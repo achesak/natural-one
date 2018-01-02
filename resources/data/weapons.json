@@ -1,0 +1,2094 @@
+{
+    "weapons": [
+        {
+            "name": "Unarmed strike",
+            "type": "Unarmed",
+            "dmgs": 2,
+            "dmgm": 3,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Gauntlet",
+            "type": "Unarmed",
+            "dmgs": 2,
+            "dmgm": 3,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Battle aspergillum",
+            "type": "Simple Light Melee",
+            "dmgs": 4,
+            "dmgm": 6,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Brass knife",
+            "type": "Simple Light Melee",
+            "dmgs": 3,
+            "dmgm": 4,
+            "counts": 1,
+            "countm": 1,
+            "critr": 19,
+            "critm": 2
+        },
+        {
+            "name": "Brass knuckles",
+            "type": "Simple Light Melee",
+            "dmgs": 2,
+            "dmgm": 3,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Cestus",
+            "type": "Simple Light Melee",
+            "dmgs": 3,
+            "dmgm": 4,
+            "counts": 1,
+            "countm": 1,
+            "critr": 19,
+            "critm": 2
+        },
+        {
+            "name": "Dagger",
+            "type": "Simple Light Melee",
+            "dmgs": 3,
+            "dmgm": 4,
+            "counts": 1,
+            "countm": 1,
+            "critr": 19,
+            "critm": 2
+        },
+        {
+            "name": "Dagger, punching",
+            "type": "Simple Light Melee",
+            "dmgs": 3,
+            "dmgm": 4,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 3
+        },
+        {
+            "name": "Gauntlet, spiked",
+            "type": "Simple Light Melee",
+            "dmgs": 3,
+            "dmgm": 4,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Hook hand",
+            "type": "Simple Light Melee",
+            "dmgs": 3,
+            "dmgm": 4,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Kunai",
+            "type": "Simple Light Melee",
+            "dmgs": 3,
+            "dmgm": 4,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Mace, light",
+            "type": "Simple Light Melee",
+            "dmgs": 4,
+            "dmgm": 6,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Sickle",
+            "type": "Simple Light Melee",
+            "dmgs": 4,
+            "dmgm": 6,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Spring blade",
+            "type": "Simple Light Melee",
+            "dmgs": 3,
+            "dmgm": 4,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Wooden stake",
+            "type": "Simple Light Melee",
+            "dmgs": 3,
+            "dmgm": 4,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Club",
+            "type": "Simple One-Handed Melee",
+            "dmgs": 4,
+            "dmgm": 6,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Club, mere",
+            "type": "Simple One-Handed Melee",
+            "dmgs": 3,
+            "dmgm": 4,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Mace, heavy",
+            "type": "Simple One-Handed Melee",
+            "dmgs": 6,
+            "dmgm": 8,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Morningstar",
+            "type": "Simple One-Handed Melee",
+            "dmgs": 6,
+            "dmgm": 8,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Shortspear",
+            "type": "Simple One-Handed Melee",
+            "dmgs": 4,
+            "dmgm": 6,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Bayonet",
+            "type": "Simple Two-Handed Melee",
+            "dmgs": 4,
+            "dmgm": 6,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Boarding pike",
+            "type": "Simple Two-Handed Melee",
+            "dmgs": 6,
+            "dmgm": 8,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 3
+        },
+        {
+            "name": "Kumade",
+            "type": "Simple Two-Handed Melee",
+            "dmgs": 4,
+            "dmgm": 6,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 3
+        },
+        {
+            "name": "Kumade, collapsible",
+            "type": "Simple Two-Handed Melee",
+            "dmgs": 4,
+            "dmgm": 6,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 3
+        },
+        {
+            "name": "Lantern staff",
+            "type": "Simple Two-Handed Melee",
+            "dmgs": 4,
+            "dmgm": 6,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Longspear",
+            "type": "Simple Two-Handed Melee",
+            "dmgs": 6,
+            "dmgm": 8,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 3
+        },
+        {
+            "name": "Quarterstaff",
+            "type": "Simple Two-Handed Melee",
+            "dmgs": 4,
+            "dmgm": 6,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Spear",
+            "type": "Simple Two-Handed Melee",
+            "dmgs": 6,
+            "dmgm": 8,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 3
+        },
+        {
+            "name": "Spear, boar",
+            "type": "Simple Two-Handed Melee",
+            "dmgs": 6,
+            "dmgm": 8,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Spear, weighted",
+            "type": "Simple Two-Handed Melee",
+            "dmgs": 6,
+            "dmgm": 8,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 3
+        },
+        {
+            "name": "Blowgun",
+            "type": "Simple Ranged",
+            "dmgs": 1,
+            "dmgm": 2,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Crossbow, heavy",
+            "type": "Simple Ranged",
+            "dmgs": 8,
+            "dmgm": 10,
+            "counts": 1,
+            "countm": 1,
+            "critr": 19,
+            "critm": 2
+        },
+        {
+            "name": "Crossbow, light",
+            "type": "Simple Ranged",
+            "dmgs": 6,
+            "dmgm": 8,
+            "counts": 1,
+            "countm": 1,
+            "critr": 19,
+            "critm": 2
+        },
+        {
+            "name": "Dart",
+            "type": "Simple Ranged",
+            "dmgs": 3,
+            "dmgm": 4,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Javelin",
+            "type": "Simple Ranged",
+            "dmgs": 4,
+            "dmgm": 6,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Sling",
+            "type": "Simple Ranged",
+            "dmgs": 3,
+            "dmgm": 4,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Stingchuck",
+            "type": "Simple Ranged",
+            "dmgs": 3,
+            "dmgm": 4,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Stonebow",
+            "type": "Simple Ranged",
+            "dmgs": 4,
+            "dmgm": 6,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Axe, boarding",
+            "type": "Martial Light Melee",
+            "dmgs": 4,
+            "dmgm": 6,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 3
+        },
+        {
+            "name": "Axe, throwing",
+            "type": "Martial Light Melee",
+            "dmgs": 4,
+            "dmgm": 6,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Blade boot",
+            "type": "Martial Light Melee",
+            "dmgs": 3,
+            "dmgm": 4,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Cat-o'-nine-tails",
+            "type": "Martial Light Melee",
+            "dmgs": 3,
+            "dmgm": 4,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Claw blades",
+            "type": "Martial Light Melee",
+            "dmgs": 3,
+            "dmgm": 4,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Dagger, dueling",
+            "type": "Martial Light Melee",
+            "dmgs": 3,
+            "dmgm": 4,
+            "counts": 1,
+            "countm": 1,
+            "critr": 19,
+            "critm": 2
+        },
+        {
+            "name": "Dogslicer",
+            "type": "Martial Light Melee",
+            "dmgs": 4,
+            "dmgm": 6,
+            "counts": 1,
+            "countm": 1,
+            "critr": 19,
+            "critm": 2
+        },
+        {
+            "name": "Hammer, light",
+            "type": "Martial Light Melee",
+            "dmgs": 3,
+            "dmgm": 4,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Gladius",
+            "type": "Martial Light Melee",
+            "dmgs": 4,
+            "dmgm": 6,
+            "counts": 1,
+            "countm": 1,
+            "critr": 19,
+            "critm": 2
+        },
+        {
+            "name": "Handaxe",
+            "type": "Martial Light Melee",
+            "dmgs": 4,
+            "dmgm": 6,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Katar, tri-bladed",
+            "type": "Martial Light Melee",
+            "dmgs": 3,
+            "dmgm": 4,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 4
+        },
+        {
+            "name": "Knife, switchblade",
+            "type": "Martial Light Melee",
+            "dmgs": 3,
+            "dmgm": 4,
+            "counts": 1,
+            "countm": 1,
+            "critr": 19,
+            "critm": 2
+        },
+        {
+            "name": "Kobold tail (long lash)",
+            "type": "Martial Light Melee",
+            "dmgs": 4,
+            "dmgm": 6,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Kobold tail (pounder)",
+            "type": "Martial Light Melee",
+            "dmgs": 6,
+            "dmgm": 8,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Kobold tail (razored)",
+            "type": "Martial Light Melee",
+            "dmgs": 6,
+            "dmgm": 8,
+            "counts": 1,
+            "countm": 1,
+            "critr": 19,
+            "critm": 2
+        },
+        {
+            "name": "Kobold tail (spiked)",
+            "type": "Martial Light Melee",
+            "dmgs": 6,
+            "dmgm": 8,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 3
+        },
+        {
+            "name": "Kobold tail (sweeper)",
+            "type": "Martial Light Melee",
+            "dmgs": 5,
+            "dmgm": 6,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Kukri",
+            "type": "Martial Light Melee",
+            "dmgs": 3,
+            "dmgm": 4,
+            "counts": 1,
+            "countm": 1,
+            "critr": 18,
+            "critm": 2
+        },
+        {
+            "name": "Machete",
+            "type": "Martial Light Melee",
+            "dmgs": 4,
+            "dmgm": 6,
+            "counts": 1,
+            "countm": 1,
+            "critr": 19,
+            "critm": 2
+        },
+        {
+            "name": "Pick, light",
+            "type": "Martial Light Melee",
+            "dmgs": 3,
+            "dmgm": 4,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 4
+        },
+        {
+            "name": "Ratfolk tailblade",
+            "type": "Martial Light Melee",
+            "dmgs": 2,
+            "dmgm": 3,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Sap",
+            "type": "Martial Light Melee",
+            "dmgs": 4,
+            "dmgm": 6,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Sea-knife",
+            "type": "Martial Light Melee",
+            "dmgs": 3,
+            "dmgm": 4,
+            "counts": 1,
+            "countm": 1,
+            "critr": 19,
+            "critm": 2
+        },
+        {
+            "name": "Shield, light",
+            "type": "Martial Light Melee",
+            "dmgs": 2,
+            "dmgm": 3,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Spiked armor",
+            "type": "Martial Light Melee",
+            "dmgs": 3,
+            "dmgm": 4,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Spiked shield, light",
+            "type": "Martial Light Melee",
+            "dmgs": 3,
+            "dmgm": 4,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Starknife",
+            "type": "Martial Light Melee",
+            "dmgs": 3,
+            "dmgm": 4,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 3
+        },
+        {
+            "name": "Sword, short",
+            "type": "Martial Light Melee",
+            "dmgs": 4,
+            "dmgm": 6,
+            "counts": 1,
+            "countm": 1,
+            "critr": 19,
+            "critm": 2
+        },
+        {
+            "name": "War razor",
+            "type": "Martial Light Melee",
+            "dmgs": 3,
+            "dmgm": 4,
+            "counts": 1,
+            "countm": 1,
+            "critr": 19,
+            "critm": 2
+        },
+        {
+            "name": "Ankus",
+            "type": "Martial One-Handed Melee",
+            "dmgs": 6,
+            "dmgm": 8,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Battleaxe",
+            "type": "Martial One-Handed Melee",
+            "dmgs": 6,
+            "dmgm": 8,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 3
+        },
+        {
+            "name": "Combat scabbard",
+            "type": "Martial One-Handed Melee",
+            "dmgs": 4,
+            "dmgm": 6,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Combat scabbard (sharpened)",
+            "type": "Martial One-Handed Melee",
+            "dmgs": 4,
+            "dmgm": 6,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Cutlass",
+            "type": "Martial One-Handed Melee",
+            "dmgs": 4,
+            "dmgm": 6,
+            "counts": 1,
+            "countm": 1,
+            "critr": 18,
+            "critm": 2
+        },
+        {
+            "name": "Flail",
+            "type": "Martial One-Handed Melee",
+            "dmgs": 6,
+            "dmgm": 8,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Gandasa",
+            "type": "Martial One-Handed Melee",
+            "dmgs": 6,
+            "dmgm": 4,
+            "counts": 1,
+            "countm": 2,
+            "critr": 20,
+            "critm": 3
+        },
+        {
+            "name": "Klar",
+            "type": "Martial One-Handed Melee",
+            "dmgs": 4,
+            "dmgm": 6,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Longsword",
+            "type": "Martial One-Handed Melee",
+            "dmgs": 6,
+            "dmgm": 8,
+            "counts": 1,
+            "countm": 1,
+            "critr": 19,
+            "critm": 2
+        },
+        {
+            "name": "Manople",
+            "type": "Martial One-Handed Melee",
+            "dmgs": 6,
+            "dmgm": 8,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Pick, heavy",
+            "type": "Martial One-Handed Melee",
+            "dmgs": 4,
+            "dmgm": 6,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 4
+        },
+        {
+            "name": "Rapier",
+            "type": "Martial One-Handed Melee",
+            "dmgs": 4,
+            "dmgm": 6,
+            "counts": 1,
+            "countm": 1,
+            "critr": 18,
+            "critm": 2
+        },
+        {
+            "name": "Scimitar",
+            "type": "Martial One-Handed Melee",
+            "dmgs": 4,
+            "dmgm": 6,
+            "counts": 1,
+            "countm": 1,
+            "critr": 18,
+            "critm": 2
+        },
+        {
+            "name": "Scizore",
+            "type": "Martial One-Handed Melee",
+            "dmgs": 8,
+            "dmgm": 10,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Shield, heavy",
+            "type": "Martial One-Handed Melee",
+            "dmgs": 3,
+            "dmgm": 4,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Spiked shield, heavy",
+            "type": "Martial One-Handed Melee",
+            "dmgs": 4,
+            "dmgm": 6,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Sword cane",
+            "type": "Martial One-Handed Melee",
+            "dmgs": 4,
+            "dmgm": 6,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Terbutje",
+            "type": "Martial One-Handed Melee",
+            "dmgs": 6,
+            "dmgm": 8,
+            "counts": 1,
+            "countm": 1,
+            "critr": 19,
+            "critm": 2
+        },
+        {
+            "name": "Warhammer",
+            "type": "Martial One-Handed Melee",
+            "dmgs": 6,
+            "dmgm": 8,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 3
+        },
+        {
+            "name": "Bardiche",
+            "type": "Martial Two-Handed Melee",
+            "dmgs": 8,
+            "dmgm": 10,
+            "counts": 1,
+            "countm": 1,
+            "critr": 19,
+            "critm": 2
+        },
+        {
+            "name": "Bec de corbin",
+            "type": "Martial Two-Handed Melee",
+            "dmgs": 8,
+            "dmgm": 10,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 3
+        },
+        {
+            "name": "Bill",
+            "type": "Martial Two-Handed Melee",
+            "dmgs": 6,
+            "dmgm": 8,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 3
+        },
+        {
+            "name": "Earth breaker",
+            "type": "Martial Two-Handed Melee",
+            "dmgs": 10,
+            "dmgm": 6,
+            "counts": 1,
+            "countm": 2,
+            "critr": 20,
+            "critm": 3
+        },
+        {
+            "name": "Falchion",
+            "type": "Martial Two-Handed Melee",
+            "dmgs": 6,
+            "dmgm": 4,
+            "counts": 1,
+            "countm": 2,
+            "critr": 18,
+            "critm": 2
+        },
+        {
+            "name": "Flail, heavy",
+            "type": "Martial Two-Handed Melee",
+            "dmgs": 8,
+            "dmgm": 10,
+            "counts": 1,
+            "countm": 1,
+            "critr": 19,
+            "critm": 2
+        },
+        {
+            "name": "Glaive",
+            "type": "Martial Two-Handed Melee",
+            "dmgs": 8,
+            "dmgm": 10,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 3
+        },
+        {
+            "name": "Glaive-guisarme",
+            "type": "Martial Two-Handed Melee",
+            "dmgs": 8,
+            "dmgm": 10,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 3
+        },
+        {
+            "name": "Greataxe",
+            "type": "Martial Two-Handed Melee",
+            "dmgs": 10,
+            "dmgm": 12,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 3
+        },
+        {
+            "name": "Greatclub",
+            "type": "Martial Two-Handed Melee",
+            "dmgs": 8,
+            "dmgm": 10,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Greatsword",
+            "type": "Martial Two-Handed Melee",
+            "dmgs": 10,
+            "dmgm": 6,
+            "counts": 1,
+            "countm": 2,
+            "critr": 19,
+            "critm": 2
+        },
+        {
+            "name": "Guisarme",
+            "type": "Martial Two-Handed Melee",
+            "dmgs": 6,
+            "dmgm": 4,
+            "counts": 1,
+            "countm": 2,
+            "critr": 20,
+            "critm": 3
+        },
+        {
+            "name": "Halberd",
+            "type": "Martial Two-Handed Melee",
+            "dmgs": 8,
+            "dmgm": 10,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 3
+        },
+        {
+            "name": "Hammer, lucerne",
+            "type": "Martial Two-Handed Melee",
+            "dmgs": 10,
+            "dmgm": 12,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Horsechopper",
+            "type": "Martial Two-Handed Melee",
+            "dmgs": 8,
+            "dmgm": 10,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 3
+        },
+        {
+            "name": "Lance",
+            "type": "Martial Two-Handed Melee",
+            "dmgs": 6,
+            "dmgm": 8,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 3
+        },
+        {
+            "name": "Ogre hook",
+            "type": "Martial Two-Handed Melee",
+            "dmgs": 8,
+            "dmgm": 10,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 3
+        },
+        {
+            "name": "Pickaxe",
+            "type": "Martial Two-Handed Melee",
+            "dmgs": 6,
+            "dmgm": 8,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 4
+        },
+        {
+            "name": "Planson",
+            "type": "Martial Two-Handed Melee",
+            "dmgs": 8,
+            "dmgm": 10,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Ranseur",
+            "type": "Martial Two-Handed Melee",
+            "dmgs": 6,
+            "dmgm": 4,
+            "counts": 1,
+            "countm": 2,
+            "critr": 20,
+            "critm": 3
+        },
+        {
+            "name": "Scythe",
+            "type": "Martial Two-Handed Melee",
+            "dmgs": 6,
+            "dmgm": 4,
+            "counts": 1,
+            "countm": 2,
+            "critr": 20,
+            "critm": 4
+        },
+        {
+            "name": "Spear, syringe",
+            "type": "Martial Two-Handed Melee",
+            "dmgs": 6,
+            "dmgm": 8,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 3
+        },
+        {
+            "name": "Ammentum",
+            "type": "Martial Ranged",
+            "dmgs": 4,
+            "dmgm": 6,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Chakram",
+            "type": "Martial Ranged",
+            "dmgs": 6,
+            "dmgm": 8,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Dart, jolting",
+            "type": "Martial Ranged",
+            "dmgs": 3,
+            "dmgm": 4,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Hunga munga",
+            "type": "Martial Ranged",
+            "dmgs": 4,
+            "dmgm": 6,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Hurlbat",
+            "type": "Martial Ranged",
+            "dmgs": 4,
+            "dmgm": 6,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 3
+        },
+        {
+            "name": "Longbow",
+            "type": "Martial Ranged",
+            "dmgs": 6,
+            "dmgm": 8,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 3
+        },
+        {
+            "name": "Pilum",
+            "type": "Martial Ranged",
+            "dmgs": 6,
+            "dmgm": 8,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Shortbow",
+            "type": "Martial Ranged",
+            "dmgs": 4,
+            "dmgm": 6,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 3
+        },
+        {
+            "name": "Spear-sling",
+            "type": "Martial Ranged",
+            "dmgs": 6,
+            "dmgm": 8,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 3
+        },
+        {
+            "name": "Throwing arrow cord",
+            "type": "Martial Ranged",
+            "dmgs": 3,
+            "dmgm": 4,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Aklys",
+            "type": "Exotic Light Melee",
+            "dmgs": 4,
+            "dmgm": 6,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Axe, knuckle",
+            "type": "Exotic Light Melee",
+            "dmgs": 4,
+            "dmgm": 6,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 3
+        },
+        {
+            "name": "Barbazu beard",
+            "type": "Exotic Light Melee",
+            "dmgs": 3,
+            "dmgm": 4,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Battle poi",
+            "type": "Exotic Light Melee",
+            "dmgs": 3,
+            "dmgm": 4,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Dagger, swordbreaker",
+            "type": "Exotic Light Melee",
+            "dmgs": 3,
+            "dmgm": 4,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Flying talon",
+            "type": "Exotic Light Melee",
+            "dmgs": 3,
+            "dmgm": 4,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Gnome pincher",
+            "type": "Exotic Light Melee",
+            "dmgs": 4,
+            "dmgm": 6,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Halfling rope-shot",
+            "type": "Exotic Light Melee",
+            "dmgs": 4,
+            "dmgm": 6,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Helmet, dwarven boulder",
+            "type": "Exotic Light Melee",
+            "dmgs": 3,
+            "dmgm": 4,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Kama",
+            "type": "Exotic Light Melee",
+            "dmgs": 4,
+            "dmgm": 6,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Knife, butterfly",
+            "type": "Exotic Light Melee",
+            "dmgs": 3,
+            "dmgm": 4,
+            "counts": 1,
+            "countm": 1,
+            "critr": 19,
+            "critm": 2
+        },
+        {
+            "name": "Knife, deer horn",
+            "type": "Exotic Light Melee",
+            "dmgs": 3,
+            "dmgm": 4,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 3
+        },
+        {
+            "name": "Maulaxe, dwarven",
+            "type": "Exotic Light Melee",
+            "dmgs": 4,
+            "dmgm": 6,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 3
+        },
+        {
+            "name": "Nunchaku",
+            "type": "Exotic Light Melee",
+            "dmgs": 4,
+            "dmgm": 6,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Quadrens",
+            "type": "Exotic Light Melee",
+            "dmgs": 4,
+            "dmgm": 6,
+            "counts": 1,
+            "countm": 1,
+            "critr": 19,
+            "critm": 2
+        },
+        {
+            "name": "Razor, drow",
+            "type": "Exotic Light Melee",
+            "dmgs": 3,
+            "dmgm": 4,
+            "counts": 1,
+            "countm": 1,
+            "critr": 18,
+            "critm": 2
+        },
+        {
+            "name": "Rope gauntlet",
+            "type": "Exotic Light Melee",
+            "dmgs": 3,
+            "dmgm": 4,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Sabre, sawtooth",
+            "type": "Exotic Light Melee",
+            "dmgs": 6,
+            "dmgm": 8,
+            "counts": 1,
+            "countm": 1,
+            "critr": 19,
+            "critm": 2
+        },
+        {
+            "name": "Sai",
+            "type": "Exotic Light Melee",
+            "dmgs": 3,
+            "dmgm": 4,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Sanpkhang",
+            "type": "Exotic Light Melee",
+            "dmgs": 3,
+            "dmgm": 4,
+            "counts": 1,
+            "countm": 1,
+            "critr": 19,
+            "critm": 2
+        },
+        {
+            "name": "Sica",
+            "type": "Exotic Light Melee",
+            "dmgs": 4,
+            "dmgm": 6,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Thorn bracer",
+            "type": "Exotic Light Melee",
+            "dmgs": 4,
+            "dmgm": 6,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "War-shield, dwarven",
+            "type": "Exotic Light Melee",
+            "dmgs": 4,
+            "dmgm": 6,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Waveblade",
+            "type": "Exotic Light Melee",
+            "dmgs": 4,
+            "dmgm": 6,
+            "counts": 1,
+            "countm": 1,
+            "critr": 18,
+            "critm": 2
+        },
+        {
+            "name": "Whip, scorpion",
+            "type": "Exotic Light Melee",
+            "dmgs": 3,
+            "dmgm": 4,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Axe, hooked",
+            "type": "Exotic One-Handed Melee",
+            "dmgs": 6,
+            "dmgm": 8,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 3
+        },
+        {
+            "name": "Estoc",
+            "type": "Exotic One-Handed Melee",
+            "dmgs": 3,
+            "dmgm": 4,
+            "counts": 2,
+            "countm": 2,
+            "critr": 18,
+            "critm": 2
+        },
+        {
+            "name": "Falcata",
+            "type": "Exotic One-Handed Melee",
+            "dmgs": 6,
+            "dmgm": 8,
+            "counts": 1,
+            "countm": 1,
+            "critr": 19,
+            "critm": 2
+        },
+        {
+            "name": "Flickmace",
+            "type": "Exotic One-Handed Melee",
+            "dmgs": 6,
+            "dmgm": 8,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Flindbar",
+            "type": "Exotic One-Handed Melee",
+            "dmgs": 6,
+            "dmgm": 8,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Khopesh",
+            "type": "Exotic One-Handed Melee",
+            "dmgs": 6,
+            "dmgm": 8,
+            "counts": 1,
+            "countm": 1,
+            "critr": 19,
+            "critm": 2
+        },
+        {
+            "name": "Khobkerrie",
+            "type": "Exotic One-Handed Melee",
+            "dmgs": 4,
+            "dmgm": 6,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Rapier, spiral",
+            "type": "Exotic One-Handed Melee",
+            "dmgs": 4,
+            "dmgm": 6,
+            "counts": 1,
+            "countm": 1,
+            "critr": 18,
+            "critm": 2
+        },
+        {
+            "name": "Rhoka",
+            "type": "Exotic One-Handed Melee",
+            "dmgs": 6,
+            "dmgm": 8,
+            "counts": 1,
+            "countm": 1,
+            "critr": 18,
+            "critm": 2
+        },
+        {
+            "name": "Shotel",
+            "type": "Exotic One-Handed Melee",
+            "dmgs": 6,
+            "dmgm": 8,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 3
+        },
+        {
+            "name": "Sickle-sword",
+            "type": "Exotic One-Handed Melee",
+            "dmgs": 6,
+            "dmgm": 8,
+            "counts": 1,
+            "countm": 1,
+            "critr": 19,
+            "critm": 2
+        },
+        {
+            "name": "Sword, dueling",
+            "type": "Exotic One-Handed Melee",
+            "dmgs": 6,
+            "dmgm": 8,
+            "counts": 1,
+            "countm": 1,
+            "critr": 19,
+            "critm": 2
+        },
+        {
+            "name": "Sword, bastard",
+            "type": "Exotic One-Handed Melee",
+            "dmgs": 8,
+            "dmgm": 10,
+            "counts": 1,
+            "countm": 1,
+            "critr": 19,
+            "critm": 2
+        },
+        {
+            "name": "Tongi",
+            "type": "Exotic One-Handed Melee",
+            "dmgs": 4,
+            "dmgm": 6,
+            "counts": 1,
+            "countm": 1,
+            "critr": 19,
+            "critm": 3
+        },
+        {
+            "name": "Waraxe, dwarven",
+            "type": "Exotic One-Handed Melee",
+            "dmgs": 8,
+            "dmgm": 10,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 3
+        },
+        {
+            "name": "Waraxe, dwarven double",
+            "type": "Exotic One-Handed Melee",
+            "dmgs": 8,
+            "dmgm": 10,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 3
+        },
+        {
+            "name": "Whip",
+            "type": "Exotic One-Handed Melee",
+            "dmgs": 2,
+            "dmgm": 3,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Axe, orc double",
+            "type": "Exotic Two-Handed Melee",
+            "dmgs": 6,
+            "dmgm": 8,
+            "counts": 2,
+            "countm": 2,
+            "critr": 20,
+            "critm": 3
+        },
+        {
+            "name": "Axe, butchering",
+            "type": "Exotic Two-Handed Melee",
+            "dmgs": 12,
+            "dmgm": 6,
+            "counts": 1,
+            "countm": 3,
+            "critr": 20,
+            "critm": 3
+        },
+        {
+            "name": "Battle ladder, gnome",
+            "type": "Exotic Two-Handed Melee",
+            "dmgs": 4,
+            "dmgm": 6,
+            "counts": 2,
+            "countm": 2,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Boarding gaff",
+            "type": "Exotic Two-Handed Melee",
+            "dmgs": 4,
+            "dmgm": 6,
+            "counts": 2,
+            "countm": 2,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Chain-hammer",
+            "type": "Exotic Two-Handed Melee",
+            "dmgs": 4,
+            "dmgm": 6,
+            "counts": 2,
+            "countm": 2,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Chain, spiked",
+            "type": "Exotic Two-Handed Melee",
+            "dmgs": 6,
+            "dmgm": 4,
+            "counts": 1,
+            "countm": 2,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Crook",
+            "type": "Exotic Two-Handed Melee",
+            "dmgs": 4,
+            "dmgm": 6,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Curve blade, elven",
+            "type": "Exotic Two-Handed Melee",
+            "dmgs": 8,
+            "dmgm": 10,
+            "counts": 1,
+            "countm": 1,
+            "critr": 18,
+            "critm": 2
+        },
+        {
+            "name": "Dorn-dergar, dwarven",
+            "type": "Exotic Two-Handed Melee",
+            "dmgs": 8,
+            "dmgm": 10,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Elven branched spear",
+            "type": "Exotic Two-Handed Melee",
+            "dmgs": 6,
+            "dmgm": 8,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 3
+        },
+        {
+            "name": "Fauchard",
+            "type": "Exotic Two-Handed Melee",
+            "dmgs": 8,
+            "dmgm": 10,
+            "counts": 1,
+            "countm": 1,
+            "critr": 18,
+            "critm": 2
+        },
+        {
+            "name": "Flail, dire",
+            "type": "Exotic Two-Handed Melee",
+            "dmgs": 6,
+            "dmgm": 8,
+            "counts": 2,
+            "countm": 2,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Flailpole",
+            "type": "Exotic Two-Handed Melee",
+            "dmgs": 6,
+            "dmgm": 9,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Flambard",
+            "type": "Exotic Two-Handed Melee",
+            "dmgs": 8,
+            "dmgm": 10,
+            "counts": 1,
+            "countm": 1,
+            "critr": 19,
+            "critm": 2
+        },
+        {
+            "name": "Flying blade",
+            "type": "Exotic Two-Handed Melee",
+            "dmgs": 10,
+            "dmgm": 12,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 3
+        },
+        {
+            "name": "Garrote",
+            "type": "Exotic Two-Handed Melee",
+            "dmgs": 4,
+            "dmgm": 6,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Hammer, gnome hooked",
+            "type": "Exotic Two-Handed Melee",
+            "dmgs": 6,
+            "dmgm": 8,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 3
+        },
+        {
+            "name": "Harpoon",
+            "type": "Exotic Two-Handed Melee",
+            "dmgs": 6,
+            "dmgm": 8,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 3
+        },
+        {
+            "name": "Longaxe, dwarven",
+            "type": "Exotic Two-Handed Melee",
+            "dmgs": 10,
+            "dmgm": 6,
+            "counts": 1,
+            "countm": 2,
+            "critr": 20,
+            "critm": 3
+        },
+        {
+            "name": "Mancatcher",
+            "type": "Exotic Two-Handed Melee",
+            "dmgs": 1,
+            "dmgm": 2,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Orc skull ram",
+            "type": "Exotic Two-Handed Melee",
+            "dmgs": 8,
+            "dmgm": 10,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 3
+        },
+        {
+            "name": "Piston maul, gnome",
+            "type": "Exotic Two-Handed Melee",
+            "dmgs": 8,
+            "dmgm": 10,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Ripsaw glaive, gnome",
+            "type": "Exotic Two-Handed Melee",
+            "dmgs": 8,
+            "dmgm": 10,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 3
+        },
+        {
+            "name": "Scarf, bladed",
+            "type": "Exotic Two-Handed Melee",
+            "dmgs": 4,
+            "dmgm": 6,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Spear, totem",
+            "type": "Exotic Two-Handed Melee",
+            "dmgs": 8,
+            "dmgm": 10,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 3
+        },
+        {
+            "name": "Switchscythe",
+            "type": "Exotic Two-Handed Melee",
+            "dmgs": 6,
+            "dmgm": 4,
+            "counts": 1,
+            "countm": 2,
+            "critr": 20,
+            "critm": 4
+        },
+        {
+            "name": "Sword, two-bladed",
+            "type": "Exotic Two-Handed Melee",
+            "dmgs": 6,
+            "dmgm": 8,
+            "counts": 1,
+            "countm": 1,
+            "critr": 19,
+            "critm": 2
+        },
+        {
+            "name": "Urgrosh, dwarven",
+            "type": "Exotic Two-Handed Melee",
+            "dmgs": 6,
+            "dmgm": 8,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 3
+        },
+        {
+            "name": "Bola",
+            "type": "Exotic Ranged",
+            "dmgs": 3,
+            "dmgm": 4,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Bola, brutal",
+            "type": "Exotic Ranged",
+            "dmgs": 3,
+            "dmgm": 4,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Boomerang",
+            "type": "Exotic Ranged",
+            "dmgs": 4,
+            "dmgm": 6,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Bow, thorn",
+            "type": "Exotic Ranged",
+            "dmgs": 4,
+            "dmgm": 6,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 3
+        },
+        {
+            "name": "Crossbow, crank (heavy)",
+            "type": "Exotic Ranged",
+            "dmgs": 8,
+            "dmgm": 10,
+            "counts": 1,
+            "countm": 1,
+            "critr": 19,
+            "critm": 2
+        },
+        {
+            "name": "Crossbow, crank (light)",
+            "type": "Exotic Ranged",
+            "dmgs": 6,
+            "dmgm": 8,
+            "counts": 1,
+            "countm": 1,
+            "critr": 19,
+            "critm": 2
+        },
+        {
+            "name": "Crossbow, double",
+            "type": "Exotic Ranged",
+            "dmgs": 6,
+            "dmgm": 8,
+            "counts": 1,
+            "countm": 1,
+            "critr": 19,
+            "critm": 2
+        },
+        {
+            "name": "Crossbow, hand",
+            "type": "Exotic Ranged",
+            "dmgs": 3,
+            "dmgm": 4,
+            "counts": 1,
+            "countm": 1,
+            "critr": 19,
+            "critm": 2
+        },
+        {
+            "name": "Crossbow, repeating",
+            "type": "Exotic Ranged",
+            "dmgs": 6,
+            "dmgm": 8,
+            "counts": 1,
+            "countm": 1,
+            "critr": 19,
+            "critm": 2
+        },
+        {
+            "name": "Crossbow, repeating (heavy)",
+            "type": "Exotic Ranged",
+            "dmgs": 8,
+            "dmgm": 10,
+            "counts": 1,
+            "countm": 1,
+            "critr": 19,
+            "critm": 2
+        },
+        {
+            "name": "Grappling hook",
+            "type": "Exotic Ranged",
+            "dmgs": 4,
+            "dmgm": 6,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Hornbow, orc",
+            "type": "Exotic Ranged",
+            "dmgs": 8,
+            "dmgm": 6,
+            "counts": 1,
+            "countm": 2,
+            "critr": 20,
+            "critm": 3
+        },
+        {
+            "name": "Javelin, shrillshaft",
+            "type": "Exotic Ranged",
+            "dmgs": 4,
+            "dmgm": 6,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Javelin, stormshaft",
+            "type": "Exotic Ranged",
+            "dmgs": 4,
+            "dmgm": 6,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Shield, throwing",
+            "type": "Exotic Ranged",
+            "dmgs": 4,
+            "dmgm": 6,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Shuriken",
+            "type": "Exotic Ranged",
+            "dmgs": 1,
+            "dmgm": 2,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Sling, double",
+            "type": "Exotic Ranged",
+            "dmgs": 3,
+            "dmgm": 4,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Sling, stitched",
+            "type": "Exotic Ranged",
+            "dmgs": 4,
+            "dmgm": 6,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Sling glove",
+            "type": "Exotic Ranged",
+            "dmgs": 3,
+            "dmgm": 4,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 2
+        },
+        {
+            "name": "Sling staff, halfling",
+            "type": "Exotic Ranged",
+            "dmgs": 6,
+            "dmgm": 8,
+            "counts": 1,
+            "countm": 1,
+            "critr": 20,
+            "critm": 3
+        },
+        {
+            "name": "Wrist launcher, heavy",
+            "type": "Exotic Ranged",
+            "dmgs": 3,
+            "dmgm": 4,
+            "counts": 1,
+            "countm": 1,
+            "critr": 19,
+            "critm": 2
+        }
+    ]
+}
