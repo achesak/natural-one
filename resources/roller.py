@@ -1,3 +1,15 @@
+# -*- coding: utf-8 -*-
+
+
+################################################################################
+#
+# resources/roller.py
+# This file contains functions for generating random dice rolls.
+#
+################################################################################
+
+
+# Import random for generating random dice rolls.
 import random
 
 

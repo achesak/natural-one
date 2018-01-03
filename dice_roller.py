@@ -1,3 +1,19 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+
+################################################################################
+#
+# Pathfinder Dice Roller
+# Version 0.1
+#
+# A simple dice roller application for the Pathfinder roll playing game.
+#
+# Released under the GNU General Public License version 3.
+#
+################################################################################
+
+
 # Import Gtk and Gdk for the interface.
 import gi
 gi.require_version("Gtk", "3.0")
@@ -6,10 +22,15 @@ from gi.repository import Gtk, Gdk, GdkPixbuf, Gio
 import sys
 import random
 
-from resources.window import DiceRollerWindow
+# Import application modules.
 import resources.launch as launch
 import resources.format as format
 import resources.roller as roller
+
+# Import UI classes.
+from resources.window import DiceRollerWindow
+
+# Import dialogs.
 
 
 class DiceRoller(Gtk.Application):
@@ -33,8 +54,8 @@ class DiceRoller(Gtk.Application):
         """Application activate."""
 
         if not self.window:
-            self.window = DiceRollerWindow(application=self, title="Dice Roller")
-            self.window.set_wmclass("Dice Roller", "Dice Roller")
+            self.window = DiceRollerWindow(application=self, title="Pathfinder Dice Roller")
+            self.window.set_wmclass("Pathfinder Dice Roller", "Pathfinder Dice Roller")
 
         self.setup_interface()
 

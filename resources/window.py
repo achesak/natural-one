@@ -1,3 +1,14 @@
+# -*- coding: utf-8 -*-
+
+
+################################################################################
+#
+# resources/window.py
+# This file defines the main UI.
+#
+################################################################################
+
+
 # Import Gtk and Gdk for the interface.
 import gi
 gi.require_version("Gtk", "3.0")
@@ -5,6 +16,7 @@ from gi.repository import Gtk, Gdk, GdkPixbuf, Gio
 
 
 class DiceRollerWindow(Gtk.ApplicationWindow):
+    """Creates the dice roller window."""
 
     def __init__(self, *args, **kwargs):
         super(Gtk.ApplicationWindow, self).__init__(*args, **kwargs)

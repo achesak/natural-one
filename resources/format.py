@@ -1,3 +1,14 @@
+# -*- coding: utf-8 -*-
+
+
+################################################################################
+#
+# resources/format.py
+# This file contains functions for formatting dice roll output.
+#
+################################################################################
+
+
 def basic(count, die, mod_each, mod_once, rolls, total):
     """Builds the output for a standard dice roll."""
 

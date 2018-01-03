@@ -1,3 +1,14 @@
+# -*- coding: utf-8 -*-
+
+
+################################################################################
+#
+# resources/launch.py
+# This file defines functions for loading data.
+#
+################################################################################
+
+
 # Import json for loading the data files.
 import json
 import sys
