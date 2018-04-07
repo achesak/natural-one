@@ -31,6 +31,7 @@ import resources.roller as roller
 from resources.window import DiceRollerWindow
 
 # Import dialogs.
+from resources.dialogs.template_dialog import TemplateDialog
 
 
 class DiceRoller(Gtk.Application):
@@ -102,20 +103,26 @@ class DiceRoller(Gtk.Application):
                                     lambda x: self.roll_attack())
         self.window.dam_btn.connect("clicked",
                                     lambda x: self.roll_dmg())
+        self.window.new_btn.connect("clicked",
+                                    lambda x: self.new_template())
 
     def roll_custom(self):
         """Roll for custom dice."""
 
         # Check validity of the die.
+        valid = True
         self.window.remove_error(self.window.dq_size_ent)
         try:
             die = int(self.window.dq_size_ent.get_text())
         except ValueError:
             self.window.add_error(self.window.dq_size_ent)
-            return
-
+            valid = False
+        
         if die < 1:
             self.window.add_error(self.window.dq_size_ent)
+            valid = False
+
+        if not valid:
             return
 
         self.roll(die, self.window.dq_count_ent, self.window.dq_mod_ent)
@@ -133,6 +140,12 @@ class DiceRoller(Gtk.Application):
             count = int(count_ent.get_text())
         except ValueError:
             self.window.add_error(count_ent)
+            valid = False
+
+        try:
+            min_value = int(self.window.min_ent.get_text())
+        except ValueError:
+            self.window.add_error(self.window.min_ent)
             valid = False
 
         if count < 1:
@@ -154,7 +167,7 @@ class DiceRoller(Gtk.Application):
         if not self.window.dice_mod_chk.get_active():
             mod_once, mod_each = mod_each, mod_once
 
-        total, rolls = roller.basic(count, die, mod_each, mod_once)
+        total, rolls = roller.basic(count, die, mod_each, mod_once, min_value)
         output = format.basic(count, die, mod_each, mod_once, rolls, total)
         self.window.update_output(output)
 
@@ -278,6 +291,13 @@ class DiceRoller(Gtk.Application):
         total, rolls = roller.dmg(num_atks, mods, weapon, count, die, crit_attack)
         output = format.dmg(num_atks, mods, weapon, crit_attack, weapon[count], weapon[die], rolls, total)
         self.window.update_output(output)
+
+    def new_template(self):
+        """Creates a new template."""
+
+        dlg = TemplateDialog(self.window, "Create New Template")
+        response = dlg.run()
+        dlg.destroy()
 
 
 # Show the window and start the application.

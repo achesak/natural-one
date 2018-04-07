@@ -179,7 +179,7 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         self.dq_count_ent.set_width_chars(4)
         dice_grid.attach_next_to(self.dq_count_ent, dq_img, Gtk.PositionType.RIGHT, 1, 1)
         dq_box = Gtk.Box()
-        dq_d_lbl = Gtk.Label("d")
+        dq_d_lbl = Gtk.Label("d ")
         dq_box.add(dq_d_lbl)
         self.dq_size_ent = Gtk.Entry()
         self.dq_size_ent.set_width_chars(4)
@@ -195,12 +195,19 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         self.dq_btn = Gtk.Button(" Roll ")
         dice_grid.attach_next_to(self.dq_btn, self.dq_mod_ent, Gtk.PositionType.RIGHT, 1, 1)
 
+        # Create the minimum value entry.
+        min_lbl = Gtk.Label("Minimum value: ")
+        dice_grid.attach_next_to(min_lbl, dq_img, Gtk.PositionType.BOTTOM, 2, 1)
+        self.min_ent = Gtk.Entry()
+        self.min_ent.set_text("0")
+        dice_grid.attach_next_to(self.min_ent, min_lbl, Gtk.PositionType.RIGHT, 4, 1);
+
         # Create the modifier check box.
         self.dice_mod_chk = Gtk.CheckButton("Add modifier to every roll")
         self.dice_mod_chk.set_active(True)
         self.dice_mod_chk.set_halign(Gtk.Align.CENTER)
         self.dice_mod_chk.set_hexpand(True)
-        dice_grid.attach_next_to(self.dice_mod_chk, dq_img, Gtk.PositionType.BOTTOM, 6, 1)
+        dice_grid.attach_next_to(self.dice_mod_chk, min_lbl, Gtk.PositionType.BOTTOM, 6, 1)
 
         # Create the Combat grid.
         combat_grid = Gtk.Grid()
