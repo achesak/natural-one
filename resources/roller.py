@@ -20,14 +20,13 @@ def basic(count, die, mod_each, mod_once, min_value):
     total = 0
     for _ in range(0, count):
         roll = random.randint(1, die)
+        rolls.append(roll)
         if mod_each:
             roll += mod_each
-            roll = max(roll, min_value)
+        roll = max(roll, min_value)
         total += roll
-        rolls.append(roll)
     total += mod_once
-    if not mod_each:
-        total = max(total, min_value)
+    total = max(total, min_value)
 
     return total, rolls
 
