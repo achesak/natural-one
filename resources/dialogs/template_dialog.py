@@ -184,10 +184,19 @@ class TemplateDialog(Gtk.Dialog):
 
         # Bind the events.
         self.add_btn.connect("clicked", lambda x: self.add_roll())
+        self.edit_btn.connect("clicked", lambda x: self.edit_roll())
         self.delete_btn.connect("clicked", lambda x: self.remove_roll())
+        self.roll_tree.connect("row-activated", self.activated_event)
 
         # Show the dialog.
         self.show_all()
+
+    def activated_event(self, widget, treepath, column):
+        """Edits on double click."""
+
+        tree_sel = self.roll_tree.get_selection()
+        tm, ti = tree_sel.get_selected()
+        self.edit_roll(ti)
 
     @staticmethod
     def add_error(widget):
@@ -289,6 +298,31 @@ class TemplateDialog(Gtk.Dialog):
 
         # Update the list.
         self.update_list()
+
+    def edit_roll(self, index=None):
+        """Edits a roll."""
+
+        # Get the selected index.
+        if index is None:
+            model, treeiter = self.roll_tree.get_selection().get_selected_rows()
+            index = -1
+            for i in treeiter:
+                index = int(str(i))
+
+        # Don't continue if nothing was selected.
+        if index == -1:
+            return
+
+        # Fill the fields.
+        roll = self.rolls[index]
+        self.count_ent.set_text(str(roll["count"]))
+        self.die_ent.set_text(str(roll["die"]))
+        self.mod_ent.set_text(str(roll["mod"]))
+        self.mod_chk.set_active(roll["mod_every"])
+        self.crit_ent.set_text(str(roll["crit_mod"]))
+        self.crit_apply_rbtn.set_active(roll["crit_active"])
+        self.min_ent.set_text(str(roll["min_value"]))
+        self.desc_ent.set_text(roll["description"])
 
     def remove_roll(self):
         """Removes a roll."""
