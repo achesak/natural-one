@@ -368,6 +368,9 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         self.template_tree = Gtk.TreeView(model=self.template_store)
         self.template_tree.set_headers_visible(False)
         self.template_tree.get_selection().set_mode(Gtk.SelectionMode.MULTIPLE)
+        renderer = Gtk.CellRendererText()
+        column = Gtk.TreeViewColumn("Name", renderer, text=0)
+        self.template_tree.append_column(column)
         templates_scroll_win.add(self.template_tree)
 
         # Create the template list buttons.

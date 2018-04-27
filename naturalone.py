@@ -24,6 +24,7 @@ import random
 
 # Import application modules.
 import resources.launch as launch
+import resources.io as io
 import resources.format as format
 import resources.roller as roller
 
@@ -49,7 +50,7 @@ class DiceRoller(Gtk.Application):
         Gtk.Application.do_startup(self)
 
         # Load the application data.
-        self.templates = []
+        self.templates = io.load_templates()
         self.weapon_data = launch.get_weapon_data()["weapons"]
 
     def do_activate(self):
@@ -77,11 +78,10 @@ class DiceRoller(Gtk.Application):
             self.window.weap_dam_store.append(weapon)
         self.window.weap_dam_cbox.set_active(0)
 
-        # Fill the template list.
-        for i, column_title in enumerate(["Name"]):
-            renderer = Gtk.CellRendererText()
-            column = Gtk.TreeViewColumn(column_title, renderer, text=i)
-            self.window.template_tree.append_column(column)
+        # Fill the templates list.
+        self.window.template_store.clear()
+        for template in self.templates:
+            self.window.template_store.append([template["name"]])
 
         # Bind the events.
         self.window.clear_btn.connect("clicked",
@@ -110,7 +110,13 @@ class DiceRoller(Gtk.Application):
                                     lambda x: self.edit_template())
         self.window.list_delete_btn.connect("clicked",
                                     lambda x: self.remove_template())
+        self.window.connect("delete-event", self.delete_event)
         self.window.template_tree.connect("row-activated", self.activated_event)
+
+    def delete_event(self, widget, event):
+        """Saves the restore data."""
+
+        io.save_templates(self.templates)
 
     def activated_event(self, widget, treepath, column):
         """Edits on double click."""
@@ -153,6 +159,10 @@ class DiceRoller(Gtk.Application):
         try:
             count = int(count_ent.get_text())
         except ValueError:
+            self.window.add_error(count_ent)
+            valid = False
+
+        if count < 1:
             self.window.add_error(count_ent)
             valid = False
 

@@ -4,12 +4,12 @@
 ################################################################################
 #
 # resources/launch.py
-# This file defines functions for loading data.
+# This file defines functions for loading application data.
 #
 ################################################################################
 
 
-# Import json for loading the data files.
+# Import necessary modules.
 import json
 import sys
 

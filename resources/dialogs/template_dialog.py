@@ -125,7 +125,7 @@ class TemplateDialog(Gtk.Dialog):
         self.desc_ent = Gtk.Entry()
         self.desc_ent.set_hexpand(True)
         self.desc_ent.set_margin_right(5)
-        self.add_btn = Gtk.Button("Add Roll")
+        self.add_btn = Gtk.Button("  Add Roll  ")
         desc_box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL)
         desc_box.pack_start(desc_lbl, False, False, 0)
         desc_box.pack_start(self.desc_ent, True, True, 0)
@@ -277,6 +277,15 @@ class TemplateDialog(Gtk.Dialog):
             min_value = int(min_value)
         except ValueError:
             self.add_error(self.min_ent)
+            valid = False
+        if count < 1:
+            self.add_error(self.count_ent)
+            valid = False
+        if die < 1:
+            self.add_error(self.die_ent)
+            valid = False
+        if crit_mod < 1:
+            self.add_error(self.crit_ent)
             valid = False
         if desc == "":
             self.add_error(self.desc_ent)
