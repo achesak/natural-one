@@ -117,7 +117,7 @@ class TemplateDialog(Gtk.Dialog):
         add_grid.attach_next_to(min_box, self.crit_no_apply_rbtn, Gtk.PositionType.BOTTOM, 7, 1)
 
         # Create the description row.
-        desc_lbl = Gtk.Label("Description: ")
+        desc_lbl = Gtk.Label("Name: ")
         desc_lbl.set_margin_right(5)
         self.desc_ent = Gtk.Entry()
         self.desc_ent.set_hexpand(True)
@@ -149,8 +149,9 @@ class TemplateDialog(Gtk.Dialog):
         self.roll_store = Gtk.ListStore(str, str, str)
         self.roll_tree = Gtk.TreeView(model=self.roll_store)
         self.roll_tree.set_headers_visible(False)
+        self.roll_tree.get_selection().set_mode(Gtk.SelectionMode.MULTIPLE)
         desc_text = Gtk.CellRendererText()
-        self.desc_col = Gtk.TreeViewColumn("Description", desc_text, text=0)
+        self.desc_col = Gtk.TreeViewColumn("Name", desc_text, text=0)
         self.desc_col.set_expand(True)
         self.roll_tree.append_column(self.desc_col)
         roll_text = Gtk.CellRendererText()
@@ -164,10 +165,10 @@ class TemplateDialog(Gtk.Dialog):
         roll_scroll_win.add(self.roll_tree)
 
         # Create the rolls buttons.
-        self.roll_edit_btn = Gtk.Button("Edit")
-        roll_grid.attach_next_to(self.roll_edit_btn, roll_scroll_win, Gtk.PositionType.BOTTOM, 1, 1)
-        self.roll_delete_btn = Gtk.Button("Delete")
-        roll_grid.attach_next_to(self.roll_delete_btn, self.roll_edit_btn, Gtk.PositionType.RIGHT, 1, 1)
+        self.edit_btn = Gtk.Button("Edit")
+        roll_grid.attach_next_to(self.edit_btn, roll_scroll_win, Gtk.PositionType.BOTTOM, 1, 1)
+        self.delete_btn = Gtk.Button("Delete")
+        roll_grid.attach_next_to(self.delete_btn, self.edit_btn, Gtk.PositionType.RIGHT, 1, 1)
 
         # Create the CSS provider.
         self.style_provider = Gtk.CssProvider()
@@ -183,6 +184,7 @@ class TemplateDialog(Gtk.Dialog):
 
         # Bind the events.
         self.add_btn.connect("clicked", lambda x: self.add_roll())
+        self.delete_btn.connect("clicked", lambda x: self.remove_roll())
 
         # Show the dialog.
         self.show_all()
@@ -198,6 +200,18 @@ class TemplateDialog(Gtk.Dialog):
         """Removes the error class from a widget."""
 
         widget.get_style_context().remove_class("bad-input")
+
+    def update_list(self):
+        """Updates the list."""
+
+        self.roll_store.clear()
+        for item in self.rolls:
+            row = [item["description"], "%dd%d+%d" % (item["count"], item["die"], item["mod"])]
+            if item["crit_active"]:
+                row.append("x%d" % item["crit_mod"])
+            else:
+                row.append("N/A")
+            self.roll_store.append(row)
 
     def add_roll(self):
         """Adds a roll."""
@@ -265,15 +279,33 @@ class TemplateDialog(Gtk.Dialog):
             "crit_mod": crit_mod,
             "min_value": min_value
         }
-        self.rolls.append(roll)
+        add_as_new = True
+        for i in range(0, len(self.rolls)):
+            if self.rolls[i]["description"] == desc:
+                self.rolls[i] = roll
+                add_as_new = False
+        if add_as_new:
+            self.rolls.append(roll)
 
         # Update the list.
-        self.roll_store.clear()
-        for item in self.rolls:
-            row = [item["description"], "%dd%d+%d" % (item["count"], item["die"], item["mod"])]
-            if item["crit_active"]:
-                row.append("x%d" % item["crit_mod"])
-            else:
-                row.append("N/A")
-            self.roll_store.append(row)
+        self.update_list()
 
+    def remove_roll(self):
+        """Removes a roll."""
+
+        # Get the selected indices.
+        model, treeiter = self.roll_tree.get_selection().get_selected_rows()
+        indices = []
+        for i in treeiter:
+            indices.append(int(str(i)))
+
+        # Don't continue if nothing was selected.
+        if len(indices) == 0:
+            return
+
+        # Remove the data.
+        for index in reversed(indices):
+            del self.rolls[index]
+
+        # Update the list.
+        self.update_list()
