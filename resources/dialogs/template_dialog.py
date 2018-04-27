@@ -16,10 +16,13 @@ from gi.repository import Gtk, Gdk
 class TemplateDialog(Gtk.Dialog):
     """Shows the template dialog."""
 
-    def __init__(self, parent, subtitle):
+    def __init__(self, parent, subtitle, name=None, rolls=None):
         """Creates the dialog."""
 
-        self.rolls = []
+        if rolls is None:
+            rolls = []
+        self.rolls = rolls
+        self.name = name
 
         Gtk.Dialog.__init__(self, "Template", parent, Gtk.DialogFlags.MODAL, use_header_bar=True)
         self.set_size_request(600, 800)
@@ -187,6 +190,11 @@ class TemplateDialog(Gtk.Dialog):
         self.edit_btn.connect("clicked", lambda x: self.edit_roll())
         self.delete_btn.connect("clicked", lambda x: self.remove_roll())
         self.roll_tree.connect("row-activated", self.activated_event)
+
+        # Enter the default values.
+        if self.name is not None:
+            self.name_ent.set_text(self.name)
+        self.update_list()
 
         # Show the dialog.
         self.show_all()

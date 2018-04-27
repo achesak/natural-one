@@ -49,6 +49,7 @@ class DiceRoller(Gtk.Application):
         Gtk.Application.do_startup(self)
 
         # Load the application data.
+        self.templates = []
         self.weapon_data = launch.get_weapon_data()["weapons"]
 
     def do_activate(self):
@@ -105,6 +106,18 @@ class DiceRoller(Gtk.Application):
                                     lambda x: self.roll_dmg())
         self.window.new_btn.connect("clicked",
                                     lambda x: self.new_template())
+        self.window.list_edit_btn.connect("clicked",
+                                    lambda x: self.edit_template())
+        self.window.list_delete_btn.connect("clicked",
+                                    lambda x: self.remove_template())
+        self.window.template_tree.connect("row-activated", self.activated_event)
+
+    def activated_event(self, widget, treepath, column):
+        """Edits on double click."""
+
+        tree_sel = self.window.template_tree.get_selection()
+        tm, ti = tree_sel.get_selected()
+        self.edit_template(ti)
 
     def roll_custom(self):
         """Roll for custom dice."""
@@ -298,7 +311,76 @@ class DiceRoller(Gtk.Application):
 
         dlg = TemplateDialog(self.window, "Create New Template")
         response = dlg.run()
+        name = dlg.name_ent.get_text().strip()
+        rolls = dlg.rolls
         dlg.destroy()
+
+        if response != Gtk.ResponseType.OK or name == "" or len(rolls) == 0:
+            return
+
+        template = {
+            "name": name,
+            "rolls": rolls
+        }
+        self.templates.append(template)
+
+        self.window.template_store.clear()
+        for template in self.templates:
+            self.window.template_store.append([template["name"]])
+
+    def edit_template(self, index=None):
+        """Edits a template."""
+
+        # Get the selected index.
+        if index is None:
+            model, treeiter = self.window.template_tree.get_selection().get_selected_rows()
+            index = -1
+            for i in treeiter:
+                index = int(str(i))
+
+        # Don't continue if nothing was selected.
+        if index == -1:
+            return
+
+        template = self.templates[index]
+        dlg = TemplateDialog(self.window, template["name"], template["name"], template["rolls"])
+        response = dlg.run()
+        name = dlg.name_ent.get_text().strip()
+        rolls = dlg.rolls
+        dlg.destroy()
+
+        if response != Gtk.ResponseType.OK or name == "" or len(rolls) == 0:
+            return
+
+        new_template = {
+            "name": name,
+            "rolls": rolls
+        }
+        self.templates[index] = new_template
+
+        self.window.template_store.clear()
+        for template in self.templates:
+            self.window.template_store.append([template["name"]])
+
+    def remove_template(self):
+        """Removes a template."""
+
+        # Get the selected indices.
+        model, treeiter = self.window.template_tree.get_selection().get_selected_rows()
+        indices = []
+        for i in treeiter:
+            indices.append(int(str(i)))
+
+        # Don't continue if nothing was selected.
+        if len(indices) == 0:
+            return
+
+        for index in reversed(indices):
+            del self.templates[index]
+
+        self.window.template_store.clear()
+        for template in self.templates:
+            self.window.template_store.append([template["name"]])
 
 
 # Show the window and start the application.
