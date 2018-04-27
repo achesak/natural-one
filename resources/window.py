@@ -22,7 +22,7 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         super(Gtk.ApplicationWindow, self).__init__(*args, **kwargs)
 
         # Create the window.
-        self.set_icon_from_file("resources/images/icon.png")
+        self.set_icon_from_file("resources/images/icon128.png")
         self.set_size_request(900, -1)
 
         # Create the header bar.

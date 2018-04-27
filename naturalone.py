@@ -4,7 +4,7 @@
 
 ################################################################################
 #
-# Pathfinder Dice Roller
+# Natural One
 # Version 0.1
 #
 # A simple dice roller application for the Pathfinder roll playing game.
@@ -33,6 +33,26 @@ from resources.window import DiceRollerWindow
 
 # Import dialogs.
 from resources.dialogs.template_dialog import TemplateDialog
+from resources.dialogs.about_dialog import NaturalOneAboutDialog
+
+MENU_DATA = """<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+    <menu id="app-menu">
+        <section>
+            <item>
+                <attribute name="action">app.about</attribute>
+                <attribute name="label" translatable="yes">_About</attribute>
+            </item>
+        </section>
+        <section>
+            <item>
+                <attribute name="action">app.quit</attribute>
+                <attribute name="label" translatable="yes">_Quit</attribute>
+                <attribute name="accel">&lt;Primary&gt;q</attribute>
+            </item>
+        </section>
+    </menu>
+</interface>"""
 
 
 class DiceRoller(Gtk.Application):
@@ -53,12 +73,23 @@ class DiceRoller(Gtk.Application):
         self.templates = io.load_templates()
         self.weapon_data = launch.get_weapon_data()["weapons"]
 
+        # Build the app menu.
+        action = Gio.SimpleAction.new("about", None)
+        action.connect("activate", lambda x, y: self.about())
+        self.add_action(action)
+        action = Gio.SimpleAction.new("quit", None)
+        action.connect("activate", lambda x, y: self.quit())
+        self.add_action(action)
+
+        builder = Gtk.Builder.new_from_string(MENU_DATA, -1)
+        self.set_app_menu(builder.get_object("app-menu"))
+
     def do_activate(self):
         """Application activate."""
 
         if not self.window:
             self.window = DiceRollerWindow(application=self, title="Natural One")
-            self.window.set_wmclass("Pathfinder Dice Roller", "Natural One")
+            self.window.set_wmclass("Natural One", "Natural One")
 
         self.setup_interface()
 
@@ -112,13 +143,7 @@ class DiceRoller(Gtk.Application):
                                     lambda x: self.remove_template())
         self.window.list_roll_btn.connect("clicked",
                                     lambda x: self.roll_template())
-        self.window.connect("delete-event", self.delete_event)
         self.window.template_tree.connect("row-activated", self.activated_event)
-
-    def delete_event(self, widget, event):
-        """Saves the restore data."""
-
-        io.save_templates(self.templates)
 
     def activated_event(self, widget, treepath, column):
         """Edits on double click."""
@@ -341,6 +366,8 @@ class DiceRoller(Gtk.Application):
         }
         self.templates.append(template)
 
+        io.save_templates(self.templates)
+
         self.window.template_store.clear()
         for template in self.templates:
             self.window.template_store.append([template["name"]])
@@ -373,6 +400,8 @@ class DiceRoller(Gtk.Application):
             "rolls": rolls
         }
         self.templates[index] = new_template
+
+        io.save_templates(self.templates)
 
         self.window.template_store.clear()
         for template in self.templates:
@@ -418,6 +447,28 @@ class DiceRoller(Gtk.Application):
         total, rolls = roller.template(template, crit_attack)
         output = format.template(template, rolls, crit_attack, total)
         self.window.update_output(output)
+
+    def about(self):
+        """Shows the About dialog."""
+
+        # Load the icon.
+        img_file = open("resources/images/icon256.png", "rb")
+        img_bin = img_file.read()
+        img_file.close()
+        loader = GdkPixbuf.PixbufLoader.new_with_type("png")
+        loader.write(img_bin)
+        loader.close()
+        pixbuf = loader.get_pixbuf()
+
+        # Read the license
+        license_file = open("LICENSE.md", "r")
+        license_text = license_file.read()
+        license_file.close()
+
+        # Show the dialog.
+        about_dlg = NaturalOneAboutDialog(self.window, "Natural One", "0.1", pixbuf, license_text)
+        about_dlg.run()
+        about_dlg.destroy()
 
 
 # Show the window and start the application.
