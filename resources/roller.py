@@ -64,7 +64,35 @@ def dmg(num_atks, mods, weapon, count, die, crit_attack):
                                                          mods[i], sum(output) + mods[i]))
         total += sum(output) + mods[i]
 
-    if crit_attack:
-        total *= weapon["critm"]
+    return total, rolls
+
+
+def template(template, crit_attack):
+    """Rolls a template."""
+
+    rolls = []
+    total = 0
+    for item in template["rolls"]:
+        roll_item = {
+            "description": item["description"],
+            "rolls": [],
+            "total": 0,
+            "item": item
+        }
+        count = item["count"]
+        if crit_attack and item["crit_active"]:
+            count *= item["crit_mod"]
+        for _ in range(0, count):
+            roll = random.randint(1, item["die"])
+            roll_item["rolls"].append(roll)
+            if item["mod_every"]:
+                roll += item["mod"]
+            roll = max(roll, item["min_value"])
+            roll_item["total"] += roll
+        if not item["mod_every"]:
+            roll_item["total"] += item["mod"]
+            roll_item["total"] = max(roll_item["total"], item["min_value"])
+        rolls.append(roll_item)
+        total += roll_item["total"]
 
     return total, rolls

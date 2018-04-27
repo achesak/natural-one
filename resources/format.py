@@ -42,3 +42,20 @@ def dmg(num_atks, mods, weapon, crit_attack, count, die, rolls, total):
         output += "<i>Multiplied by %dx due to critical hit</i>" % weapon["critm"]
 
     return output
+
+
+def template(template, rolls, crit_attack, total):
+    """Builds the output for the template rolls."""
+
+    output = "<b>Rolled template \"%s\": <i>%d</i></b>\n" % (template["name"], total)
+    for roll in rolls:
+        item = roll["item"]
+        output += "<i>Rolled \"%s\": %d</i>\n" % (item["description"], roll["total"])
+        if not item["mod_every"]:
+            output += ", ".join([str(x) for x in roll["rolls"]])
+        else:
+            output += ", ".join(["%d+%d (%d)" % (x, item["mod"], x + item["mod"]) for x in roll["rolls"]])
+        output += "\n"
+    if crit_attack:
+        output += "<i>Criticals applied</i>"
+    return output

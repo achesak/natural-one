@@ -57,8 +57,8 @@ class DiceRoller(Gtk.Application):
         """Application activate."""
 
         if not self.window:
-            self.window = DiceRollerWindow(application=self, title="NaturalOne")
-            self.window.set_wmclass("Pathfinder Dice Roller", "NaturalOne")
+            self.window = DiceRollerWindow(application=self, title="Natural One")
+            self.window.set_wmclass("Pathfinder Dice Roller", "Natural One")
 
         self.setup_interface()
 
@@ -110,6 +110,8 @@ class DiceRoller(Gtk.Application):
                                     lambda x: self.edit_template())
         self.window.list_delete_btn.connect("clicked",
                                     lambda x: self.remove_template())
+        self.window.list_roll_btn.connect("clicked",
+                                    lambda x: self.roll_template())
         self.window.connect("delete-event", self.delete_event)
         self.window.template_tree.connect("row-activated", self.activated_event)
 
@@ -123,7 +125,7 @@ class DiceRoller(Gtk.Application):
 
         tree_sel = self.window.template_tree.get_selection()
         tm, ti = tree_sel.get_selected()
-        self.edit_template(ti)
+        self.roll_template(ti)
 
     def roll_custom(self):
         """Roll for custom dice."""
@@ -166,6 +168,7 @@ class DiceRoller(Gtk.Application):
             self.window.add_error(count_ent)
             valid = False
 
+        min_value = -1
         try:
             min_value = int(self.window.min_ent.get_text())
         except ValueError:
@@ -269,6 +272,9 @@ class DiceRoller(Gtk.Application):
         if selected_iter is None or weapon_index == -1:
             self.window.add_error(self.window.weap_dam_cbox)
             valid = False
+        weapon = self.weapon_data[weapon_index]
+
+        crit_attack = self.window.crit_dam_chk.get_active()
 
         # Check validity of the entries.
         num_atks = -1
@@ -281,6 +287,9 @@ class DiceRoller(Gtk.Application):
         if num_atks < 1:
             self.window.add_error(self.window.num_dam_ent)
             valid = False
+
+        if crit_attack:
+            num_atks *= weapon["critm"]
 
         mods = []
         try:
@@ -306,12 +315,10 @@ class DiceRoller(Gtk.Application):
         else:
             die = "dmgm"
             count = "countm"
-        crit_attack = self.window.crit_dam_chk.get_active()
 
         if not valid:
             return
 
-        weapon = self.weapon_data[weapon_index]
         total, rolls = roller.dmg(num_atks, mods, weapon, count, die, crit_attack)
         output = format.dmg(num_atks, mods, weapon, crit_attack, weapon[count], weapon[die], rolls, total)
         self.window.update_output(output)
@@ -338,15 +345,14 @@ class DiceRoller(Gtk.Application):
         for template in self.templates:
             self.window.template_store.append([template["name"]])
 
-    def edit_template(self, index=None):
+    def edit_template(self):
         """Edits a template."""
 
         # Get the selected index.
-        if index is None:
-            model, treeiter = self.window.template_tree.get_selection().get_selected_rows()
-            index = -1
-            for i in treeiter:
-                index = int(str(i))
+        model, treeiter = self.window.template_tree.get_selection().get_selected_rows()
+        index = -1
+        for i in treeiter:
+            index = int(str(i))
 
         # Don't continue if nothing was selected.
         if index == -1:
@@ -391,6 +397,27 @@ class DiceRoller(Gtk.Application):
         self.window.template_store.clear()
         for template in self.templates:
             self.window.template_store.append([template["name"]])
+
+    def roll_template(self, index=None):
+        """Rolls a template."""
+
+        # Get the selected index.
+        if index is None:
+            model, treeiter = self.window.template_tree.get_selection().get_selected_rows()
+            index = -1
+            for i in treeiter:
+                index = int(str(i))
+
+        # Don't continue if nothing was selected.
+        if index == -1:
+            return
+
+        template = self.templates[index]
+        crit_attack = self.window.list_crit_chk.get_active()
+
+        total, rolls = roller.template(template, crit_attack)
+        output = format.template(template, rolls, crit_attack, total)
+        self.window.update_output(output)
 
 
 # Show the window and start the application.
