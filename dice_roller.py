@@ -55,8 +55,8 @@ class DiceRoller(Gtk.Application):
         """Application activate."""
 
         if not self.window:
-            self.window = DiceRollerWindow(application=self, title="Pathfinder Dice Roller")
-            self.window.set_wmclass("Pathfinder Dice Roller", "Pathfinder Dice Roller")
+            self.window = DiceRollerWindow(application=self, title="NaturalOne")
+            self.window.set_wmclass("Pathfinder Dice Roller", "NaturalOne")
 
         self.setup_interface()
 
@@ -115,6 +115,7 @@ class DiceRoller(Gtk.Application):
         try:
             die = int(self.window.dq_size_ent.get_text())
         except ValueError:
+            die = 0
             self.window.add_error(self.window.dq_size_ent)
             valid = False
         

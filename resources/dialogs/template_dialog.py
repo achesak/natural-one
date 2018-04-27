@@ -10,7 +10,7 @@
 
 
 # Import GTK for the dialog.
-from gi.repository import Gtk
+from gi.repository import Gtk, Gdk
 
 
 class TemplateDialog(Gtk.Dialog):
@@ -18,6 +18,8 @@ class TemplateDialog(Gtk.Dialog):
 
     def __init__(self, parent, subtitle):
         """Creates the dialog."""
+
+        self.rolls = []
 
         Gtk.Dialog.__init__(self, "Template", parent, Gtk.DialogFlags.MODAL, use_header_bar=True)
         self.set_size_request(600, 800)
@@ -83,6 +85,7 @@ class TemplateDialog(Gtk.Dialog):
         self.mod_ent.set_width_chars(4)
         add_grid.attach_next_to(self.mod_ent, p_lbl, Gtk.PositionType.RIGHT, 1, 1)
         self.mod_chk = Gtk.CheckButton("Add modifier to every roll")
+        self.mod_chk.set_active(True)
         self.mod_chk.set_margin_left(15)
         add_grid.attach_next_to(self.mod_chk, self.mod_ent, Gtk.PositionType.RIGHT, 2, 1)
 
@@ -102,6 +105,17 @@ class TemplateDialog(Gtk.Dialog):
         add_grid.attach_next_to(crit_box, self.crit_apply_rbtn, Gtk.PositionType.BOTTOM, 7, 1)
         add_grid.attach_next_to(self.crit_no_apply_rbtn, crit_box, Gtk.PositionType.BOTTOM, 7, 1)
 
+        # Create the minimum value row.
+        min_lbl = Gtk.Label("Minimum value: ")
+        min_lbl.set_margin_right(5)
+        self.min_ent = Gtk.Entry()
+        self.min_ent.set_text("0")
+        self.min_ent.set_hexpand(True)
+        min_box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL)
+        min_box.pack_start(min_lbl, False, False, 0)
+        min_box.pack_start(self.min_ent, True, True, 0)
+        add_grid.attach_next_to(min_box, self.crit_no_apply_rbtn, Gtk.PositionType.BOTTOM, 7, 1)
+
         # Create the description row.
         desc_lbl = Gtk.Label("Description: ")
         desc_lbl.set_margin_right(5)
@@ -113,7 +127,7 @@ class TemplateDialog(Gtk.Dialog):
         desc_box.pack_start(desc_lbl, False, False, 0)
         desc_box.pack_start(self.desc_ent, True, True, 0)
         desc_box.pack_start(self.add_btn, False, False, 0)
-        add_grid.attach_next_to(desc_box, self.crit_no_apply_rbtn, Gtk.PositionType.BOTTOM, 7, 1)
+        add_grid.attach_next_to(desc_box, min_box, Gtk.PositionType.BOTTOM, 7, 1)
 
         # Create the rolls grid.
         roll_grid = Gtk.Grid()
@@ -125,22 +139,141 @@ class TemplateDialog(Gtk.Dialog):
         roll_lbl = Gtk.Label()
         roll_lbl.set_markup("<span size=\"x-large\">Rolls</span>")
         roll_lbl.set_alignment(0, 0.5)
-        roll_grid.attach_next_to(roll_lbl, None, Gtk.PositionType.RIGHT, 1, 1)
+        roll_grid.attach_next_to(roll_lbl, None, Gtk.PositionType.RIGHT, 2, 1)
 
         # Create the rolls list.
         roll_scroll_win = Gtk.ScrolledWindow()
         roll_scroll_win.set_hexpand(True)
         roll_scroll_win.set_vexpand(True)
-        roll_grid.attach_next_to(roll_scroll_win, roll_lbl, Gtk.PositionType.BOTTOM, 1, 1)
-        self.roll_store = Gtk.ListStore(str)
+        roll_grid.attach_next_to(roll_scroll_win, roll_lbl, Gtk.PositionType.BOTTOM, 2, 1)
+        self.roll_store = Gtk.ListStore(str, str, str)
         self.roll_tree = Gtk.TreeView(model=self.roll_store)
         self.roll_tree.set_headers_visible(False)
+        desc_text = Gtk.CellRendererText()
+        self.desc_col = Gtk.TreeViewColumn("Description", desc_text, text=0)
+        self.desc_col.set_expand(True)
+        self.roll_tree.append_column(self.desc_col)
+        roll_text = Gtk.CellRendererText()
+        self.roll_col = Gtk.TreeViewColumn("Roll", roll_text, text=1)
+        self.roll_col.set_expand(True)
+        self.roll_tree.append_column(self.roll_col)
+        crit_text = Gtk.CellRendererText()
+        self.crit_col = Gtk.TreeViewColumn("Critical", crit_text, text=2)
+        self.crit_col.set_expand(True)
+        self.roll_tree.append_column(self.crit_col)
         roll_scroll_win.add(self.roll_tree)
+
+        # Create the rolls buttons.
+        self.roll_edit_btn = Gtk.Button("Edit")
+        roll_grid.attach_next_to(self.roll_edit_btn, roll_scroll_win, Gtk.PositionType.BOTTOM, 1, 1)
+        self.roll_delete_btn = Gtk.Button("Delete")
+        roll_grid.attach_next_to(self.roll_delete_btn, self.roll_edit_btn, Gtk.PositionType.RIGHT, 1, 1)
+
+        # Create the CSS provider.
+        self.style_provider = Gtk.CssProvider()
+        self.style_context = Gtk.StyleContext()
+        self.style_context.add_provider_for_screen(Gdk.Screen.get_default(), self.style_provider,
+                                                   Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION)
+        self.style_provider.load_from_data(".bad-input {background-color: red}")
 
         # Connect 'Enter' key to the Save button.
         save_btn = self.get_widget_for_response(response_id=Gtk.ResponseType.OK)
         save_btn.set_can_default(True)
         save_btn.grab_default()
 
+        # Bind the events.
+        self.add_btn.connect("clicked", lambda x: self.add_roll())
+
         # Show the dialog.
         self.show_all()
+
+    @staticmethod
+    def add_error(widget):
+        """Adds the error class to a widget."""
+
+        widget.get_style_context().add_class("bad-input")
+
+    @staticmethod
+    def remove_error(widget):
+        """Removes the error class from a widget."""
+
+        widget.get_style_context().remove_class("bad-input")
+
+    def add_roll(self):
+        """Adds a roll."""
+
+        self.remove_error(self.count_ent)
+        self.remove_error(self.die_ent)
+        self.remove_error(self.mod_ent)
+        self.remove_error(self.crit_ent)
+        self.remove_error(self.min_ent)
+        self.remove_error(self.desc_ent)
+
+        # Get the roll data.
+        count = self.count_ent.get_text()
+        die = self.die_ent.get_text()
+        mod = self.mod_ent.get_text()
+        mod_every = self.mod_chk.get_active()
+        crit_mod = self.crit_ent.get_text()
+        crit_active = self.crit_apply_rbtn.get_active()
+        min_value = self.min_ent.get_text()
+        desc = self.desc_ent.get_text().strip()
+
+        # Check validity.
+        valid = True
+        try:
+            count = int(count)
+        except ValueError:
+            self.add_error(self.count_ent)
+            valid = False
+        try:
+            die = int(die)
+        except ValueError:
+            self.add_error(self.die_ent)
+            valid = False
+        try:
+            mod = int(mod)
+        except ValueError:
+            self.add_error(self.mod_ent)
+            valid = False
+        if crit_active:
+            try:
+                crit_mod = int(crit_mod)
+            except ValueError:
+                self.add_error(self.crit_ent)
+                valid = False
+        try:
+            min_value = int(min_value)
+        except ValueError:
+            self.add_error(self.min_ent)
+            valid = False
+        if desc == "":
+            self.add_error(self.desc_ent)
+            valid = False
+
+        if not valid:
+            return
+
+        # Add the data.
+        roll = {
+            "description": desc,
+            "count": count,
+            "die": die,
+            "mod": mod,
+            "mod_every": mod_every,
+            "crit_active": crit_active,
+            "crit_mod": crit_mod,
+            "min_value": min_value
+        }
+        self.rolls.append(roll)
+
+        # Update the list.
+        self.roll_store.clear()
+        for item in self.rolls:
+            row = [item["description"], "%dd%d+%d" % (item["count"], item["die"], item["mod"])]
+            if item["crit_active"]:
+                row.append("x%d" % item["crit_mod"])
+            else:
+                row.append("N/A")
+            self.roll_store.append(row)
+
