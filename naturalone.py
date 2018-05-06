@@ -27,6 +27,7 @@ import resources.launch as launch
 import resources.io as io
 import resources.format as format
 import resources.roller as roller
+import resources.utility as utility
 
 # Import UI classes.
 from resources.window import DiceRollerWindow
@@ -252,14 +253,7 @@ class DiceRoller(Gtk.Application):
             self.window.add_error(self.window.mod_atks_ent)
             valid = False
 
-        if num_atks > 1 and len(mods) == 1:
-            mod_value = mods[0]
-            mods = [mod_value for _ in range(0, num_atks)]
-
-        if len(mods) != num_atks:
-            self.window.add_error(self.window.num_atks_ent)
-            self.window.add_error(self.window.mod_atks_ent)
-            valid = False
+        mods = utility.expand_mod(mods, num_atks, False)
 
         try:
             crit_range = int(self.window.crit_atks_ent.get_text())
@@ -313,9 +307,6 @@ class DiceRoller(Gtk.Application):
             self.window.add_error(self.window.num_dam_ent)
             valid = False
 
-        if crit_attack:
-            num_atks *= weapon["critm"]
-
         mods = []
         try:
             mods = self.window.mod_dam_ent.get_text().split(",")
@@ -325,14 +316,7 @@ class DiceRoller(Gtk.Application):
             self.window.add_error(self.window.mod_dam_ent)
             valid = False
 
-        if num_atks > 1 and len(mods) == 1:
-            mod_value = mods[0]
-            mods = [mod_value for _ in range(0, num_atks)]
-
-        if len(mods) != num_atks:
-            self.window.add_error(self.window.num_dam_ent)
-            self.window.add_error(self.window.mod_dam_ent)
-            valid = False
+        mods = utility.expand_mod(mods, num_atks, crit_attack)
 
         if self.window.small_dam_rbtn.get_active():
             die = "dmgs"
