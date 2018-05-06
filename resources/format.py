@@ -58,4 +58,6 @@ def template(template, rolls, crit_attack, total):
         output += "\n"
     if crit_attack:
         output += "<i>Criticals applied</i>"
+    if output.endswith("\n"):
+        output = output[:-1]
     return output
