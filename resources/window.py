@@ -319,6 +319,15 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         self.mod_dam_ent.set_text("0")
         dam_grid.attach_next_to(self.mod_dam_ent, mod_dam_lbl, Gtk.PositionType.RIGHT, 2, 1)
 
+        # Create the minimum value row.
+        min_dam_lbl = Gtk.Label("Minimum value: ")
+        min_dam_lbl.set_alignment(0, 0.5)
+        dam_grid.attach_next_to(min_dam_lbl, mod_dam_lbl, Gtk.PositionType.BOTTOM, 1, 1)
+        self.min_dam_ent = Gtk.Entry()
+        self.min_dam_ent.set_hexpand(True)
+        self.min_dam_ent.set_text("0")
+        dam_grid.attach_next_to(self.min_dam_ent, min_dam_lbl, Gtk.PositionType.RIGHT, 2, 1)
+
         # Create the size row.
         size_dam_grid = Gtk.Grid()
         size_dam_grid.set_column_spacing(15)
@@ -327,7 +336,7 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         self.med_dam_rbtn.set_active(True)
         size_dam_grid.add(self.small_dam_rbtn)
         size_dam_grid.attach_next_to(self.med_dam_rbtn, self.small_dam_rbtn, Gtk.PositionType.RIGHT, 1, 1)
-        dam_grid.attach_next_to(size_dam_grid, mod_dam_lbl, Gtk.PositionType.BOTTOM, 4, 1)
+        dam_grid.attach_next_to(size_dam_grid, min_dam_lbl, Gtk.PositionType.BOTTOM, 4, 1)
 
         # Create the critical row.
         self.crit_dam_chk = Gtk.CheckButton("Critical hit")

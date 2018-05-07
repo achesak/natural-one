@@ -282,6 +282,7 @@ class DiceRoller(Gtk.Application):
         self.window.remove_error(self.window.weap_dam_cbox)
         self.window.remove_error(self.window.num_dam_ent)
         self.window.remove_error(self.window.mod_dam_ent)
+        self.window.remove_error(self.window.min_dam_ent)
 
         # Check validity of the entries.
         weapon_index, weapon_name = -1, ""
@@ -295,7 +296,6 @@ class DiceRoller(Gtk.Application):
 
         crit_attack = self.window.crit_dam_chk.get_active()
 
-        # Check validity of the entries.
         num_atks = -1
         try:
             num_atks = int(self.window.num_dam_ent.get_text())
@@ -305,6 +305,13 @@ class DiceRoller(Gtk.Application):
 
         if num_atks < 1:
             self.window.add_error(self.window.num_dam_ent)
+            valid = False
+
+        min_value = -1
+        try:
+            min_value = int(self.window.min_dam_ent.get_text())
+        except ValueError:
+            self.window.add_error(self.window.min_dam_ent)
             valid = False
 
         mods = []
@@ -328,7 +335,7 @@ class DiceRoller(Gtk.Application):
         if not valid:
             return
 
-        total, rolls = roller.dmg(num_atks, mods, weapon, count, die, crit_attack)
+        total, rolls = roller.dmg(num_atks, mods, weapon, count, die, crit_attack, min_value)
         output = format.dmg(num_atks, mods, weapon, crit_attack, weapon[count], weapon[die], rolls, total)
         self.window.update_output(output)
 
