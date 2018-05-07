@@ -242,6 +242,7 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         atk_grid.attach_next_to(mod_atks_lbl, num_atks_lbl, Gtk.PositionType.BOTTOM, 1, 1)
         self.mod_atks_ent = Gtk.Entry()
         self.mod_atks_ent.set_hexpand(True)
+        self.mod_atks_ent.set_text("0")
         atk_grid.attach_next_to(self.mod_atks_ent, mod_atks_lbl, Gtk.PositionType.RIGHT, 3, 1)
 
         # Create the critical range row.
@@ -277,10 +278,20 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         dam_lbl.set_alignment(0, 0.5)
         dam_grid.add(dam_lbl)
 
+        # Create the system row.
+        sys_dam_lbl = Gtk.Label("System: ")
+        sys_dam_lbl.set_alignment(0, 0.5)
+        dam_grid.attach_next_to(sys_dam_lbl, dam_lbl, Gtk.PositionType.BOTTOM, 1, 1)
+        self.sys_dam_cbox = Gtk.ComboBoxText.new()
+        for system in ["Pathfinder"]:
+            self.sys_dam_cbox.append_text(system)
+        self.sys_dam_cbox.set_active(0)
+        dam_grid.attach_next_to(self.sys_dam_cbox, sys_dam_lbl, Gtk.PositionType.RIGHT, 2, 1)
+
         # Create the weapon row.
         weap_dam_lbl = Gtk.Label("Weapon: ")
         weap_dam_lbl.set_alignment(0, 0.5)
-        dam_grid.attach_next_to(weap_dam_lbl, dam_lbl, Gtk.PositionType.BOTTOM, 1, 1)
+        dam_grid.attach_next_to(weap_dam_lbl, sys_dam_lbl, Gtk.PositionType.BOTTOM, 1, 1)
         self.weap_dam_store = Gtk.ListStore(int, str)
         self.weap_dam_cbox = Gtk.ComboBox.new_with_model(self.weap_dam_store)
         self.weap_dam_cbox.set_entry_text_column(0)
@@ -305,6 +316,7 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         dam_grid.attach_next_to(mod_dam_lbl, num_dam_lbl, Gtk.PositionType.BOTTOM, 1, 1)
         self.mod_dam_ent = Gtk.Entry()
         self.mod_dam_ent.set_hexpand(True)
+        self.mod_dam_ent.set_text("0")
         dam_grid.attach_next_to(self.mod_dam_ent, mod_dam_lbl, Gtk.PositionType.RIGHT, 2, 1)
 
         # Create the size row.
