@@ -12,7 +12,7 @@
 def basic(count, die, mod_each, mod_once, rolls, total):
     """Builds the output for a standard dice roll."""
 
-    output = "<b>Rolled %dd%d+%d: <i>%d</i></b>\n" % (count, die, max(mod_each, mod_once), total)
+    output = "<span size=\"larger\"><b>Rolled %dd%d+%d: <i>%d</i></b></span>\n" % (count, die, max(mod_each, mod_once), total)
     if not mod_each:
         output += ", ".join([str(x) for x in rolls])
     else:
@@ -24,7 +24,7 @@ def basic(count, die, mod_each, mod_once, rolls, total):
 def atk(num_atks, mods, crit_range, rolls):
     """Builds the output for attack rolls."""
 
-    output = "<b>Rolled %d attack%s</b>:\n" % (num_atks, "" if num_atks == 1 else "s")
+    output = "<span size=\"larger\"><b>Rolled %d attack%s</b>:</span>\n" % (num_atks, "" if num_atks == 1 else "s")
     output += "<i>Modifiers %s\nCritical range %d-20</i>\n" % (", ".join([str(x) for x in mods]), crit_range)
     output += "\n".join(rolls)
 
@@ -34,7 +34,7 @@ def atk(num_atks, mods, crit_range, rolls):
 def dmg(num_atks, mods, weapon, crit_attack, count, die, rolls, total):
     """Builds the output for damage rolls."""
 
-    output = "<b>Rolled %d hit%s with a %s: <i>%d damage</i></b>\n" % \
+    output = "<span size=\"larger\"><b>Rolled %d hit%s with a %s: <i>%d damage</i></b></span>\n" % \
              (num_atks, "" if num_atks == 1 else "s", weapon["name"].lower(), total)
     output += "<i>Modifiers %s\nDamage dice %dd%d</i>\n" % (", ".join([str(x) for x in mods]), count, die)
     output += "\n".join(rolls) + "\n"
@@ -47,7 +47,7 @@ def dmg(num_atks, mods, weapon, crit_attack, count, die, rolls, total):
 def template(template, rolls, crit_attack, total):
     """Builds the output for the template rolls."""
 
-    output = "<b>Rolled template \"%s\": <i>%d</i></b>\n" % (template["name"], total)
+    output = "<span size=\"larger\"><b>Rolled template \"%s\": <i>%d</i></b></span>\n" % (template["name"], total)
     for roll in rolls:
         item = roll["item"]
         output += "<i>Rolled \"%s\": %d</i>\n" % (item["description"], roll["total"])
