@@ -116,6 +116,8 @@ class DiceRoller(Gtk.Application):
                                     lambda x: self.roll_attack())
         self.window.dam_btn.connect("clicked",
                                     lambda x: self.roll_dmg())
+        self.window.weap_dam_tree.connect("row-activated",
+                                    lambda x, y, z: self.roll_dmg())
         self.window.new_btn.connect("clicked",
                                     lambda x: self.new_template())
         self.window.list_edit_btn.connect("clicked",
