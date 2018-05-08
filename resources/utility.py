@@ -29,3 +29,16 @@ def expand_mod(mods, count, crit_applied):
             extended_mods += [mod, mod]
 
         return extended_mods
+
+
+def get_weapon(weapon_data, weapon_name, section_name):
+    """Gets the weapon data."""
+
+    for section in weapon_data:
+        if section["category"] != section_name:
+            continue
+
+        for weapon in section["weapons"]:
+            if weapon["name"] == weapon_name:
+                return weapon
+    return None

@@ -72,7 +72,7 @@ class DiceRoller(Gtk.Application):
 
         # Load the application data.
         self.templates = io.load_templates()
-        self.weapon_data = launch.get_weapon_data()["weapons"]
+        self.weapon_data = launch.get_weapon_data()["data"]
 
         # Build the app menu.
         action = Gio.SimpleAction.new("about", None)
@@ -101,14 +101,10 @@ class DiceRoller(Gtk.Application):
         """Fills interface fields and sets events."""
 
         # Fill the damage roll weapon data.
-        weapons = []
         for i in range(0, len(self.weapon_data)):
-            weapons.append([i, self.weapon_data[i]["name"]])
-        weapons.sort(key=lambda x: x[1])
-        weapons.insert(0, [-1, "Choose weapon"])
-        for weapon in weapons:
-            self.window.weap_dam_store.append(weapon)
-        self.window.weap_dam_cbox.set_active(0)
+            row_iter = self.window.weap_dam_store.append(None, [self.weapon_data[i]["category"]])
+            for j in range(0, len(self.weapon_data[i]["weapons"])):
+                self.window.weap_dam_store.append(row_iter, [self.weapon_data[i]["weapons"][j]["name"]])
 
         # Fill the templates list.
         self.window.template_store.clear()
@@ -279,20 +275,30 @@ class DiceRoller(Gtk.Application):
         """Rolls damage."""
 
         valid = True
-        self.window.remove_error(self.window.weap_dam_cbox)
+        self.window.remove_error(self.window.weap_dam_tree)
         self.window.remove_error(self.window.num_dam_ent)
         self.window.remove_error(self.window.mod_dam_ent)
         self.window.remove_error(self.window.min_dam_ent)
 
         # Check validity of the entries.
-        weapon_index, weapon_name = -1, ""
-        selected_iter = self.window.weap_dam_cbox.get_active_iter()
-        if selected_iter is not None:
-            weapon_index, weapon_name = self.window.weap_dam_store[selected_iter]
-        if selected_iter is None or weapon_index == -1:
-            self.window.add_error(self.window.weap_dam_cbox)
+        # weapon_index, weapon_name = -1, ""
+        # selected_iter = self.window.weap_dam_cbox.get_active_iter()
+        # if selected_iter is not None:
+        #    weapon_index, weapon_name = self.window.weap_dam_store[selected_iter]
+        # if selected_iter is None or weapon_index == -1:
+        #    self.window.add_error(self.window.weap_dam_cbox)
+        #    valid = False
+        # weapon = self.weapon_data[weapon_index]
+
+        model, weapon_iter = self.window.weap_dam_tree.get_selection().get_selected()
+        section_iter = None
+        if weapon_iter is not None:
+            section_iter = self.window.weap_dam_store.iter_parent(weapon_iter)
+        if weapon_iter is None or section_iter is None:
+            self.window.add_error(self.window.weap_dam_tree)
             valid = False
-        weapon = self.weapon_data[weapon_index]
+        else:
+            weapon = utility.get_weapon(self.weapon_data, model[weapon_iter][0], model[section_iter][0])
 
         crit_attack = self.window.crit_dam_chk.get_active()
 
