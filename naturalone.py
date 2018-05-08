@@ -5,7 +5,7 @@
 ################################################################################
 #
 # Natural One
-# Version 0.1
+# Version 1.0
 #
 # A simple dice roller application for the Pathfinder roll playing game.
 #
@@ -449,7 +449,7 @@ class DiceRoller(Gtk.Application):
         license_file.close()
 
         # Show the dialog.
-        about_dlg = NaturalOneAboutDialog(self.window, "Natural One", "0.1", pixbuf, license_text)
+        about_dlg = NaturalOneAboutDialog(self.window, "Natural One", "1.0", pixbuf, license_text)
         about_dlg.run()
         about_dlg.destroy()
 
