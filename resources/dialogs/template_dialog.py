@@ -178,7 +178,7 @@ class TemplateDialog(Gtk.Dialog):
         self.style_context = Gtk.StyleContext()
         self.style_context.add_provider_for_screen(Gdk.Screen.get_default(), self.style_provider,
                                                    Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION)
-        self.style_provider.load_from_data(".bad-input {background-color: red}")
+        self.style_provider.load_from_data(".bad-input {background-color: red; color: white}")
 
         # Connect 'Enter' key to the Save button.
         save_btn = self.get_widget_for_response(response_id=Gtk.ResponseType.OK)

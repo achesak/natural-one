@@ -431,7 +431,7 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         self.style_context = Gtk.StyleContext()
         self.style_context.add_provider_for_screen(Gdk.Screen.get_default(), self.style_provider,
                                                    Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION)
-        self.style_provider.load_from_data(".bad-input {background-color: red}")
+        self.style_provider.load_from_data(".bad-input {background-color: red; color: white}")
 
         # Set up the stack.
         self.stack.add_titled(dice_grid, "basic", "Basic")
