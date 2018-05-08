@@ -36,25 +36,6 @@ from resources.window import DiceRollerWindow
 from resources.dialogs.template_dialog import TemplateDialog
 from resources.dialogs.about_dialog import NaturalOneAboutDialog
 
-MENU_DATA = """<?xml version="1.0" encoding="UTF-8"?>
-<interface>
-    <menu id="app-menu">
-        <section>
-            <item>
-                <attribute name="action">app.about</attribute>
-                <attribute name="label" translatable="yes">_About</attribute>
-            </item>
-        </section>
-        <section>
-            <item>
-                <attribute name="action">app.quit</attribute>
-                <attribute name="label" translatable="yes">_Quit</attribute>
-                <attribute name="accel">&lt;Primary&gt;q</attribute>
-            </item>
-        </section>
-    </menu>
-</interface>"""
-
 
 class DiceRoller(Gtk.Application):
     """Creates the dice roller application."""
@@ -71,8 +52,11 @@ class DiceRoller(Gtk.Application):
         Gtk.Application.do_startup(self)
 
         # Load the application data.
-        self.templates = io.load_templates()
+        self.menu = launch.get_menu_data()
         self.weapon_data = launch.get_weapon_data()["data"]
+
+        # Load the user data.
+        self.templates = io.load_templates()
 
         # Build the app menu.
         action = Gio.SimpleAction.new("about", None)
@@ -82,7 +66,7 @@ class DiceRoller(Gtk.Application):
         action.connect("activate", lambda x, y: self.quit())
         self.add_action(action)
 
-        builder = Gtk.Builder.new_from_string(MENU_DATA, -1)
+        builder = Gtk.Builder.new_from_string(self.menu, -1)
         self.set_app_menu(builder.get_object("app-menu"))
 
     def do_activate(self):

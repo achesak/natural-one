@@ -14,6 +14,21 @@ import json
 import sys
 
 
+def get_menu_data():
+    """Reads the menu data."""
+
+    try:
+        menu_file = open("resources/ui/menu.xml")
+        menu_data = menu_file.read()
+        menu_file.close()
+
+    except IOError as e:
+        print("get_menu_data(): Error reading menu data:\n%s" % e)
+        sys.exit()
+
+    return menu_data
+
+
 def get_weapon_data():
     """Reads and parses the weapon data."""
 
