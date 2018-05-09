@@ -94,7 +94,8 @@ class TemplateDialog(Gtk.Dialog):
 
         # Create the critical rows.
         self.crit_apply_rbtn = Gtk.RadioButton.new_with_label_from_widget(None, "Multiplied by critical hit")
-        self.crit_no_apply_rbtn = Gtk.RadioButton.new_with_label_from_widget(self.crit_apply_rbtn, "Not multiplied by critical hit")
+        self.crit_no_apply_rbtn = Gtk.RadioButton.new_with_label_from_widget(self.crit_apply_rbtn,
+                                                                             "Not multiplied by critical hit")
         self.crit_no_apply_rbtn.set_hexpand(True)
         crit_lbl = Gtk.Label("Multiplier: ")
         crit_lbl.set_margin_left(25)
@@ -189,7 +190,7 @@ class TemplateDialog(Gtk.Dialog):
         self.add_btn.connect("clicked", lambda x: self.add_roll())
         self.edit_btn.connect("clicked", lambda x: self.edit_roll())
         self.delete_btn.connect("clicked", lambda x: self.remove_roll())
-        self.roll_tree.connect("row-activated", self.activated_event)
+        self.roll_tree.connect("row-activated", lambda x, y, z: self.activated_event())
 
         # Enter the default values.
         if self.name is not None:
@@ -199,7 +200,7 @@ class TemplateDialog(Gtk.Dialog):
         # Show the dialog.
         self.show_all()
 
-    def activated_event(self, widget, treepath, column):
+    def activated_event(self):
         """Edits on double click."""
 
         tree_sel = self.roll_tree.get_selection()

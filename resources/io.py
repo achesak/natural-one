@@ -24,7 +24,6 @@ def get_main_dir():
     # Linux:
     # * Data: /home/[username]/.share/local/naturalone
     # OSX: probably the same as Linux?
-    path = None
     if platform.system().lower() == "windows":
         path = os.environ["LOCALAPPDATA"] + "\\naturalone"
     else:
@@ -70,4 +69,3 @@ def save_templates(templates):
 
     except IOError:
         print("IOError saving templates")
-

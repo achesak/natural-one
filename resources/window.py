@@ -200,7 +200,7 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         dice_grid.attach_next_to(min_lbl, dq_img, Gtk.PositionType.BOTTOM, 2, 1)
         self.min_ent = Gtk.Entry()
         self.min_ent.set_text("0")
-        dice_grid.attach_next_to(self.min_ent, min_lbl, Gtk.PositionType.RIGHT, 4, 1);
+        dice_grid.attach_next_to(self.min_ent, min_lbl, Gtk.PositionType.RIGHT, 4, 1)
 
         # Create the modifier check box.
         self.dice_mod_chk = Gtk.CheckButton("Add modifier to every roll")
@@ -438,12 +438,14 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         self.stack.add_titled(combat_grid, "combat", "Combat")
         self.stack.add_titled(templates_grid, "templates", "Templates")
 
-    def add_error(self, widget):
+    @staticmethod
+    def add_error(widget):
         """Adds the error class to a widget."""
 
         widget.get_style_context().add_class("bad-input")
 
-    def remove_error(self, widget):
+    @staticmethod
+    def remove_error(widget):
         """Removes the error class from a widget."""
 
         widget.get_style_context().remove_class("bad-input")

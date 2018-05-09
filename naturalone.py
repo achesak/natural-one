@@ -110,25 +110,17 @@ class DiceRoller(Gtk.Application):
                                     lambda x: self.roll(12, self.window.d12_count_ent, self.window.d12_mod_ent))
         self.window.d20_btn.connect("clicked",
                                     lambda x: self.roll(20, self.window.d20_count_ent, self.window.d20_mod_ent))
-        self.window.dq_btn.connect("clicked",
-                                   lambda x: self.roll_custom())
-        self.window.atk_btn.connect("clicked",
-                                    lambda x: self.roll_attack())
-        self.window.dam_btn.connect("clicked",
-                                    lambda x: self.roll_dmg())
-        self.window.weap_dam_tree.connect("row-activated",
-                                    lambda x, y, z: self.roll_dmg())
-        self.window.new_btn.connect("clicked",
-                                    lambda x: self.new_template())
-        self.window.list_edit_btn.connect("clicked",
-                                    lambda x: self.edit_template())
-        self.window.list_delete_btn.connect("clicked",
-                                    lambda x: self.remove_template())
-        self.window.list_roll_btn.connect("clicked",
-                                    lambda x: self.roll_template())
-        self.window.template_tree.connect("row-activated", self.activated_event)
+        self.window.dq_btn.connect("clicked", lambda x: self.roll_custom())
+        self.window.atk_btn.connect("clicked", lambda x: self.roll_attack())
+        self.window.dam_btn.connect("clicked", lambda x: self.roll_dmg())
+        self.window.weap_dam_tree.connect("row-activated", lambda x, y, z: self.roll_dmg())
+        self.window.new_btn.connect("clicked", lambda x: self.new_template())
+        self.window.list_edit_btn.connect("clicked", lambda x: self.edit_template())
+        self.window.list_delete_btn.connect("clicked", lambda x: self.remove_template())
+        self.window.list_roll_btn.connect("clicked", lambda x: self.roll_template())
+        self.window.template_tree.connect("row-activated", lambda x, y, z: self.activated_event())
 
-    def activated_event(self, widget, treepath, column):
+    def activated_event(self):
         """Edits on double click."""
 
         tree_sel = self.window.template_tree.get_selection()
@@ -267,17 +259,9 @@ class DiceRoller(Gtk.Application):
         self.window.remove_error(self.window.min_dam_ent)
 
         # Check validity of the entries.
-        # weapon_index, weapon_name = -1, ""
-        # selected_iter = self.window.weap_dam_cbox.get_active_iter()
-        # if selected_iter is not None:
-        #    weapon_index, weapon_name = self.window.weap_dam_store[selected_iter]
-        # if selected_iter is None or weapon_index == -1:
-        #    self.window.add_error(self.window.weap_dam_cbox)
-        #    valid = False
-        # weapon = self.weapon_data[weapon_index]
-
         model, weapon_iter = self.window.weap_dam_tree.get_selection().get_selected()
         section_iter = None
+        weapon = None
         if weapon_iter is not None:
             section_iter = self.window.weap_dam_store.iter_parent(weapon_iter)
         if weapon_iter is None or section_iter is None:

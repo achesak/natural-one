@@ -12,7 +12,8 @@
 def basic(count, die, mod_each, mod_once, rolls, total):
     """Builds the output for a standard dice roll."""
 
-    output = "<span size=\"larger\"><b>Rolled %dd%d+%d: <i>%d</i></b></span>\n" % (count, die, max(mod_each, mod_once), total)
+    output = "<span size=\"larger\"><b>Rolled %dd%d+%d: <i>%d</i></b></span>\n" % \
+             (count, die, max(mod_each, mod_once), total)
     if not mod_each:
         output += ", ".join([str(x) for x in rolls])
     else:
