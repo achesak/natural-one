@@ -35,8 +35,13 @@ def atk(num_atks, mods, crit_range, rolls):
 def dmg(num_atks, mods, weapon, crit_attack, count, die, rolls, total):
     """Builds the output for damage rolls."""
 
+    display_name = weapon["name"]
+    if "display" in weapon:
+        display_name = weapon["display"]
+    if "no_format" not in weapon:
+        display_name = display_name.lower()
     output = "<span size=\"larger\"><b>Rolled %d hit%s with a %s: <i>%d damage</i></b></span>\n" % \
-             (num_atks, "" if num_atks == 1 else "s", weapon["name"].lower(), total)
+             (num_atks, "" if num_atks == 1 else "s", display_name, total)
     output += "<i>Modifiers %s\nDamage dice %dd%d</i>\n" % (", ".join([str(x) for x in mods]), count, die)
     output += "\n".join(rolls) + "\n"
     if crit_attack:

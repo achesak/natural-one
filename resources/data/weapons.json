@@ -76,6 +76,7 @@
                 },
                 {
                     "name": "Dagger, punching",
+                    "display": "Punching dagger",
                     "type": "Simple light melee weapons",
                     "dmgs": 3,
                     "dmgm": 4,
@@ -86,6 +87,7 @@
                 },
                 {
                     "name": "Gauntlet, spiked",
+                    "display": "Spiked gauntlet",
                     "type": "Simple light melee weapons",
                     "dmgs": 3,
                     "dmgm": 4,
@@ -116,6 +118,7 @@
                 },
                 {
                     "name": "Mace, light",
+                    "display": "Light mace",
                     "type": "Simple light melee weapons",
                     "dmgs": 4,
                     "dmgm": 6,
@@ -171,6 +174,7 @@
                 },
                 {
                     "name": "Club, mere",
+                    "display": "Mere club",
                     "type": "Simple one-handed melee weapons",
                     "dmgs": 3,
                     "dmgm": 4,
@@ -181,6 +185,7 @@
                 },
                 {
                     "name": "Mace, heavy",
+                    "display": "Heavy mace",
                     "type": "Simple one-handed melee weapons",
                     "dmgs": 6,
                     "dmgm": 8,
@@ -246,6 +251,7 @@
                 },
                 {
                     "name": "Kumade, collapsible",
+                    "display": "Collapsible kumade",
                     "type": "Simple two-handed melee weapons",
                     "dmgs": 4,
                     "dmgm": 6,
@@ -296,6 +302,7 @@
                 },
                 {
                     "name": "Spear, boar",
+                    "display": "Boar spear",
                     "type": "Simple two-handed melee weapons",
                     "dmgs": 6,
                     "dmgm": 8,
@@ -306,6 +313,7 @@
                 },
                 {
                     "name": "Spear, weighted",
+                    "display": "Weighted spear",
                     "type": "Simple two-handed melee weapons",
                     "dmgs": 6,
                     "dmgm": 8,
@@ -331,6 +339,7 @@
                 },
                 {
                     "name": "Crossbow, heavy",
+                    "display": "Heavy crossbow",
                     "type": "Simple ranged weapons",
                     "dmgs": 8,
                     "dmgm": 10,
@@ -341,6 +350,7 @@
                 },
                 {
                     "name": "Crossbow, light",
+                    "display": "Light crossbow",
                     "type": "Simple ranged weapons",
                     "dmgs": 6,
                     "dmgm": 8,
@@ -406,6 +416,7 @@
             "weapons": [
                  {
                     "name": "Axe, boarding",
+                    "display": "Boarding axe",
                     "type": "Martial light melee weapons",
                     "dmgs": 4,
                     "dmgm": 6,
@@ -416,6 +427,7 @@
                 },
                 {
                     "name": "Axe, throwing",
+                    "display": "Throwing axe",
                     "type": "Martial light melee weapons",
                     "dmgs": 4,
                     "dmgm": 6,
@@ -456,6 +468,7 @@
                 },
                 {
                     "name": "Dagger, dueling",
+                    "display": "Dueling dagger",
                     "type": "Martial light melee weapons",
                     "dmgs": 3,
                     "dmgm": 4,
@@ -476,6 +489,7 @@
                 },
                 {
                     "name": "Hammer, light",
+                    "display": "Light hammer",
                     "type": "Martial light melee weapons",
                     "dmgs": 3,
                     "dmgm": 4,
@@ -506,6 +520,7 @@
                 },
                 {
                     "name": "Katar, tri-bladed",
+                    "display": "Tri-bladed katar",
                     "type": "Martial light melee weapons",
                     "dmgs": 3,
                     "dmgm": 4,
@@ -516,6 +531,7 @@
                 },
                 {
                     "name": "Knife, switchblade",
+                    "display": "Switchblade knife",
                     "type": "Martial light melee weapons",
                     "dmgs": 3,
                     "dmgm": 4,
@@ -596,6 +612,7 @@
                 },
                 {
                     "name": "Pick, light",
+                    "display": "Light pick",
                     "type": "Martial light melee weapons",
                     "dmgs": 3,
                     "dmgm": 4,
@@ -636,6 +653,7 @@
                 },
                 {
                     "name": "Shield, light",
+                    "display": "Light shield",
                     "type": "Martial light melee weapons",
                     "dmgs": 2,
                     "dmgm": 3,
@@ -656,6 +674,7 @@
                 },
                 {
                     "name": "Spiked shield, light",
+                    "display": "Light spiked shield",
                     "type": "Martial light melee weapons",
                     "dmgs": 3,
                     "dmgm": 4,
@@ -676,6 +695,7 @@
                 },
                 {
                     "name": "Sword, short",
+                    "display": "Short sword",
                     "type": "Martial light melee weapons",
                     "dmgs": 4,
                     "dmgm": 6,
@@ -801,6 +821,7 @@
                 },
                 {
                     "name": "Pick, heavy",
+                    "display": "Heavy pick",
                     "type": "Martial one-handed melee weapons",
                     "dmgs": 4,
                     "dmgm": 6,
@@ -841,6 +862,7 @@
                 },
                 {
                     "name": "Shield, heavy",
+                    "display": "Heavy shield",
                     "type": "Martial one-handed melee weapons",
                     "dmgs": 3,
                     "dmgm": 4,
@@ -851,6 +873,7 @@
                 },
                 {
                     "name": "Spiked shield, heavy",
+                    "display": "Heavy spiked shield",
                     "type": "Martial one-handed melee weapons",
                     "dmgs": 4,
                     "dmgm": 6,
@@ -956,6 +979,7 @@
                 },
                 {
                     "name": "Flail, heavy",
+                    "display": "Heavy flail",
                     "type": "Martial two-handed melee weapons",
                     "dmgs": 8,
                     "dmgm": 10,
@@ -1036,6 +1060,7 @@
                 },
                 {
                     "name": "Hammer, lucerne",
+                    "display": "Lucerne hammer",
                     "type": "Martial two-handed melee weapons",
                     "dmgs": 10,
                     "dmgm": 12,
@@ -1116,6 +1141,7 @@
                 },
                 {
                     "name": "Spear, syringe",
+                    "display": "Syringe spear",
                     "type": "Martial two-handed melee weapons",
                     "dmgs": 6,
                     "dmgm": 8,
@@ -1151,6 +1177,7 @@
                 },
                 {
                     "name": "Dart, jolting",
+                    "display": "Jolting dart",
                     "type": "Martial ranged weapons",
                     "dmgs": 3,
                     "dmgm": 4,
@@ -1276,6 +1303,7 @@
                 },
                 {
                     "name": "Dagger, swordbreaker",
+                    "display": "Swordbreaker dagger",
                     "type": "Exotic light melee weapons",
                     "dmgs": 3,
                     "dmgm": 4,
@@ -1316,6 +1344,7 @@
                 },
                 {
                     "name": "Helmet, dwarven boulder",
+                    "display": "Dwarven boulder helmet",
                     "type": "Exotic light melee weapons",
                     "dmgs": 3,
                     "dmgm": 4,
@@ -1336,6 +1365,7 @@
                 },
                 {
                     "name": "Knife, butterfly",
+                    "display": "Butterfly knife",
                     "type": "Exotic light melee weapons",
                     "dmgs": 3,
                     "dmgm": 4,
@@ -1346,6 +1376,7 @@
                 },
                 {
                     "name": "Knife, deer horn",
+                    "display": "Deer horn knife",
                     "type": "Exotic light melee weapons",
                     "dmgs": 3,
                     "dmgm": 4,
@@ -1356,6 +1387,7 @@
                 },
                 {
                     "name": "Maulaxe, dwarven",
+                    "display": "Dwarven maulaxe",
                     "type": "Exotic light melee weapons",
                     "dmgs": 4,
                     "dmgm": 6,
@@ -1386,6 +1418,7 @@
                 },
                 {
                     "name": "Razor, drow",
+                    "display": "Drow razor",
                     "type": "Exotic light melee weapons",
                     "dmgs": 3,
                     "dmgm": 4,
@@ -1406,6 +1439,7 @@
                 },
                 {
                     "name": "Sabre, sawtooth",
+                    "display": "Sawtooth sabre",
                     "type": "Exotic light melee weapons",
                     "dmgs": 6,
                     "dmgm": 8,
@@ -1456,6 +1490,7 @@
                 },
                 {
                     "name": "War-shield, dwarven",
+                    "display": "Dwarven war-shield",
                     "type": "Exotic light melee weapons",
                     "dmgs": 4,
                     "dmgm": 6,
@@ -1476,6 +1511,7 @@
                 },
                 {
                     "name": "Whip, scorpion",
+                    "display": "Scorpion whip",
                     "type": "Exotic light melee weapons",
                     "dmgs": 3,
                     "dmgm": 4,
@@ -1491,6 +1527,7 @@
             "weapons": [
                 {
                     "name": "Axe, hooked",
+                    "display": "Hooked axe",
                     "type": "Exotic one-handed melee weapons",
                     "dmgs": 6,
                     "dmgm": 8,
@@ -1561,6 +1598,7 @@
                 },
                 {
                     "name": "Rapier, spiral",
+                    "display": "Spiral rapier",
                     "type": "Exotic one-handed melee weapons",
                     "dmgs": 4,
                     "dmgm": 6,
@@ -1601,6 +1639,7 @@
                 },
                 {
                     "name": "Sword, dueling",
+                    "display": "Dueling sword",
                     "type": "Exotic one-handed melee weapons",
                     "dmgs": 6,
                     "dmgm": 8,
@@ -1611,6 +1650,7 @@
                 },
                 {
                     "name": "Sword, bastard",
+                    "display": "Bastard sword",
                     "type": "Exotic one-handed melee weapons",
                     "dmgs": 8,
                     "dmgm": 10,
@@ -1631,6 +1671,7 @@
                 },
                 {
                     "name": "Waraxe, dwarven",
+                    "display": "Dwarven waraxe",
                     "type": "Exotic one-handed melee weapons",
                     "dmgs": 8,
                     "dmgm": 10,
@@ -1641,6 +1682,7 @@
                 },
                 {
                     "name": "Waraxe, dwarven double",
+                    "display": "Dwarven double waraxe",
                     "type": "Exotic one-handed melee weapons",
                     "dmgs": 8,
                     "dmgm": 10,
@@ -1666,6 +1708,7 @@
             "weapons": [
                 {
                     "name": "Axe, orc double",
+                    "display": "Orc double axe",
                     "type": "Exotic two-handed melee weapons",
                     "dmgs": 6,
                     "dmgm": 8,
@@ -1676,6 +1719,7 @@
                 },
                 {
                     "name": "Axe, butchering",
+                    "display": "Butchering axe",
                     "type": "Exotic two-handed melee weapons",
                     "dmgs": 12,
                     "dmgm": 6,
@@ -1686,6 +1730,7 @@
                 },
                 {
                     "name": "Battle ladder, gnome",
+                    "display": "Gnome battle ladder",
                     "type": "Exotic two-handed melee weapons",
                     "dmgs": 4,
                     "dmgm": 6,
@@ -1705,6 +1750,17 @@
                     "critm": 2
                 },
                 {
+                    "name": "Branched spear, elven",
+                    "display": "Elven branched spear",
+                    "type": "Exotic two-handed melee weapons",
+                    "dmgs": 6,
+                    "dmgm": 8,
+                    "counts": 1,
+                    "countm": 1,
+                    "critr": 20,
+                    "critm": 3
+                },
+                {
                     "name": "Chain-hammer",
                     "type": "Exotic two-handed melee weapons",
                     "dmgs": 4,
@@ -1716,6 +1772,7 @@
                 },
                 {
                     "name": "Chain, spiked",
+                    "display": "Spiked chain",
                     "type": "Exotic two-handed melee weapons",
                     "dmgs": 6,
                     "dmgm": 4,
@@ -1735,7 +1792,8 @@
                     "critm": 2
                 },
                 {
-                    "name": "Curve blade, elven",
+                    "name": "Curved blade, elven",
+                    "display": "Elven curved blade",
                     "type": "Exotic two-handed melee weapons",
                     "dmgs": 8,
                     "dmgm": 10,
@@ -1746,6 +1804,7 @@
                 },
                 {
                     "name": "Dorn-dergar, dwarven",
+                    "display": "Dwarven dorn-dergar",
                     "type": "Exotic two-handed melee weapons",
                     "dmgs": 8,
                     "dmgm": 10,
@@ -1753,16 +1812,6 @@
                     "countm": 1,
                     "critr": 20,
                     "critm": 2
-                },
-                {
-                    "name": "Elven branched spear",
-                    "type": "Exotic two-handed melee weapons",
-                    "dmgs": 6,
-                    "dmgm": 8,
-                    "counts": 1,
-                    "countm": 1,
-                    "critr": 20,
-                    "critm": 3
                 },
                 {
                     "name": "Fauchard",
@@ -1776,6 +1825,7 @@
                 },
                 {
                     "name": "Flail, dire",
+                    "display": "Dire flail",
                     "type": "Exotic two-handed melee weapons",
                     "dmgs": 6,
                     "dmgm": 8,
@@ -1826,6 +1876,7 @@
                 },
                 {
                     "name": "Hammer, gnome hooked",
+                    "display": "Gnome hooked hammer",
                     "type": "Exotic two-handed melee weapons",
                     "dmgs": 6,
                     "dmgm": 8,
@@ -1846,6 +1897,7 @@
                 },
                 {
                     "name": "Longaxe, dwarven",
+                    "display": "Dwarven longaxe",
                     "type": "Exotic two-handed melee weapons",
                     "dmgs": 10,
                     "dmgm": 6,
@@ -1865,17 +1917,8 @@
                     "critm": 2
                 },
                 {
-                    "name": "Orc skull ram",
-                    "type": "Exotic two-handed melee weapons",
-                    "dmgs": 8,
-                    "dmgm": 10,
-                    "counts": 1,
-                    "countm": 1,
-                    "critr": 20,
-                    "critm": 3
-                },
-                {
                     "name": "Piston maul, gnome",
+                    "display": "Gnome piston maul",
                     "type": "Exotic two-handed melee weapons",
                     "dmgs": 8,
                     "dmgm": 10,
@@ -1886,6 +1929,7 @@
                 },
                 {
                     "name": "Ripsaw glaive, gnome",
+                    "display": "Gnome ripsaw glaive",
                     "type": "Exotic two-handed melee weapons",
                     "dmgs": 8,
                     "dmgm": 10,
@@ -1896,6 +1940,7 @@
                 },
                 {
                     "name": "Scarf, bladed",
+                    "display": "Bladed scarf",
                     "type": "Exotic two-handed melee weapons",
                     "dmgs": 4,
                     "dmgm": 6,
@@ -1905,7 +1950,19 @@
                     "critm": 2
                 },
                 {
+                    "name": "Skull ram, orc",
+                    "display": "Orc skull ram",
+                    "type": "Exotic two-handed melee weapons",
+                    "dmgs": 8,
+                    "dmgm": 10,
+                    "counts": 1,
+                    "countm": 1,
+                    "critr": 20,
+                    "critm": 3
+                },
+                {
                     "name": "Spear, totem",
+                    "display": "Totem spear",
                     "type": "Exotic two-handed melee weapons",
                     "dmgs": 8,
                     "dmgm": 10,
@@ -1926,6 +1983,7 @@
                 },
                 {
                     "name": "Sword, two-bladed",
+                    "display": "Two-bladed sword",
                     "type": "Exotic two-handed melee weapons",
                     "dmgs": 6,
                     "dmgm": 8,
@@ -1936,6 +1994,7 @@
                 },
                 {
                     "name": "Urgrosh, dwarven",
+                    "display": "Dwarven urgrosh",
                     "type": "Exotic two-handed melee weapons",
                     "dmgs": 6,
                     "dmgm": 8,
@@ -1961,6 +2020,7 @@
                 },
                 {
                     "name": "Bola, brutal",
+                    "display": "Brutal bola",
                     "type": "Exotic ranged weapons",
                     "dmgs": 3,
                     "dmgm": 4,
@@ -1981,6 +2041,7 @@
                 },
                 {
                     "name": "Bow, thorn",
+                    "display": "Thorn bow",
                     "type": "Exotic ranged weapons",
                     "dmgs": 4,
                     "dmgm": 6,
@@ -1991,6 +2052,7 @@
                 },
                 {
                     "name": "Crossbow, crank (heavy)",
+                    "display": "Crank crossbow (heavy)",
                     "type": "Exotic ranged weapons",
                     "dmgs": 8,
                     "dmgm": 10,
@@ -2001,6 +2063,7 @@
                 },
                 {
                     "name": "Crossbow, crank (light)",
+                    "display": "Crank crossbow (light)",
                     "type": "Exotic ranged weapons",
                     "dmgs": 6,
                     "dmgm": 8,
@@ -2011,6 +2074,7 @@
                 },
                 {
                     "name": "Crossbow, double",
+                    "display": "Double crossbow",
                     "type": "Exotic ranged weapons",
                     "dmgs": 6,
                     "dmgm": 8,
@@ -2021,6 +2085,7 @@
                 },
                 {
                     "name": "Crossbow, hand",
+                    "display": "Hand crossbow",
                     "type": "Exotic ranged weapons",
                     "dmgs": 3,
                     "dmgm": 4,
@@ -2031,6 +2096,7 @@
                 },
                 {
                     "name": "Crossbow, repeating",
+                    "display": "Repeating crossbow",
                     "type": "Exotic ranged weapons",
                     "dmgs": 6,
                     "dmgm": 8,
@@ -2041,6 +2107,7 @@
                 },
                 {
                     "name": "Crossbow, repeating (heavy)",
+                    "display": "Repeating crossbow (heavy)",
                     "type": "Exotic ranged weapons",
                     "dmgs": 8,
                     "dmgm": 10,
@@ -2061,6 +2128,7 @@
                 },
                 {
                     "name": "Hornbow, orc",
+                    "display": "Orc hornbow",
                     "type": "Exotic ranged weapons",
                     "dmgs": 8,
                     "dmgm": 6,
@@ -2071,6 +2139,7 @@
                 },
                 {
                     "name": "Javelin, shrillshaft",
+                    "display": "Shrillshaft javelin",
                     "type": "Exotic ranged weapons",
                     "dmgs": 4,
                     "dmgm": 6,
@@ -2081,6 +2150,7 @@
                 },
                 {
                     "name": "Javelin, stormshaft",
+                    "display": "Stormshaft javelin",
                     "type": "Exotic ranged weapons",
                     "dmgs": 4,
                     "dmgm": 6,
@@ -2091,6 +2161,7 @@
                 },
                 {
                     "name": "Shield, throwing",
+                    "display": "Throwing shield",
                     "type": "Exotic ranged weapons",
                     "dmgs": 4,
                     "dmgm": 6,
@@ -2111,6 +2182,7 @@
                 },
                 {
                     "name": "Sling, double",
+                    "display": "Double sling",
                     "type": "Exotic ranged weapons",
                     "dmgs": 3,
                     "dmgm": 4,
@@ -2121,6 +2193,7 @@
                 },
                 {
                     "name": "Sling, stitched",
+                    "display": "Stitched sling",
                     "type": "Exotic ranged weapons",
                     "dmgs": 4,
                     "dmgm": 6,
@@ -2141,6 +2214,7 @@
                 },
                 {
                     "name": "Sling staff, halfling",
+                    "display": "Halfling sling staff",
                     "type": "Exotic ranged weapons",
                     "dmgs": 6,
                     "dmgm": 8,
@@ -2151,6 +2225,7 @@
                 },
                 {
                     "name": "Wrist launcher, heavy",
+                    "display": "Heavy wrist launcher",
                     "type": "Exotic ranged weapons",
                     "dmgs": 3,
                     "dmgm": 4,
@@ -2276,6 +2351,7 @@
             "weapons": [
                 {
                     "name": "Broadsword, nine ring",
+                    "display": "Nine ring broadsword",
                     "type": "Eastern martial one-handed",
                     "dmgs": 6,
                     "dmgm": 8,
@@ -2361,6 +2437,7 @@
                 },
                 {
                     "name": "Sword, tri-point double-edged",
+                    "display": "Tri-point double-edged sword",
                     "type": "Eastern martial two-handed melee weapons",
                     "dmgs": 8,
                     "dmgm": 10,
@@ -2546,6 +2623,7 @@
                 },
                 {
                     "name": "Sword, temple",
+                    "display": "Temple sword",
                     "type": "Eastern exotic one-handed melee weapons",
                     "dmgs": 6,
                     "dmgm": 8,
@@ -2591,6 +2669,7 @@
                 },
                 {
                     "name": "Chain, spiked",
+                    "display": "Spiked chain",
                     "type": "Eastern exotic two-handed melee weapons",
                     "dmgs": 6,
                     "dmgm": 4,
@@ -2601,6 +2680,7 @@
                 },
                 {
                     "name": "Kama, double-chained",
+                    "display": "Double-chained kama",
                     "type": "Eastern exotic two-handed melee weapons",
                     "dmgs": 4,
                     "dmgm": 6,
@@ -2611,6 +2691,7 @@
                 },
                 {
                     "name": "Kama, double walking stick",
+                    "display": "Double walking stick kama",
                     "type": "Eastern exotic two-handed melee weapons",
                     "dmgs": 4,
                     "dmgm": 6,
@@ -2651,6 +2732,7 @@
                 },
                 {
                     "name": "Sword, seven branched",
+                    "display": "Seven branched sword",
                     "type": "Eastern exotic two-handed melee weapons",
                     "dmgs": 8,
                     "dmgm": 10,
@@ -2676,6 +2758,7 @@
             "weapons": [
                 {
                     "name": "Chakram, crystal",
+                    "display": "Crystal chakram",
                     "type": "Eastern exotic ranged weapons",
                     "dmgs": 4,
                     "dmgm": 6,
@@ -2731,6 +2814,7 @@
                 },
                 {
                     "name": "Pistol, coat",
+                    "display": "Coat pistol",
                     "type": "Early one-handed firearms",
                     "dmgs": 3,
                     "dmgm": 4,
@@ -2741,6 +2825,7 @@
                 },
                 {
                     "name": "Pistol, dagger",
+                    "display": "Dagger pistol",
                     "type": "Early one-handed firearms",
                     "dmgs": 3,
                     "dmgm": 4,
@@ -2751,6 +2836,7 @@
                 },
                 {
                     "name": "Pistol, double-barreled",
+                    "display": "Double-barreled pistol",
                     "type": "Early one-handed firearms",
                     "dmgs": 6,
                     "dmgm": 8,
@@ -2761,6 +2847,7 @@
                 },
                 {
                     "name": "Pistol, dragon",
+                    "display": "Dragon pistol",
                     "type": "Early one-handed firearms",
                     "dmgs": 4,
                     "dmgm": 6,
@@ -2771,6 +2858,7 @@
                 },
                 {
                     "name": "Pistol, dragoon",
+                    "display": "Dragoon pistol",
                     "type": "Early one-handed firearms",
                     "dmgs": 6,
                     "dmgm": 8,
@@ -2781,6 +2869,7 @@
                 },
                 {
                     "name": "Pistol, paddle-foot",
+                    "display": "Paddle-foot pistol",
                     "type": "Early one-handed firearms",
                     "dmgs": 4,
                     "dmgm": 6,
@@ -2791,6 +2880,7 @@
                 },
                 {
                     "name": "Pistol, sword cane",
+                    "display": "Sword cane pistol",
                     "type": "Early one-handed firearms",
                     "dmgs": 3,
                     "dmgm": 4,
@@ -2866,6 +2956,7 @@
                 },
                 {
                     "name": "Musket, axe",
+                    "display": "Axe musket",
                     "type": "Early two-handed firearms",
                     "dmgs": 6,
                     "dmgm": 8,
@@ -2876,6 +2967,7 @@
                 },
                 {
                     "name": "Musket, double-barreled",
+                    "display": "Double-barreled musket",
                     "type": "Early two-handed firearms",
                     "dmgs": 10,
                     "dmgm": 12,
@@ -2886,6 +2978,7 @@
                 },
                 {
                     "name": "Musket, dragoon",
+                    "display": "Dragoon musket",
                     "type": "Early two-handed firearms",
                     "dmgs": 10,
                     "dmgm": 12,
@@ -2896,6 +2989,7 @@
                 },
                 {
                     "name": "Musket, warhammer",
+                    "display": "Warhammer musket",
                     "type": "Early two-handed firearms",
                     "dmgs": 6,
                     "dmgm": 8,
@@ -2936,6 +3030,7 @@
                 },
                 {
                     "name": "Rifle, pepperbox",
+                    "display": "Pepperbox rifle",
                     "type": "Advanced two-handed firearms",
                     "dmgs": 8,
                     "dmgm": 10,
@@ -2956,6 +3051,7 @@
                 },
                 {
                     "name": "Shotgun, double-barreled",
+                    "display": "Double-barreled shotgun",
                     "type": "Advanced two-handed firearms",
                     "dmgs": 6,
                     "dmgm": 9,
@@ -2971,6 +3067,7 @@
             "weapons": [
                 {
                     "name": "Catapult, heavy",
+                    "display": "Heavy catapult",
                     "type": "Siege engines",
                     "dmgs": 6,
                     "dmgm": 6,
@@ -2981,6 +3078,7 @@
                 },
                 {
                     "name": "Catapult, light",
+                    "display": "Light catapult",
                     "type": "Siege engines",
                     "dmgs": 6,
                     "dmgm": 6,
@@ -3016,6 +3114,8 @@
             "weapons": [
                 {
                     "name": "Revolver, Nagant M1895",
+                    "display": "Nagant M1895 revolver",
+                    "no_format": true,
                     "type": "Modern one-handed firearms",
                     "dmgs": 8,
                     "dmgm": 8,
@@ -3031,6 +3131,8 @@
             "weapons": [
                 {
                     "name": "Flamethrower, Lawrence 1917",
+                    "display": "Lawrence 1917 flamethrower",
+                    "no_format": true,
                     "type": "Modern two-handed firearms",
                     "dmgs": 6,
                     "dmgm": 6,
@@ -3041,6 +3143,8 @@
                 },
                 {
                     "name": "Light machine gun, Madsen",
+                    "display": "Madsen light machine gun",
+                    "no_format": true,
                     "type": "Modern two-handed firearms",
                     "dmgs": 6,
                     "dmgm": 6,
@@ -3051,6 +3155,8 @@
                 },
                 {
                     "name": "Light machine gun, Maxim 1910",
+                    "display": "Maxim 1910 light machine gun",
+                    "no_format": true,
                     "type": "Modern two-handed firearms",
                     "dmgs": 8,
                     "dmgm": 8,
@@ -3061,6 +3167,8 @@
                 },
                 {
                     "name": "Rifle, Mosin-Nagant M1891",
+                    "display": "Mosin-Nagant M1891 rifle",
+                    "no_format": true,
                     "type": "Modern two-handed firearms",
                     "dmgs": 10,
                     "dmgm": 10,
@@ -3076,6 +3184,7 @@
             "weapons": [
                 {
                     "name": "Aasen mortar",
+                    "no_format": true,
                     "type": "Siege firearms",
                     "dmgs": 6,
                     "dmgm": 6,
@@ -3086,6 +3195,7 @@
                 },
                 {
                     "name": "Hotchkiss 6 pounder",
+                    "no_format": true,
                     "type": "Siege firearms",
                     "dmgs": 6,
                     "dmgm": 6,
@@ -3101,6 +3211,7 @@
             "weapons": [
                 {
                     "name": "M1914 grenade (concussion)",
+                    "no_format": true,
                     "type": "Modern explosive",
                     "dmgs": 6,
                     "dmgm": 6,
@@ -3111,6 +3222,7 @@
                 },
                 {
                     "name": "M1914 grenade (fragmentation)",
+                    "no_format": true,
                     "type": "Modern explosive",
                     "dmgs": 6,
                     "dmgm": 6,
@@ -3125,7 +3237,8 @@
             "category": "Stone age simple one-handed melee weapons",
             "weapons": [
                 {
-                    "name": "Mere club",
+                    "name": "Club, mere",
+                    "display": "Mere club",
                     "type": "Stone age simple one-handed melee weapons",
                     "dmgs": 3,
                     "dmgm": 4,
@@ -3181,6 +3294,7 @@
                 },
                 {
                     "name": "Terbutje, great",
+                    "display": "Great terbutje",
                     "type": "Stone age exotic one-handed melee weapons",
                     "dmgs": 8,
                     "dmgm": 10,
@@ -3371,6 +3485,7 @@
                 },
                 {
                     "name": "EMP pistol",
+                    "no_format": true,
                     "type": "Technological one-handed firearms",
                     "dmgs": 10,
                     "dmgm": 6,
@@ -3466,6 +3581,7 @@
                 },
                 {
                     "name": "EMP rifle",
+                    "no_format": true,
                     "type": "Technological two-handed firearms",
                     "dmgs": 6,
                     "dmgm": 6,
