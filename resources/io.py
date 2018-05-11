@@ -9,7 +9,6 @@
 ################################################################################
 
 
-# Import necessary modules.
 import json
 import sys
 import os
@@ -19,53 +18,42 @@ import platform
 def get_main_dir():
     """Returns the main directory."""
 
-    # Windows:
-    # * Data: C:\Users\[username]\AppData\Local\naturalone
-    # Linux:
-    # * Data: /home/[username]/.share/local/naturalone
-    # OSX: probably the same as Linux?
+    # Windows support here for future full implementation.
     if platform.system().lower() == "windows":
         path = os.environ["LOCALAPPDATA"] + "\\naturalone"
     else:
         path = os.path.expanduser("~") + "/.local/share/naturalone"
 
-    # Create if necessary.
     if not os.path.exists(path):
         os.makedirs(path)
 
     return path
 
 
+def get_template_path():
+    """Returns the path to the template file."""
+
+    root_path = get_main_dir()
+    return os.path.join(root_path, "templates.json")
+
+
 def load_templates():
     """Loads the templates."""
 
-    root_path = get_main_dir()
-    path = os.path.join(root_path, "templates.json")
-
-    try:
-        template_file = open(path, "r")
-        templates = json.load(template_file)
-        template_file.close()
-
-    except IOError:
-        template_file = open(path, "w")
-        template_file.write("[]")
-        template_file.close()
-        templates = []
-
-    return templates
+    with open(get_template_path(), "a+") as template_file:
+        template_file.seek(0)
+        try:
+            return json.load(template_file)
+        except (IOError, TypeError, ValueError):
+            template_file.write("[]")
+            return []
 
 
 def save_templates(templates):
     """Saves the templates."""
 
-    root_path = get_main_dir()
-    path = os.path.join(root_path, "templates.json")
-
     try:
-        template_file = open(path, "w")
-        json.dump(templates, template_file)
-        template_file.close()
-
+        with open(get_template_path(), "w") as template_file:
+            json.dump(templates, template_file)
     except IOError:
         print("IOError saving templates")

@@ -12,33 +12,20 @@
 def expand_mod(mods, count, crit_applied):
     """Expands a modifier list as needed. Ensures len(mods) == count"""
 
-    diff = count - len(mods)
-    if diff == 0:
-        return mods
-
-    last_value = mods[len(mods) - 1]
-    for _ in range(0, diff):
-        mods.append(last_value)
-
-    if not crit_applied:
-        return mods
-
+    if len(mods) > count:
+        del mods[count:]
     else:
-        extended_mods = []
-        for mod in mods:
-            extended_mods += [mod, mod]
+        mods.extend([mods[-1]] * (count - len(mods)))
 
-        return extended_mods
+    if crit_applied:
+        return [mod for mod in mods for _ in (0, 1)]
+    else:
+        return mods
 
 
 def get_weapon(weapon_data, weapon_name, section_name):
     """Gets the weapon data."""
 
-    for section in weapon_data:
-        if section["category"] != section_name:
-            continue
-
-        for weapon in section["weapons"]:
-            if weapon["name"] == weapon_name:
-                return weapon
-    return None
+    section_elem = (section for section in weapon_data if section["category"] == section_name).next()
+    weapon_elem = (weapon for weapon in section_elem["weapons"] if weapon["name"] == weapon_name).next()
+    return weapon_elem

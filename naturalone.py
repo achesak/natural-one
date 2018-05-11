@@ -433,7 +433,7 @@ class DiceRoller(Gtk.Application):
         license_file.close()
 
         # Show the dialog.
-        about_dlg = NaturalOneAboutDialog(self.window, "Natural One", "1.0", pixbuf, license_text)
+        about_dlg = NaturalOneAboutDialog(self.window, pixbuf, license_text)
         about_dlg.run()
         about_dlg.destroy()
 
