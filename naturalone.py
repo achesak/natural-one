@@ -14,25 +14,21 @@
 ################################################################################
 
 
-# Import Gtk and Gdk for the interface.
 import gi
 gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk, Gdk, GdkPixbuf, Gio
-# Import necessary modules.
+
 import sys
 import random
 
-# Import application modules.
 import resources.launch as launch
 import resources.io as io
 import resources.format as format
 import resources.roller as roller
 import resources.utility as utility
 
-# Import UI classes.
 from resources.window import DiceRollerWindow
 
-# Import dialogs.
 from resources.dialogs.template_dialog import TemplateDialog
 from resources.dialogs.about_dialog import NaturalOneAboutDialog
 
@@ -41,24 +37,19 @@ class DiceRoller(Gtk.Application):
     """Creates the dice roller application."""
 
     def __init__(self, *args, **kwargs):
-        """Initializes the application."""
 
         super(DiceRoller, self).__init__(*args, application_id="com.achesak.diceroller", **kwargs)
         self.window = None
 
     def do_startup(self):
-        """Application startup."""
 
         Gtk.Application.do_startup(self)
 
-        # Load the application data.
         self.menu = launch.get_menu_data()
         self.weapon_data = launch.get_weapon_data()["data"]
 
-        # Load the user data.
         self.templates = io.load_templates()
 
-        # Build the app menu.
         action = Gio.SimpleAction.new("about", None)
         action.connect("activate", lambda x, y: self.about())
         self.add_action(action)
@@ -70,7 +61,6 @@ class DiceRoller(Gtk.Application):
         self.set_app_menu(builder.get_object("app-menu"))
 
     def do_activate(self):
-        """Application activate."""
 
         if not self.window:
             self.window = DiceRollerWindow(application=self, title="Natural One")
@@ -345,13 +335,11 @@ class DiceRoller(Gtk.Application):
     def edit_template(self):
         """Edits a template."""
 
-        # Get the selected index.
         model, treeiter = self.window.template_tree.get_selection().get_selected_rows()
         index = -1
         for i in treeiter:
             index = int(str(i))
 
-        # Don't continue if nothing was selected.
         if index == -1:
             return
 
@@ -380,13 +368,11 @@ class DiceRoller(Gtk.Application):
     def remove_template(self):
         """Removes a template."""
 
-        # Get the selected indices.
         model, treeiter = self.window.template_tree.get_selection().get_selected_rows()
         indices = []
         for i in treeiter:
             indices.append(int(str(i)))
 
-        # Don't continue if nothing was selected.
         if len(indices) == 0:
             return
 
@@ -400,14 +386,12 @@ class DiceRoller(Gtk.Application):
     def roll_template(self, index=None):
         """Rolls a template."""
 
-        # Get the selected index.
         if index is None:
             model, treeiter = self.window.template_tree.get_selection().get_selected_rows()
             index = -1
             for i in treeiter:
                 index = int(str(i))
 
-        # Don't continue if nothing was selected.
         if index == -1:
             return
 
@@ -421,7 +405,6 @@ class DiceRoller(Gtk.Application):
     def about(self):
         """Shows the About dialog."""
 
-        # Load the icon.
         img_file = open("resources/images/icon256.png", "rb")
         img_bin = img_file.read()
         img_file.close()
@@ -430,18 +413,15 @@ class DiceRoller(Gtk.Application):
         loader.close()
         pixbuf = loader.get_pixbuf()
 
-        # Read the license
         license_file = open("LICENSE.md", "r")
         license_text = license_file.read()
         license_file.close()
 
-        # Show the dialog.
         about_dlg = NaturalOneAboutDialog(self.window, pixbuf, license_text)
         about_dlg.run()
         about_dlg.destroy()
 
 
-# Show the window and start the application.
 if __name__ == "__main__" and len(sys.argv) == 1:
 
     win = DiceRoller()
