@@ -45,7 +45,7 @@ def dmg(num_atks, mods, weapon, crit_attack, count, die, rolls, total):
     output += "<i>Modifiers %s\nDamage dice %dd%d</i>\n" % (", ".join([str(x) for x in mods]), count, die)
     output += "\n".join(rolls) + "\n"
     if crit_attack:
-        output += "<i>Multiplied by %dx due to critical hit</i>" % weapon["critm"]
+        output += "<i>Multiplied by %dx due to critical hit</i>" % weapon["crit_mult"]
 
     return output
 

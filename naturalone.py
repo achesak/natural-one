@@ -302,17 +302,17 @@ class DiceRoller(Gtk.Application):
         mods = utility.expand_mod(mods, num_atks, crit_attack)
 
         if self.window.small_dam_rbtn.get_active():
-            die = "dmgs"
-            count = "counts"
+            die = "dmg_small"
+            count = "count_small"
         else:
-            die = "dmgm"
-            count = "countm"
+            die = "dmg_medium"
+            count = "count_medium"
 
         if not valid:
             return
 
         if crit_attack:
-            num_atks *= weapon["critm"]
+            num_atks *= weapon["crit_mult"]
 
         total, rolls = roller.dmg(num_atks, mods, weapon, count, die, crit_attack, min_value)
         output = format.dmg(num_atks, mods, weapon, crit_attack, weapon[count], weapon[die], rolls, total)
