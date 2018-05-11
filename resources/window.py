@@ -414,7 +414,7 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         self.results_view = Gtk.TextView()
         self.results_view.set_editable(False)
         self.results_view.set_cursor_visible(False)
-        self.results_view.set_wrap_mode(Gtk.WrapMode.WORD)
+        self.results_view.set_wrap_mode(Gtk.WrapMode.WORD_CHAR)
         self.results_view.set_left_margin(5)
         self.results_view.set_right_margin(5)
         self.results_view.set_top_margin(5)
