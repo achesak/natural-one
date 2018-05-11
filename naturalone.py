@@ -311,6 +311,9 @@ class DiceRoller(Gtk.Application):
         if not valid:
             return
 
+        if crit_attack:
+            num_atks *= weapon["critm"]
+
         total, rolls = roller.dmg(num_atks, mods, weapon, count, die, crit_attack, min_value)
         output = format.dmg(num_atks, mods, weapon, crit_attack, weapon[count], weapon[die], rolls, total)
         self.window.update_output(output)
