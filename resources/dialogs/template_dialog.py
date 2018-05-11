@@ -174,30 +174,25 @@ class TemplateDialog(Gtk.Dialog):
         self.delete_btn = Gtk.Button("Delete")
         roll_grid.attach_next_to(self.delete_btn, self.edit_btn, Gtk.PositionType.RIGHT, 1, 1)
 
-        # Create the CSS provider.
         self.style_provider = Gtk.CssProvider()
         self.style_context = Gtk.StyleContext()
         self.style_context.add_provider_for_screen(Gdk.Screen.get_default(), self.style_provider,
                                                    Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION)
         self.style_provider.load_from_data(".bad-input {background-color: red; color: white}")
 
-        # Connect 'Enter' key to the Save button.
         save_btn = self.get_widget_for_response(response_id=Gtk.ResponseType.OK)
         save_btn.set_can_default(True)
         save_btn.grab_default()
 
-        # Bind the events.
         self.add_btn.connect("clicked", lambda x: self.add_roll())
         self.edit_btn.connect("clicked", lambda x: self.edit_roll())
         self.delete_btn.connect("clicked", lambda x: self.remove_roll())
         self.roll_tree.connect("row-activated", lambda x, y, z: self.activated_event())
 
-        # Enter the default values.
         if self.name is not None:
             self.name_ent.set_text(self.name)
         self.update_list()
 
-        # Show the dialog.
         self.show_all()
 
     def activated_event(self):
@@ -231,8 +226,8 @@ class TemplateDialog(Gtk.Dialog):
                 row.append("N/A")
             self.roll_store.append(row)
 
-    def add_roll(self):
-        """Adds a roll."""
+    def check_roll_validity(self, roll):
+        """Ensures the user entered a valid roll."""
 
         self.remove_error(self.count_ent)
         self.remove_error(self.die_ent)
@@ -241,7 +236,53 @@ class TemplateDialog(Gtk.Dialog):
         self.remove_error(self.min_ent)
         self.remove_error(self.desc_ent)
 
-        # Get the roll data.
+        valid = True
+
+        try:
+            assert roll["description"] != ""
+        except AssertionError:
+            self.add_error(self.desc_ent)
+            valid = False
+
+        try:
+            roll["count"] = int(roll["count"])
+            assert roll["count"] >= 1
+        except (ValueError, AssertionError):
+            self.add_error(self.count_ent)
+            valid = False
+
+        try:
+            roll["die"] = int(roll["die"])
+            assert roll["die"] >= 1
+        except (ValueError, AssertionError):
+            self.add_error(self.die_ent)
+            valid = False
+
+        try:
+            roll["mod"] = int(roll["mod"])
+        except (ValueError, AssertionError):
+            self.add_error(self.mod_ent)
+            valid = False
+
+        try:
+            roll["min_value"] = int(roll["min_value"])
+        except (ValueError, AssertionError):
+            self.add_error(self.min_ent)
+            valid = False
+
+        if roll["crit_active"]:
+            try:
+                roll["crit_mod"] = int(roll["crit_mod"])
+                assert roll["crit_mod"] >= 1
+            except (ValueError, AssertionError):
+                self.add_error(self.crit_ent)
+                valid = False
+
+        return valid
+
+    def get_roll_data(self):
+        """Gets the user-entered data for a roll."""
+
         count = self.count_ent.get_text()
         die = self.die_ent.get_text()
         mod = self.mod_ent.get_text()
@@ -251,51 +292,6 @@ class TemplateDialog(Gtk.Dialog):
         min_value = self.min_ent.get_text()
         desc = self.desc_ent.get_text().strip()
 
-        # Check validity.
-        valid = True
-        try:
-            count = int(count)
-        except ValueError:
-            self.add_error(self.count_ent)
-            valid = False
-        try:
-            die = int(die)
-        except ValueError:
-            self.add_error(self.die_ent)
-            valid = False
-        try:
-            mod = int(mod)
-        except ValueError:
-            self.add_error(self.mod_ent)
-            valid = False
-        if crit_active:
-            try:
-                crit_mod = int(crit_mod)
-            except ValueError:
-                self.add_error(self.crit_ent)
-                valid = False
-        try:
-            min_value = int(min_value)
-        except ValueError:
-            self.add_error(self.min_ent)
-            valid = False
-        if count < 1:
-            self.add_error(self.count_ent)
-            valid = False
-        if die < 1:
-            self.add_error(self.die_ent)
-            valid = False
-        if crit_mod < 1:
-            self.add_error(self.crit_ent)
-            valid = False
-        if desc == "":
-            self.add_error(self.desc_ent)
-            valid = False
-
-        if not valid:
-            return
-
-        # Add the data.
         roll = {
             "description": desc,
             "count": count,
@@ -306,6 +302,18 @@ class TemplateDialog(Gtk.Dialog):
             "crit_mod": crit_mod,
             "min_value": min_value
         }
+
+        valid = self.check_roll_validity(roll)
+
+        return roll, valid
+
+    def add_roll(self):
+        """Adds a roll."""
+
+        roll, valid = self.get_roll_data()
+        if not valid:
+            return
+
         add_as_new = True
         for i in range(0, len(self.rolls)):
             if self.rolls[i]["description"] == desc:
@@ -314,24 +322,20 @@ class TemplateDialog(Gtk.Dialog):
         if add_as_new:
             self.rolls.append(roll)
 
-        # Update the list.
         self.update_list()
 
     def edit_roll(self, index=None):
         """Edits a roll."""
 
-        # Get the selected index.
         if index is None:
             model, treeiter = self.roll_tree.get_selection().get_selected_rows()
             index = -1
             for i in treeiter:
                 index = int(str(i))
 
-        # Don't continue if nothing was selected.
         if index == -1:
             return
 
-        # Fill the fields.
         roll = self.rolls[index]
         self.count_ent.set_text(str(roll["count"]))
         self.die_ent.set_text(str(roll["die"]))
@@ -345,19 +349,15 @@ class TemplateDialog(Gtk.Dialog):
     def remove_roll(self):
         """Removes a roll."""
 
-        # Get the selected indices.
         model, treeiter = self.roll_tree.get_selection().get_selected_rows()
         indices = []
         for i in treeiter:
             indices.append(int(str(i)))
 
-        # Don't continue if nothing was selected.
         if len(indices) == 0:
             return
 
-        # Remove the data.
         for index in reversed(indices):
             del self.rolls[index]
 
-        # Update the list.
         self.update_list()
