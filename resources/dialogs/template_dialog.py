@@ -76,16 +76,19 @@ class TemplateDialog(Gtk.Dialog):
         # Create the roll row.
         self.count_ent = Gtk.Entry()
         self.count_ent.set_width_chars(4)
+        self.count_ent.props.xalign = 0.5
         add_grid.attach_next_to(self.count_ent, add_lbl, Gtk.PositionType.BOTTOM, 1, 1)
         d_lbl = Gtk.Label(" d ")
         add_grid.attach_next_to(d_lbl, self.count_ent, Gtk.PositionType.RIGHT, 1, 1)
         self.die_ent = Gtk.Entry()
         self.die_ent.set_width_chars(4)
+        self.die_ent.props.xalign = 0.5
         add_grid.attach_next_to(self.die_ent, d_lbl, Gtk.PositionType.RIGHT, 1, 1)
         p_lbl = Gtk.Label(" + ")
         add_grid.attach_next_to(p_lbl, self.die_ent, Gtk.PositionType.RIGHT, 1, 1)
         self.mod_ent = Gtk.Entry()
         self.mod_ent.set_width_chars(4)
+        self.mod_ent.props.xalign = 0.5
         add_grid.attach_next_to(self.mod_ent, p_lbl, Gtk.PositionType.RIGHT, 1, 1)
         self.mod_chk = Gtk.CheckButton("Add modifier to every roll")
         self.mod_chk.set_active(True)
@@ -102,6 +105,7 @@ class TemplateDialog(Gtk.Dialog):
         crit_lbl.set_margin_right(5)
         self.crit_ent = Gtk.Entry()
         self.crit_ent.set_width_chars(4)
+        self.crit_ent.props.xalign = 0.5
         crit_box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL)
         crit_box.pack_start(crit_lbl, False, False, 0)
         crit_box.pack_start(self.crit_ent, False, False, 0)

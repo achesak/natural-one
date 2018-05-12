@@ -60,6 +60,7 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         self.d4_count_ent = Gtk.Entry()
         self.d4_count_ent.set_text("1")
         self.d4_count_ent.set_width_chars(4)
+        self.d4_count_ent.props.xalign = 0.5
         dice_grid.attach_next_to(self.d4_count_ent, d4_img, Gtk.PositionType.RIGHT, 1, 1)
         d4_d_lbl = Gtk.Label("d4")
         dice_grid.attach_next_to(d4_d_lbl, self.d4_count_ent, Gtk.PositionType.RIGHT, 1, 1)
@@ -68,6 +69,7 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         self.d4_mod_ent = Gtk.Entry()
         self.d4_mod_ent.set_text("0")
         self.d4_mod_ent.set_width_chars(4)
+        self.d4_mod_ent.props.xalign = 0.5
         dice_grid.attach_next_to(self.d4_mod_ent, d4_plus_lbl, Gtk.PositionType.RIGHT, 1, 1)
         self.d4_btn = Gtk.Button(" Roll ")
         dice_grid.attach_next_to(self.d4_btn, self.d4_mod_ent, Gtk.PositionType.RIGHT, 1, 1)
@@ -79,6 +81,7 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         self.d6_count_ent = Gtk.Entry()
         self.d6_count_ent.set_text("1")
         self.d6_count_ent.set_width_chars(4)
+        self.d6_count_ent.props.xalign = 0.5
         dice_grid.attach_next_to(self.d6_count_ent, d6_img, Gtk.PositionType.RIGHT, 1, 1)
         d6_d_lbl = Gtk.Label("d6")
         dice_grid.attach_next_to(d6_d_lbl, self.d6_count_ent, Gtk.PositionType.RIGHT, 1, 1)
@@ -87,6 +90,7 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         self.d6_mod_ent = Gtk.Entry()
         self.d6_mod_ent.set_text("0")
         self.d6_mod_ent.set_width_chars(4)
+        self.d6_mod_ent.props.xalign = 0.5
         dice_grid.attach_next_to(self.d6_mod_ent, d6_plus_lbl, Gtk.PositionType.RIGHT, 1, 1)
         self.d6_btn = Gtk.Button(" Roll ")
         dice_grid.attach_next_to(self.d6_btn, self.d6_mod_ent, Gtk.PositionType.RIGHT, 1, 1)
@@ -98,6 +102,7 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         self.d8_count_ent = Gtk.Entry()
         self.d8_count_ent.set_text("1")
         self.d8_count_ent.set_width_chars(4)
+        self.d8_count_ent.props.xalign = 0.5
         dice_grid.attach_next_to(self.d8_count_ent, d8_img, Gtk.PositionType.RIGHT, 1, 1)
         d8_d_lbl = Gtk.Label("d8")
         dice_grid.attach_next_to(d8_d_lbl, self.d8_count_ent, Gtk.PositionType.RIGHT, 1, 1)
@@ -106,6 +111,7 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         self.d8_mod_ent = Gtk.Entry()
         self.d8_mod_ent.set_text("0")
         self.d8_mod_ent.set_width_chars(4)
+        self.d8_mod_ent.props.xalign = 0.5
         dice_grid.attach_next_to(self.d8_mod_ent, d8_plus_lbl, Gtk.PositionType.RIGHT, 1, 1)
         self.d8_btn = Gtk.Button(" Roll ")
         dice_grid.attach_next_to(self.d8_btn, self.d8_mod_ent, Gtk.PositionType.RIGHT, 1, 1)
@@ -117,6 +123,7 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         self.d10_count_ent = Gtk.Entry()
         self.d10_count_ent.set_text("1")
         self.d10_count_ent.set_width_chars(4)
+        self.d10_count_ent.props.xalign = 0.5
         dice_grid.attach_next_to(self.d10_count_ent, d10_img, Gtk.PositionType.RIGHT, 1, 1)
         d10_d_lbl = Gtk.Label("d10")
         dice_grid.attach_next_to(d10_d_lbl, self.d10_count_ent, Gtk.PositionType.RIGHT, 1, 1)
@@ -125,6 +132,7 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         self.d10_mod_ent = Gtk.Entry()
         self.d10_mod_ent.set_text("0")
         self.d10_mod_ent.set_width_chars(4)
+        self.d10_mod_ent.props.xalign = 0.5
         dice_grid.attach_next_to(self.d10_mod_ent, d10_plus_lbl, Gtk.PositionType.RIGHT, 1, 1)
         self.d10_btn = Gtk.Button(" Roll ")
         dice_grid.attach_next_to(self.d10_btn, self.d10_mod_ent, Gtk.PositionType.RIGHT, 1, 1)
@@ -136,6 +144,7 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         self.d12_count_ent = Gtk.Entry()
         self.d12_count_ent.set_text("1")
         self.d12_count_ent.set_width_chars(4)
+        self.d12_count_ent.props.xalign = 0.5
         dice_grid.attach_next_to(self.d12_count_ent, d12_img, Gtk.PositionType.RIGHT, 1, 1)
         d12_d_lbl = Gtk.Label("d12")
         dice_grid.attach_next_to(d12_d_lbl, self.d12_count_ent, Gtk.PositionType.RIGHT, 1, 1)
@@ -144,6 +153,7 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         self.d12_mod_ent = Gtk.Entry()
         self.d12_mod_ent.set_text("0")
         self.d12_mod_ent.set_width_chars(4)
+        self.d12_mod_ent.props.xalign = 0.5
         dice_grid.attach_next_to(self.d12_mod_ent, d12_plus_lbl, Gtk.PositionType.RIGHT, 1, 1)
         self.d12_btn = Gtk.Button(" Roll ")
         dice_grid.attach_next_to(self.d12_btn, self.d12_mod_ent, Gtk.PositionType.RIGHT, 1, 1)
@@ -155,6 +165,7 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         self.d20_count_ent = Gtk.Entry()
         self.d20_count_ent.set_text("1")
         self.d20_count_ent.set_width_chars(4)
+        self.d20_count_ent.props.xalign = 0.5
         dice_grid.attach_next_to(self.d20_count_ent, d20_img, Gtk.PositionType.RIGHT, 1, 1)
         d20_d_lbl = Gtk.Label("d20")
         dice_grid.attach_next_to(d20_d_lbl, self.d20_count_ent, Gtk.PositionType.RIGHT, 1, 1)
@@ -163,6 +174,7 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         self.d20_mod_ent = Gtk.Entry()
         self.d20_mod_ent.set_text("0")
         self.d20_mod_ent.set_width_chars(4)
+        self.d20_mod_ent.props.xalign = 0.5
         dice_grid.attach_next_to(self.d20_mod_ent, d20_plus_lbl, Gtk.PositionType.RIGHT, 1, 1)
         self.d20_btn = Gtk.Button(" Roll ")
         dice_grid.attach_next_to(self.d20_btn, self.d20_mod_ent, Gtk.PositionType.RIGHT, 1, 1)
@@ -174,12 +186,14 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         self.dq_count_ent = Gtk.Entry()
         self.dq_count_ent.set_text("1")
         self.dq_count_ent.set_width_chars(4)
+        self.dq_count_ent.props.xalign = 0.5
         dice_grid.attach_next_to(self.dq_count_ent, dq_img, Gtk.PositionType.RIGHT, 1, 1)
         dq_box = Gtk.Box()
         dq_d_lbl = Gtk.Label("d ")
         dq_box.add(dq_d_lbl)
         self.dq_size_ent = Gtk.Entry()
         self.dq_size_ent.set_width_chars(4)
+        self.dq_size_ent.props.xalign = 0.5
         self.dq_size_ent.set_margin_left(5)
         dq_box.add(self.dq_size_ent)
         dice_grid.attach_next_to(dq_box, self.dq_count_ent, Gtk.PositionType.RIGHT, 1, 1)
@@ -188,6 +202,7 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         self.dq_mod_ent = Gtk.Entry()
         self.dq_mod_ent.set_text("0")
         self.dq_mod_ent.set_width_chars(4)
+        self.dq_mod_ent.props.xalign = 0.5
         dice_grid.attach_next_to(self.dq_mod_ent, dq_plus_lbl, Gtk.PositionType.RIGHT, 1, 1)
         self.dq_btn = Gtk.Button(" Roll ")
         dice_grid.attach_next_to(self.dq_btn, self.dq_mod_ent, Gtk.PositionType.RIGHT, 1, 1)
