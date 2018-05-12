@@ -5,7 +5,7 @@
 ################################################################################
 #
 # Natural One
-# Version 1.0
+# Version 1.1
 #
 # A simple dice roller application for the Pathfinder roll playing game.
 #
