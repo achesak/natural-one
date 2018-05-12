@@ -9,15 +9,12 @@
 ################################################################################
 
 
-# Import GTK for the dialog.
 from gi.repository import Gtk, Gdk
 
 
 class TemplateDialog(Gtk.Dialog):
-    """Shows the template dialog."""
 
     def __init__(self, parent, subtitle, name=None, rolls=None):
-        """Creates the dialog."""
 
         if rolls is None:
             rolls = []
