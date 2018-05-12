@@ -320,7 +320,7 @@ class TemplateDialog(Gtk.Dialog):
 
         add_as_new = True
         for i in range(0, len(self.rolls)):
-            if self.rolls[i]["description"] == desc:
+            if self.rolls[i]["description"] == roll["description"]:
                 self.rolls[i] = roll
                 add_as_new = False
         if add_as_new:
