@@ -405,24 +405,20 @@ class DiceRoller(Gtk.Application):
     def about(self):
         """Shows the About dialog."""
 
-        img_file = open("resources/images/icon256.png", "rb")
-        img_bin = img_file.read()
-        img_file.close()
+        with open("resources/images/icon256.png", "rb") as img_file:
+            img_bin = img_file.read()
+
         loader = GdkPixbuf.PixbufLoader.new_with_type("png")
         loader.write(img_bin)
         loader.close()
         pixbuf = loader.get_pixbuf()
 
-        license_file = open("LICENSE.md", "r")
-        license_text = license_file.read()
-        license_file.close()
-
-        about_dlg = NaturalOneAboutDialog(self.window, pixbuf, license_text)
+        about_dlg = NaturalOneAboutDialog(self.window, pixbuf)
         about_dlg.run()
         about_dlg.destroy()
 
 
-if __name__ == "__main__" and len(sys.argv) == 1:
+if __name__ == "__main__":
 
     win = DiceRoller()
     win.run()
