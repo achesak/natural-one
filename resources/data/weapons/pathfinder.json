@@ -5838,9 +5838,9 @@
                             "die": 8
                         }
                     ],
+                    "dmg_static": 6,
                     "crit_range": 20,
-                    "crit_mult": 3,
-                    "dmg_static": 6
+                    "crit_mult": 3
                 },
                 {
                     "name": "EMP rifle",

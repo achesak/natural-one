@@ -1,0 +1,400 @@
+{
+    "system": "Starfinder",
+    "data": [
+        {
+            "category": "Uncategorized one-handed melee",
+            "weapons": [
+                {
+                    "name": "Unarmed strike",
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Club",
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Baton, tactical",
+                    "display": "Tactical baton",
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Battleglove, cestus",
+                    "display": "Cestus battleglove",
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Knife, survival",
+                    "display": "Survival knife",
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Dueling sword, tactical",
+                    "display": "Tactical dueling sword",
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Knife, tactical",
+                    "display": "Tactical knife",
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                            "count": 2,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Dueling sword, buzzblade",
+                    "display": "Buzzblade dueling sword",
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                            "count": 2,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Incapacitator",
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                            "count": 3,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Battleglove, power",
+                    "display": "Power battleglove",
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                            "count": 2,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Dueling sword, ultrathin",
+                    "display": "Ultrathin dueling sword",
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                            "count": 3,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Dagger, ultrathin",
+                    "display": "Ultrathin dagger",
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                            "count": 4,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Battleglove, nova",
+                    "display": "Nova battleglove",
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                            "count": 3,
+                            "die": 10
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Dagger, zero-edge",
+                    "display": "Zero-edge dagger",
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                            "count": 6,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Dueling sword, ripper",
+                    "display": "Ripper dueling sword",
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                            "count": 7,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Peacemaker",
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                            "count": 6,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Battleglove, gravity",
+                    "display": "Gravity battleglove",
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                            "count": 5,
+                            "die": 10
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Dagger, molecular rift",
+                    "display": "Molecular rift dagger",
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                            "count": 10,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Dueling sword, molecular rift",
+                    "display": "Molecular rift dueling sword",
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                            "count": 10,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Baton, advanced",
+                    "display": "Advanced baton",
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                            "count": 8,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                }
+            ]
+        },
+        {
+            "category": "Uncategorized two-handed weapons",
+            "weapons": [
+                {
+                    "name": "Spear, tactical",
+                    "display": "Tactical spear",
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Staff, battle",
+                    "display": "Battle staff",
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Staff, carbon",
+                    "display": "Carbon staff",
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Spear, sentinel",
+                    "display": "Sentinel spear",
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                            "count": 2,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Spear, buzzblade",
+                    "display": "Buzzblade spear",
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                            "count": 3,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Spear, zero-edge",
+                    "display": "Zero-edge spear",
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                            "count": 7,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Staff, hardlight",
+                    "display": "Hardlight spear",
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                            "count": 8,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Spear, gravity",
+                    "display": "Gravity spear",
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                            "count": 12,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                }
+            ]
+        },
+        {
+            "category": "Flame longarms",
+            "weapons": [
+                {
+                    "name": "Flame rifle",
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2,
+                    "crit_extra": {
+                        "dmg": [
+                            {
+                                "count": 1,
+                                "die": 6
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}
