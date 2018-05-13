@@ -63,7 +63,12 @@ def dmg(num_atks, mods, weapon, count, die, crit_attack, min_value):
             output.append(roll)
         rolls.append("Hit %d: %s+%d=<b>%d damage</b>" % (i + 1, "+".join([str(x) for x in output]),
                                                          mods[i], sum(output) + mods[i]))
+
         total += sum(output) + mods[i]
+
+        if "dmg_static" in weapon:
+            total += weapon["dmg_static"]
+            rolls.append("<i>Added %s damage</i>" % weapon["dmg_static"])
 
     return total, rolls
 

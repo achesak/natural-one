@@ -293,10 +293,10 @@ class DiceRoller(Gtk.Application):
         mods = utility.expand_mod(mods, num_atks, crit_attack)
 
         if self.window.small_dam_rbtn.get_active():
-            die = "dmg_small"
+            die = "die_small"
             count = "count_small"
         else:
-            die = "dmg_medium"
+            die = "die_medium"
             count = "count_medium"
 
         if not valid:
