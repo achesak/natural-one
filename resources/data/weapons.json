@@ -1,6 +1,5 @@
 {
-    "default": 0,
-    "weapons": [
+    "systems": [
         {
             "name": "Pathfinder",
             "filename": "pathfinder.json"

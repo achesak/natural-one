@@ -300,9 +300,6 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         sys_dam_lbl.set_alignment(0, 0.5)
         dam_grid.attach_next_to(sys_dam_lbl, dam_lbl, Gtk.PositionType.BOTTOM, 1, 1)
         self.sys_dam_cbox = Gtk.ComboBoxText.new()
-        for system in ["Pathfinder"]:
-            self.sys_dam_cbox.append_text(system)
-        self.sys_dam_cbox.set_active(0)
         dam_grid.attach_next_to(self.sys_dam_cbox, sys_dam_lbl, Gtk.PositionType.RIGHT, 2, 1)
 
         # Create the weapon row.

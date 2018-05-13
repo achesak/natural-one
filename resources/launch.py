@@ -28,8 +28,21 @@ def get_weapon_data():
     """Reads and parses the weapon data."""
 
     try:
-        with open("resources/data/weapons/pathfinder.json", "r") as weapon_file:
-            return json.load(weapon_file)
+        with open("resources/data/weapons.json", "r") as weapon_file:
+            meta_data = json.load(weapon_file)
     except (IOError, TypeError, ValueError) as e:
-        print("get_weapon_data(): Error reading weapon data:\n%s" % e)
+        print("get_weapon_data(): Error reading weapons meta file:\n%s" % e)
         sys.exit()
+
+    systems = [system["name"] for system in meta_data["systems"]]
+    data = []
+    for system in meta_data["systems"]:
+        try:
+            with open("resources/data/weapons/%s" % system["filename"]) as data_file:
+                data.append(json.load(data_file))
+        except (IOError, TypeError, ValueError) as e:
+            print("get_weapon_data(): Error reading weapons data file %s:\n%s" % (system["filename"], e))
+            sys.exit()
+
+    return systems, data
+

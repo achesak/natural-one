@@ -46,7 +46,8 @@ class DiceRoller(Gtk.Application):
         Gtk.Application.do_startup(self)
 
         self.menu = launch.get_menu_data()
-        self.weapon_data = launch.get_weapon_data()["data"]
+        self.systems, self.weapon_data = launch.get_weapon_data()
+        self.current_system_index = 0
 
         self.templates = io.load_templates()
 
@@ -74,11 +75,13 @@ class DiceRoller(Gtk.Application):
     def setup_interface(self):
         """Fills interface fields and sets events."""
 
+        # Fill the system data.
+        for system in self.systems:
+            self.window.sys_dam_cbox.append_text(system)
+        self.window.sys_dam_cbox.set_active(0)
+
         # Fill the damage roll weapon data.
-        for i in range(0, len(self.weapon_data)):
-            row_iter = self.window.weap_dam_store.append(None, [self.weapon_data[i]["category"]])
-            for j in range(0, len(self.weapon_data[i]["weapons"])):
-                self.window.weap_dam_store.append(row_iter, [self.weapon_data[i]["weapons"][j]["name"]])
+        self.fill_weapon_list(self.current_system_index)
 
         # Fill the templates list.
         self.window.template_store.clear()
@@ -102,6 +105,7 @@ class DiceRoller(Gtk.Application):
                                     lambda x: self.roll(20, self.window.d20_count_ent, self.window.d20_mod_ent))
         self.window.dq_btn.connect("clicked", lambda x: self.roll_custom())
         self.window.atk_btn.connect("clicked", lambda x: self.roll_attack())
+        self.window.sys_dam_cbox.connect("changed", lambda x: self.change_system())
         self.window.dam_btn.connect("clicked", lambda x: self.roll_dmg())
         self.window.weap_dam_tree.connect("row-activated", lambda x, y, z: self.roll_dmg())
         self.window.new_btn.connect("clicked", lambda x: self.new_template())
@@ -116,6 +120,27 @@ class DiceRoller(Gtk.Application):
         tree_sel = self.window.template_tree.get_selection()
         tm, ti = tree_sel.get_selected()
         self.roll_template(ti)
+
+    def fill_weapon_list(self, index):
+        """Fills the weapon list with data from the selected system."""
+
+        self.window.weap_dam_store.clear()
+
+        system_data = self.weapon_data[index]
+        for i in range(0, len(system_data["data"])):
+            row_iter = self.window.weap_dam_store.append(None, [system_data["data"][i]["category"]])
+            for j in range(0, len(system_data["data"][i]["weapons"])):
+                self.window.weap_dam_store.append(row_iter, [system_data["data"][i]["weapons"][j]["name"]])
+
+    def change_system(self):
+        """Changes the currently displayed system for weapon data."""
+
+        current_selection = self.window.sys_dam_cbox.get_active()
+        if current_selection is None or current_selection == -1:
+            return
+
+        self.current_system_index = current_selection
+        self.fill_weapon_list(current_selection)
 
     def roll_custom(self):
         """Roll for custom dice."""
@@ -243,6 +268,8 @@ class DiceRoller(Gtk.Application):
     def roll_dmg(self):
         """Rolls damage."""
 
+        system_data = self.weapon_data[self.current_system_index]["data"]
+
         valid = True
         self.window.remove_error(self.window.weap_dam_tree)
         self.window.remove_error(self.window.num_dam_ent)
@@ -259,7 +286,7 @@ class DiceRoller(Gtk.Application):
             self.window.add_error(self.window.weap_dam_tree)
             valid = False
         else:
-            weapon = utility.get_weapon(self.weapon_data, model[weapon_iter][0], model[section_iter][0])
+            weapon = utility.get_weapon(system_data, model[weapon_iter][0], model[section_iter][0])
 
         crit_attack = self.window.crit_dam_chk.get_active()
 
@@ -292,15 +319,15 @@ class DiceRoller(Gtk.Application):
 
         mods = utility.expand_mod(mods, num_atks, crit_attack)
 
+        if not valid:
+            return
+
         if "no_size_steps" in weapon and weapon["no_size_steps"]:
             weapon_rolls = weapon["dmg"]
         elif self.window.small_dam_rbtn.get_active():
             weapon_rolls = weapon["dmg_small"]
         else:
             weapon_rolls = weapon["dmg_medium"]
-
-        if not valid:
-            return
 
         if crit_attack:
             num_atks *= weapon["crit_mult"]

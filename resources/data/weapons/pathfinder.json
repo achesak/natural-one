@@ -602,7 +602,7 @@
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 9
+                            "die": 8
                         }
                     ],
                     "crit_range": 19,
