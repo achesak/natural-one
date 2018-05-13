@@ -30,7 +30,7 @@ def basic(count, die, mod_each, mod_once, min_value):
     return total, rolls
 
 
-def atk(num_atks, mods, crit_range, stop_on_crit):
+def atk(num_atks, mods, crit_range, stop_on_crit, confirm_crit):
     """Rolls an attack roll."""
 
     rolls = []
@@ -43,8 +43,9 @@ def atk(num_atks, mods, crit_range, stop_on_crit):
                 break
         if roll >= crit_range:
             rolls.append("<span color=\"green\">Critical hit!</span>")
-            confirm = random.randint(1, 20)
-            rolls.append("Critical confirm: %d+%d=<b>%d</b>" % (confirm, mods[i], confirm + mods[i]))
+            if confirm_crit:
+                confirm = random.randint(1, 20)
+                rolls.append("Critical confirm: %d+%d=<b>%d</b>" % (confirm, mods[i], confirm + mods[i]))
 
     return rolls
 

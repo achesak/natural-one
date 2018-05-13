@@ -269,10 +269,15 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         crit_20_atks_lbl.set_alignment(0, 0.5)
         atk_grid.attach_next_to(crit_20_atks_lbl, self.crit_atks_ent, Gtk.PositionType.RIGHT, 1, 1)
 
+        # Create the confirm critical row.
+        self.confirm_atks_chk = Gtk.CheckButton("Confirm critical hits")
+        self.confirm_atks_chk.set_active(True)
+        atk_grid.attach_next_to(self.confirm_atks_chk, crit_atks_lbl, Gtk.PositionType.BOTTOM, 2, 1)
+
         # Create the stop on fail row.
         self.stop_atks_chk = Gtk.CheckButton("Stop on critical fail")
         self.stop_atks_chk.set_active(True)
-        atk_grid.attach_next_to(self.stop_atks_chk, crit_atks_lbl, Gtk.PositionType.BOTTOM, 2, 1)
+        atk_grid.attach_next_to(self.stop_atks_chk, self.confirm_atks_chk, Gtk.PositionType.BOTTOM, 2, 1)
 
         # Create the attack roll button.
         self.atk_btn = Gtk.Button(" Roll ")

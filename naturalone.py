@@ -231,11 +231,12 @@ class DiceRoller(Gtk.Application):
             valid = False
         
         stop_on_crit = self.window.stop_atks_chk.get_active()
+        confirm_crit = self.window.confirm_atks_chk.get_active()
 
         if not valid:
             return
 
-        rolls = roller.atk(num_atks, mods, crit_range, stop_on_crit)
+        rolls = roller.atk(num_atks, mods, crit_range, stop_on_crit, confirm_crit)
         output = format.atk(num_atks, mods, crit_range, rolls)
         self.window.update_output(output)
 
