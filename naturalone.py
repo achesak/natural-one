@@ -242,7 +242,7 @@ class DiceRoller(Gtk.Application):
             self.window.add_error(self.window.mod_atks_ent)
             valid = False
 
-        mods = utility.expand_mod(mods, num_atks, False)
+        mods = utility.expand_mod(mods, num_atks, False, 0)
 
         try:
             crit_range = int(self.window.crit_atks_ent.get_text())
