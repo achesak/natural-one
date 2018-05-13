@@ -127,7 +127,7 @@ class TemplateDialog(Gtk.Dialog):
         self.desc_ent = Gtk.Entry()
         self.desc_ent.set_hexpand(True)
         self.desc_ent.set_margin_right(5)
-        self.add_btn = Gtk.Button("  Add Roll  ")
+        self.add_btn = Gtk.Button(" Add Roll ")
         desc_box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL)
         desc_box.pack_start(desc_lbl, False, False, 0)
         desc_box.pack_start(self.desc_ent, True, True, 0)
@@ -189,19 +189,13 @@ class TemplateDialog(Gtk.Dialog):
         self.edit_btn.connect("clicked", lambda x: self.edit_roll())
         self.delete_btn.connect("clicked", lambda x: self.remove_roll())
         self.roll_tree.connect("row-activated", lambda x, y, z: self.activated_event())
+        self.desc_ent.connect("changed", lambda x: self.check_edit_name())
 
         if self.name is not None:
             self.name_ent.set_text(self.name)
         self.update_list()
 
         self.show_all()
-
-    def activated_event(self):
-        """Edits on double click."""
-
-        tree_sel = self.roll_tree.get_selection()
-        tm, ti = tree_sel.get_selected()
-        self.edit_roll(ti)
 
     @staticmethod
     def add_error(widget):
@@ -214,6 +208,24 @@ class TemplateDialog(Gtk.Dialog):
         """Removes the error class from a widget."""
 
         widget.get_style_context().remove_class("bad-input")
+
+    def activated_event(self):
+        """Edits on double click."""
+
+        tree_sel = self.roll_tree.get_selection()
+        tm, ti = tree_sel.get_selected()
+        self.edit_roll(ti)
+
+    def check_edit_name(self):
+        """Checks if the current roll is being added or edited."""
+
+        desc = self.desc_ent.get_text()
+        for i in range(0, len(self.rolls)):
+            if self.rolls[i]["description"] == desc:
+                self.add_btn.set_label("Edit Roll")
+                return
+
+        self.add_btn.set_label("Add Roll")
 
     def update_list(self):
         """Updates the list."""
