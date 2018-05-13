@@ -57,7 +57,10 @@ def dmg(num_atks, mods, weapon, weapon_path, min_value, crit_attack):
 
     rolls = []
     total = 0
+    hit_num = 0
     for i in range(0, num_atks):
+        if not crit_attack or (crit_attack and i % weapon["crit_mult"] == 0):
+            hit_num += 1
         output = []
         for j in range(0, len(weapon_rolls)):
             for _ in range(0, weapon_rolls[j]["count"]):
@@ -66,7 +69,7 @@ def dmg(num_atks, mods, weapon, weapon_path, min_value, crit_attack):
                 output.append(roll)
 
         if len(output) != 0:
-            rolls.append("Hit %d: %s+%d=<b>%d damage</b>" % (i + 1, "+".join([str(x) for x in output]),
+            rolls.append("Hit %d: %s+%d=<b>%d damage</b>" % (hit_num, "+".join([str(x) for x in output]),
                                                             mods[i], sum(output) + mods[i]))
 
         total += sum(output) + mods[i]
