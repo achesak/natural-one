@@ -223,84 +223,73 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
 
         # Create the Combat grid.
         combat_grid = Gtk.Grid()
-        combat_grid.set_row_spacing(20)
-        combat_grid.set_column_spacing(20)
+        combat_grid.set_row_spacing(5)
+        combat_grid.set_column_spacing(5)
         combat_grid.set_border_width(20)
-
-        # Create the Combat -> Attack Roll grid.
-        atk_grid = Gtk.Grid()
-        atk_grid.set_row_spacing(5)
-        atk_grid.set_column_spacing(5)
-        combat_grid.attach(atk_grid, 0, 0, 1, 1)
 
         # Create the attack roll main label.
         atk_lbl = Gtk.Label()
         atk_lbl.set_markup("<span size=\"x-large\">Attack Roll</span>")
         atk_lbl.set_alignment(0, 0.5)
-        atk_grid.add(atk_lbl)
+        combat_grid.add(atk_lbl)
 
         # Create the number of attacks row.
         num_atks_lbl = Gtk.Label("Number of attacks: ")
         num_atks_lbl.set_alignment(0, 0.5)
-        atk_grid.attach_next_to(num_atks_lbl, atk_lbl, Gtk.PositionType.BOTTOM, 1, 1)
+        combat_grid.attach_next_to(num_atks_lbl, atk_lbl, Gtk.PositionType.BOTTOM, 1, 1)
         self.num_atks_ent = Gtk.Entry()
         self.num_atks_ent.set_hexpand(True)
         self.num_atks_ent.set_text("1")
-        atk_grid.attach_next_to(self.num_atks_ent, num_atks_lbl, Gtk.PositionType.RIGHT, 3, 1)
+        combat_grid.attach_next_to(self.num_atks_ent, num_atks_lbl, Gtk.PositionType.RIGHT, 3, 1)
 
         # Create the modifiers row.
         mod_atks_lbl = Gtk.Label("Modifiers: ")
         mod_atks_lbl.set_alignment(0, 0.5)
-        atk_grid.attach_next_to(mod_atks_lbl, num_atks_lbl, Gtk.PositionType.BOTTOM, 1, 1)
+        combat_grid.attach_next_to(mod_atks_lbl, num_atks_lbl, Gtk.PositionType.BOTTOM, 1, 1)
         self.mod_atks_ent = Gtk.Entry()
         self.mod_atks_ent.set_hexpand(True)
         self.mod_atks_ent.set_text("0")
-        atk_grid.attach_next_to(self.mod_atks_ent, mod_atks_lbl, Gtk.PositionType.RIGHT, 3, 1)
+        combat_grid.attach_next_to(self.mod_atks_ent, mod_atks_lbl, Gtk.PositionType.RIGHT, 3, 1)
 
         # Create the critical range row.
         crit_atks_lbl = Gtk.Label("Critical range: ")
         crit_atks_lbl.set_alignment(0, 0.5)
-        atk_grid.attach_next_to(crit_atks_lbl, mod_atks_lbl, Gtk.PositionType.BOTTOM, 1, 1)
+        combat_grid.attach_next_to(crit_atks_lbl, mod_atks_lbl, Gtk.PositionType.BOTTOM, 1, 1)
         self.crit_atks_ent = Gtk.Entry()
         self.crit_atks_ent.set_hexpand(True)
         self.crit_atks_ent.set_text("20")
-        atk_grid.attach_next_to(self.crit_atks_ent, crit_atks_lbl, Gtk.PositionType.RIGHT, 2, 1)
+        combat_grid.attach_next_to(self.crit_atks_ent, crit_atks_lbl, Gtk.PositionType.RIGHT, 2, 1)
         crit_20_atks_lbl = Gtk.Label("-20")
         crit_20_atks_lbl.set_alignment(0, 0.5)
-        atk_grid.attach_next_to(crit_20_atks_lbl, self.crit_atks_ent, Gtk.PositionType.RIGHT, 1, 1)
+        combat_grid.attach_next_to(crit_20_atks_lbl, self.crit_atks_ent, Gtk.PositionType.RIGHT, 1, 1)
 
         # Create the confirm critical row.
         self.confirm_atks_chk = Gtk.CheckButton("Confirm critical hits")
         self.confirm_atks_chk.set_active(True)
-        atk_grid.attach_next_to(self.confirm_atks_chk, crit_atks_lbl, Gtk.PositionType.BOTTOM, 2, 1)
+        combat_grid.attach_next_to(self.confirm_atks_chk, crit_atks_lbl, Gtk.PositionType.BOTTOM, 2, 1)
 
         # Create the stop on fail row.
         self.stop_atks_chk = Gtk.CheckButton("Stop on critical fail")
         self.stop_atks_chk.set_active(True)
-        atk_grid.attach_next_to(self.stop_atks_chk, self.confirm_atks_chk, Gtk.PositionType.BOTTOM, 2, 1)
+        combat_grid.attach_next_to(self.stop_atks_chk, self.confirm_atks_chk, Gtk.PositionType.BOTTOM, 2, 1)
 
         # Create the attack roll button.
         self.atk_btn = Gtk.Button(" Roll ")
-        atk_grid.attach_next_to(self.atk_btn, self.stop_atks_chk, Gtk.PositionType.RIGHT, 2, 1)
-
-        # Create the Combat -> Damage Roll grid.
-        dam_grid = Gtk.Grid()
-        dam_grid.set_row_spacing(5)
-        dam_grid.set_column_spacing(5)
-        combat_grid.attach(dam_grid, 0, 1, 1, 1)
+        combat_grid.attach_next_to(self.atk_btn, self.stop_atks_chk, Gtk.PositionType.RIGHT, 2, 1)
 
         # Create the damage roll main label.
         dam_lbl = Gtk.Label()
         dam_lbl.set_markup("<span size=\"x-large\">Damage Roll</span>")
         dam_lbl.set_alignment(0, 0.5)
-        dam_grid.add(dam_lbl)
+        dam_lbl.set_margin_top(15)
+        combat_grid.attach_next_to(dam_lbl, self.stop_atks_chk, Gtk.PositionType.BOTTOM, 4, 1)
 
         # Create the system row.
         sys_dam_lbl = Gtk.Label("System: ")
         sys_dam_lbl.set_alignment(0, 0.5)
-        dam_grid.attach_next_to(sys_dam_lbl, dam_lbl, Gtk.PositionType.BOTTOM, 1, 1)
+        combat_grid.attach_next_to(sys_dam_lbl, dam_lbl, Gtk.PositionType.BOTTOM, 1, 1)
         self.sys_dam_cbox = Gtk.ComboBoxText.new()
-        dam_grid.attach_next_to(self.sys_dam_cbox, sys_dam_lbl, Gtk.PositionType.RIGHT, 2, 1)
+        combat_grid.attach_next_to(self.sys_dam_cbox, sys_dam_lbl, Gtk.PositionType.RIGHT, 3, 1)
 
         # Create the weapon row.
         dam_scroll_win = Gtk.ScrolledWindow()
@@ -314,52 +303,52 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         weap_dam_crend = Gtk.CellRendererText()
         weap_dam_col = Gtk.TreeViewColumn("Weapons", weap_dam_crend, text=0)
         self.weap_dam_tree.append_column(weap_dam_col)
-        dam_grid.attach_next_to(dam_scroll_win, sys_dam_lbl, Gtk.PositionType.BOTTOM, 3, 1)
+        combat_grid.attach_next_to(dam_scroll_win, sys_dam_lbl, Gtk.PositionType.BOTTOM, 4, 1)
 
         # Create the number of attacks row.
         num_dam_lbl = Gtk.Label("Number of attacks: ")
         num_dam_lbl.set_alignment(0, 0.5)
-        dam_grid.attach_next_to(num_dam_lbl, dam_scroll_win, Gtk.PositionType.BOTTOM, 1, 1)
+        combat_grid.attach_next_to(num_dam_lbl, dam_scroll_win, Gtk.PositionType.BOTTOM, 1, 1)
         self.num_dam_ent = Gtk.Entry()
         self.num_dam_ent.set_hexpand(True)
         self.num_dam_ent.set_text("1")
-        dam_grid.attach_next_to(self.num_dam_ent, num_dam_lbl, Gtk.PositionType.RIGHT, 2, 1)
+        combat_grid.attach_next_to(self.num_dam_ent, num_dam_lbl, Gtk.PositionType.RIGHT, 3, 1)
 
         # Create the damage modifier row.
         mod_dam_lbl = Gtk.Label("Modifiers: ")
         mod_dam_lbl.set_alignment(0, 0.5)
-        dam_grid.attach_next_to(mod_dam_lbl, num_dam_lbl, Gtk.PositionType.BOTTOM, 1, 1)
+        combat_grid.attach_next_to(mod_dam_lbl, num_dam_lbl, Gtk.PositionType.BOTTOM, 1, 1)
         self.mod_dam_ent = Gtk.Entry()
         self.mod_dam_ent.set_hexpand(True)
         self.mod_dam_ent.set_text("0")
-        dam_grid.attach_next_to(self.mod_dam_ent, mod_dam_lbl, Gtk.PositionType.RIGHT, 2, 1)
+        combat_grid.attach_next_to(self.mod_dam_ent, mod_dam_lbl, Gtk.PositionType.RIGHT, 3, 1)
 
         # Create the minimum value row.
         min_dam_lbl = Gtk.Label("Minimum value: ")
         min_dam_lbl.set_alignment(0, 0.5)
-        dam_grid.attach_next_to(min_dam_lbl, mod_dam_lbl, Gtk.PositionType.BOTTOM, 1, 1)
+        combat_grid.attach_next_to(min_dam_lbl, mod_dam_lbl, Gtk.PositionType.BOTTOM, 1, 1)
         self.min_dam_ent = Gtk.Entry()
         self.min_dam_ent.set_hexpand(True)
         self.min_dam_ent.set_text("0")
-        dam_grid.attach_next_to(self.min_dam_ent, min_dam_lbl, Gtk.PositionType.RIGHT, 2, 1)
+        combat_grid.attach_next_to(self.min_dam_ent, min_dam_lbl, Gtk.PositionType.RIGHT, 3, 1)
 
         # Create the size row.
-        size_dam_grid = Gtk.Grid()
-        size_dam_grid.set_column_spacing(15)
+        size_combat_grid = Gtk.Grid()
+        size_combat_grid.set_column_spacing(15)
         self.small_dam_rbtn = Gtk.RadioButton.new_with_label_from_widget(None, "Small")
         self.med_dam_rbtn = Gtk.RadioButton.new_with_label_from_widget(self.small_dam_rbtn, "Medium")
         self.med_dam_rbtn.set_active(True)
-        size_dam_grid.add(self.small_dam_rbtn)
-        size_dam_grid.attach_next_to(self.med_dam_rbtn, self.small_dam_rbtn, Gtk.PositionType.RIGHT, 1, 1)
-        dam_grid.attach_next_to(size_dam_grid, min_dam_lbl, Gtk.PositionType.BOTTOM, 4, 1)
+        size_combat_grid.add(self.small_dam_rbtn)
+        size_combat_grid.attach_next_to(self.med_dam_rbtn, self.small_dam_rbtn, Gtk.PositionType.RIGHT, 1, 1)
+        combat_grid.attach_next_to(size_combat_grid, min_dam_lbl, Gtk.PositionType.BOTTOM, 3, 1)
 
         # Create the critical row.
         self.crit_dam_chk = Gtk.CheckButton("Critical hit")
-        dam_grid.attach_next_to(self.crit_dam_chk, size_dam_grid, Gtk.PositionType.BOTTOM, 2, 1)
+        combat_grid.attach_next_to(self.crit_dam_chk, size_combat_grid, Gtk.PositionType.BOTTOM, 2, 1)
 
         # Create the damage roll button.
         self.dam_btn = Gtk.Button(" Roll ")
-        dam_grid.attach_next_to(self.dam_btn, self.crit_dam_chk, Gtk.PositionType.RIGHT, 1, 1)
+        combat_grid.attach_next_to(self.dam_btn, self.crit_dam_chk, Gtk.PositionType.RIGHT, 2, 1)
 
         # Create the Templates grid.
         templates_grid = Gtk.Grid()
