@@ -94,8 +94,7 @@ class TemplateDialog(Gtk.Dialog):
 
         # Create the critical rows.
         self.crit_apply_rbtn = Gtk.RadioButton.new_with_label_from_widget(None, "Multiplied by critical hit")
-        self.crit_no_apply_rbtn = Gtk.RadioButton.new_with_label_from_widget(self.crit_apply_rbtn,
-                                                                             "Not multiplied by critical hit")
+        self.crit_no_apply_rbtn = Gtk.RadioButton.new_with_label_from_widget(self.crit_apply_rbtn, "Not multiplied by critical hit")
         self.crit_no_apply_rbtn.set_hexpand(True)
         crit_lbl = Gtk.Label("Multiplier: ")
         crit_lbl.set_margin_left(25)
@@ -110,6 +109,10 @@ class TemplateDialog(Gtk.Dialog):
         add_grid.attach_next_to(crit_box, self.crit_apply_rbtn, Gtk.PositionType.BOTTOM, 7, 1)
         add_grid.attach_next_to(self.crit_no_apply_rbtn, crit_box, Gtk.PositionType.BOTTOM, 7, 1)
 
+        # Create the critical only row.
+        self.crit_only_chk = Gtk.CheckButton("Only roll on critical hit")
+        add_grid.attach_next_to(self.crit_only_chk, self.crit_no_apply_rbtn, Gtk.PositionType.BOTTOM, 7, 1)
+
         # Create the minimum value row.
         min_lbl = Gtk.Label("Minimum value: ")
         min_lbl.set_margin_right(5)
@@ -119,7 +122,7 @@ class TemplateDialog(Gtk.Dialog):
         min_box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL)
         min_box.pack_start(min_lbl, False, False, 0)
         min_box.pack_start(self.min_ent, True, True, 0)
-        add_grid.attach_next_to(min_box, self.crit_no_apply_rbtn, Gtk.PositionType.BOTTOM, 7, 1)
+        add_grid.attach_next_to(min_box, self.crit_only_chk, Gtk.PositionType.BOTTOM, 7, 1)
 
         # Create the description row.
         desc_lbl = Gtk.Label("Name: ")
@@ -302,6 +305,7 @@ class TemplateDialog(Gtk.Dialog):
         mod_every = self.mod_chk.get_active()
         crit_mod = self.crit_ent.get_text()
         crit_active = self.crit_apply_rbtn.get_active()
+        crit_only = self.crit_only_chk.get_active()
         min_value = self.min_ent.get_text()
         desc = self.desc_ent.get_text().strip()
 
@@ -313,6 +317,7 @@ class TemplateDialog(Gtk.Dialog):
             "mod_every": mod_every,
             "crit_active": crit_active,
             "crit_mod": crit_mod,
+            "crit_only": crit_only,
             "min_value": min_value
         }
 
@@ -335,6 +340,8 @@ class TemplateDialog(Gtk.Dialog):
         if add_as_new:
             self.rolls.append(roll)
 
+        self.check_edit_name()
+
         self.update_list()
 
     def edit_roll(self, index=None):
@@ -356,8 +363,11 @@ class TemplateDialog(Gtk.Dialog):
         self.mod_chk.set_active(roll["mod_every"])
         self.crit_ent.set_text(str(roll["crit_mod"]))
         self.crit_apply_rbtn.set_active(roll["crit_active"])
+        self.crit_only_chk.set_active(roll["crit_only"])
         self.min_ent.set_text(str(roll["min_value"]))
         self.desc_ent.set_text(roll["description"])
+
+        self.check_edit_name()
 
     def remove_roll(self):
         """Removes a roll."""

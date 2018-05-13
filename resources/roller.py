@@ -106,6 +106,8 @@ def template(template, crit_attack):
     rolls = []
     total = 0
     for item in template["rolls"]:
+        if item["crit_only"] and not crit_attack:
+            continue
         roll_item = {
             "description": item["description"],
             "rolls": [],
@@ -113,7 +115,7 @@ def template(template, crit_attack):
             "item": item
         }
         count = item["count"]
-        if crit_attack and item["crit_active"]:
+        if crit_attack and item["crit_active"] and not item["crit_only"]:
             count *= item["crit_mod"]
         for _ in range(0, count):
             roll = random.randint(1, item["die"])
