@@ -41,8 +41,9 @@ def dmg(num_atks, mods, weapon, crit_attack, weapon_rolls, rolls, total):
         display_name = weapon["display"]
     if "no_format" not in weapon:
         display_name = display_name.lower()
-    output = "<span size=\"larger\"><b>Rolled %d hit%s with a %s: <i>%d damage</i></b></span>\n" % \
-             (num_atks, "" if num_atks == 1 else "s", display_name, total)
+    use_an = display_name.lower()[0] in ["a", "e", "i", "o", "u"]
+    output = "<span size=\"larger\"><b>Rolled %d hit%s with a%s %s: <i>%d damage</i></b></span>\n" % \
+             (num_atks, "" if num_atks == 1 else "s", "n" if use_an else "", display_name, total)
     output += "<i>Modifiers %s\nDamage dice %s</i>\n" % (", ".join([str(x) for x in mods]), damage_dice)
     output += "\n".join(rolls) + "\n"
     if crit_attack:
