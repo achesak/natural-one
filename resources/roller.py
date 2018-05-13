@@ -50,19 +50,22 @@ def atk(num_atks, mods, crit_range, stop_on_crit, confirm_crit):
     return rolls
 
 
-def dmg(num_atks, mods, weapon, count, die, crit_attack, min_value):
+def dmg(num_atks, mods, weapon, weapon_rolls, min_value):
     """Rolls a damage roll."""
 
     rolls = []
     total = 0
     for i in range(0, num_atks):
         output = []
-        for _ in range(0, weapon[count]):
-            roll = random.randint(1, weapon[die])
-            roll = max(roll, min_value)
-            output.append(roll)
-        rolls.append("Hit %d: %s+%d=<b>%d damage</b>" % (i + 1, "+".join([str(x) for x in output]),
-                                                         mods[i], sum(output) + mods[i]))
+        for j in range(0, len(weapon_rolls)):
+            for _ in range(0, weapon_rolls[j]["count"]):
+                roll = random.randint(1, weapon_rolls[j]["die"])
+                roll = max(roll, min_value)
+                output.append(roll)
+
+        if len(output) != 0:
+            rolls.append("Hit %d: %s+%d=<b>%d damage</b>" % (i + 1, "+".join([str(x) for x in output]),
+                                                            mods[i], sum(output) + mods[i]))
 
         total += sum(output) + mods[i]
 

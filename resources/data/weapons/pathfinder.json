@@ -1,0 +1,6043 @@
+{
+    "system": "Pathfinder",
+    "data": [
+        {
+            "category": "Simple light melee weapons",
+            "weapons": [
+                {
+                    "name": "Unarmed strike",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 2
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Gauntlet",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 2
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Battle aspergillum",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 5
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Brass knife",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 19,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Brass knuckles",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 2
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Cestus",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 19,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Dagger",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 19,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Dagger, punching",
+                    "display": "Punching dagger",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 3
+                },
+                {
+                    "name": "Gauntlet, spiked",
+                    "display": "Spiked gauntlet",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Hook hand",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Kunai",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Mace, light",
+                    "display": "Light mace",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Sickle",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Spring blade",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Wooden stake",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                }
+            ]
+        },
+        {
+            "category": "Simple one-handed melee weapons",
+            "weapons": [
+                {
+                    "name": "Club",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Club, mere",
+                    "display": "Mere club",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Mace, heavy",
+                    "display": "Heavy mace",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Morningstar",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Shortspear",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                }
+            ]
+        },
+        {
+            "category": "Simple two-handed melee weapons",
+            "weapons": [
+                {
+                    "name": "Bayonet",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Boarding pike",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 3
+                },
+                {
+                    "name": "Kumade",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 3
+                },
+                {
+                    "name": "Kumade, collapsible",
+                    "display": "Collapsible kumade",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 3
+                },
+                {
+                    "name": "Lantern staff",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Longspear",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 3
+                },
+                {
+                    "name": "Quarterstaff",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Spear",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 3
+                },
+                {
+                    "name": "Spear, boar",
+                    "display": "Boar spear",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Spear, weighted (spear)",
+                    "display": "Weighted spear (spear)",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 3
+                },
+                {
+                    "name": "Spear, weighted (weight)",
+                    "display": "Weighted spear (weight)",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                }
+            ]
+        },
+        {
+            "category": "Simple ranged weapons",
+            "weapons": [
+                 {
+                    "name": "Blowgun",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 1
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 2
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Crossbow, heavy",
+                    "display": "Heavy crossbow",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 10
+                        }
+                    ],
+                    "crit_range": 19,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Crossbow, light",
+                    "display": "Light crossbow",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 9
+                        }
+                    ],
+                    "crit_range": 19,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Dart",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Javelin",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Sling",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Stingchuck",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Stonebow",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                }
+            ]
+        },
+        {
+            "category": "Martial light melee weapons",
+            "weapons": [
+                 {
+                    "name": "Axe, boarding",
+                    "display": "Boarding axe",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 3
+                },
+                {
+                    "name": "Axe, throwing",
+                    "display": "Throwing axe",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Blade boot",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Cat-o'-nine-tails",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Claw blades",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Dagger, dueling",
+                    "display": "Dueling dagger",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 19,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Dogslicer",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 19,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Hammer, light",
+                    "display": "Light hammer",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Gladius",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 19,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Handaxe",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Katar, tri-bladed",
+                    "display": "Tri-bladed katar",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 4
+                },
+                {
+                    "name": "Knife, switchblade",
+                    "display": "Switchblade knife",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 19,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Kobold tail (long lash)",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Kobold tail (pounder)",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Kobold tail (razored)",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 19,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Kobold tail (spiked)",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 3
+                },
+                {
+                    "name": "Kobold tail (sweeper)",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Kukri",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 18,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Machete",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 19,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Pick, light",
+                    "display": "Light pick",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 4
+                },
+                {
+                    "name": "Ratfolk tailblade",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 2
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Sap",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Sea-knife",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 19,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Shield, light",
+                    "display": "Light shield",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 2
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Spiked armor",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Spiked shield, light",
+                    "display": "Light spiked shield",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Starknife",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 3
+                },
+                {
+                    "name": "Sword, short",
+                    "display": "Short sword",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 19,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "War razor",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 19,
+                    "crit_mult": 2
+                }
+            ]
+        },
+        {
+            "category": "Martial one-handed melee weapons",
+            "weapons": [
+                {
+                    "name": "Ankus",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Battleaxe",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 3
+                },
+                {
+                    "name": "Combat scabbard",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Combat scabbard (sharpened)",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Cutlass",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 18,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Flail",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Gandasa",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 2,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 3
+                },
+                {
+                    "name": "Klar",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Longsword",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 19,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Manople",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Pick, heavy",
+                    "display": "Heavy pick",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 4
+                },
+                {
+                    "name": "Rapier",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 18,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Scimitar",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 18,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Scizore",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 10
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Shield, heavy",
+                    "display": "Heavy shield",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Spiked shield, heavy",
+                    "display": "Heavy spiked shield",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Sword cane",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Terbutje",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 19,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Trident",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Warhammer",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 3
+                }
+            ]
+        },
+        {
+            "category": "Martial two-handed melee weapons",
+            "weapons": [
+                {
+                    "name": "Bardiche",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 10
+                        }
+                    ],
+                    "crit_range": 19,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Bec de corbin",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 10
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 3
+                },
+                {
+                    "name": "Bill",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 3
+                },
+                {
+                    "name": "Earth breaker",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 10
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 2,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 3
+                },
+                {
+                    "name": "Falchion",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 2,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 18,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Flail, heavy",
+                    "display": "Heavy flail",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 10
+                        }
+                    ],
+                    "crit_range": 19,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Glaive",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 10
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 3
+                },
+                {
+                    "name": "Glaive-guisarme",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 10
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 3
+                },
+                {
+                    "name": "Greataxe",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 10
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 12
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 3
+                },
+                {
+                    "name": "Greatclub",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 10
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Greatsword",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 10
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 2,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 19,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Guisarme",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 2,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 3
+                },
+                {
+                    "name": "Halberd",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 10
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 3
+                },
+                {
+                    "name": "Hammer, lucerne",
+                    "display": "Lucerne hammer",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 10
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 12
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Horsechopper",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 10
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 3
+                },
+                {
+                    "name": "Lance",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 3
+                },
+                {
+                    "name": "Ogre hook",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 10
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 3
+                },
+                {
+                    "name": "Pickaxe",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 4
+                },
+                {
+                    "name": "Planson",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 10
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Ranseur",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 2,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 3
+                },
+                {
+                    "name": "Scythe",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 2,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 4
+                },
+                {
+                    "name": "Spear, syringe",
+                    "display": "Syringe spear",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 3
+                }
+            ]
+        },
+        {
+            "category": "Martial ranged weapons",
+            "weapons": [
+                {
+                    "name": "Ammentum",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Chakram",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Dart, jolting",
+                    "display": "Jolting dart",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Hunga munga",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Hurlbat",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 3
+                },
+                {
+                    "name": "Longbow",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 3
+                },
+                {
+                    "name": "Pilum",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Shortbow",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 3
+                },
+                {
+                    "name": "Spear-sling",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 3
+                },
+                {
+                    "name": "Throwing arrow cord",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                }
+            ]
+        },
+        {
+            "category": "Exotic light melee weapons",
+            "weapons": [
+                {
+                    "name": "Aklys",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Axe, knuckle",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 3
+                },
+                {
+                    "name": "Barbazu beard",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Battle poi",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Dagger, swordbreaker",
+                    "display": "Swordbreaker dagger",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Flying talon",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Gnome pincher",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Halfling rope-shot",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Helmet, dwarven boulder",
+                    "display": "Dwarven boulder helmet",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Kama",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Knife, butterfly",
+                    "display": "Butterfly knife",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 19,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Knife, deer horn",
+                    "display": "Deer horn knife",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 3
+                },
+                {
+                    "name": "Maulaxe, dwarven",
+                    "display": "Dwarven maulaxe",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 3
+                },
+                {
+                    "name": "Nunchaku",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Quadrens",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 19,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Razor, drow",
+                    "display": "Drow razor",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 18,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Rope gauntlet",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Sabre, sawtooth",
+                    "display": "Sawtooth sabre",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 19,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Sai",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Sanpkhang",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 19,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Sica",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Thorn bracer",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "War-shield, dwarven",
+                    "display": "Dwarven war-shield",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Waveblade",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 18,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Whip, scorpion",
+                    "display": "Scorpion whip",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                }
+            ]
+        },
+        {
+            "category": "Exotic one-handed melee weapons",
+            "weapons": [
+                {
+                    "name": "Axe, hooked",
+                    "display": "Hooked axe",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 3
+                },
+                {
+                    "name": "Estoc",
+                    "dmg_small": [
+                        {
+                            "count": 2,
+                            "die": 3
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 2,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 18,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Falcata",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 19,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Flickmace",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Flindbar",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Khopesh",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 19,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Khobkerrie",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Rapier, spiral",
+                    "display": "Spiral rapier",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 18,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Rhoka",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 18,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Shotel",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 3
+                },
+                {
+                    "name": "Sickle-sword",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 19,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Sword, dueling",
+                    "display": "Dueling sword",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 19,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Sword, bastard",
+                    "display": "Bastard sword",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 10
+                        }
+                    ],
+                    "crit_range": 19,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Tongi",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 19,
+                    "crit_mult": 3
+                },
+                {
+                    "name": "Waraxe, dwarven",
+                    "display": "Dwarven waraxe",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 10
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 3
+                },
+                {
+                    "name": "Waraxe, dwarven double",
+                    "display": "Dwarven double waraxe",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 10
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 3
+                },
+                {
+                    "name": "Whip",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 2
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                }
+            ]
+        },
+        {
+            "category": "Exotic two-handed melee weapons",
+            "weapons": [
+                {
+                    "name": "Axe, orc double",
+                    "display": "Orc double axe",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 3
+                },
+                {
+                    "name": "Axe, butchering",
+                    "display": "Butchering axe",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 12
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 3,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 3
+                },
+                {
+                    "name": "Battle ladder, gnome",
+                    "display": "Gnome battle ladder",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Boarding gaff",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Branched spear, elven",
+                    "display": "Elven branched spear",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 3
+                },
+                {
+                    "name": "Chain-hammer",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Chain, spiked",
+                    "display": "Spiked chain",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 2,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Crook",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Curved blade, elven",
+                    "display": "Elven curved blade",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 10
+                        }
+                    ],
+                    "crit_range": 18,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Dorn-dergar, dwarven",
+                    "display": "Dwarven dorn-dergar",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 10
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Fauchard",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 10
+                        }
+                    ],
+                    "crit_range": 18,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Flail, dire",
+                    "display": "Dire flail",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Flailpole",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Flambard",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 10
+                        }
+                    ],
+                    "crit_range": 19,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Flying blade",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 10
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 12
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 3
+                },
+                {
+                    "name": "Garrote",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Hammer, gnome hooked (hammer)",
+                    "display": "Gnome hooked hammer (hammer)",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 3
+                },
+                {
+                    "name": "Hammer, gnome hooked (hook)",
+                    "display": "Gnome hooked hammer (hook)",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 4
+                },
+                {
+                    "name": "Harpoon",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 3
+                },
+                {
+                    "name": "Longaxe, dwarven",
+                    "display": "Dwarven longaxe",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 10
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 2,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 3
+                },
+                {
+                    "name": "Mancatcher",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 1
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 2
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Piston maul, gnome",
+                    "display": "Gnome piston maul",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 10
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Ripsaw glaive, gnome",
+                    "display": "Gnome ripsaw glaive",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 10
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 3
+                },
+                {
+                    "name": "Scarf, bladed",
+                    "display": "Bladed scarf",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Skull ram, orc",
+                    "display": "Orc skull ram",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 10
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 3
+                },
+                {
+                    "name": "Spear, totem",
+                    "display": "Totem spear",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 10
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 3
+                },
+                {
+                    "name": "Switchscythe",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 2,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 4
+                },
+                {
+                    "name": "Sword, two-bladed",
+                    "display": "Two-bladed sword",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 19,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Urgrosh, dwarven (axe)",
+                    "display": "Dwarven urgrosh (axe)",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 3
+                },
+                {
+                    "name": "Urgrosh, dwarven (spear)",
+                    "display": "Dwarven urgrosh (spear)",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 3
+                }
+            ]
+        },
+        {
+            "category": "Exotic ranged weapons",
+            "weapons": [
+                {
+                    "name": "Bola",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Bola, brutal",
+                    "display": "Brutal bola",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Boomerang",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Bow, thorn",
+                    "display": "Thorn bow",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 3
+                },
+                {
+                    "name": "Crossbow, crank (heavy)",
+                    "display": "Crank crossbow (heavy)",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 10
+                        }
+                    ],
+                    "crit_range": 19,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Crossbow, crank (light)",
+                    "display": "Crank crossbow (light)",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 19,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Crossbow, double",
+                    "display": "Double crossbow",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 19,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Crossbow, hand",
+                    "display": "Hand crossbow",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 19,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Crossbow, repeating",
+                    "display": "Repeating crossbow",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 19,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Crossbow, repeating (heavy)",
+                    "display": "Repeating crossbow (heavy)",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 10
+                        }
+                    ],
+                    "crit_range": 19,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Grappling hook",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Hornbow, orc",
+                    "display": "Orc hornbow",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 2,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 3
+                },
+                {
+                    "name": "Javelin, shrillshaft",
+                    "display": "Shrillshaft javelin",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Javelin, stormshaft",
+                    "display": "Stormshaft javelin",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Shield, throwing",
+                    "display": "Throwing shield",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Shuriken",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 1
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 2
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Sling, double",
+                    "display": "Double sling",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Sling, stitched",
+                    "display": "Stitched sling",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Sling glove",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Sling staff, halfling",
+                    "display": "Halfling sling staff",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 3
+                },
+                {
+                    "name": "Wrist launcher, heavy",
+                    "display": "Heavy wrist launcher",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 19,
+                    "crit_mult": 2
+                }
+            ]
+        },
+        {
+            "category": "Eastern simple light melee weapons",
+            "weapons": [
+                {
+                    "name": "Hanbo",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                }
+            ]
+        },
+        {
+            "category": "Eastern martial light melee weapons",
+            "weapons": [
+                 {
+                    "name": "Butterfly sword",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 19,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Iron brush",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 2
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Jutte",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Kerambit",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 2
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 3
+                },
+                {
+                    "name": "Kukri",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 18,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Lungchuan tamo",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Shang gou",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Tonfa",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Wushu dart",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 2
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                }
+            ]
+        },
+        {
+            "category": "Eastern martial one-handed melee weapons",
+            "weapons": [
+                {
+                    "name": "Broadsword, nine ring",
+                    "display": "Nine ring broadsword",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 3
+                },
+                {
+                    "name": "Double chicken saber",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 19,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Sibat",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 3
+                }
+            ]
+        },
+        {
+            "category": "Eastern martial two-handed melee weapons",
+            "weapons": [
+                {
+                    "name": "Hooked lance",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 4
+                },
+                {
+                    "name": "Monk's spade",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Naginata",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 4
+                },
+                {
+                    "name": "Nodachi",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 10
+                        }
+                    ],
+                    "crit_range": 18,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Sansetsukon",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 10
+                        }
+                    ],
+                    "crit_range": 18,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Sword, tri-point double-edged",
+                    "display": "Tri-point double-edged sword",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 10
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 3
+                },
+                {
+                    "name": "Tiger fork",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                }
+            ]
+        },
+        {
+            "category": "Eastern martial ranged weapons",
+            "weapons": [
+                {
+                    "name": "Tube arrow shooter",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                }
+            ]
+        },
+        {
+            "category": "Eastern exotic light melee weapons",
+            "weapons": [
+                {
+                    "name": "Bich'hwa",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 19,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Dan bong",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 2
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "crit_range": 19,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Emei piercer",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 2
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "crit_range": 19,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Fighting fan",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 3
+                },
+                {
+                    "name": "Kama",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Madu",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Nunchaku",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Pata",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 3
+                },
+                {
+                    "name": "Sai",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Siangham",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Tekko-kagi",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 2
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Wakizashi",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 18,
+                    "crit_mult": 2
+                }
+            ]
+        },
+        {
+            "category": "Eastern exotic one-handed melee weapons",
+            "weapons": [
+                {
+                    "name": "Katana",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 18,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Nine-section whip",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 19,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Sword, temple",
+                    "display": "Temple sword",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 19,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Urumi",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 18,
+                    "crit_mult": 2
+                }
+            ]
+        },
+        {
+            "category": "Eastern exotic two-handed melee weapons",
+            "weapons": [
+                {
+                    "name": "Bo staff",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Chain spear",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Chain, spiked",
+                    "display": "Spiked chain",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 2,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Kama, double-chained",
+                    "display": "Double-chained kama",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Kama, double walking stick",
+                    "display": "Double walking stick kama",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Kusarigama",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Kyoketsu shoge",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Meteor hammer",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Sword, seven branched",
+                    "display": "Seven branched sword",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 10
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 3
+                },
+                {
+                    "name": "Tetsubo",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 10
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 4
+                }
+            ]
+        },
+        {
+            "category": "Eastern exotic ranged weapons",
+            "weapons": [
+                {
+                    "name": "Chakram, crystal",
+                    "display": "Crystal chakram",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 18,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Rope dart",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                }
+            ]
+        },
+        {
+            "category": "Early one-handed firearms",
+            "weapons": [
+                {
+                    "name": "Buckler gun",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 4
+                },
+                {
+                    "name": "Pepperbox",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 4
+                },
+                {
+                    "name": "Pistol",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 4
+                },
+                {
+                    "name": "Pistol, coat",
+                    "display": "Coat pistol",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 3
+                },
+                {
+                    "name": "Pistol, dagger",
+                    "display": "Dagger pistol",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 3
+                },
+                {
+                    "name": "Pistol, double-barreled",
+                    "display": "Double-barreled pistol",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 4
+                },
+                {
+                    "name": "Pistol, dragon",
+                    "display": "Dragon pistol",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 4
+                },
+                {
+                    "name": "Pistol, dragoon",
+                    "display": "Dragoon pistol",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 3
+                },
+                {
+                    "name": "Pistol, paddle-foot",
+                    "display": "Paddle-foot pistol",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 3
+                },
+                {
+                    "name": "Pistol, sword cane",
+                    "display": "Sword cane pistol",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 3
+                }
+            ]
+        },
+        {
+            "category": "Early two-handed firearms",
+            "weapons": [
+                {
+                    "name": "Blunderbuss",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Culverin",
+                    "dmg_small": [
+                        {
+                            "count": 2,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 2,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 4
+                },
+                {
+                    "name": "Cylinder rifle",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 4
+                },
+                {
+                    "name": "Double hackbut",
+                    "dmg_small": [
+                        {
+                            "count": 2,
+                            "die": 10
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 2,
+                            "die": 12
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 4
+                },
+                {
+                    "name": "Fire lance",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 4
+                },
+                {
+                    "name": "Musket",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 10
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 12
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 4
+                },
+                {
+                    "name": "Musket, axe",
+                    "display": "Axe musket",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 4
+                },
+                {
+                    "name": "Musket, double-barreled",
+                    "display": "Double-barreled musket",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 10
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 12
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 4
+                },
+                {
+                    "name": "Musket, dragoon",
+                    "display": "Dragoon musket",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 10
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 12
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 3
+                },
+                {
+                    "name": "Musket, warhammer",
+                    "display": "Warhammer musket",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 4
+                }
+            ]
+        },
+        {
+            "category": "Advanced one-handed firearms",
+            "weapons": [
+                {
+                    "name": "Revolver",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 4
+                }
+            ]
+        },
+        {
+            "category": "Advanced two-handed firearms",
+            "weapons": [
+                {
+                    "name": "Rifle",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 10
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 4
+                },
+                {
+                    "name": "Rifle, pepperbox",
+                    "display": "Pepperbox rifle",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 10
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 4
+                },
+                {
+                    "name": "Shotgun",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Shotgun, double-barreled",
+                    "display": "Double-barreled shotgun",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_mult": 2
+                }
+            ]
+        },
+        {
+            "category": "Siege engines",
+            "weapons": [
+                {
+                    "name": "Catapult, heavy",
+                    "display": "Heavy catapult",
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                            "count": 6,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 1
+                },
+                {
+                    "name": "Catapult, light",
+                    "display": "Light catapult",
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                            "count": 4,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 1
+                },
+                {
+                    "name": "Ballista",
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                            "count": 3,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 1
+                },
+                {
+                    "name": "Ram",
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                            "count": 3,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 1
+                }
+            ]
+        },
+        {
+            "category": "Modern one-handed firearms",
+            "weapons": [
+                {
+                    "name": "Revolver, Nagant M1895",
+                    "display": "Nagant M1895 revolver",
+                    "no_format": true,
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 4
+                }
+            ]
+        },
+        {
+            "category": "Modern two-handed firearms",
+            "weapons": [
+                {
+                    "name": "Flamethrower, Lawrence 1917",
+                    "display": "Lawrence 1917 flamethrower",
+                    "no_format": true,
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                            "count": 4,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 1
+                },
+                {
+                    "name": "Light machine gun, Madsen",
+                    "display": "Madsen light machine gun",
+                    "no_format": true,
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                            "count": 2,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 4
+                },
+                {
+                    "name": "Light machine gun, Maxim 1910",
+                    "display": "Maxim 1910 light machine gun",
+                    "no_format": true,
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                            "count": 2,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 4
+                },
+                {
+                    "name": "Rifle, Mosin-Nagant M1891",
+                    "display": "Mosin-Nagant M1891 rifle",
+                    "no_format": true,
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                            "count": 1,
+                            "die": 10
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 4
+                }
+            ]
+        },
+        {
+            "category": "Siege firearms",
+            "weapons": [
+                {
+                    "name": "Aasen mortar",
+                    "no_format": true,
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                            "count": 6,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 3
+                },
+                {
+                    "name": "Hotchkiss 6 pounder",
+                    "no_format": true,
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                            "count": 8,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 3
+                }
+            ]
+        },
+        {
+            "category": "Modern explosives",
+            "weapons": [
+                {
+                    "name": "M1914 grenade (concussion)",
+                    "no_format": true,
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                            "count": 3,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "M1914 grenade (fragmentation)",
+                    "no_format": true,
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                            "count": 4,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                }
+            ]
+        },
+        {
+            "category": "Stone age simple one-handed melee weapons",
+            "weapons": [
+                {
+                    "name": "Club, mere",
+                    "display": "Mere club",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                }
+            ]
+        },
+        {
+            "category": "Stone age martial one-handed melee weapons",
+            "weapons": [
+                {
+                    "name": "Terbutje",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 19,
+                    "crit_mult": 2
+                }
+            ]
+        },
+        {
+            "category": "Stone age martial ranged weapons",
+            "weapons": [
+                {
+                    "name": "Atlatl dart",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                }
+            ]
+        },
+        {
+            "category": "Stone age exotic one-handed melee weapons",
+            "weapons": [
+                {
+                    "name": "Taiaha",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 10
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Terbutje, great",
+                    "display": "Great terbutje",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 10
+                        }
+                    ],
+                    "crit_range": 19,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Wahaika",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                }
+            ]
+        },
+        {
+            "category": "Bronze age martial two-handed melee weapons",
+            "weapons": [
+                {
+                    "name": "Mattock",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 2,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 4
+                },
+                {
+                    "name": "Rhomphaia",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 2,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 3
+                }
+            ]
+        },
+        {
+            "category": "Bronze age exotic two-handed melee weapons",
+            "weapons": [
+                {
+                    "name": "Harpoon",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 3
+                }
+            ]
+        },
+        {
+            "category": "Bronze age exotic ranged weapons",
+            "weapons": [
+                {
+                    "name": "Kestros dart",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 3
+                }
+            ]
+        },
+        {
+            "category": "Technological martial one-handed melee weapons",
+            "weapons": [
+                {
+                    "name": "Laser torch",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 10
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 3
+                },
+                {
+                    "name": "Stun baton",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        },
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        },
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                }
+            ]
+        },
+        {
+            "category": "Technological exotic light melee weapons",
+            "weapons": [
+                {
+                    "name": "Monowhip",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 10
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 2,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 18,
+                    "crit_mult": 3
+                }
+            ]
+        },
+        {
+            "category": "Technological exotic one-handed melee weapons",
+            "weapons": [
+                {
+                    "name": "Null blade",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 10
+                        }
+                    ],
+                    "crit_range": 19,
+                    "crit_mult": 2
+                }
+            ]
+        },
+        {
+            "category": "Technological exotic two-handed melee weapons",
+            "weapons": [
+                {
+                    "name": "Chainsaw",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 12
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 3,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 18,
+                    "crit_mult": 2
+                }
+            ]
+        },
+        {
+            "category": "Technological one-handed firearms",
+            "weapons": [
+                {
+                    "name": "Arc pistol",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Dart gun",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 4
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Death ray (pass)",
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                        "count": 6,
+                        "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 1
+                },
+                {
+                    "name": "Death ray (fail)",
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                        "count": 0,
+                        "die": 0
+                        }
+                    ],
+                    "dmg_static": 100,
+                    "crit_range": 20,
+                    "crit_mult": 1
+                },
+                {
+                    "name": "EMP pistol",
+                    "no_format": true,
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 10
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 2,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Flare gun",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 3
+                },
+                {
+                    "name": "Gravity pistol",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Laser pistol",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Sonic pistol",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Stun gun",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Zero pistol",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                }
+            ]
+        },
+        {
+            "category": "Technological two-handed firearms",
+            "weapons": [
+                {
+                    "name": "Arc rifle",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 10
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 2,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Autograpnel",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 8
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 3,
+                    "dmg_static": 6
+                },
+                {
+                    "name": "EMP rifle",
+                    "no_format": true,
+                    "dmg_small": [
+                        {
+                            "count": 2,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 3,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Gravity rifle",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 10
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 2,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Laser rifle",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 10
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 2,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Zero rifle",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 10
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 2,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                }
+            ]
+        },
+        {
+            "category": "Technological heavy weapons",
+            "weapons": [
+                {
+                    "name": "Nuclear resonator (initial)",
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                            "count": 9,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 18,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Nuclear resonator (same type)",
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                            "count": 5,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 18,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Nuclear resonator (other type)",
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                            "count": 3,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 18,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Plasmathrower",
+                    "dmg_small": [
+                        {
+                            "count": 2,
+                            "die": 10
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 4,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 19,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Rail gun",
+                    "dmg_small": [
+                        {
+                            "count": 3,
+                            "die": 10
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 3,
+                            "die": 10
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 4
+                },
+                {
+                    "name": "Rocket launcher",
+                    "dmg_small": [
+                        {
+                            "count": 8,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 12,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 1
+                },
+                {
+                    "name": "Vortex gun",
+                    "dmg_small": [
+                        {
+                            "count": 8,
+                            "die": 6
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 10,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 19,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "X-laser",
+                    "dmg_small": [
+                        {
+                            "count": 6,
+                            "die": 4
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 5,
+                            "die": 6
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 4
+                }
+            ]
+        }
+    ]
+}
