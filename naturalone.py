@@ -317,23 +317,23 @@ class DiceRoller(Gtk.Application):
             self.window.add_error(self.window.mod_dam_ent)
             valid = False
 
-        mods = utility.expand_mod(mods, num_atks, crit_attack)
-
         if not valid:
             return
 
+        mods = utility.expand_mod(mods, num_atks, crit_attack, weapon["crit_mult"])
+
         if "no_size_steps" in weapon and weapon["no_size_steps"]:
-            weapon_rolls = weapon["dmg"]
+            weapon_path = "dmg"
         elif self.window.small_dam_rbtn.get_active():
-            weapon_rolls = weapon["dmg_small"]
+            weapon_path = "dmg_small"
         else:
-            weapon_rolls = weapon["dmg_medium"]
+            weapon_path = "dmg_medium"
 
         if crit_attack:
             num_atks *= weapon["crit_mult"]
 
-        total, rolls = roller.dmg(num_atks, mods, weapon, weapon_rolls, min_value)
-        output = format.dmg(num_atks, mods, weapon, crit_attack, weapon_rolls, rolls, total)
+        total, rolls = roller.dmg(num_atks, mods, weapon, weapon_path, min_value, crit_attack)
+        output = format.dmg(num_atks, mods, weapon, crit_attack, weapon[weapon_path], rolls, total)
         self.window.update_output(output)
 
     def new_template(self):

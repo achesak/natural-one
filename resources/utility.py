@@ -9,7 +9,7 @@
 ################################################################################
 
 
-def expand_mod(mods, count, crit_applied):
+def expand_mod(mods, count, crit_applied, crit_mod):
     """Expands a modifier list as needed. Ensures len(mods) == count"""
 
     if len(mods) > count:
@@ -18,7 +18,7 @@ def expand_mod(mods, count, crit_applied):
         mods.extend([mods[-1]] * (count - len(mods)))
 
     if crit_applied:
-        return [mod for mod in mods for _ in (0, 1)]
+        return [mod for mod in mods for _ in range(0, crit_mod)]
     else:
         return mods
 
