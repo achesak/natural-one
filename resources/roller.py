@@ -78,14 +78,15 @@ def dmg(num_atks, mods, weapon, weapon_path, min_value, crit_attack):
     if crit_attack and "crit_extra" in weapon:
         crit_output = []
         crit_extra = weapon["crit_extra"]
-        crit_rolls = crit_extra[weapon_path]
+        crit_rolls = crit_extra[weapon_path] if weapon_path in crit_extra else []
         for i in range(0, num_atks / 2):
             for j in range(0, len(crit_rolls)):
                 for _ in range(0, crit_rolls[j]["count"]):
                     roll = random.randint(1, crit_rolls[j]["die"])
                     crit_output.append(roll)
 
-            rolls.append("Bonus critical damage %d: %s=<b>%d damage</b>" % (i + 1, "+".join([str(x) for x in crit_output]), sum(crit_output)))
+            if len(crit_output) != 0:
+                rolls.append("Bonus critical damage %d: %s=<b>%d damage</b>" % (i + 1, "+".join([str(x) for x in crit_output]), sum(crit_output)))
 
             total += sum(crit_output)
 
