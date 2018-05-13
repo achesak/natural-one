@@ -69,8 +69,7 @@ def dmg(num_atks, mods, weapon, weapon_path, min_value, crit_attack):
                 output.append(roll)
 
         if len(output) != 0:
-            rolls.append("Hit %d: %s+%d=<b>%d damage</b>" % (hit_num, "+".join([str(x) for x in output]),
-                                                            mods[i], sum(output) + mods[i]))
+            rolls.append("Hit %d: %s+%d=<b>%d damage</b>" % (hit_num, "+".join([str(x) for x in output]), mods[i], sum(output) + mods[i]))
 
         total += sum(output) + mods[i]
 
