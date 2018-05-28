@@ -7,6 +7,10 @@
         {
             "name": "Starfinder",
             "filename": "starfinder.json"
+        },
+        {
+            "name": "D&D 5e",
+            "filename": "dnd5e.json"
         }
     ]
 }

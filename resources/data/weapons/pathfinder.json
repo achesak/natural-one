@@ -5662,8 +5662,8 @@
                     "no_size_steps": true,
                     "dmg": [
                         {
-                        "count": 6,
-                        "die": 6
+                            "count": 6,
+                            "die": 6
                         }
                     ],
                     "crit_range": 20,
@@ -5674,8 +5674,8 @@
                     "no_size_steps": true,
                     "dmg": [
                         {
-                        "count": 0,
-                        "die": 0
+                            "count": 0,
+                            "die": 0
                         }
                     ],
                     "dmg_static": 100,
