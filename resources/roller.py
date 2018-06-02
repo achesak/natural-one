@@ -68,7 +68,7 @@ def dmg(num_atks, mods, weapon, weapon_path, min_value, crit_attack):
                 else:
                     roll = random.randint(1, weapon_rolls[j]["die"])
                 if "reroll_below" in weapon:
-                    while roll < weapon["reroll_below"]:
+                    while roll <= weapon["reroll_below"]:
                         if max_damage:
                             roll = weapon_rolls[j]["die"]
                         else:
