@@ -9,15 +9,15 @@
 ################################################################################
 
 
+from resources.rolls import *
+
+
 def basic(count, die, mod_each, mod_once, rolls, total):
     """Builds the output for a standard dice roll."""
 
     output = "<span size=\"larger\"><b>Rolled %dd%d+%d: <i>%d</i></b></span>\n" % \
              (count, die, max(mod_each, mod_once), total)
-    if not mod_each:
-        output += ", ".join([str(x) for x in rolls])
-    else:
-        output += ", ".join(["%d+%d (%d)" % (x, mod_each, x + mod_each) for x in rolls])
+    output += ", ".join([str(x) for x in rolls])
 
     return output
 
@@ -27,7 +27,7 @@ def atk(num_atks, mods, crit_range, rolls):
 
     output = "<span size=\"larger\"><b>Rolled %d attack%s</b>:</span>\n" % (num_atks, "" if num_atks == 1 else "s")
     output += "<i>Modifiers %s\nCritical range %d-20</i>\n" % (", ".join([str(x) for x in mods]), crit_range)
-    output += "\n".join(rolls)
+    output += "\n".join([str(x) for x in rolls])
 
     return output
 

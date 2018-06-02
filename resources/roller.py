@@ -10,6 +10,7 @@
 
 
 import random
+from resources.rolls import *
 
 
 def basic(count, die, mod_each, mod_once, min_value):
@@ -19,11 +20,9 @@ def basic(count, die, mod_each, mod_once, min_value):
     total = 0
     for _ in range(0, count):
         roll = random.randint(1, die)
-        rolls.append(roll)
-        if mod_each:
-            roll += mod_each
-        roll = max(roll, min_value)
-        total += roll
+        roll_result = BasicRollResult(roll, min_value, mod_each)
+        rolls.append(roll_result)
+        total += roll_result
     total += mod_once
     total = max(total, min_value)
 
@@ -36,16 +35,12 @@ def atk(num_atks, mods, crit_range, stop_on_crit, confirm_crit):
     rolls = []
     for i in range(0, num_atks):
         roll = random.randint(1, 20)
-        rolls.append("Attack %d: %d+%d=<b>%d</b>" % (i + 1, roll, mods[i], roll + mods[i]))
-        if roll == 1:
-            rolls.append("<span color=\"red\">Critical fail!</span>")
-            if stop_on_crit:
-                break
-        if roll >= crit_range:
-            rolls.append("<span color=\"green\">Critical hit!</span>")
-            if confirm_crit:
-                confirm = random.randint(1, 20)
-                rolls.append("Critical confirm: %d+%d=<b>%d</b>" % (confirm, mods[i], confirm + mods[i]))
+        roll_result = AttackRollResult(i + 1, roll, mods[i])
+        rolls.append(roll_result)
+        if roll == 1 and stop_on_crit:
+            break
+        if roll >= crit_range and confirm_crit:
+            roll_result.add_critical_confirm(random.randint(1, 20))
 
     return rolls
 
