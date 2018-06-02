@@ -49,6 +49,10 @@ def dmg(num_atks, mods, weapon, weapon_path, min_value, crit_attack):
     """Rolls a damage roll."""
 
     weapon_rolls = weapon[weapon_path]
+    max_damage = False
+    if crit_attack and "max_on_crit" in weapon:
+        max_damage = True
+        crit_attack = False
 
     rolls = []
     total = 0
@@ -59,7 +63,16 @@ def dmg(num_atks, mods, weapon, weapon_path, min_value, crit_attack):
         output = []
         for j in range(0, len(weapon_rolls)):
             for _ in range(0, weapon_rolls[j]["count"]):
-                roll = random.randint(1, weapon_rolls[j]["die"])
+                if max_damage:
+                    roll = weapon_rolls[j]["die"]
+                else:
+                    roll = random.randint(1, weapon_rolls[j]["die"])
+                if "reroll_below" in weapon:
+                    while roll < weapon["reroll_below"]:
+                        if max_damage:
+                            roll = weapon_rolls[j]["die"]
+                        else:
+                            roll = random.randint(1, weapon_rolls[j]["die"])
                 roll = max(roll, min_value)
                 output.append(roll)
 

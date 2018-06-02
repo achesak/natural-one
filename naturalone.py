@@ -38,7 +38,7 @@ class DiceRoller(Gtk.Application):
 
     def __init__(self, *args, **kwargs):
 
-        super(DiceRoller, self).__init__(*args, application_id="com.achesak.diceroller", **kwargs)
+        super(DiceRoller, self).__init__(*args, application_id="com.achesak.naturalone", **kwargs)
         self.window = None
 
     def do_startup(self):

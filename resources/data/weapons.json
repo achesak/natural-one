@@ -11,6 +11,10 @@
         {
             "name": "D&D 5e",
             "filename": "dnd5e.json"
+        },
+        {
+            "name": "D&D 4e",
+            "filename": "dnd4e.json"
         }
     ]
 }
