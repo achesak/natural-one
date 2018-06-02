@@ -54,8 +54,11 @@ Optional keyss:
   "Spiked gauntlet"
 * `no_format` - If present and set to `true`, the weapon name when displaying the results of the roll
   will not be converted to lowercase.
+* `reroll_below` - If present, rolls lower than or equal to this number will be rerolled until above.
 * `dmg_static` - If present, this value will be added to the damage roll. Note that this is NOT intended
   for player modifiers and should only be used if the weapon ALWAYS has this damage added.
+* `max_on_crit` - If present and set to `true`, then `crit_mult` is ignored when determining critical
+  damage, and the damage on critical hits is the weapon's maximum possible damage roll.
 * `crit_extra` - If present, this specifies extra damage to roll or add only on critical attacks. See
   below.
 
