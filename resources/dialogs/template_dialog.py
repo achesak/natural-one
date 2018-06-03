@@ -191,7 +191,7 @@ class TemplateDialog(Gtk.Dialog):
         self.add_btn.connect("clicked", lambda x: self.add_roll())
         self.edit_btn.connect("clicked", lambda x: self.edit_roll())
         self.delete_btn.connect("clicked", lambda x: self.remove_roll())
-        self.roll_tree.connect("row-activated", lambda x, y, z: self.activated_event())
+        self.roll_tree.connect("row-activated", lambda x, y, z: self.edit_roll())
         self.desc_ent.connect("changed", lambda x: self.check_edit_name())
 
         if self.name is not None:
@@ -211,13 +211,6 @@ class TemplateDialog(Gtk.Dialog):
         """Removes the error class from a widget."""
 
         widget.get_style_context().remove_class("bad-input")
-
-    def activated_event(self):
-        """Edits on double click."""
-
-        tree_sel = self.roll_tree.get_selection()
-        tm, ti = tree_sel.get_selected()
-        self.edit_roll(ti)
 
     def check_edit_name(self):
         """Checks if the current roll is being added or edited."""
@@ -345,14 +338,13 @@ class TemplateDialog(Gtk.Dialog):
 
         self.update_list()
 
-    def edit_roll(self, index=None):
+    def edit_roll(self):
         """Edits a roll."""
 
-        if index is None:
-            model, treeiter = self.roll_tree.get_selection().get_selected_rows()
-            index = -1
-            for i in treeiter:
-                index = int(str(i))
+        model, treeiter = self.roll_tree.get_selection().get_selected_rows()
+        index = -1
+        for i in treeiter:
+            index = int(str(i))
 
         if index == -1:
             return
