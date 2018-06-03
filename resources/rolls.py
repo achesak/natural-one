@@ -27,7 +27,8 @@ class BasicRollResult(object):
         if self.min_value == val:
             return str(val)
         if self.mod:
-            return "%d+%d (%d)" % (self.value, self.mod, val)
+            mod_sign = "+" if self.mod > 0 else ""
+            return "%d%s%d (%d)" % (self.value, mod_sign, self.mod, val)
         return str(val)
 
     def __add__(self, other):
@@ -59,7 +60,8 @@ class AttackRollResult(BasicRollResult):
         val = int(self)
         output = "Attack %d: " % self.number
         if self.mod:
-            output += "%d+%d" % (self.value, self.mod)
+            mod_sign = "+" if self.mod > 0 else ""
+            output += "%d%s%d" % (self.value, mod_sign, self.mod)
         else:
             output += str(self.value)
         output += "=<b>%d</b>" % val
@@ -149,9 +151,10 @@ class DamageRollResult(object):
             static_text = "critical damage"
         output = []
         if len(self.rolls) != 0:
+            mod_sign = "+" if self.mod > 0 else ""
             output.append("%s %d: %s%s=<b>%d damage</b>" %
                           (hit_text, self.number, "+".join([str(x) for x in self.rolls]),
-                           "+%d" % self.mod if self.mod != 0 else "", int(self)))
+                           "%s%d" % (mod_sign, self.mod) if self.mod != 0 else "", int(self)))
         if self.dmg_static is not None:
             output.append("<i>Added %d %s</i>" % (self.dmg_static, static_text))
         return "\n".join(output)

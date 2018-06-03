@@ -235,7 +235,8 @@ class TemplateDialog(Gtk.Dialog):
 
         self.roll_store.clear()
         for item in self.rolls:
-            row = [item["description"], "%dd%d+%d" % (item["count"], item["die"], item["mod"])]
+            mod_sign = "+" if item["mod"] > 0 else ""
+            row = [item["description"], "%dd%d%s%d" % (item["count"], item["die"], mod_sign, item["mod"])]
             if item["crit_active"]:
                 row.append("x%d" % item["crit_mod"])
             else:
