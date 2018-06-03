@@ -149,8 +149,9 @@ class DamageRollResult(object):
             static_text = "critical damage"
         output = []
         if len(self.rolls) != 0:
-            output.append("%s %d: %s+%d=<b>%d damage</b>" %
-                          (hit_text, self.number, "+".join([str(x) for x in self.rolls]), self.mod, int(self)))
+            output.append("%s %d: %s%s=<b>%d damage</b>" %
+                          (hit_text, self.number, "+".join([str(x) for x in self.rolls]),
+                           "+%d" % self.mod if self.mod != 0 else "", int(self)))
         if self.dmg_static is not None:
             output.append("<i>Added %d %s</i>" % (self.dmg_static, static_text))
         return "\n".join(output)
