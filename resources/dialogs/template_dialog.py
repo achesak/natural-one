@@ -363,6 +363,7 @@ class TemplateDialog(Gtk.Dialog):
         self.mod_chk.set_active(roll["mod_every"])
         self.crit_ent.set_text(str(roll["crit_mod"]))
         self.crit_apply_rbtn.set_active(roll["crit_active"])
+        self.crit_no_apply_rbtn.set_active(not roll["crit_active"])
         self.crit_only_chk.set_active(roll["crit_only"])
         self.min_ent.set_text(str(roll["min_value"]))
         self.desc_ent.set_text(roll["description"])
