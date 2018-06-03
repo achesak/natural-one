@@ -63,13 +63,8 @@ def template(template, rolls, crit_attack, total):
 
     output = "<span size=\"larger\"><b>Rolled template \"%s\": <i>%d</i></b></span>\n" % (template["name"], total)
     for roll in rolls:
-        item = roll["item"]
-        output += "<i>Rolled \"%s\": %d</i>\n" % (item["description"], roll["total"])
-        if not item["mod_every"]:
-            output += ", ".join([str(x) for x in roll["rolls"]])
-        else:
-            output += ", ".join(["%d+%d (%d)" % (x, item["mod"], x + item["mod"]) for x in roll["rolls"]])
-        output += "\n"
+        output += "<i>Rolled \"%s\": %d</i>\n" % (roll.item["description"], roll)
+        output += "%s\n" % roll
     if crit_attack:
         output += "<i>Criticals applied</i>"
     if output.endswith("\n"):

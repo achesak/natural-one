@@ -14,7 +14,7 @@ from resources.constants import *
 
 class BasicRollResult(object):
 
-    def __init__(self, value, min_value, mod):
+    def __init__(self, value=0, min_value=0, mod=0):
         self.value = value
         self.min_value = min_value
         self.mod = mod
@@ -78,3 +78,26 @@ class AttackRollResult(BasicRollResult):
 
         return output
 
+
+class TemplateRollResult(BasicRollResult):
+
+    def __init__(self, item):
+        super(TemplateRollResult, self).__init__()
+        self.item = item
+        self.rolls = []
+
+    def add_roll(self, value):
+        if not self.item["mod_every"]:
+            mod = 0
+        else:
+            mod = self.item["mod"]
+        self.rolls.append(BasicRollResult(value, self.item["min_value"], mod))
+
+    def __int__(self):
+        total = sum(self.rolls)
+        if not self.item["mod_every"]:
+            total += self.item["mod"]
+        return max(total, self.item["min_value"])
+
+    def __str__(self):
+        return ", ".join([str(x) for x in self.rolls])
