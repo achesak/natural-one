@@ -145,9 +145,10 @@ class DiceRoller(Gtk.Application):
     def roll_custom(self):
         """Roll for custom dice."""
 
-        # Check validity of the die.
         valid = True
-        self.window.remove_error(self.window.dq_size_ent)
+        self.window.remove_errors()
+
+        # Check validity of the die.
         try:
             die = int(self.window.dq_size_ent.get_text())
         except ValueError:
@@ -168,8 +169,7 @@ class DiceRoller(Gtk.Application):
         """Rolls the value."""
 
         valid = True
-        self.window.remove_error(count_ent)
-        self.window.remove_error(mod_ent)
+        self.window.remove_errors()
 
         # Check validity of the entries.
         count = -1
@@ -217,9 +217,7 @@ class DiceRoller(Gtk.Application):
         """Rolls an attack."""
         
         valid = True
-        self.window.remove_error(self.window.num_atks_ent)
-        self.window.remove_error(self.window.mod_atks_ent)
-        self.window.remove_error(self.window.crit_atks_ent)
+        self.window.remove_errors()
 
         # Check validity of the entries.
         num_atks = -1
@@ -271,10 +269,7 @@ class DiceRoller(Gtk.Application):
         system_data = self.weapon_data[self.current_system_index]["data"]
 
         valid = True
-        self.window.remove_error(self.window.weap_dam_tree)
-        self.window.remove_error(self.window.num_dam_ent)
-        self.window.remove_error(self.window.mod_dam_ent)
-        self.window.remove_error(self.window.min_dam_ent)
+        self.window.remove_errors()
 
         # Check validity of the entries.
         model, weapon_iter = self.window.weap_dam_tree.get_selection().get_selected()
@@ -348,11 +343,10 @@ class DiceRoller(Gtk.Application):
         if response != Gtk.ResponseType.OK or name == "" or len(rolls) == 0:
             return
 
-        template = {
+        self.templates.append({
             "name": name,
             "rolls": rolls
-        }
-        self.templates.append(template)
+        })
 
         io.save_templates(self.templates)
 
@@ -381,11 +375,10 @@ class DiceRoller(Gtk.Application):
         if response != Gtk.ResponseType.OK or name == "" or len(rolls) == 0:
             return
 
-        new_template = {
+        self.templates[index] = {
             "name": name,
             "rolls": rolls
         }
-        self.templates[index] = new_template
 
         io.save_templates(self.templates)
 

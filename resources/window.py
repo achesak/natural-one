@@ -460,6 +460,21 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
 
         widget.get_style_context().remove_class("bad-input")
 
+    def remove_errors(self):
+        """Removes the error class from all widgets."""
+
+        widgets = [
+            self.d4_count_ent, self.d4_mod_ent, self.d6_count_ent, self.d6_mod_ent,
+            self.d8_count_ent, self.d8_mod_ent, self.d10_count_ent, self.d10_mod_ent,
+            self.d12_count_ent, self.d12_mod_ent, self.d20_count_ent, self.d20_mod_ent,
+            self.dq_size_ent, self.dq_count_ent, self.dq_mod_ent, self.min_ent,
+            self.num_atks_ent, self.mod_atks_ent, self.crit_atks_ent,
+            self.weap_dam_tree, self.num_dam_ent, self.mod_dam_ent, self.min_dam_ent
+        ]
+
+        for widget in widgets:
+            self.remove_error(widget)
+
     def update_output(self, new_text):
         """Updates the textview with new output."""
 

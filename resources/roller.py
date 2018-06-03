@@ -49,10 +49,7 @@ def dmg(num_atks, mods, weapon, weapon_path, min_value, crit_attack):
     """Rolls a damage roll."""
 
     weapon_rolls = weapon[weapon_path]
-    max_damage = False
-    if crit_attack and "max_on_crit" in weapon:
-        max_damage = True
-        crit_attack = False
+    max_damage, crit_attack = (True, False) if crit_attack and "max_on_crit" in weapon else (False, True)
 
     rolls = []
     total = 0
