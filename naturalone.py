@@ -112,14 +112,7 @@ class DiceRoller(Gtk.Application):
         self.window.list_edit_btn.connect("clicked", lambda x: self.edit_template())
         self.window.list_delete_btn.connect("clicked", lambda x: self.remove_template())
         self.window.list_roll_btn.connect("clicked", lambda x: self.roll_template())
-        self.window.template_tree.connect("row-activated", lambda x, y, z: self.activated_event())
-
-    def activated_event(self):
-        """Edits on double click."""
-
-        tree_sel = self.window.template_tree.get_selection()
-        tm, ti = tree_sel.get_selected()
-        self.roll_template(ti)
+        self.window.template_tree.connect("row-activated", lambda x, y, z: self.roll_template())
 
     def fill_weapon_list(self, index):
         """Fills the weapon list with data from the selected system."""
@@ -401,14 +394,13 @@ class DiceRoller(Gtk.Application):
         for template in self.templates:
             self.window.template_store.append([template["name"]])
 
-    def roll_template(self, index=None):
+    def roll_template(self):
         """Rolls a template."""
 
-        if index is None:
-            model, treeiter = self.window.template_tree.get_selection().get_selected_rows()
-            index = -1
-            for i in treeiter:
-                index = int(str(i))
+        model, treeiter = self.window.template_tree.get_selection().get_selected_rows()
+        index = -1
+        for i in treeiter:
+            index = int(str(i))
 
         if index == -1:
             return
