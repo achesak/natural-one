@@ -419,6 +419,96 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         init_grid.set_column_spacing(20)
         init_grid.set_border_width(20)
 
+        # Create the add initiative grid.
+        add_init_grid = Gtk.Grid()
+        add_init_grid.set_row_spacing(5)
+        add_init_grid.set_column_spacing(5)
+        init_grid.add(add_init_grid)
+
+        # Create the add initiative label.
+        add_init_lbl = Gtk.Label()
+        add_init_lbl.set_markup("<span size=\"x-large\">Add Initiative</span>")
+        add_init_lbl.set_alignment(0, 0.5)
+        add_init_grid.attach(add_init_lbl, 0, 0, 3, 1)
+
+        # Create the name label and entry.
+        name_init_lbl = Gtk.Label("Name: ")
+        name_init_lbl.set_alignment(0, 0.5)
+        add_init_grid.attach_next_to(name_init_lbl, add_init_lbl, Gtk.PositionType.BOTTOM, 1, 1)
+        self.name_init_ent = Gtk.Entry()
+        self.name_init_ent.set_hexpand(True)
+        add_init_grid.attach_next_to(self.name_init_ent, name_init_lbl, Gtk.PositionType.RIGHT, 2, 1)
+
+        # Create the roll initiative label.
+        roll_init_lbl = Gtk.Label("Roll initiative...")
+        add_init_grid.attach_next_to(roll_init_lbl, name_init_lbl, Gtk.PositionType.BOTTOM, 3, 1)
+
+        # Create the modifier label and entry.
+        mod_init_lbl = Gtk.Label("Modifier: ")
+        mod_init_lbl.set_alignment(0, 0.5)
+        add_init_grid.attach_next_to(mod_init_lbl, roll_init_lbl, Gtk.PositionType.BOTTOM, 1, 1)
+        self.mod_init_ent = Gtk.Entry()
+        self.mod_init_ent.set_hexpand(True)
+        add_init_grid.attach_next_to(self.mod_init_ent, mod_init_lbl, Gtk.PositionType.RIGHT, 1, 1)
+        self.roll_init_btn = Gtk.Button(" Roll ")
+        add_init_grid.attach_next_to(self.roll_init_btn, self.mod_init_ent, Gtk.PositionType.RIGHT, 1, 1)
+
+        # Create the add directly label.
+        direct_init_lbl = Gtk.Label("... or add directly")
+        add_init_grid.attach_next_to(direct_init_lbl, mod_init_lbl, Gtk.PositionType.BOTTOM, 3, 1)
+
+        # Create the initiative label and entry.
+        init_init_lbl = Gtk.Label("Initiative: ")
+        init_init_lbl.set_alignment(0, 0.5)
+        add_init_grid.attach_next_to(init_init_lbl, direct_init_lbl, Gtk.PositionType.BOTTOM, 1, 1)
+        self.init_init_ent = Gtk.Entry()
+        self.init_init_ent.set_hexpand(True)
+        add_init_grid.attach_next_to(self.init_init_ent, init_init_lbl, Gtk.PositionType.RIGHT, 1, 1)
+        self.add_init_btn = Gtk.Button(" Add ")
+        add_init_grid.attach_next_to(self.add_init_btn, self.init_init_ent, Gtk.PositionType.RIGHT, 1, 1)
+
+        # Create the initiative list grid.
+        list_init_grid = Gtk.Grid()
+        list_init_grid.set_row_spacing(5)
+        list_init_grid.set_column_spacing(5)
+        init_grid.attach_next_to(list_init_grid, add_init_grid, Gtk.PositionType.BOTTOM, 1, 1)
+
+        # Create the initiative list label.
+        list_init_lbl = Gtk.Label()
+        list_init_lbl.set_markup("<span size=\"x-large\">Initiative List</span>")
+        list_init_lbl.set_alignment(0, 0.5)
+        list_init_grid.attach(list_init_lbl, 0, 0, 2, 1)
+
+        # Create the initiative list.
+        init_scroll_win = Gtk.ScrolledWindow()
+        init_scroll_win.set_hexpand(True)
+        init_scroll_win.set_vexpand(True)
+        list_init_grid.attach_next_to(init_scroll_win, list_init_lbl, Gtk.PositionType.BOTTOM, 2, 1)
+        self.init_store = Gtk.ListStore(str)
+        self.init_tree = Gtk.TreeView(model=self.init_store)
+        self.init_tree.set_reorderable(True)
+        self.init_tree.get_selection().set_mode(Gtk.SelectionMode.MULTIPLE)
+        renderer = Gtk.CellRendererText()
+        column = Gtk.TreeViewColumn("Name", renderer, text=0)
+        column.set_expand(True)
+        self.init_tree.append_column(column)
+        renderer = Gtk.CellRendererText()
+        column = Gtk.TreeViewColumn("Initiative", renderer, text=1)
+        column.set_expand(True)
+        self.init_tree.append_column(column)
+        init_scroll_win.add(self.init_tree)
+
+        # Create the initiative list buttons.
+        self.init_remove_btn = Gtk.Button("Remove")
+        list_init_grid.attach_next_to(self.init_remove_btn, init_scroll_win, Gtk.PositionType.BOTTOM, 1, 1)
+        self.init_clear_btn = Gtk.Button("Clear")
+        list_init_grid.attach_next_to(self.init_clear_btn, self.init_remove_btn, Gtk.PositionType.RIGHT, 1, 1)
+
+        # Create the initiative drag and drop help text.
+        drag_init_lbl = Gtk.Label("Drag and drop to re-arrange initiative order")
+        drag_init_lbl.set_margin_top(5)
+        list_init_grid.attach_next_to(drag_init_lbl, self.init_remove_btn, Gtk.PositionType.BOTTOM, 2, 1)
+
         # Create the results display.
         results_scroll_win = Gtk.ScrolledWindow()
         results_scroll_win.set_hexpand(True)

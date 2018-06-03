@@ -101,3 +101,62 @@ class TemplateRollResult(BasicRollResult):
 
     def __str__(self):
         return ", ".join([str(x) for x in self.rolls])
+
+
+class DamageRollEachResult(object):
+
+    def __init__(self, roll_data):
+        self.rolls = roll_data
+
+    def add_roll(self, roll):
+        self.rolls.append(roll)
+
+    def __int__(self):
+        return sum(self.rolls)
+
+    def __str__(self):
+        return "+".join([str(x) for x in self.rolls])
+
+
+class DamageRollResult(object):
+
+    def __init__(self, number, crit_attack, min_value, mod):
+        self.number = number
+        self.crit_attack = crit_attack
+        self.mod = mod
+        self.min_value = min_value
+        self.rolls = []
+        self.dmg_static = None
+
+    def add_weapon_roll(self, roll_data):
+        self.rolls.append(DamageRollEachResult(roll_data))
+
+    def set_static_damage(self, dmg_static):
+        self.dmg_static = dmg_static
+
+    def __int__(self):
+        total = sum([int(x) for x in self.rolls]) + self.mod
+        if self.dmg_static is not None:
+            total += self.dmg_static
+        return max(total, self.min_value)
+
+    def __str__(self):
+        if not self.crit_attack:
+            hit_text = "Hit"
+            static_text = "damage"
+        else:
+            hit_text = "Bonus critical damage"
+            static_text = "critical damage"
+        output = []
+        if len(self.rolls) != 0:
+            output.append("%s %d: %s+%d=<b>%d damage</b>" %
+                          (hit_text, self.number, "+".join([str(x) for x in self.rolls]), self.mod, int(self)))
+        if self.dmg_static is not None:
+            output.append("<i>Added %d %s</i>" % (self.dmg_static, static_text))
+        return "\n".join(output)
+
+    def __add__(self, other):
+        return int(self) + other
+
+    def __radd__(self, other):
+        return other + int(self)

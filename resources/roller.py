@@ -45,61 +45,68 @@ def atk(num_atks, mods, crit_range, stop_on_crit, confirm_crit):
     return rolls
 
 
+def dmg_die(weapon, die_data, max_damage):
+    """Roll damage die."""
+
+    roll_data = []
+
+    reroll_below = 0 if "reroll_below" not in weapon else weapon["reroll_below"]
+    for _ in range(0, die_data["count"]):
+        roll = -1
+        while roll <= reroll_below:
+            if max_damage:
+                roll = die_data["die"]
+            else:
+                roll = random.randint(1, die_data["die"])
+        roll_data.append(roll)
+
+    return roll_data
+
+
 def dmg(num_atks, mods, weapon, weapon_path, min_value, crit_attack):
     """Rolls a damage roll."""
 
     weapon_rolls = weapon[weapon_path]
-    max_damage, crit_attack = (True, False) if crit_attack and "max_on_crit" in weapon else (False, True)
+    apply_crit, max_damage = (False, False)
+    if crit_attack and "max_on_crit" in weapon:
+        max_damage = True
+    elif crit_attack:
+        apply_crit = True
+    crit_count = weapon["crit_mult"] if apply_crit else 1
 
     rolls = []
     total = 0
-    hit_num = 0
-    for i in range(0, num_atks):
-        if not crit_attack or (crit_attack and i % weapon["crit_mult"] == 0):
-            hit_num += 1
-        output = []
-        for j in range(0, len(weapon_rolls)):
-            for _ in range(0, weapon_rolls[j]["count"]):
-                if max_damage:
-                    roll = weapon_rolls[j]["die"]
-                else:
-                    roll = random.randint(1, weapon_rolls[j]["die"])
-                if "reroll_below" in weapon:
-                    while roll <= weapon["reroll_below"]:
-                        if max_damage:
-                            roll = weapon_rolls[j]["die"]
-                        else:
-                            roll = random.randint(1, weapon_rolls[j]["die"])
-                roll = max(roll, min_value)
-                output.append(roll)
-
-        if len(output) != 0:
-            rolls.append("Hit %d: %s+%d=<b>%d damage</b>" % (hit_num, "+".join([str(x) for x in output]), mods[i], sum(output) + mods[i]))
-
-        total += sum(output) + mods[i]
+    for atk_index in range(0, num_atks):
+        roll_result = DamageRollResult(atk_index + 1, False, min_value, mods[atk_index])
+        for crit_index in range(0, crit_count):
+            for die_index in range(0, len(weapon_rolls)):
+                die_data = weapon_rolls[die_index]
+                roll_data = dmg_die(weapon, die_data, max_damage)
+                if len(roll_data):
+                    roll_result.add_weapon_roll(roll_data)
 
         if "dmg_static" in weapon:
-            total += weapon["dmg_static"]
-            rolls.append("<i>Added %d damage</i>" % weapon["dmg_static"])
+            roll_result.set_static_damage(weapon["dmg_static"])
+
+        rolls.append(roll_result)
+        total += roll_result
 
     if crit_attack and "crit_extra" in weapon:
-        crit_output = []
         crit_extra = weapon["crit_extra"]
         crit_rolls = crit_extra[weapon_path] if weapon_path in crit_extra else []
-        for i in range(0, num_atks / 2):
-            for j in range(0, len(crit_rolls)):
-                for _ in range(0, crit_rolls[j]["count"]):
-                    roll = random.randint(1, crit_rolls[j]["die"])
-                    crit_output.append(roll)
-
-            if len(crit_output) != 0:
-                rolls.append("Bonus critical damage %d: %s=<b>%d damage</b>" % (i + 1, "+".join([str(x) for x in crit_output]), sum(crit_output)))
-
-            total += sum(crit_output)
+        for atk_index in range(0, num_atks):
+            roll_result = DamageRollResult(atk_index + 1, True, min_value, mods[atk_index])
+            for die_index in range(0, len(crit_rolls)):
+                die_data = crit_rolls[die_index]
+                roll_data = dmg_die(weapon, die_data, False)
+                if len(roll_data):
+                    roll_result.add_weapon_roll(roll_data)
 
             if "dmg_static" in crit_extra:
-                total += crit_extra["dmg_static"]
-                rolls.append("<i>Added %d critical damage</i>" % crit_extra["dmg_static"])
+                roll_result.set_static_damage(crit_extra["dmg_static"])
+
+            rolls.append(roll_result)
+            total += roll_result
 
     return total, rolls
 

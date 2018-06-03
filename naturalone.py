@@ -324,9 +324,6 @@ class DiceRoller(Gtk.Application):
         else:
             weapon_path = "dmg_medium"
 
-        if crit_attack:
-            num_atks *= weapon["crit_mult"]
-
         total, rolls = roller.dmg(num_atks, mods, weapon, weapon_path, min_value, crit_attack)
         output = format.dmg(num_atks, mods, weapon, crit_attack, weapon[weapon_path], rolls, total)
         self.window.update_output(output)

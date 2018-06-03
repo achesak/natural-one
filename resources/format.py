@@ -43,15 +43,15 @@ def dmg(num_atks, mods, weapon, crit_attack, weapon_rolls, rolls, total):
         display_name = display_name.lower()
     use_an = display_name.lower()[0] in ["a", "e", "i", "o", "u"]
     if crit_attack:
-        if "max_on_crit" not in weapon and weapon["crit_mult"] > 1:
-            num_atks /= 2
         weapon_hits = "%d critical hit%s" % (num_atks, "s" if num_atks != 1 else "")
     else:
         weapon_hits = "%d hit%s" % (num_atks, "s" if num_atks != 1 else "")
     output = "<span size=\"larger\"><b>Rolled %s with a%s %s: <i>%d damage</i></b></span>\n" % \
              (weapon_hits, "n" if use_an else "", display_name, total)
-    output += "<i>Modifiers %s\nDamage dice %s</i>\n" % (", ".join([str(x) for x in mods]), damage_dice)
-    output += "\n".join(rolls) + "\n"
+    output += "<i>Modifiers %s</i>\n" % ", ".join([str(x) for x in mods])
+    if weapon_rolls[0]["count"] != 0:
+        output += "<i>Damage dice %s</i>\n" % damage_dice
+    output += "\n".join([str(x) for x in rolls]) + "\n"
     if crit_attack and weapon["crit_mult"] > 1:
         output += "<i>Multiplied by %dx due to critical hit</i>" % weapon["crit_mult"]
 
