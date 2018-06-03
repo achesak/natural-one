@@ -43,7 +43,7 @@ def dmg(num_atks, mods, weapon, crit_attack, weapon_rolls, rolls, total):
         display_name = display_name.lower()
     use_an = display_name.lower()[0] in ["a", "e", "i", "o", "u"]
     if crit_attack:
-        if "max_on_crit" not in weapon:
+        if "max_on_crit" not in weapon and weapon["crit_mult"] > 1:
             num_atks /= 2
         weapon_hits = "%d critical hit%s" % (num_atks, "s" if num_atks != 1 else "")
     else:

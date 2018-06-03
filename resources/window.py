@@ -413,6 +413,12 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         self.list_crit_chk.set_margin_top(5)
         list_grid.attach_next_to(self.list_crit_chk, self.list_edit_btn, Gtk.PositionType.BOTTOM, 3, 1)
 
+        # Create the Initiative grid.
+        init_grid = Gtk.Grid()
+        init_grid.set_row_spacing(20)
+        init_grid.set_column_spacing(20)
+        init_grid.set_border_width(20)
+
         # Create the results display.
         results_scroll_win = Gtk.ScrolledWindow()
         results_scroll_win.set_hexpand(True)
@@ -440,6 +446,7 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         self.stack.add_titled(dice_grid, "basic", "Basic")
         self.stack.add_titled(combat_grid, "combat", "Combat")
         self.stack.add_titled(templates_grid, "templates", "Templates")
+        self.stack.add_titled(init_grid, "initiative", "Initiative")
 
     @staticmethod
     def add_error(widget):
