@@ -15,8 +15,11 @@ from resources.rolls import *
 def basic(count, die, mod_each, mod_once, rolls, total):
     """Builds the output for a standard dice roll."""
 
-    output = "<span size=\"larger\"><b>Rolled %dd%d+%d: <i>%d</i></b></span>\n" % \
-             (count, die, max(mod_each, mod_once), total)
+    mod = mod_each if mod_each != 0 else mod_once
+    mod_sign = "+" if mod > 0 else ""
+    mod_output = "%s%d" % (mod_sign, mod) if mod else ""
+
+    output = "<span size=\"larger\"><b>Rolled %dd%d%s: <i>%d</i></b></span>\n" % (count, die, mod_output, total)
     output += ", ".join([str(x) for x in rolls])
 
     return output

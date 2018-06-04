@@ -24,8 +24,6 @@ class BasicRollResult(object):
 
     def __str__(self):
         val = int(self)
-        if self.min_value == val:
-            return str(val)
         if self.mod:
             mod_sign = "+" if self.mod > 0 else ""
             return "%d%s%d (%d)" % (self.value, mod_sign, self.mod, val)
