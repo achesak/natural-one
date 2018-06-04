@@ -23,7 +23,7 @@ import random
 
 import resources.launch as launch
 import resources.io as io
-import resources.format as format
+import resources.formatter as formatter
 import resources.roller as roller
 import resources.utility as utility
 
@@ -206,7 +206,7 @@ class DiceRoller(Gtk.Application):
             mod_once, mod_each = mod_each, mod_once
 
         total, rolls = roller.basic(count, die, mod_each, mod_once, min_value)
-        output = format.basic(count, die, mod_each, mod_once, rolls, total)
+        output = formatter.basic(count, die, mod_each, mod_once, rolls, total)
         self.window.update_output(output)
 
     def roll_attack(self):
@@ -256,7 +256,7 @@ class DiceRoller(Gtk.Application):
             return
 
         rolls = roller.atk(num_atks, mods, crit_range, stop_on_crit, confirm_crit)
-        output = format.atk(num_atks, mods, crit_range, rolls)
+        output = formatter.atk(num_atks, mods, crit_range, rolls)
         self.window.update_output(output)
 
     def roll_dmg(self):
@@ -321,7 +321,7 @@ class DiceRoller(Gtk.Application):
             weapon_path = "dmg_medium"
 
         total, rolls = roller.dmg(num_atks, mods, weapon, weapon_path, min_value, crit_attack)
-        output = format.dmg(num_atks, mods, weapon, crit_attack, weapon[weapon_path], rolls, total)
+        output = formatter.dmg(num_atks, mods, weapon, crit_attack, weapon[weapon_path], rolls, total)
         self.window.update_output(output)
 
     def new_template(self):
@@ -412,7 +412,7 @@ class DiceRoller(Gtk.Application):
         crit_attack = self.window.list_crit_chk.get_active()
 
         total, rolls = roller.template(template, crit_attack)
-        output = format.template(template, rolls, crit_attack, total)
+        output = formatter.template(template, rolls, crit_attack, total)
         self.window.update_output(output)
 
     def add_initiative(self):

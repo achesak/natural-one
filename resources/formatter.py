@@ -3,7 +3,7 @@
 
 ################################################################################
 #
-# resources/format.py
+# resources/formatter.py
 # This file contains functions for formatting dice roll output.
 #
 ################################################################################
