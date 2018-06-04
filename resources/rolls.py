@@ -155,7 +155,7 @@ class DamageRollResult(object):
                            "%s%d" % (mod_sign, self.mod) if self.mod != 0 else "", int(self)))
         if self.dmg_static is not None:
             output.append("<i>Added %d %s</i>" % (self.dmg_static, static_text))
-        return "\n".join(output)
+        return "\n".join(output).strip()
 
     def __add__(self, other):
         return int(self) + other
