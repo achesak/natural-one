@@ -51,6 +51,8 @@ class DiceRoller(Gtk.Application):
 
         self.templates = io.load_templates()
 
+        self.initiative_list = []
+
         action = Gio.SimpleAction.new("about", None)
         action.connect("activate", lambda x, y: self.about())
         self.add_action(action)
@@ -113,6 +115,7 @@ class DiceRoller(Gtk.Application):
         self.window.list_delete_btn.connect("clicked", lambda x: self.remove_template())
         self.window.list_roll_btn.connect("clicked", lambda x: self.roll_template())
         self.window.template_tree.connect("row-activated", lambda x, y, z: self.roll_template())
+        self.window.add_init_btn.connect("clicked", lambda x: self.add_initiative())
 
     def fill_weapon_list(self, index):
         """Fills the weapon list with data from the selected system."""
@@ -143,7 +146,7 @@ class DiceRoller(Gtk.Application):
 
         # Check validity of the die.
         try:
-            die = int(self.window.dq_size_ent.get_text())
+            die = int(self.window.dq_size_ent.get_text().strip())
         except ValueError:
             die = 0
             self.window.add_error(self.window.dq_size_ent)
@@ -167,7 +170,7 @@ class DiceRoller(Gtk.Application):
         # Check validity of the entries.
         count = -1
         try:
-            count = int(count_ent.get_text())
+            count = int(count_ent.get_text().strip())
         except ValueError:
             self.window.add_error(count_ent)
             valid = False
@@ -178,7 +181,7 @@ class DiceRoller(Gtk.Application):
 
         min_value = -1
         try:
-            min_value = int(self.window.min_ent.get_text())
+            min_value = int(self.window.min_ent.get_text().strip())
         except ValueError:
             self.window.add_error(self.window.min_ent)
             valid = False
@@ -189,7 +192,7 @@ class DiceRoller(Gtk.Application):
 
         mod = -1
         try:
-            mod = int(mod_ent.get_text())
+            mod = int(mod_ent.get_text().strip())
         except ValueError:
             self.window.add_error(mod_ent)
             valid = False
@@ -215,7 +218,7 @@ class DiceRoller(Gtk.Application):
         # Check validity of the entries.
         num_atks = -1
         try:
-            num_atks = int(self.window.num_atks_ent.get_text())
+            num_atks = int(self.window.num_atks_ent.get_text().strip())
         except ValueError:
             self.window.add_error(self.window.num_atks_ent)
             valid = False
@@ -236,7 +239,7 @@ class DiceRoller(Gtk.Application):
         mods = utility.expand_mod(mods, num_atks, False, 0)
 
         try:
-            crit_range = int(self.window.crit_atks_ent.get_text())
+            crit_range = int(self.window.crit_atks_ent.get_text().strip())
         except ValueError:
             self.window.add_error(self.window.crit_atks_ent)
             crit_range = -1
@@ -280,7 +283,7 @@ class DiceRoller(Gtk.Application):
 
         num_atks = -1
         try:
-            num_atks = int(self.window.num_dam_ent.get_text())
+            num_atks = int(self.window.num_dam_ent.get_text().strip())
         except ValueError:
             self.window.add_error(self.window.num_dam_ent)
             valid = False
@@ -291,7 +294,7 @@ class DiceRoller(Gtk.Application):
 
         min_value = -1
         try:
-            min_value = int(self.window.min_dam_ent.get_text())
+            min_value = int(self.window.min_dam_ent.get_text().strip())
         except ValueError:
             self.window.add_error(self.window.min_dam_ent)
             valid = False
@@ -411,6 +414,28 @@ class DiceRoller(Gtk.Application):
         total, rolls = roller.template(template, crit_attack)
         output = format.template(template, rolls, crit_attack, total)
         self.window.update_output(output)
+
+    def add_initiative(self):
+        """Adds to the initiative list directly."""
+
+        valid = True
+        self.window.remove_errors()
+
+        name = self.window.name_init_ent.get_text().strip()
+        if not name:
+            self.window.add_error(self.window.name_init_ent)
+            valid = False
+
+        initiative = -1
+        try:
+            initiative = int(self.window.init_init_ent.get_text().strip())
+        except ValueError:
+            self.window.add_error(self.window.init_init_ent)
+            valid = False
+
+        if not valid:
+            return
+
 
     def about(self):
         """Shows the About dialog."""

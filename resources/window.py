@@ -559,7 +559,8 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
             self.d12_count_ent, self.d12_mod_ent, self.d20_count_ent, self.d20_mod_ent,
             self.dq_size_ent, self.dq_count_ent, self.dq_mod_ent, self.min_ent,
             self.num_atks_ent, self.mod_atks_ent, self.crit_atks_ent,
-            self.weap_dam_tree, self.num_dam_ent, self.mod_dam_ent, self.min_dam_ent
+            self.weap_dam_tree, self.num_dam_ent, self.mod_dam_ent, self.min_dam_ent,
+            self.name_init_ent, self.init_init_ent, self.mod_init_ent
         ]
 
         for widget in widgets:

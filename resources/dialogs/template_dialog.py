@@ -293,14 +293,14 @@ class TemplateDialog(Gtk.Dialog):
     def get_roll_data(self):
         """Gets the user-entered data for a roll."""
 
-        count = self.count_ent.get_text()
-        die = self.die_ent.get_text()
-        mod = self.mod_ent.get_text()
+        count = self.count_ent.get_text().strip()
+        die = self.die_ent.get_text().strip()
+        mod = self.mod_ent.get_text().strip()
         mod_every = self.mod_chk.get_active()
-        crit_mod = self.crit_ent.get_text()
+        crit_mod = self.crit_ent.get_text().strip()
         crit_active = self.crit_apply_rbtn.get_active()
         crit_only = self.crit_only_chk.get_active()
-        min_value = self.min_ent.get_text()
+        min_value = self.min_ent.get_text().strip()
         desc = self.desc_ent.get_text().strip()
 
         roll = {
