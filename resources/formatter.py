@@ -72,4 +72,16 @@ def template(template, rolls, crit_attack, total):
         output += "<i>Criticals applied</i>"
     if output.endswith("\n"):
         output = output[:-1]
+
+    return output
+
+
+def initiative(name, mod, roll):
+    """Builds the output for initiative rolls."""
+
+    mod_sign = "+" if mod > 0 else ""
+
+    output = "<span size=\"larger\"><b>Rolled initiative for %s: <i>%d</i></b></span>\n" % (name, roll)
+    output += "Initiative: %d%s=<b>%d</b>" % (roll - mod, "%s%d" % (mod_sign, mod) if mod else "", roll)
+
     return output

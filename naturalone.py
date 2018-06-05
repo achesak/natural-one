@@ -115,7 +115,8 @@ class DiceRoller(Gtk.Application):
         self.window.list_delete_btn.connect("clicked", lambda x: self.remove_template())
         self.window.list_roll_btn.connect("clicked", lambda x: self.roll_template())
         self.window.template_tree.connect("row-activated", lambda x, y, z: self.roll_template())
-        self.window.add_init_btn.connect("clicked", lambda x: self.add_initiative())
+        self.window.roll_init_btn.connect("clicked", lambda x: self.roll_initiative())
+        self.window.roll_init_rbtn.connect("toggled", lambda x: self.window.toggle_initiative_mode())
 
     def fill_weapon_list(self, index):
         """Fills the weapon list with data from the selected system."""
@@ -436,6 +437,50 @@ class DiceRoller(Gtk.Application):
         if not valid:
             return
 
+        self.initiative_list.append({
+            "name": name,
+            "initiative": initiative
+        })
+        self.initiative_list = sorted(self.initiative_list, reverse=True, key=lambda x: x["initiative"])
+
+        self.window.init_store.clear()
+        for init in self.initiative_list:
+            self.window.init_store.append([init["name"], init["initiative"]])
+
+    def roll_initiative(self):
+        """"Rolls for an initiative."""
+
+        valid = True
+        self.window.remove_errors()
+
+        name = self.window.name_init_ent.get_text().strip()
+        if not name:
+            self.window.add_error(self.window.name_init_ent)
+            valid = False
+
+        mod = -1
+        try:
+            mod = int(self.window.mod_init_ent.get_text().strip())
+        except ValueError:
+            self.window.add_error(self.window.mod_init_ent)
+            valid = False
+
+        if not valid:
+            return
+
+        roll, _ = roller.basic(1, 20, mod, 0, -float("inf"))
+        output = formatter.initiative(name, mod, roll)
+        self.window.update_output(output)
+
+        self.initiative_list.append({
+            "name": name,
+            "initiative": roll
+        })
+        self.initiative_list = sorted(self.initiative_list, reverse=True, key=lambda x: x["initiative"])
+
+        self.window.init_store.clear()
+        for init in self.initiative_list:
+            self.window.init_store.append([init["name"], init["initiative"]])
 
     def about(self):
         """Shows the About dialog."""

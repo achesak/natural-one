@@ -33,9 +33,9 @@ class TemplateDialog(Gtk.Dialog):
 
         # Create the main grid.
         dlg_grid = Gtk.Grid()
-        dlg_grid.set_row_spacing(20)
-        dlg_grid.set_column_spacing(20)
-        dlg_grid.set_border_width(20)
+        dlg_grid.set_row_spacing(18)
+        dlg_grid.set_column_spacing(12)
+        dlg_grid.set_border_width(18)
         self.get_content_area().add(dlg_grid)
 
         # Create the template details grid.
@@ -51,8 +51,9 @@ class TemplateDialog(Gtk.Dialog):
         details_grid.attach_next_to(details_lbl, None, Gtk.PositionType.RIGHT, 2, 1)
 
         # Create the template name row.
-        name_lbl = Gtk.Label("Name: ")
-        name_lbl.set_alignment(0, 0.5)
+        name_lbl = Gtk.Label("Name")
+        name_lbl.set_alignment(1, 0.5)
+        name_lbl.set_margin_right(7)
         details_grid.attach_next_to(name_lbl, details_lbl, Gtk.PositionType.BOTTOM, 1, 1)
         self.name_ent = Gtk.Entry()
         self.name_ent.set_hexpand(True)
@@ -96,7 +97,7 @@ class TemplateDialog(Gtk.Dialog):
         self.crit_apply_rbtn = Gtk.RadioButton.new_with_label_from_widget(None, "Multiplied by critical hit")
         self.crit_no_apply_rbtn = Gtk.RadioButton.new_with_label_from_widget(self.crit_apply_rbtn, "Not multiplied by critical hit")
         self.crit_no_apply_rbtn.set_hexpand(True)
-        crit_lbl = Gtk.Label("Multiplier: ")
+        crit_lbl = Gtk.Label("Multiplier")
         crit_lbl.set_margin_left(25)
         crit_lbl.set_margin_right(5)
         self.crit_ent = Gtk.Entry()
@@ -114,28 +115,29 @@ class TemplateDialog(Gtk.Dialog):
         add_grid.attach_next_to(self.crit_only_chk, self.crit_no_apply_rbtn, Gtk.PositionType.BOTTOM, 7, 1)
 
         # Create the minimum value row.
-        min_lbl = Gtk.Label("Minimum value: ")
+        min_grid = Gtk.Grid()
+        min_grid.set_row_spacing(5)
+        min_grid.set_column_spacing(12)
+        min_lbl = Gtk.Label("Minimum value")
+        min_lbl.set_alignment(1, 0.5)
         min_lbl.set_margin_right(5)
         self.min_ent = Gtk.Entry()
         self.min_ent.set_text("0")
         self.min_ent.set_hexpand(True)
-        min_box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL)
-        min_box.pack_start(min_lbl, False, False, 0)
-        min_box.pack_start(self.min_ent, True, True, 0)
-        add_grid.attach_next_to(min_box, self.crit_only_chk, Gtk.PositionType.BOTTOM, 7, 1)
+        min_grid.add(min_lbl)
+        min_grid.attach_next_to(self.min_ent, min_lbl, Gtk.PositionType.RIGHT, 2, 1)
+        add_grid.attach_next_to(min_grid, self.crit_only_chk, Gtk.PositionType.BOTTOM, 7, 1)
 
         # Create the description row.
-        desc_lbl = Gtk.Label("Name: ")
+        desc_lbl = Gtk.Label("Name")
+        desc_lbl.set_alignment(1, 0.5)
         desc_lbl.set_margin_right(5)
         self.desc_ent = Gtk.Entry()
         self.desc_ent.set_hexpand(True)
-        self.desc_ent.set_margin_right(5)
-        self.add_btn = Gtk.Button(" Add Roll ")
-        desc_box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL)
-        desc_box.pack_start(desc_lbl, False, False, 0)
-        desc_box.pack_start(self.desc_ent, True, True, 0)
-        desc_box.pack_start(self.add_btn, False, False, 0)
-        add_grid.attach_next_to(desc_box, min_box, Gtk.PositionType.BOTTOM, 7, 1)
+        self.add_btn = Gtk.Button("Add Roll")
+        min_grid.attach_next_to(desc_lbl, min_lbl, Gtk.PositionType.BOTTOM, 1, 1)
+        min_grid.attach_next_to(self.desc_ent, desc_lbl, Gtk.PositionType.RIGHT, 1, 1)
+        min_grid.attach_next_to(self.add_btn, self.desc_ent, Gtk.PositionType.RIGHT, 1, 1)
 
         # Create the rolls grid.
         roll_grid = Gtk.Grid()

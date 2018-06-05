@@ -49,9 +49,9 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
 
         # Create the Basic grid.
         dice_grid = Gtk.Grid()
-        dice_grid.set_row_spacing(20)
-        dice_grid.set_column_spacing(20)
-        dice_grid.set_border_width(20)
+        dice_grid.set_row_spacing(18)
+        dice_grid.set_column_spacing(12)
+        dice_grid.set_border_width(18)
 
         # Create the dice: d4
         d4_pixbuf = GdkPixbuf.Pixbuf.new_from_file_at_scale("resources/images/d4.png", 60, 60, True)
@@ -71,7 +71,7 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         self.d4_mod_ent.set_width_chars(4)
         self.d4_mod_ent.props.xalign = 0.5
         dice_grid.attach_next_to(self.d4_mod_ent, d4_plus_lbl, Gtk.PositionType.RIGHT, 1, 1)
-        self.d4_btn = Gtk.Button(" Roll ")
+        self.d4_btn = Gtk.Button("Roll")
         dice_grid.attach_next_to(self.d4_btn, self.d4_mod_ent, Gtk.PositionType.RIGHT, 1, 1)
 
         # Create the dice: d6
@@ -92,7 +92,7 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         self.d6_mod_ent.set_width_chars(4)
         self.d6_mod_ent.props.xalign = 0.5
         dice_grid.attach_next_to(self.d6_mod_ent, d6_plus_lbl, Gtk.PositionType.RIGHT, 1, 1)
-        self.d6_btn = Gtk.Button(" Roll ")
+        self.d6_btn = Gtk.Button("Roll")
         dice_grid.attach_next_to(self.d6_btn, self.d6_mod_ent, Gtk.PositionType.RIGHT, 1, 1)
 
         # Create the dice: d8
@@ -113,7 +113,7 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         self.d8_mod_ent.set_width_chars(4)
         self.d8_mod_ent.props.xalign = 0.5
         dice_grid.attach_next_to(self.d8_mod_ent, d8_plus_lbl, Gtk.PositionType.RIGHT, 1, 1)
-        self.d8_btn = Gtk.Button(" Roll ")
+        self.d8_btn = Gtk.Button("Roll")
         dice_grid.attach_next_to(self.d8_btn, self.d8_mod_ent, Gtk.PositionType.RIGHT, 1, 1)
 
         # Create the dice: d10
@@ -134,7 +134,7 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         self.d10_mod_ent.set_width_chars(4)
         self.d10_mod_ent.props.xalign = 0.5
         dice_grid.attach_next_to(self.d10_mod_ent, d10_plus_lbl, Gtk.PositionType.RIGHT, 1, 1)
-        self.d10_btn = Gtk.Button(" Roll ")
+        self.d10_btn = Gtk.Button("Roll")
         dice_grid.attach_next_to(self.d10_btn, self.d10_mod_ent, Gtk.PositionType.RIGHT, 1, 1)
 
         # Create the dice: d12
@@ -155,7 +155,7 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         self.d12_mod_ent.set_width_chars(4)
         self.d12_mod_ent.props.xalign = 0.5
         dice_grid.attach_next_to(self.d12_mod_ent, d12_plus_lbl, Gtk.PositionType.RIGHT, 1, 1)
-        self.d12_btn = Gtk.Button(" Roll ")
+        self.d12_btn = Gtk.Button("Roll")
         dice_grid.attach_next_to(self.d12_btn, self.d12_mod_ent, Gtk.PositionType.RIGHT, 1, 1)
 
         # Create the dice: d20
@@ -176,7 +176,7 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         self.d20_mod_ent.set_width_chars(4)
         self.d20_mod_ent.props.xalign = 0.5
         dice_grid.attach_next_to(self.d20_mod_ent, d20_plus_lbl, Gtk.PositionType.RIGHT, 1, 1)
-        self.d20_btn = Gtk.Button(" Roll ")
+        self.d20_btn = Gtk.Button("Roll")
         dice_grid.attach_next_to(self.d20_btn, self.d20_mod_ent, Gtk.PositionType.RIGHT, 1, 1)
 
         # Create the dice: custom
@@ -189,7 +189,7 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         self.dq_count_ent.props.xalign = 0.5
         dice_grid.attach_next_to(self.dq_count_ent, dq_img, Gtk.PositionType.RIGHT, 1, 1)
         dq_box = Gtk.Box()
-        dq_d_lbl = Gtk.Label("d ")
+        dq_d_lbl = Gtk.Label("d")
         dq_box.add(dq_d_lbl)
         self.dq_size_ent = Gtk.Entry()
         self.dq_size_ent.set_width_chars(4)
@@ -204,11 +204,12 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         self.dq_mod_ent.set_width_chars(4)
         self.dq_mod_ent.props.xalign = 0.5
         dice_grid.attach_next_to(self.dq_mod_ent, dq_plus_lbl, Gtk.PositionType.RIGHT, 1, 1)
-        self.dq_btn = Gtk.Button(" Roll ")
+        self.dq_btn = Gtk.Button("Roll")
         dice_grid.attach_next_to(self.dq_btn, self.dq_mod_ent, Gtk.PositionType.RIGHT, 1, 1)
 
         # Create the minimum value entry.
-        min_lbl = Gtk.Label("Minimum value: ")
+        min_lbl = Gtk.Label("Minimum value")
+        min_lbl.set_alignment(1, 0.5)
         dice_grid.attach_next_to(min_lbl, dq_img, Gtk.PositionType.BOTTOM, 2, 1)
         self.min_ent = Gtk.Entry()
         self.min_ent.set_text("0")
@@ -224,8 +225,8 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         # Create the Combat grid.
         combat_grid = Gtk.Grid()
         combat_grid.set_row_spacing(5)
-        combat_grid.set_column_spacing(5)
-        combat_grid.set_border_width(20)
+        combat_grid.set_column_spacing(12)
+        combat_grid.set_border_width(18)
 
         # Create the attack roll main label.
         atk_lbl = Gtk.Label()
@@ -234,8 +235,8 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         combat_grid.add(atk_lbl)
 
         # Create the number of attacks row.
-        num_atks_lbl = Gtk.Label("Number of attacks: ")
-        num_atks_lbl.set_alignment(0, 0.5)
+        num_atks_lbl = Gtk.Label("Number of attacks")
+        num_atks_lbl.set_alignment(1, 0.5)
         combat_grid.attach_next_to(num_atks_lbl, atk_lbl, Gtk.PositionType.BOTTOM, 1, 1)
         self.num_atks_ent = Gtk.Entry()
         self.num_atks_ent.set_hexpand(True)
@@ -243,8 +244,8 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         combat_grid.attach_next_to(self.num_atks_ent, num_atks_lbl, Gtk.PositionType.RIGHT, 3, 1)
 
         # Create the modifiers row.
-        mod_atks_lbl = Gtk.Label("Modifiers: ")
-        mod_atks_lbl.set_alignment(0, 0.5)
+        mod_atks_lbl = Gtk.Label("Modifiers")
+        mod_atks_lbl.set_alignment(1, 0.5)
         combat_grid.attach_next_to(mod_atks_lbl, num_atks_lbl, Gtk.PositionType.BOTTOM, 1, 1)
         self.mod_atks_ent = Gtk.Entry()
         self.mod_atks_ent.set_hexpand(True)
@@ -252,16 +253,19 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         combat_grid.attach_next_to(self.mod_atks_ent, mod_atks_lbl, Gtk.PositionType.RIGHT, 3, 1)
 
         # Create the critical range row.
-        crit_atks_lbl = Gtk.Label("Critical range: ")
-        crit_atks_lbl.set_alignment(0, 0.5)
+        crit_atks_lbl = Gtk.Label("Critical range")
+        crit_atks_lbl.set_alignment(1, 0.5)
         combat_grid.attach_next_to(crit_atks_lbl, mod_atks_lbl, Gtk.PositionType.BOTTOM, 1, 1)
+        crit_atks_box = Gtk.Box(Gtk.Orientation.HORIZONTAL)
         self.crit_atks_ent = Gtk.Entry()
         self.crit_atks_ent.set_hexpand(True)
         self.crit_atks_ent.set_text("20")
-        combat_grid.attach_next_to(self.crit_atks_ent, crit_atks_lbl, Gtk.PositionType.RIGHT, 2, 1)
-        crit_20_atks_lbl = Gtk.Label("-20")
-        crit_20_atks_lbl.set_alignment(0, 0.5)
-        combat_grid.attach_next_to(crit_20_atks_lbl, self.crit_atks_ent, Gtk.PositionType.RIGHT, 1, 1)
+        crit_20_atks_lbl = Gtk.Label("- 20")
+        crit_20_atks_lbl.set_alignment(1, 0.5)
+        crit_20_atks_lbl.set_margin_left(5)
+        crit_atks_box.pack_start(self.crit_atks_ent, True, True, 0)
+        crit_atks_box.pack_start(crit_20_atks_lbl, False, False, 0)
+        combat_grid.attach_next_to(crit_atks_box, crit_atks_lbl, Gtk.PositionType.RIGHT, 3, 1)
 
         # Create the confirm critical row.
         self.confirm_atks_chk = Gtk.CheckButton("Confirm critical hits")
@@ -274,7 +278,7 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         combat_grid.attach_next_to(self.stop_atks_chk, self.confirm_atks_chk, Gtk.PositionType.BOTTOM, 2, 1)
 
         # Create the attack roll button.
-        self.atk_btn = Gtk.Button(" Roll ")
+        self.atk_btn = Gtk.Button("Roll")
         combat_grid.attach_next_to(self.atk_btn, self.stop_atks_chk, Gtk.PositionType.RIGHT, 2, 1)
 
         # Create the damage roll main label.
@@ -285,8 +289,8 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         combat_grid.attach_next_to(dam_lbl, self.stop_atks_chk, Gtk.PositionType.BOTTOM, 4, 1)
 
         # Create the system row.
-        sys_dam_lbl = Gtk.Label("System: ")
-        sys_dam_lbl.set_alignment(0, 0.5)
+        sys_dam_lbl = Gtk.Label("System")
+        sys_dam_lbl.set_alignment(1, 0.5)
         combat_grid.attach_next_to(sys_dam_lbl, dam_lbl, Gtk.PositionType.BOTTOM, 1, 1)
         self.sys_dam_cbox = Gtk.ComboBoxText.new()
         combat_grid.attach_next_to(self.sys_dam_cbox, sys_dam_lbl, Gtk.PositionType.RIGHT, 3, 1)
@@ -306,8 +310,8 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         combat_grid.attach_next_to(dam_scroll_win, sys_dam_lbl, Gtk.PositionType.BOTTOM, 4, 1)
 
         # Create the number of attacks row.
-        num_dam_lbl = Gtk.Label("Number of attacks: ")
-        num_dam_lbl.set_alignment(0, 0.5)
+        num_dam_lbl = Gtk.Label("Number of attacks")
+        num_dam_lbl.set_alignment(1, 0.5)
         combat_grid.attach_next_to(num_dam_lbl, dam_scroll_win, Gtk.PositionType.BOTTOM, 1, 1)
         self.num_dam_ent = Gtk.Entry()
         self.num_dam_ent.set_hexpand(True)
@@ -315,8 +319,8 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         combat_grid.attach_next_to(self.num_dam_ent, num_dam_lbl, Gtk.PositionType.RIGHT, 3, 1)
 
         # Create the damage modifier row.
-        mod_dam_lbl = Gtk.Label("Modifiers: ")
-        mod_dam_lbl.set_alignment(0, 0.5)
+        mod_dam_lbl = Gtk.Label("Modifiers")
+        mod_dam_lbl.set_alignment(1, 0.5)
         combat_grid.attach_next_to(mod_dam_lbl, num_dam_lbl, Gtk.PositionType.BOTTOM, 1, 1)
         self.mod_dam_ent = Gtk.Entry()
         self.mod_dam_ent.set_hexpand(True)
@@ -324,8 +328,8 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         combat_grid.attach_next_to(self.mod_dam_ent, mod_dam_lbl, Gtk.PositionType.RIGHT, 3, 1)
 
         # Create the minimum value row.
-        min_dam_lbl = Gtk.Label("Minimum value: ")
-        min_dam_lbl.set_alignment(0, 0.5)
+        min_dam_lbl = Gtk.Label("Minimum value")
+        min_dam_lbl.set_alignment(1, 0.5)
         combat_grid.attach_next_to(min_dam_lbl, mod_dam_lbl, Gtk.PositionType.BOTTOM, 1, 1)
         self.min_dam_ent = Gtk.Entry()
         self.min_dam_ent.set_hexpand(True)
@@ -347,7 +351,7 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         combat_grid.attach_next_to(self.crit_dam_chk, size_combat_grid, Gtk.PositionType.BOTTOM, 2, 1)
 
         # Create the damage roll button.
-        self.dam_btn = Gtk.Button(" Roll ")
+        self.dam_btn = Gtk.Button("Roll")
         combat_grid.attach_next_to(self.dam_btn, self.crit_dam_chk, Gtk.PositionType.RIGHT, 2, 1)
 
         # Create the Templates grid.
@@ -415,14 +419,14 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
 
         # Create the Initiative grid.
         init_grid = Gtk.Grid()
-        init_grid.set_row_spacing(20)
-        init_grid.set_column_spacing(20)
-        init_grid.set_border_width(20)
+        init_grid.set_row_spacing(18)
+        init_grid.set_column_spacing(12)
+        init_grid.set_border_width(18)
 
         # Create the add initiative grid.
         add_init_grid = Gtk.Grid()
         add_init_grid.set_row_spacing(5)
-        add_init_grid.set_column_spacing(5)
+        add_init_grid.set_column_spacing(12)
         init_grid.add(add_init_grid)
 
         # Create the add initiative label.
@@ -431,41 +435,43 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         add_init_lbl.set_alignment(0, 0.5)
         add_init_grid.attach(add_init_lbl, 0, 0, 3, 1)
 
+        # Create the initiative mode box.
+        mode_init_box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL)
+        mode_init_box.set_margin_top(5)
+        mode_init_box.props.halign = Gtk.Align.CENTER
+        add_init_grid.attach_next_to(mode_init_box, add_init_lbl, Gtk.PositionType.BOTTOM, 3, 1)
+
+        # Create the initiative mode radiobuttons.
+        self.roll_init_rbtn  = Gtk.RadioButton.new_with_label_from_widget(None, "Roll initiative")
+        self.add_init_rbtn = Gtk.RadioButton.new_with_label_from_widget(self.roll_init_rbtn, "Add initiative directly")
+        mode_init_box.pack_start(self.roll_init_rbtn, False, False, 0)
+        mode_init_box.pack_start(self.add_init_rbtn, False, False, 0)
+
         # Create the name label and entry.
-        name_init_lbl = Gtk.Label("Name: ")
-        name_init_lbl.set_alignment(0, 0.5)
-        add_init_grid.attach_next_to(name_init_lbl, add_init_lbl, Gtk.PositionType.BOTTOM, 1, 1)
+        name_init_lbl = Gtk.Label("Name")
+        name_init_lbl.set_alignment(1, 0.5)
+        add_init_grid.attach_next_to(name_init_lbl, mode_init_box, Gtk.PositionType.BOTTOM, 1, 1)
         self.name_init_ent = Gtk.Entry()
         self.name_init_ent.set_hexpand(True)
         add_init_grid.attach_next_to(self.name_init_ent, name_init_lbl, Gtk.PositionType.RIGHT, 2, 1)
 
-        # Create the roll initiative label.
-        roll_init_lbl = Gtk.Label("Roll initiative...")
-        add_init_grid.attach_next_to(roll_init_lbl, name_init_lbl, Gtk.PositionType.BOTTOM, 3, 1)
-
         # Create the modifier label and entry.
-        mod_init_lbl = Gtk.Label("Modifier: ")
-        mod_init_lbl.set_alignment(0, 0.5)
-        add_init_grid.attach_next_to(mod_init_lbl, roll_init_lbl, Gtk.PositionType.BOTTOM, 1, 1)
+        self.mod_init_lbl = Gtk.Label("Modifier")
+        self.mod_init_lbl.set_alignment(1, 0.5)
+        add_init_grid.attach_next_to(self.mod_init_lbl, name_init_lbl, Gtk.PositionType.BOTTOM, 1, 1)
         self.mod_init_ent = Gtk.Entry()
         self.mod_init_ent.set_hexpand(True)
-        add_init_grid.attach_next_to(self.mod_init_ent, mod_init_lbl, Gtk.PositionType.RIGHT, 1, 1)
-        self.roll_init_btn = Gtk.Button(" Roll ")
+        add_init_grid.attach_next_to(self.mod_init_ent, self.mod_init_lbl, Gtk.PositionType.RIGHT, 1, 1)
+        self.roll_init_btn = Gtk.Button("Roll")
         add_init_grid.attach_next_to(self.roll_init_btn, self.mod_init_ent, Gtk.PositionType.RIGHT, 1, 1)
 
-        # Create the add directly label.
-        direct_init_lbl = Gtk.Label("... or add directly")
-        add_init_grid.attach_next_to(direct_init_lbl, mod_init_lbl, Gtk.PositionType.BOTTOM, 3, 1)
-
-        # Create the initiative label and entry.
-        init_init_lbl = Gtk.Label("Initiative: ")
-        init_init_lbl.set_alignment(0, 0.5)
-        add_init_grid.attach_next_to(init_init_lbl, direct_init_lbl, Gtk.PositionType.BOTTOM, 1, 1)
-        self.init_init_ent = Gtk.Entry()
-        self.init_init_ent.set_hexpand(True)
-        add_init_grid.attach_next_to(self.init_init_ent, init_init_lbl, Gtk.PositionType.RIGHT, 1, 1)
-        self.add_init_btn = Gtk.Button(" Add ")
-        add_init_grid.attach_next_to(self.add_init_btn, self.init_init_ent, Gtk.PositionType.RIGHT, 1, 1)
+        # Create the sorting check box.
+        self.sort_init_chk = Gtk.CheckButton("Automatically sort initiatives")
+        self.sort_init_chk.set_halign(Gtk.Align.CENTER)
+        self.sort_init_chk.set_hexpand(True)
+        self.sort_init_chk.set_margin_top(5)
+        self.sort_init_chk.set_active(True)
+        add_init_grid.attach_next_to(self.sort_init_chk, self.mod_init_lbl, Gtk.PositionType.BOTTOM, 3, 1)
 
         # Create the initiative list grid.
         list_init_grid = Gtk.Grid()
@@ -484,7 +490,7 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         init_scroll_win.set_hexpand(True)
         init_scroll_win.set_vexpand(True)
         list_init_grid.attach_next_to(init_scroll_win, list_init_lbl, Gtk.PositionType.BOTTOM, 2, 1)
-        self.init_store = Gtk.ListStore(str)
+        self.init_store = Gtk.ListStore(str, int)
         self.init_tree = Gtk.TreeView(model=self.init_store)
         self.init_tree.set_reorderable(True)
         self.init_tree.get_selection().set_mode(Gtk.SelectionMode.MULTIPLE)
@@ -560,7 +566,7 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
             self.dq_size_ent, self.dq_count_ent, self.dq_mod_ent, self.min_ent,
             self.num_atks_ent, self.mod_atks_ent, self.crit_atks_ent,
             self.weap_dam_tree, self.num_dam_ent, self.mod_dam_ent, self.min_dam_ent,
-            self.name_init_ent, self.init_init_ent, self.mod_init_ent
+            self.name_init_ent, self.mod_init_ent
         ]
 
         for widget in widgets:
@@ -571,3 +577,16 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
 
         new_text += "\n\n"
         self.results_buffer.insert_markup(self.results_buffer.get_start_iter(), new_text, len(new_text))
+
+    def toggle_initiative_mode(self):
+        """Switches adding an initiative between rolling and adding directly."""
+
+        roll_is_active = self.roll_init_rbtn.get_active()
+
+        if roll_is_active:
+            self.mod_init_lbl.set_text("Modifier")
+            self.roll_init_btn.set_label("Roll")
+
+        else:
+            self.mod_init_lbl.set_text("Initiative")
+            self.roll_init_btn.set_label("Add")
