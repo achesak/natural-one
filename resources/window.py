@@ -190,6 +190,7 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         dice_grid.attach_next_to(self.dq_count_ent, dq_img, Gtk.PositionType.RIGHT, 1, 1)
         dq_box = Gtk.Box()
         dq_d_lbl = Gtk.Label("d")
+        dq_d_lbl.set_alignment(1, 0.5)
         dq_box.add(dq_d_lbl)
         self.dq_size_ent = Gtk.Entry()
         self.dq_size_ent.set_width_chars(4)
