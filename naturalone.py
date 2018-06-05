@@ -115,8 +115,11 @@ class DiceRoller(Gtk.Application):
         self.window.list_delete_btn.connect("clicked", lambda x: self.remove_template())
         self.window.list_roll_btn.connect("clicked", lambda x: self.roll_template())
         self.window.template_tree.connect("row-activated", lambda x, y, z: self.roll_template())
-        self.window.roll_init_btn.connect("clicked", lambda x: self.roll_initiative())
         self.window.roll_init_rbtn.connect("toggled", lambda x: self.window.toggle_initiative_mode())
+        self.window.roll_init_btn.connect("clicked", lambda x: self.roll_initiative())
+        self.window.remove_init_btn.connect("clicked", lambda x: self.remove_initiative())
+        self.window.clear_init_btn.connect("clicked", lambda x: self.remove_initiative(clear=True))
+        self.window.init_tree.connect("drag-end", lambda x, y: self.reorder_initiative())
 
     def fill_weapon_list(self, index):
         """Fills the weapon list with data from the selected system."""
@@ -468,15 +471,57 @@ class DiceRoller(Gtk.Application):
         if not valid:
             return
 
-        roll, _ = roller.basic(1, 20, mod, 0, -float("inf"))
-        output = formatter.initiative(name, mod, roll)
-        self.window.update_output(output)
+        if self.window.roll_init_rbtn.get_active():
+            initiative, _ = roller.basic(1, 20, mod, 0, -float("inf"))
+            output = formatter.initiative(name, mod, initiative)
+            self.window.update_output(output)
+
+        else:
+            initiative = mod
 
         self.initiative_list.append({
             "name": name,
-            "initiative": roll
+            "initiative": initiative
         })
-        self.initiative_list = sorted(self.initiative_list, reverse=True, key=lambda x: x["initiative"])
+        if self.window.sort_init_chk.get_active():
+            self.initiative_list = sorted(self.initiative_list, reverse=True, key=lambda x: x["initiative"])
+
+        self.window.init_store.clear()
+        for init in self.initiative_list:
+            self.window.init_store.append([init["name"], init["initiative"]])
+
+    def remove_initiative(self, clear=False):
+        """Removes initiatives from the list."""
+
+        if not clear:
+            model, treeiter = self.window.init_tree.get_selection().get_selected_rows()
+            indices = []
+            for i in treeiter:
+                indices.append(int(str(i)))
+
+            if len(indices) == 0:
+                return
+
+            for index in reversed(indices):
+                del self.initiative_list[index]
+
+        else:
+            self.initiative_list = []
+
+        self.window.init_store.clear()
+        for init in self.initiative_list:
+            self.window.init_store.append([init["name"], init["initiative"]])
+
+    def reorder_initiative(self):
+        """Reorders the initiative list after a drag and drop."""
+
+        new_initiatives = []
+        for row_index in range(len(self.window.init_store)):
+            new_initiatives.append({
+                "name": self.window.init_store[row_index][0],
+                "initiative": self.window.init_store[row_index][1]
+            })
+        self.initiative_list = new_initiatives
 
         self.window.init_store.clear()
         for init in self.initiative_list:

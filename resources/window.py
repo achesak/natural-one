@@ -505,15 +505,15 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         init_scroll_win.add(self.init_tree)
 
         # Create the initiative list buttons.
-        self.init_remove_btn = Gtk.Button("Remove")
-        list_init_grid.attach_next_to(self.init_remove_btn, init_scroll_win, Gtk.PositionType.BOTTOM, 1, 1)
-        self.init_clear_btn = Gtk.Button("Clear")
-        list_init_grid.attach_next_to(self.init_clear_btn, self.init_remove_btn, Gtk.PositionType.RIGHT, 1, 1)
+        self.remove_init_btn = Gtk.Button("Remove")
+        list_init_grid.attach_next_to(self.remove_init_btn, init_scroll_win, Gtk.PositionType.BOTTOM, 1, 1)
+        self.clear_init_btn = Gtk.Button("Clear All")
+        list_init_grid.attach_next_to(self.clear_init_btn, self.remove_init_btn, Gtk.PositionType.RIGHT, 1, 1)
 
         # Create the initiative drag and drop help text.
         drag_init_lbl = Gtk.Label("Drag and drop to re-arrange initiative order")
         drag_init_lbl.set_margin_top(5)
-        list_init_grid.attach_next_to(drag_init_lbl, self.init_remove_btn, Gtk.PositionType.BOTTOM, 2, 1)
+        list_init_grid.attach_next_to(drag_init_lbl, self.remove_init_btn, Gtk.PositionType.BOTTOM, 2, 1)
 
         # Create the results display.
         results_scroll_win = Gtk.ScrolledWindow()
