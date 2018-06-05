@@ -95,6 +95,8 @@ class TemplateDialog(Gtk.Dialog):
 
         # Create the critical rows.
         self.crit_apply_rbtn = Gtk.RadioButton.new_with_label_from_widget(None, "Multiplied by critical hit")
+        self.crit_apply_rbtn.set_margin_top(10)
+        self.crit_max_rbtn = Gtk.RadioButton.new_with_label_from_widget(self.crit_apply_rbtn, "Maximized on critical hit")
         self.crit_no_apply_rbtn = Gtk.RadioButton.new_with_label_from_widget(self.crit_apply_rbtn, "Not multiplied by critical hit")
         self.crit_no_apply_rbtn.set_hexpand(True)
         crit_lbl = Gtk.Label("Multiplier")
@@ -108,16 +110,19 @@ class TemplateDialog(Gtk.Dialog):
         crit_box.pack_start(self.crit_ent, False, False, 0)
         add_grid.attach_next_to(self.crit_apply_rbtn, self.count_ent, Gtk.PositionType.BOTTOM, 7, 1)
         add_grid.attach_next_to(crit_box, self.crit_apply_rbtn, Gtk.PositionType.BOTTOM, 7, 1)
-        add_grid.attach_next_to(self.crit_no_apply_rbtn, crit_box, Gtk.PositionType.BOTTOM, 7, 1)
+        add_grid.attach_next_to(self.crit_max_rbtn, crit_box, Gtk.PositionType.BOTTOM, 7, 1)
+        add_grid.attach_next_to(self.crit_no_apply_rbtn, self.crit_max_rbtn, Gtk.PositionType.BOTTOM, 7, 1)
 
         # Create the critical only row.
         self.crit_only_chk = Gtk.CheckButton("Only roll on critical hit")
+        self.crit_only_chk.set_margin_top(10)
         add_grid.attach_next_to(self.crit_only_chk, self.crit_no_apply_rbtn, Gtk.PositionType.BOTTOM, 7, 1)
 
         # Create the minimum value row.
         min_grid = Gtk.Grid()
         min_grid.set_row_spacing(5)
         min_grid.set_column_spacing(12)
+        min_grid.set_margin_top(10)
         min_lbl = Gtk.Label("Minimum value")
         min_lbl.set_alignment(1, 0.5)
         min_lbl.set_margin_right(5)
@@ -231,7 +236,8 @@ class TemplateDialog(Gtk.Dialog):
         self.roll_store.clear()
         for item in self.rolls:
             mod_sign = "+" if item["mod"] > 0 else ""
-            row = [item["description"], "%dd%d%s%d" % (item["count"], item["die"], mod_sign, item["mod"])]
+            mod_output = "%s%d" % (mod_sign, item["mod"]) if item["mod"] else ""
+            row = [item["description"], "%dd%d%s" % (item["count"], item["die"], mod_output)]
             if item["crit_active"]:
                 row.append("x%d" % item["crit_mod"])
             else:
@@ -301,6 +307,7 @@ class TemplateDialog(Gtk.Dialog):
         mod_every = self.mod_chk.get_active()
         crit_mod = self.crit_ent.get_text().strip()
         crit_active = self.crit_apply_rbtn.get_active()
+        crit_max = self.crit_max_rbtn.get_active()
         crit_only = self.crit_only_chk.get_active()
         min_value = self.min_ent.get_text().strip()
         desc = self.desc_ent.get_text().strip()
@@ -312,6 +319,7 @@ class TemplateDialog(Gtk.Dialog):
             "mod": mod,
             "mod_every": mod_every,
             "crit_active": crit_active,
+            "crit_max": crit_max,
             "crit_mod": crit_mod,
             "crit_only": crit_only,
             "min_value": min_value
@@ -358,7 +366,8 @@ class TemplateDialog(Gtk.Dialog):
         self.mod_chk.set_active(roll["mod_every"])
         self.crit_ent.set_text(str(roll["crit_mod"]))
         self.crit_apply_rbtn.set_active(roll["crit_active"])
-        self.crit_no_apply_rbtn.set_active(not roll["crit_active"])
+        self.crit_max_rbtn.set_active(roll["crit_max"])
+        self.crit_no_apply_rbtn.set_active(not roll["crit_active"] and not roll["crit_max"])
         self.crit_only_chk.set_active(roll["crit_only"])
         self.min_ent.set_text(str(roll["min_value"]))
         self.desc_ent.set_text(roll["description"])

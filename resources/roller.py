@@ -124,7 +124,10 @@ def template(template, crit_attack):
         if crit_attack and item["crit_active"] and not item["crit_only"]:
             count *= item["crit_mod"]
         for _ in range(0, count):
-            roll = random.randint(1, item["die"])
+            if crit_attack and item["crit_max"]:
+                roll = item["die"]
+            else:
+                roll = random.randint(1, item["die"])
             roll_result.add_roll(roll)
         rolls.append(roll_result)
         total += roll_result
