@@ -105,8 +105,9 @@ class TemplateRollResult(BasicRollResult):
 
 class DamageRollEachResult(object):
 
-    def __init__(self, roll_data):
+    def __init__(self, roll_data, type):
         self.rolls = roll_data
+        self.type = type
 
     def add_roll(self, roll):
         self.rolls.append(roll)
@@ -128,11 +129,12 @@ class DamageRollResult(object):
         self.rolls = []
         self.dmg_static = None
 
-    def add_weapon_roll(self, roll_data):
-        self.rolls.append(DamageRollEachResult(roll_data))
+    def add_weapon_roll(self, roll_data, type):
+        self.rolls.append(DamageRollEachResult(roll_data, type))
 
-    def set_static_damage(self, dmg_static):
+    def set_static_damage(self, dmg_static, dmg_static_type):
         self.dmg_static = dmg_static
+        self.dmg_static_type = dmg_static_type
 
     def __int__(self):
         total = sum([int(x) for x in self.rolls]) + self.mod
@@ -150,11 +152,13 @@ class DamageRollResult(object):
         output = []
         if len(self.rolls) != 0:
             mod_sign = "+" if self.mod > 0 else ""
-            output.append("%s %d: %s%s=<b>%d damage</b>" %
-                          (hit_text, self.number, "+".join([str(x) for x in self.rolls]),
-                           "%s%d" % (mod_sign, self.mod) if self.mod != 0 else "", int(self)))
+            output.append("%s %d: <b>%d damage</b>" % (hit_text, self.number, int(self)))
+            for roll in self.rolls:
+                output.append("\t%s=%d %s" % (roll, roll, roll.type.lower()))
+            if self.mod:
+                output.append("\t%s%d modifier" % (mod_sign, self.mod))
         if self.dmg_static is not None:
-            output.append("<i>Added %d %s</i>" % (self.dmg_static, static_text))
+            output.append("<i>Added %d %s %s</i>" % (self.dmg_static, self.dmg_static_type, static_text))
         return "\n".join(output).strip()
 
     def __add__(self, other):

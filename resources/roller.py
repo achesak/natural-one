@@ -77,16 +77,16 @@ def dmg(num_atks, mods, weapon, weapon_path, min_value, crit_attack):
     rolls = []
     total = 0
     for atk_index in range(0, num_atks):
-        roll_result = DamageRollResult(atk_index + 1, False, min_value, mods[atk_index])
+        roll_result = DamageRollResult(atk_index + 1, False, min_value, mods[atk_index] * crit_count)
         for crit_index in range(0, crit_count):
             for die_index in range(0, len(weapon_rolls)):
                 die_data = weapon_rolls[die_index]
                 roll_data = dmg_die(weapon, die_data, max_damage)
                 if len(roll_data):
-                    roll_result.add_weapon_roll(roll_data)
+                    roll_result.add_weapon_roll(roll_data, die_data["type"])
 
         if "dmg_static" in weapon:
-            roll_result.set_static_damage(weapon["dmg_static"])
+            roll_result.set_static_damage(weapon["dmg_static"], weapon["dmg_static_type"])
 
         rolls.append(roll_result)
         total += roll_result
@@ -100,10 +100,10 @@ def dmg(num_atks, mods, weapon, weapon_path, min_value, crit_attack):
                 die_data = crit_rolls[die_index]
                 roll_data = dmg_die(weapon, die_data, False)
                 if len(roll_data):
-                    roll_result.add_weapon_roll(roll_data)
+                    roll_result.add_weapon_roll(roll_data, die_data["type"])
 
             if "dmg_static" in crit_extra:
-                roll_result.set_static_damage(crit_extra["dmg_static"])
+                roll_result.set_static_damage(crit_extra["dmg_static"], weapon["dmg_static_type"])
 
             rolls.append(roll_result)
             total += roll_result
