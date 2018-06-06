@@ -5,40 +5,6 @@
             "category": "Simple light melee weapons",
             "weapons": [
                 {
-                    "name": "Unarmed strike",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 2
-                        }
-                    ],
-                    "dmg_medium": [
-                        {
-                            "count": 1,
-                            "die": 3
-                        }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
-                },
-                {
-                    "name": "Gauntlet",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 2
-                        }
-                    ],
-                    "dmg_medium": [
-                        {
-                            "count": 1,
-                            "die": 3
-                        }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
-                },
-                {
                     "name": "Battle aspergillum",
                     "dmg_small": [
                         {
@@ -142,6 +108,23 @@
                     "crit_mult": 3
                 },
                 {
+                    "name": "Gauntlet",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 2
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 3
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
                     "name": "Gauntlet, spiked",
                     "display": "Spiked gauntlet",
                     "dmg_small": [
@@ -240,6 +223,23 @@
                         {
                             "count": 1,
                             "die": 4
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Unarmed strike",
+                    "dmg_small": [
+                        {
+                            "count": 1,
+                            "die": 2
+                        }
+                    ],
+                    "dmg_medium": [
+                        {
+                            "count": 1,
+                            "die": 3
                         }
                     ],
                     "crit_range": 20,
