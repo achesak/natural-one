@@ -10,7 +10,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 4
+                            "die": 4,
+                            "type": "Bludgeoning"
                         }
                     ],
                     "crit_range": 20,
@@ -22,7 +23,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 4
+                            "die": 4,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -34,7 +36,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Bludgeoning"
                         }
                     ],
                     "crit_range": 20,
@@ -46,7 +49,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Slashing"
                         }
                     ],
                     "crit_range": 20,
@@ -58,7 +62,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -70,7 +75,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 4
+                            "die": 4,
+                            "type": "Bludgeoning"
                         }
                     ],
                     "crit_range": 20,
@@ -82,7 +88,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Bludgeoning"
                         }
                     ],
                     "crit_range": 20,
@@ -94,7 +101,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Bludgeoning"
                         }
                     ],
                     "crit_range": 20,
@@ -106,7 +114,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 4
+                            "die": 4,
+                            "type": "Slashing"
                         }
                     ],
                     "crit_range": 20,
@@ -118,7 +127,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -136,7 +146,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -148,7 +159,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 4
+                            "die": 4,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -160,7 +172,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -172,7 +185,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 4
+                            "die": 4,
+                            "type": "Bludgeoning"
                         }
                     ],
                     "crit_range": 20,
@@ -189,7 +203,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Slashing"
                         }
                     ],
                     "crit_range": 20,
@@ -201,7 +216,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Bludgeoning"
                         }
                     ],
                     "crit_range": 20,
@@ -213,7 +229,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 10
+                            "die": 10,
+                            "type": "Slashing"
                         }
                     ],
                     "crit_range": 20,
@@ -225,7 +242,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 12
+                            "die": 12,
+                            "type": "Slashing"
                         }
                     ],
                     "crit_range": 20,
@@ -237,7 +255,8 @@
                     "dmg": [
                         {
                             "count": 2,
-                            "die": 6
+                            "die": 6,
+                            "type": "Slashing"
                         }
                     ],
                     "crit_range": 20,
@@ -249,7 +268,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 10
+                            "die": 10,
+                            "type": "Slashing"
                         }
                     ],
                     "crit_range": 20,
@@ -261,7 +281,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 12
+                            "die": 12,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -273,7 +294,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Slashing"
                         }
                     ],
                     "crit_range": 20,
@@ -285,7 +307,8 @@
                     "dmg": [
                         {
                             "count": 2,
-                            "die": 6
+                            "die": 6,
+                            "type": "Bludgeoning"
                         }
                     ],
                     "crit_range": 20,
@@ -297,7 +320,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -309,7 +333,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 10
+                            "die": 10,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -321,7 +346,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -333,7 +359,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Slashing"
                         }
                     ],
                     "crit_range": 20,
@@ -345,7 +372,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -357,7 +385,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -369,7 +398,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -381,7 +411,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Bludgeoning"
                         }
                     ],
                     "crit_range": 20,
@@ -393,7 +424,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 4
+                            "die": 4,
+                            "type": "Slashing"
                         }
                     ],
                     "crit_range": 20,
@@ -410,10 +442,12 @@
                     "dmg": [
                         {
                             "count": 0,
-                            "die": 0
+                            "die": 0,
+                            "type": "None"
                         }
                     ],
                     "dmg_static": 1,
+                    "dmg_static_type": "Piercing",
                     "crit_range": 20,
                     "crit_mult": 2
                 },
@@ -424,7 +458,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -437,7 +472,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 10
+                            "die": 10,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -449,7 +485,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
