@@ -86,7 +86,7 @@ def dmg(num_atks, mods, weapon, weapon_path, min_value, crit_attack):
                     roll_result.add_weapon_roll(roll_data, die_data["type"])
 
         if "dmg_static" in weapon:
-            roll_result.set_static_damage(weapon["dmg_static"], weapon["dmg_static_type"].lower())
+            roll_result.set_static_damage(weapon["dmg_static"] * crit_count, weapon["dmg_static_type"].lower())
 
         rolls.append(roll_result)
         total += roll_result

@@ -9,6 +9,10 @@
             "filename": "starfinder.json"
         },
         {
+            "name": "D&D 3.5e",
+            "filename": "dnd35e.json"
+        },
+        {
             "name": "D&D 4e",
             "filename": "dnd4e.json"
         },
