@@ -9,13 +9,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 4
+                            "die": 4,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -27,13 +29,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 3
+                            "die": 3,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 4
+                            "die": 4,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -45,13 +49,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 4
+                            "die": 4,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -63,13 +69,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 4
+                            "die": 4,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -81,13 +89,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -99,13 +109,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 4
+                            "die": 4,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -117,13 +129,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -136,13 +150,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 4
+                            "die": 4,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -154,13 +170,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 4
+                            "die": 4,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -172,13 +190,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 4
+                            "die": 4,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -190,13 +210,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 3
+                            "die": 3,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 4
+                            "die": 4,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -208,13 +230,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 3
+                            "die": 3,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 4
+                            "die": 4,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -231,13 +255,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 2,
-                            "die": 4
+                            "die": 4,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -249,13 +275,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 10
+                            "die": 10,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -267,13 +295,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -285,13 +315,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 2,
-                            "die": 4
+                            "die": 4,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -308,13 +340,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 10
+                            "die": 10,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -326,13 +360,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 10
+                            "die": 10,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -344,13 +380,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Physical"
                         }
                     ],
                     "reroll_below": 2,
@@ -363,13 +401,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 10
+                            "die": 10,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -381,13 +421,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 4
+                            "die": 4,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -399,13 +441,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Physical"
                         }
                     ],
                     "reroll_below": 1,
@@ -418,13 +462,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 10
+                            "die": 10,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -436,13 +482,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -454,13 +502,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -472,13 +522,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -490,13 +542,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -508,13 +562,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 4
+                            "die": 4,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -526,13 +582,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 4
+                            "die": 4,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -544,13 +602,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -562,13 +622,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 10
+                            "die": 10,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -580,13 +642,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -599,13 +663,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 4
+                            "die": 4,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -622,13 +688,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 6,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 2,
-                            "die": 4
+                            "die": 4,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -641,13 +709,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 12
+                            "die": 10,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 2,
-                            "die": 6
+                            "die": 6,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -659,13 +729,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 6,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 2,
-                            "die": 4
+                            "die": 4,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -677,13 +749,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 10
+                            "die": 10,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 12
+                            "die": 12,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -695,13 +769,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 10
+                            "die": 10,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -713,13 +789,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 10
+                            "die": 10,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -731,13 +809,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 10
+                            "die": 10,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -749,13 +829,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 12
+                            "die": 10,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 2,
-                            "die": 6
+                            "die": 6,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -767,13 +849,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 10
+                            "die": 10,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -785,13 +869,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 10
+                            "die": 10,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -804,13 +890,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 10
+                            "die": 10,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 12
+                            "die": 12,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -827,13 +915,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 10
+                            "die": 10,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -845,13 +935,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 3
+                            "die": 3,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 4
+                            "die": 4,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -863,13 +955,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 10
+                            "die": 10,
+                            "type": "Physical"
                         }
                     ],
                     "reroll_below": 2,
@@ -883,13 +977,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 10
+                            "die": 10,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -902,13 +998,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 10
+                            "die": 10,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -920,13 +1018,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -938,13 +1038,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 4
+                            "die": 4,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -956,13 +1058,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 4
+                            "die": 4,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Physical"
                         }
                     ],
                     "reroll_below": 1,
@@ -975,13 +1079,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 4
+                            "die": 4,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -994,13 +1100,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 10
+                            "die": 10,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -1012,13 +1120,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 4
+                            "die": 4,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -1031,13 +1141,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 4
+                            "die": 4,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -1049,13 +1161,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 4
+                            "die": 4,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -1067,13 +1181,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 4
+                            "die": 4,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -1085,13 +1201,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -1103,13 +1221,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 10
+                            "die": 10,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 12
+                            "die": 12,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -1121,13 +1241,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 3
+                            "die": 3,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 4
+                            "die": 4,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -1145,13 +1267,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 10
+                            "die": 10,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 12
+                            "die": 12,
+                            "type": "Physical"
                         }
                     ],
                     "reroll_below": 2,
@@ -1165,13 +1289,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 6,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 2,
-                            "die": 4
+                            "die": 4,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -1183,13 +1309,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 10
+                            "die": 10,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 12
+                            "die": 12,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -1201,13 +1329,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 3
+                            "die": 3,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 4
+                            "die": 4,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -1219,13 +1349,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 12
+                            "die": 10,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 2,
-                            "die": 6
+                            "die": 6,
+                            "type": "Physical"
                         }
                     ],
                     "reroll_below": 1,
@@ -1238,13 +1370,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 10
+                            "die": 10,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -1256,13 +1390,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 12
+                            "die": 10,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 2,
-                            "die": 6
+                            "die": 6,
+                            "type": "Physical"
                         }
                     ],
                     "reroll_below": 1,
@@ -1281,13 +1417,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 10
+                            "die": 10,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -1299,13 +1437,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -1317,13 +1457,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -1335,13 +1477,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 4
+                            "die": 4,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -1354,13 +1498,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -1372,13 +1518,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -1390,13 +1538,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 10
+                            "die": 10,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -1408,13 +1558,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 4
+                            "die": 4,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -1426,13 +1578,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 10
+                            "die": 10,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -1444,13 +1598,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -1463,13 +1619,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 4
+                            "die": 4,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -1481,13 +1639,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 10
+                            "die": 10,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 12
+                            "die": 12,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -1499,13 +1659,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 4
+                            "die": 4,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -1522,13 +1684,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 3
+                            "die": 3,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 4
+                            "die": 4,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -1540,13 +1704,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 3
+                            "die": 3,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 4
+                            "die": 4,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -1563,13 +1729,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -1587,13 +1755,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 4
+                            "die": 4,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -1605,13 +1775,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -1623,13 +1795,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 4
+                            "die": 4,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -1646,13 +1820,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -1665,13 +1841,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -1688,13 +1866,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 4
+                            "die": 4,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -1711,13 +1891,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 10
+                            "die": 10,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -1729,13 +1911,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -1753,13 +1937,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 3
+                            "die": 3,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 4
+                            "die": 4,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -1772,13 +1958,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 4
+                            "die": 4,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -1790,13 +1978,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 3
+                            "die": 3,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 4
+                            "die": 4,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -1813,13 +2003,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 3
+                            "die": 3,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 4
+                            "die": 4,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -1832,13 +2024,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 10
+                            "die": 10,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -1850,13 +2044,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 10
+                            "die": 10,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 12
+                            "die": 12,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
@@ -1873,13 +2069,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 3
+                            "die": 3,
+                            "type": "Physical"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 4
+                            "die": 4,
+                            "type": "Physical"
                         }
                     ],
                     "crit_range": 20,
