@@ -95,7 +95,7 @@ def dmg(num_atks, mods, weapon, weapon_path, min_value, crit_attack):
         crit_extra = weapon["crit_extra"]
         crit_rolls = crit_extra[weapon_path] if weapon_path in crit_extra else []
         for atk_index in range(0, num_atks):
-            roll_result = DamageRollResult(atk_index + 1, True, min_value, mods[atk_index])
+            roll_result = DamageRollResult(atk_index + 1, True, min_value, 0)
             for die_index in range(0, len(crit_rolls)):
                 die_data = crit_rolls[die_index]
                 roll_data = dmg_die(weapon, die_data, False)
