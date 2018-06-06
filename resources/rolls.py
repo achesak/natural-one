@@ -145,20 +145,19 @@ class DamageRollResult(object):
     def __str__(self):
         if not self.crit_attack:
             hit_text = "Hit"
-            static_text = "damage"
         else:
             hit_text = "Bonus critical damage"
-            static_text = "critical damage"
         output = []
-        if len(self.rolls) != 0:
-            mod_sign = "+" if self.mod > 0 else ""
+        if len(self.rolls) != 0 or self.dmg_static is not None:
             output.append("%s %d: <b>%d damage</b>" % (hit_text, self.number, int(self)))
+        if len(self.rolls) != 0:
             for roll in self.rolls:
                 output.append("\t%s=%d %s" % (roll, roll, roll.type.lower()))
-            if self.mod:
-                output.append("\t%s%d modifier" % (mod_sign, self.mod))
         if self.dmg_static is not None:
-            output.append("<i>Added %d %s %s</i>" % (self.dmg_static, self.dmg_static_type, static_text))
+            output.append("\t%d %s" % (self.dmg_static, self.dmg_static_type))
+        if self.mod:
+            mod_sign = "+" if self.mod > 0 else ""
+            output.append("\t%s%d modifier" % (mod_sign, self.mod))
         return "\n".join(output).strip()
 
     def __add__(self, other):
