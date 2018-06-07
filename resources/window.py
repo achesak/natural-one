@@ -358,43 +358,22 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
 
         # Create the Templates grid.
         templates_grid = Gtk.Grid()
-        templates_grid.set_row_spacing(20)
-        templates_grid.set_column_spacing(20)
-        templates_grid.set_border_width(20)
-
-        # Create the Templates -> New Template box.
-        new_box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL)
-        new_box.set_hexpand(True)
-        templates_grid.attach(new_box, 0, 0, 1, 1)
-
-        # Create the new template main label.
-        new_lbl = Gtk.Label()
-        new_lbl.set_markup("<span size=\"x-large\">New Template</span>")
-        new_lbl.set_alignment(0, 0.5)
-        new_box.pack_start(new_lbl, False, False, 0)
-
-        # Create the new template button.
-        self.new_btn = Gtk.Button("Create Template")
-        self.new_btn.set_halign(Gtk.Align.END)
-        new_box.pack_end(self.new_btn, False, False, 0)
-
-        # Create the Templates -> Template List grid.
-        list_grid = Gtk.Grid()
-        list_grid.set_row_spacing(5)
-        list_grid.set_column_spacing(5)
-        templates_grid.attach(list_grid, 0, 1, 1, 1)
+        templates_grid.set_row_spacing(0)
+        templates_grid.set_column_spacing(12)
+        templates_grid.set_border_width(18)
 
         # Create the template list main label.
         list_lbl = Gtk.Label()
         list_lbl.set_markup("<span size=\"x-large\">Templates</span>")
         list_lbl.set_alignment(0, 0.5)
-        list_grid.attach_next_to(list_lbl, None, Gtk.PositionType.RIGHT, 3, 1)
+        list_lbl.set_margin_bottom(10)
+        templates_grid.add(list_lbl)
 
         # Create the template list.
         templates_scroll_win = Gtk.ScrolledWindow()
         templates_scroll_win.set_hexpand(True)
         templates_scroll_win.set_vexpand(True)
-        list_grid.attach_next_to(templates_scroll_win, list_lbl, Gtk.PositionType.BOTTOM, 3, 1)
+        templates_grid.attach_next_to(templates_scroll_win, list_lbl, Gtk.PositionType.BOTTOM, 1, 1)
         self.template_store = Gtk.ListStore(str)
         self.template_tree = Gtk.TreeView(model=self.template_store)
         self.template_tree.set_headers_visible(False)
@@ -404,20 +383,41 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         self.template_tree.append_column(column)
         templates_scroll_win.add(self.template_tree)
 
+        # Create the template list action bar.
+        self.template_action_bar = Gtk.ActionBar()
+        templates_grid.attach_next_to(self.template_action_bar, templates_scroll_win, Gtk.PositionType.BOTTOM, 1, 1)
+
         # Create the template list buttons.
-        self.list_edit_btn = Gtk.Button("Edit")
-        list_grid.attach_next_to(self.list_edit_btn, templates_scroll_win, Gtk.PositionType.BOTTOM, 1, 1)
-        self.list_delete_btn = Gtk.Button("Delete")
-        list_grid.attach_next_to(self.list_delete_btn, self.list_edit_btn, Gtk.PositionType.RIGHT, 1, 1)
-        self.list_roll_btn = Gtk.Button("Roll")
-        list_grid.attach_next_to(self.list_roll_btn, self.list_delete_btn, Gtk.PositionType.RIGHT, 1, 1)
+        template_btn_box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL)
+        Gtk.StyleContext.add_class(template_btn_box.get_style_context(), "linked")
+        self.template_action_bar.pack_start(template_btn_box)
+        self.new_btn = Gtk.Button()
+        new_img = Gtk.Image.new_from_gicon(Gio.ThemedIcon(name="list-add-symbolic"), Gtk.IconSize.BUTTON)
+        self.new_btn.add(new_img)
+        self.new_btn.set_tooltip_text("Create a new template")
+        template_btn_box.add(self.new_btn)
+        self.list_edit_btn = Gtk.Button()
+        edit_img = Gtk.Image.new_from_gicon(Gio.ThemedIcon(name="edit-symbolic"), Gtk.IconSize.BUTTON)
+        self.list_edit_btn.add(edit_img)
+        self.list_edit_btn.set_tooltip_text("Edit selected template")
+        template_btn_box.add(self.list_edit_btn)
+        self.list_delete_btn = Gtk.Button()
+        delete_img = Gtk.Image.new_from_gicon(Gio.ThemedIcon(name="list-remove-symbolic"), Gtk.IconSize.BUTTON)
+        self.list_delete_btn.add(delete_img)
+        self.list_delete_btn.set_tooltip_text("Delete selected template")
+        template_btn_box.add(self.list_delete_btn)
+        self.list_roll_btn = Gtk.Button()
+        roll_img = Gtk.Image.new_from_gicon(Gio.ThemedIcon(name="go-jump-symbolic"), Gtk.IconSize.BUTTON)
+        self.list_roll_btn.add(roll_img)
+        self.list_roll_btn.set_tooltip_text("Roll selected template")
+        self.template_action_bar.pack_end(self.list_roll_btn)
 
         # Create the template list critical check box.
         self.list_crit_chk = Gtk.CheckButton("Apply critical hit")
         self.list_crit_chk.set_halign(Gtk.Align.CENTER)
         self.list_crit_chk.set_hexpand(True)
-        self.list_crit_chk.set_margin_top(5)
-        list_grid.attach_next_to(self.list_crit_chk, self.list_edit_btn, Gtk.PositionType.BOTTOM, 3, 1)
+        self.list_crit_chk.set_margin_top(10)
+        templates_grid.attach_next_to(self.list_crit_chk, self.template_action_bar, Gtk.PositionType.BOTTOM, 1, 1)
 
         # Create the Initiative grid.
         init_grid = Gtk.Grid()
