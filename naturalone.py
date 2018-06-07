@@ -184,11 +184,15 @@ class DiceRoller(Gtk.Application):
             valid = False
 
         min_value = -1
+        min_text =  self.window.min_ent.get_text().strip()
         try:
-            min_value = int(self.window.min_ent.get_text().strip())
+            min_value = int(min_text)
         except ValueError:
-            self.window.add_error(self.window.min_ent)
-            valid = False
+            if min_text == "":
+                min_value = - float("inf")
+            else:
+                self.window.add_error(self.window.min_ent)
+                valid = False
 
         if count < 1:
             self.window.add_error(count_ent)
@@ -297,11 +301,15 @@ class DiceRoller(Gtk.Application):
             valid = False
 
         min_value = -1
+        min_text = self.window.min_dam_ent.get_text().strip()
         try:
-            min_value = int(self.window.min_dam_ent.get_text().strip())
+            min_value = int(min_text)
         except ValueError:
-            self.window.add_error(self.window.min_dam_ent)
-            valid = False
+            if min_text == "":
+                min_value = - float("inf")
+            else:
+                self.window.add_error(self.window.min_dam_ent)
+                valid = False
 
         mods = []
         try:

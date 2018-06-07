@@ -87,17 +87,19 @@ class TemplateRollResult(BasicRollResult):
         self.rolls = []
 
     def add_roll(self, value):
+        min_value = - float("inf") if self.item["min_value"] == "" else self.item["min_value"]
         if not self.item["mod_every"]:
             mod = 0
         else:
             mod = self.item["mod"]
-        self.rolls.append(BasicRollResult(value, self.item["min_value"], mod))
+        self.rolls.append(BasicRollResult(value, min_value, mod))
 
     def __int__(self):
+        min_value = - float("inf") if self.item["min_value"] == "" else self.item["min_value"]
         total = sum(self.rolls)
         if not self.item["mod_every"]:
             total += self.item["mod"]
-        return max(total, self.item["min_value"])
+        return max(total, min_value)
 
     def __str__(self):
         return ", ".join([str(x) for x in self.rolls])

@@ -214,7 +214,7 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         min_lbl.set_alignment(1, 0.5)
         dice_grid.attach_next_to(min_lbl, dq_img, Gtk.PositionType.BOTTOM, 2, 1)
         self.min_ent = Gtk.Entry()
-        self.min_ent.set_text("0")
+        self.min_ent.set_placeholder_text("No minimum value")
         dice_grid.attach_next_to(self.min_ent, min_lbl, Gtk.PositionType.RIGHT, 4, 1)
 
         # Create the modifier check box.
@@ -335,7 +335,7 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         combat_grid.attach_next_to(min_dam_lbl, mod_dam_lbl, Gtk.PositionType.BOTTOM, 1, 1)
         self.min_dam_ent = Gtk.Entry()
         self.min_dam_ent.set_hexpand(True)
-        self.min_dam_ent.set_text("0")
+        self.min_dam_ent.set_placeholder_text("No minimum value")
         combat_grid.attach_next_to(self.min_dam_ent, min_dam_lbl, Gtk.PositionType.RIGHT, 3, 1)
 
         # Create the size row.
@@ -463,6 +463,7 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         add_init_grid.attach_next_to(self.mod_init_lbl, name_init_lbl, Gtk.PositionType.BOTTOM, 1, 1)
         self.mod_init_ent = Gtk.Entry()
         self.mod_init_ent.set_hexpand(True)
+        self.mod_init_ent.set_text("0")
         add_init_grid.attach_next_to(self.mod_init_ent, self.mod_init_lbl, Gtk.PositionType.RIGHT, 1, 1)
         self.roll_init_btn = Gtk.Button("Roll")
         add_init_grid.attach_next_to(self.roll_init_btn, self.mod_init_ent, Gtk.PositionType.RIGHT, 1, 1)

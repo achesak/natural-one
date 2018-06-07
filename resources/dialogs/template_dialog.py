@@ -127,7 +127,7 @@ class TemplateDialog(Gtk.Dialog):
         min_lbl.set_alignment(1, 0.5)
         min_lbl.set_margin_right(5)
         self.min_ent = Gtk.Entry()
-        self.min_ent.set_text("0")
+        self.min_ent.set_placeholder_text("No minimum value")
         self.min_ent.set_hexpand(True)
         min_grid.add(min_lbl)
         min_grid.attach_next_to(self.min_ent, min_lbl, Gtk.PositionType.RIGHT, 2, 1)
@@ -285,8 +285,9 @@ class TemplateDialog(Gtk.Dialog):
         try:
             roll["min_value"] = int(roll["min_value"])
         except (ValueError, AssertionError):
-            self.add_error(self.min_ent)
-            valid = False
+            if roll["min_value"] != "":
+                self.add_error(self.min_ent)
+                valid = False
 
         if roll["crit_active"]:
             try:
