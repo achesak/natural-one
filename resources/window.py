@@ -20,7 +20,7 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         super(Gtk.ApplicationWindow, self).__init__(*args, **kwargs)
 
         self.set_icon_from_file("resources/images/icon128.png")
-        self.set_size_request(900, -1)
+        self.set_size_request(1000, -1)
 
         # Create the header bar.
         self.header = Gtk.HeaderBar()
@@ -32,6 +32,7 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         self.stack = Gtk.Stack()
         self.stack.set_vexpand(False)
         self.stack.set_hexpand(False)
+        self.stack.set_size_request(450, 1)
         self.stack.set_transition_type(Gtk.StackTransitionType.SLIDE_LEFT_RIGHT)
         self.stack_switcher = Gtk.StackSwitcher()
         self.stack_switcher.set_stack(self.stack)
