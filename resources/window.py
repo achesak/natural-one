@@ -478,21 +478,22 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
 
         # Create the initiative list grid.
         list_init_grid = Gtk.Grid()
-        list_init_grid.set_row_spacing(5)
-        list_init_grid.set_column_spacing(5)
+        list_init_grid.set_row_spacing(0)
+        list_init_grid.set_column_spacing(12)
         init_grid.attach_next_to(list_init_grid, add_init_grid, Gtk.PositionType.BOTTOM, 1, 1)
 
         # Create the initiative list label.
         list_init_lbl = Gtk.Label()
         list_init_lbl.set_markup("<span size=\"x-large\">Initiative List</span>")
         list_init_lbl.set_alignment(0, 0.5)
-        list_init_grid.attach(list_init_lbl, 0, 0, 2, 1)
+        list_init_lbl.set_margin_bottom(10)
+        list_init_grid.attach(list_init_lbl, 0, 0, 1, 1)
 
         # Create the initiative list.
         init_scroll_win = Gtk.ScrolledWindow()
         init_scroll_win.set_hexpand(True)
         init_scroll_win.set_vexpand(True)
-        list_init_grid.attach_next_to(init_scroll_win, list_init_lbl, Gtk.PositionType.BOTTOM, 2, 1)
+        list_init_grid.attach_next_to(init_scroll_win, list_init_lbl, Gtk.PositionType.BOTTOM, 1, 1)
         self.init_store = Gtk.ListStore(str, int)
         self.init_tree = Gtk.TreeView(model=self.init_store)
         self.init_tree.set_reorderable(True)
@@ -507,16 +508,29 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         self.init_tree.append_column(column)
         init_scroll_win.add(self.init_tree)
 
+        # Create the initiative list action bar.
+        self.init_action_bar = Gtk.ActionBar()
+        list_init_grid.attach_next_to(self.init_action_bar, init_scroll_win, Gtk.PositionType.BOTTOM, 1, 1)
+
         # Create the initiative list buttons.
-        self.remove_init_btn = Gtk.Button("Remove")
-        list_init_grid.attach_next_to(self.remove_init_btn, init_scroll_win, Gtk.PositionType.BOTTOM, 1, 1)
-        self.clear_init_btn = Gtk.Button("Clear All")
-        list_init_grid.attach_next_to(self.clear_init_btn, self.remove_init_btn, Gtk.PositionType.RIGHT, 1, 1)
+        init_btn_box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL)
+        Gtk.StyleContext.add_class(init_btn_box.get_style_context(), "linked")
+        self.init_action_bar.pack_start(init_btn_box)
+        self.remove_init_btn = Gtk.Button()
+        remove_img = Gtk.Image.new_from_gicon(Gio.ThemedIcon(name="list-remove-symbolic"), Gtk.IconSize.BUTTON)
+        self.remove_init_btn.add(remove_img)
+        self.remove_init_btn.set_tooltip_text("Remove selected initiative")
+        init_btn_box.add(self.remove_init_btn)
+        self.clear_init_btn = Gtk.Button()
+        clear_img = Gtk.Image.new_from_gicon(Gio.ThemedIcon(name="edit-clear-symbolic"), Gtk.IconSize.BUTTON)
+        self.clear_init_btn.add(clear_img)
+        self.clear_init_btn.set_tooltip_text("Clear all initiatives")
+        init_btn_box.add(self.clear_init_btn)
 
         # Create the initiative drag and drop help text.
         drag_init_lbl = Gtk.Label("Drag and drop to re-arrange initiative order")
-        drag_init_lbl.set_margin_top(5)
-        list_init_grid.attach_next_to(drag_init_lbl, self.remove_init_btn, Gtk.PositionType.BOTTOM, 2, 1)
+        drag_init_lbl.set_margin_top(10)
+        list_init_grid.attach_next_to(drag_init_lbl, self.init_action_bar, Gtk.PositionType.BOTTOM, 1, 1)
 
         # Create the results display.
         results_scroll_win = Gtk.ScrolledWindow()
