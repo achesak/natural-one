@@ -460,7 +460,8 @@
                     "dmg": [
                         {
                             "count": 2,
-                            "die": 8
+                            "die": 8,
+                            "type": "Electricity and fire"
                         }
                     ],
                     "crit_range": 20,
@@ -473,7 +474,8 @@
                     "dmg": [
                         {
                             "count": 4,
-                            "die": 8
+                            "die": 8,
+                            "type": "Electricity and fire"
                         }
                     ],
                     "crit_range": 20,
@@ -486,7 +488,8 @@
                     "dmg": [
                         {
                             "count": 5,
-                            "die": 8
+                            "die": 8,
+                            "type": "Electricity and fire"
                         }
                     ],
                     "crit_range": 20,
@@ -499,7 +502,8 @@
                     "dmg": [
                         {
                             "count": 8,
-                            "die": 8
+                            "die": 8,
+                            "type": "Electricity and fire"
                         }
                     ],
                     "crit_range": 20,
@@ -512,7 +516,8 @@
                     "dmg": [
                         {
                             "count": 10,
-                            "die": 8
+                            "die": 8,
+                            "type": "Electricity and fire"
                         }
                     ],
                     "crit_range": 20,
@@ -530,7 +535,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 12
+                            "die": 12,
+                            "type": "Electricity"
                         }
                     ],
                     "crit_range": 20,
@@ -539,7 +545,8 @@
                         "dmg": [
                             {
                                 "count": 1,
-                                "die": 4
+                                "die": 4,
+                                "type": "Arc"
                             }
                         ]
                     }
@@ -551,7 +558,8 @@
                     "dmg": [
                         {
                             "count": 2,
-                            "die": 12
+                            "die": 12,
+                            "type": "Electricity"
                         }
                     ],
                     "crit_range": 20,
@@ -560,7 +568,8 @@
                         "dmg": [
                             {
                                 "count": 2,
-                                "die": 4
+                                "die": 4,
+                                "type": "Arc"
                             }
                         ]
                     }
@@ -572,7 +581,8 @@
                     "dmg": [
                         {
                             "count": 3,
-                            "die": 12
+                            "die": 12,
+                            "type": "Electricity"
                         }
                     ],
                     "crit_range": 20,
@@ -581,7 +591,8 @@
                         "dmg": [
                             {
                                 "count": 3,
-                                "die": 4
+                                "die": 4,
+                                "type": "Arc"
                             }
                         ]
                     }
@@ -593,7 +604,8 @@
                     "dmg": [
                         {
                             "count": 6,
-                            "die": 12
+                            "die": 12,
+                            "type": "Electricity"
                         }
                     ],
                     "crit_range": 20,
@@ -602,7 +614,8 @@
                         "dmg": [
                             {
                                 "count": 6,
-                                "die": 4
+                                "die": 4,
+                                "type": "Arc"
                             }
                         ]
                     }
@@ -619,7 +632,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Bludgeoning and sonic"
                         }
                     ],
                     "crit_range": 20,
@@ -633,7 +647,8 @@
                     "dmg": [
                         {
                             "count": 2,
-                            "die": 6
+                            "die": 6,
+                            "type": "Bludgeoning and sonic"
                         }
                     ],
                     "crit_range": 20,
@@ -647,7 +662,8 @@
                     "dmg": [
                         {
                             "count": 5,
-                            "die": 6
+                            "die": 6,
+                            "type": "Bludgeoning and sonic"
                         }
                     ],
                     "crit_range": 20,
@@ -660,7 +676,8 @@
                     "dmg": [
                         {
                             "count": 10,
-                            "die": 6
+                            "die": 6,
+                            "type": "Bludgeoning and sonic"
                         }
                     ],
                     "crit_range": 20,
@@ -678,7 +695,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Bludgeoning"
                         }
                     ],
                     "crit_range": 20,
@@ -690,7 +708,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Slashing"
                         }
                     ],
                     "crit_range": 20,
@@ -703,7 +722,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 4
+                            "die": 4,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -716,7 +736,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 4
+                            "die": 4,
+                            "type": "Slashing"
                         }
                     ],
                     "crit_range": 20,
@@ -728,7 +749,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 4
+                            "die": 4,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -740,7 +762,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 12
+                            "die": 12,
+                            "type": "Slashing"
                         }
                     ],
                     "crit_range": 20,
@@ -749,7 +772,8 @@
                         "dmg": [
                             {
                                 "count": 1,
-                                "die": 8
+                                "die": 8,
+                                "type": "Bleed"
                             }
                         ]
                     }
@@ -761,7 +785,8 @@
                     "dmg": [
                         {
                             "count": 2,
-                            "die": 8
+                            "die": 8,
+                            "type": "Slashing"
                         }
                     ],
                     "crit_range": 20,
@@ -774,7 +799,8 @@
                     "dmg": [
                         {
                             "count": 4,
-                            "die": 4
+                            "die": 4,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -787,7 +813,8 @@
                     "dmg": [
                         {
                             "count": 2,
-                            "die": 10
+                            "die": 10,
+                            "type": "Slashing"
                         }
                     ],
                     "crit_range": 20,
@@ -796,7 +823,8 @@
                         "dmg": [
                             {
                                 "count": 2,
-                                "die": 6
+                                "die": 6,
+                                "type": "Bleed"
                             }
                         ]
                     }
@@ -808,7 +836,8 @@
                     "dmg": [
                         {
                             "count": 4,
-                            "die": 6
+                            "die": 6,
+                            "type": "Bludgeoning"
                         }
                     ],
                     "crit_range": 20,
@@ -821,7 +850,8 @@
                     "dmg": [
                         {
                             "count": 4,
-                            "die": 8
+                            "die": 8,
+                            "type": "Slashing"
                         }
                     ],
                     "crit_range": 20,
@@ -834,7 +864,8 @@
                     "dmg": [
                         {
                             "count": 5,
-                            "die": 4
+                            "die": 4,
+                            "type": "Slashing"
                         }
                     ],
                     "crit_range": 20,
@@ -847,7 +878,8 @@
                     "dmg": [
                         {
                             "count": 4,
-                            "die": 8
+                            "die": 8,
+                            "type": "Fire and piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -859,7 +891,8 @@
                     "dmg": [
                         {
                             "count": 4,
-                            "die": 10
+                            "die": 10,
+                            "type": "Slashing"
                         }
                     ],
                     "crit_range": 20,
@@ -868,7 +901,8 @@
                         "dmg": [
                             {
                                 "count": 2,
-                                "die": 8
+                                "die": 8,
+                                "type": "Bleed"
                             }
                         ]
                     }
@@ -880,7 +914,8 @@
                     "dmg": [
                         {
                             "count": 7,
-                            "die": 8
+                            "die": 8,
+                            "type": "Slashing"
                         }
                     ],
                     "crit_range": 20,
@@ -892,7 +927,8 @@
                     "dmg": [
                         {
                             "count": 10,
-                            "die": 4
+                            "die": 4,
+                            "type": "Slashing"
                         }
                     ],
                     "crit_range": 20,
@@ -905,7 +941,8 @@
                     "dmg": [
                         {
                             "count": 11,
-                            "die": 6
+                            "die": 6,
+                            "type": "Bludgeoning"
                         }
                     ],
                     "crit_range": 20,
@@ -918,7 +955,8 @@
                     "dmg": [
                         {
                             "count": 8,
-                            "die": 8
+                            "die": 8,
+                            "type": "Fire and piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -931,7 +969,8 @@
                     "dmg": [
                         {
                             "count": 10,
-                            "die": 8
+                            "die": 8,
+                            "type": "Slashing"
                         }
                     ],
                     "crit_range": 20,
@@ -944,7 +983,8 @@
                     "dmg": [
                         {
                             "count": 8,
-                            "die": 10
+                            "die": 10,
+                            "type": "Slashing"
                         }
                     ],
                     "crit_range": 20,
@@ -953,7 +993,8 @@
                         "dmg": [
                             {
                                 "count": 6,
-                                "die": 6
+                                "die": 6,
+                                "type": "Bleed"
                             }
                         ]
                     }
@@ -965,7 +1006,8 @@
                     "dmg": [
                         {
                             "count": 15,
-                            "die": 6
+                            "die": 6,
+                            "type": "Bludgeoning"
                         }
                     ],
                     "crit_range": 20,
@@ -978,7 +1020,8 @@
                     "dmg": [
                         {
                             "count": 8,
-                            "die": 12
+                            "die": 12,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -991,7 +1034,8 @@
                     "dmg": [
                         {
                             "count": 14,
-                            "die": 8
+                            "die": 8,
+                            "type": "Slashing"
                         }
                     ],
                     "crit_range": 20,
@@ -1009,7 +1053,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Cold"
                         }
                     ],
                     "crit_range": 20,
@@ -1022,7 +1067,8 @@
                     "dmg": [
                         {
                             "count": 2,
-                            "die": 8
+                            "die": 8,
+                            "type": "Cold"
                         }
                     ],
                     "crit_range": 20,
@@ -1040,7 +1086,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Fire"
                         }
                     ],
                     "crit_range": 20,
@@ -1053,7 +1100,8 @@
                     "dmg": [
                         {
                             "count": 2,
-                            "die": 8
+                            "die": 8,
+                            "type": "Fire"
                         }
                     ],
                     "crit_range": 20,
@@ -1066,7 +1114,8 @@
                     "dmg": [
                         {
                             "count": 5,
-                            "die": 8
+                            "die": 8,
+                            "type": "Fire"
                         }
                     ],
                     "crit_range": 20,
@@ -1079,7 +1128,8 @@
                     "dmg": [
                         {
                             "count": 10,
-                            "die": 8
+                            "die": 8,
+                            "type": "Fire"
                         }
                     ],
                     "crit_range": 20,
@@ -1097,7 +1147,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 10
+                            "die": 10,
+                            "type": "Electricity and fire"
                         }
                     ],
                     "crit_range": 20,
@@ -1110,7 +1161,8 @@
                     "dmg": [
                         {
                             "count": 2,
-                            "die": 10
+                            "die": 10,
+                            "type": "Electricity and fire"
                         }
                     ],
                     "crit_range": 20,
@@ -1123,7 +1175,8 @@
                     "dmg": [
                         {
                             "count": 5,
-                            "die": 10
+                            "die": 10,
+                            "type": "Electricity and fire"
                         }
                     ],
                     "crit_range": 20,
@@ -1136,7 +1189,8 @@
                     "dmg": [
                         {
                             "count": 7,
-                            "die": 10
+                            "die": 10,
+                            "type": "Electricity and fire"
                         }
                     ],
                     "crit_range": 20,
@@ -1154,7 +1208,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 12
+                            "die": 12,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -1167,7 +1222,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -1180,7 +1236,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 10
+                            "die": 10,
+                            "type": "Slashing"
                         }
                     ],
                     "crit_range": 20,
@@ -1189,7 +1246,8 @@
                         "dmg": [
                             {
                                 "count": 1,
-                                "die": 6
+                                "die": 6,
+                                "type": "Bleed"
                             }
                         ]
                     }
@@ -1201,7 +1259,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 10
+                            "die": 10,
+                            "type": "Bludgeoning"
                         }
                     ],
                     "crit_range": 20,
@@ -1214,7 +1273,8 @@
                     "dmg": [
                         {
                             "count": 2,
-                            "die": 8
+                            "die": 8,
+                            "type": "Slashing"
                         }
                     ],
                     "crit_range": 20,
@@ -1227,7 +1287,8 @@
                     "dmg": [
                         {
                             "count": 2,
-                            "die": 12
+                            "die": 12,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -1240,7 +1301,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 10
+                            "die": 10,
+                            "type": "Bludgeoning"
                         }
                     ],
                     "crit_range": 20,
@@ -1253,7 +1315,8 @@
                     "dmg": [
                         {
                             "count": 2,
-                            "die": 8
+                            "die": 8,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -1262,7 +1325,8 @@
                         "dmg": [
                             {
                                 "count": 1,
-                                "die": 8
+                                "die": 8,
+                                "type": "Bleed"
                             }
                         ]
                     }
@@ -1274,7 +1338,8 @@
                     "dmg": [
                         {
                             "count": 3,
-                            "die": 10
+                            "die": 10,
+                            "type": "Bludgeoning"
                         }
                     ],
                     "crit_range": 20,
@@ -1287,7 +1352,8 @@
                     "dmg": [
                         {
                             "count": 3,
-                            "die": 10
+                            "die": 10,
+                            "type": "Slashing"
                         }
                     ],
                     "crit_range": 20,
@@ -1296,7 +1362,8 @@
                         "dmg": [
                             {
                                 "count": 2,
-                                "die": 6
+                                "die": 6,
+                                "type": "Bleed"
                             }
                         ]
                     }
@@ -1308,7 +1375,8 @@
                     "dmg": [
                         {
                             "count": 4,
-                            "die": 12
+                            "die": 12,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -1321,7 +1389,8 @@
                     "dmg": [
                         {
                             "count": 5,
-                            "die": 8
+                            "die": 8,
+                            "type": "Slashing"
                         }
                     ],
                     "crit_range": 20,
@@ -1334,7 +1403,8 @@
                     "dmg": [
                         {
                             "count": 3,
-                            "die": 8
+                            "die": 8,
+                            "type": "Bludgeoning"
                         }
                     ],
                     "crit_range": 20,
@@ -1347,7 +1417,8 @@
                     "dmg": [
                         {
                             "count": 5,
-                            "die": 10
+                            "die": 10,
+                            "type": "Bludgeoning"
                         }
                     ],
                     "crit_range": 20,
@@ -1360,7 +1431,8 @@
                     "dmg": [
                         {
                             "count": 7,
-                            "die": 12
+                            "die": 12,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -1373,7 +1445,8 @@
                     "dmg": [
                         {
                             "count": 7,
-                            "die": 8
+                            "die": 8,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -1382,7 +1455,8 @@
                         "dmg": [
                             {
                                 "count": 3,
-                                "die": 8
+                                "die": 8,
+                                "type": "Bleed"
                             }
                         ]
                     }
@@ -1394,7 +1468,8 @@
                     "dmg": [
                         {
                             "count": 8,
-                            "die": 10
+                            "die": 10,
+                            "type": "Slashing"
                         }
                     ],
                     "crit_range": 20,
@@ -1403,7 +1478,8 @@
                         "dmg": [
                             {
                                 "count": 5,
-                                "die": 6
+                                "die": 6,
+                                "type": "Bleed"
                             }
                         ]
                     }
@@ -1415,7 +1491,8 @@
                     "dmg": [
                         {
                             "count": 10,
-                            "die": 12
+                            "die": 12,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -1428,7 +1505,8 @@
                     "dmg": [
                         {
                             "count": 10,
-                            "die": 10
+                            "die": 10,
+                            "type": "Bludgeoning"
                         }
                     ],
                     "crit_range": 20,
@@ -1441,7 +1519,8 @@
                     "dmg": [
                         {
                             "count": 12,
-                            "die": 8
+                            "die": 8,
+                            "type": "Slashing"
                         }
                     ],
                     "crit_range": 20,
@@ -1454,7 +1533,8 @@
                     "dmg": [
                         {
                             "count": 13,
-                            "die": 12
+                            "die": 12,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -1467,7 +1547,8 @@
                     "dmg": [
                         {
                             "count": 12,
-                            "die": 10
+                            "die": 10,
+                            "type": "Slashing"
                         }
                     ],
                     "crit_range": 20,
@@ -1476,7 +1557,8 @@
                         "dmg": [
                             {
                                 "count": 6,
-                                "die": 6
+                                "die": 6,
+                                "type": "Bleed"
                             }
                         ]
                     }
@@ -1488,7 +1570,8 @@
                     "dmg": [
                         {
                             "count": 14,
-                            "die": 10
+                            "die": 10,
+                            "type": "Bludgeoning and fire"
                         }
                     ],
                     "crit_range": 20,
@@ -1506,7 +1589,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Cold"
                         }
                     ],
                     "crit_range": 20,
@@ -1519,7 +1603,8 @@
                     "dmg": [
                         {
                             "count": 2,
-                            "die": 6
+                            "die": 6,
+                            "type": "Cold"
                         }
                     ],
                     "crit_range": 20,
@@ -1532,7 +1617,8 @@
                     "dmg": [
                         {
                             "count": 4,
-                            "die": 6
+                            "die": 6,
+                            "type": "Cold"
                         }
                     ],
                     "crit_range": 20,
@@ -1545,7 +1631,8 @@
                     "dmg": [
                         {
                             "count": 6,
-                            "die": 6
+                            "die": 6,
+                            "type": "Cold"
                         }
                     ],
                     "crit_range": 20,
@@ -1563,7 +1650,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 3
+                            "die": 3,
+                            "type": "Fire"
                         }
                     ],
                     "crit_range": 20,
@@ -1572,7 +1660,8 @@
                         "dmg": [
                             {
                                 "count": 1,
-                                "die": 6
+                                "die": 6,
+                                "type": "Burn"
                             }
                         ]
                     }
@@ -1583,7 +1672,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 4
+                            "die": 4,
+                            "type": "Fire"
                         }
                     ],
                     "crit_range": 20,
@@ -1592,7 +1682,8 @@
                         "dmg": [
                             {
                                 "count": 1,
-                                "die": 4
+                                "die": 4,
+                                "type": "Burn"
                             }
                         ]
                     }
@@ -1609,7 +1700,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 4
+                            "die": 4,
+                            "type": "Fire"
                         }
                     ],
                     "crit_range": 20,
@@ -1618,7 +1710,8 @@
                         "dmg": [
                             {
                                 "count": 1,
-                                "die": 4
+                                "die": 4,
+                                "type": "Burn"
                             }
                         ]
                     }
@@ -1630,7 +1723,8 @@
                     "dmg": [
                         {
                             "count": 2,
-                            "die": 4
+                            "die": 4,
+                            "type": "Fire"
                         }
                     ],
                     "crit_range": 20,
@@ -1639,7 +1733,8 @@
                         "dmg": [
                             {
                                 "count": 1,
-                                "die": 4
+                                "die": 4,
+                                "type": "Burn"
                             }
                         ]
                     }
@@ -1651,7 +1746,8 @@
                     "dmg": [
                         {
                             "count": 3,
-                            "die": 4
+                            "die": 4,
+                            "type": "Fire"
                         }
                     ],
                     "crit_range": 20,
@@ -1660,7 +1756,8 @@
                         "dmg": [
                             {
                                 "count": 1,
-                                "die": 4
+                                "die": 4,
+                                "type": "Burn"
                             }
                         ]
                     }
@@ -1672,7 +1769,8 @@
                     "dmg": [
                         {
                             "count": 4,
-                            "die": 4
+                            "die": 4,
+                            "type": "Fire"
                         }
                     ],
                     "crit_range": 20,
@@ -1681,7 +1779,8 @@
                         "dmg": [
                             {
                                 "count": 2,
-                                "die": 4
+                                "die": 4,
+                                "type": "Burn"
                             }
                         ]
                     }
@@ -1693,7 +1792,8 @@
                     "dmg": [
                         {
                             "count": 5,
-                            "die": 4
+                            "die": 4,
+                            "type": "Fire"
                         }
                     ],
                     "crit_range": 20,
@@ -1702,7 +1802,8 @@
                         "dmg": [
                             {
                                 "count": 3,
-                                "die": 4
+                                "die": 4,
+                                "type": "Burn"
                             }
                         ]
                     }
@@ -1714,7 +1815,8 @@
                     "dmg": [
                         {
                             "count": 8,
-                            "die": 4
+                            "die": 4,
+                            "type": "Fire"
                         }
                     ],
                     "crit_range": 20,
@@ -1723,7 +1825,8 @@
                         "dmg": [
                             {
                                 "count": 4,
-                                "die": 4
+                                "die": 4,
+                                "type": "Burn"
                             }
                         ]
                     }
@@ -1740,7 +1843,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Electricity and fire"
                         }
                     ],
                     "crit_range": 20,
@@ -1749,7 +1853,8 @@
                         "dmg": [
                             {
                                 "count": 1,
-                                "die": 8
+                                "die": 8,
+                                "type": "Burn"
                             }
                         ]
                     }
@@ -1761,7 +1866,8 @@
                     "dmg": [
                         {
                             "count": 2,
-                            "die": 8
+                            "die": 8,
+                            "type": "Electricity and fire"
                         }
                     ],
                     "crit_range": 20,
@@ -1770,7 +1876,8 @@
                         "dmg": [
                             {
                                 "count": 1,
-                                "die": 8
+                                "die": 8,
+                                "type": "Burn"
                             }
                         ]
                     }
@@ -1782,7 +1889,8 @@
                     "dmg": [
                         {
                             "count": 3,
-                            "die": 8
+                            "die": 8,
+                            "type": "Electricity and fire"
                         }
                     ],
                     "crit_range": 20,
@@ -1791,7 +1899,8 @@
                         "dmg": [
                             {
                                 "count": 2,
-                                "die": 8
+                                "die": 8,
+                                "type": "Burn"
                             }
                         ]
                     }
@@ -1803,7 +1912,8 @@
                     "dmg": [
                         {
                             "count": 5,
-                            "die": 8
+                            "die": 8,
+                            "type": "Electricity and fire"
                         }
                     ],
                     "crit_range": 20,
@@ -1812,7 +1922,8 @@
                         "dmg": [
                             {
                                 "count": 3,
-                                "die": 8
+                                "die": 8,
+                                "type": "Burn"
                             }
                         ]
                     }
@@ -1829,7 +1940,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -1842,7 +1954,8 @@
                     "dmg": [
                         {
                             "count": 2,
-                            "die": 6
+                            "die": 6,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -1855,7 +1968,8 @@
                     "dmg": [
                         {
                             "count": 3,
-                            "die": 6
+                            "die": 6,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -1868,7 +1982,8 @@
                     "dmg": [
                         {
                             "count": 4,
-                            "die": 6
+                            "die": 6,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -1881,7 +1996,8 @@
                     "dmg": [
                         {
                             "count": 3,
-                            "die": 12
+                            "die": 12,
+                            "type": "Bludgeoning"
                         }
                     ],
                     "crit_range": 20,
@@ -1894,7 +2010,8 @@
                     "dmg": [
                         {
                             "count": 4,
-                            "die": 12
+                            "die": 12,
+                            "type": "Bludgeoning"
                         }
                     ],
                     "crit_range": 20,
@@ -1907,7 +2024,8 @@
                     "dmg": [
                         {
                             "count": 5,
-                            "die": 12
+                            "die": 12,
+                            "type": "Bludgeoning"
                         }
                     ],
                     "crit_range": 20,
@@ -1924,7 +2042,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 4
+                            "die": 4,
+                            "type": "Electricity"
                         }
                     ],
                     "crit_range": 20,
@@ -1937,13 +2056,15 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Electricity"
                         }
                     ],
                     "crit_range": 20,
                     "crit_mult": 2,
                     "crit_extra": {
-                        "dmg_static": 2
+                        "dmg_static": 2,
+                        "dmg_static_type": "Arc"
                     }
                 },
                 {
@@ -1953,7 +2074,8 @@
                     "dmg": [
                         {
                             "count": 3,
-                            "die": 6
+                            "die": 6,
+                            "type": "Electricity"
                         }
                     ],
                     "crit_range": 20,
@@ -1962,7 +2084,8 @@
                         "dmg": [
                             {
                                 "count": 2,
-                                "die": 6
+                                "die": 6,
+                                "type": "Arc"
                             }
                         ]
                     }
@@ -1974,7 +2097,8 @@
                     "dmg": [
                         {
                             "count": 3,
-                            "die": 12
+                            "die": 12,
+                            "type": "Electricity"
                         }
                     ],
                     "crit_range": 20,
@@ -1983,7 +2107,8 @@
                         "dmg": [
                             {
                                 "count": 4,
-                                "die": 6
+                                "die": 6,
+                                "type": "Arc"
                             }
                         ]
                     }
@@ -2000,7 +2125,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Sonic"
                         }
                     ],
                     "crit_range": 20,
@@ -2014,7 +2140,8 @@
                     "dmg": [
                         {
                             "count": 2,
-                            "die": 8
+                            "die": 8,
+                            "type": "Sonic"
                         }
                     ],
                     "crit_range": 20,
@@ -2028,7 +2155,8 @@
                     "dmg": [
                         {
                             "count": 3,
-                            "die": 8
+                            "die": 8,
+                            "type": "Sonic"
                         }
                     ],
                     "crit_range": 20,
@@ -2041,7 +2169,8 @@
                     "dmg": [
                         {
                             "count": 4,
-                            "die": 8
+                            "die": 8,
+                            "type": "Sonic"
                         }
                     ],
                     "crit_range": 20,
@@ -2058,7 +2187,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 4
+                            "die": 4,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -2076,7 +2206,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Cold"
                         }
                     ],
                     "crit_range": 20,
@@ -2089,7 +2220,8 @@
                     "dmg": [
                         {
                             "count": 2,
-                            "die": 8
+                            "die": 8,
+                            "type": "Cold"
                         }
                     ],
                     "crit_range": 20,
@@ -2102,7 +2234,8 @@
                     "dmg": [
                         {
                             "count": 4,
-                            "die": 8
+                            "die": 8,
+                            "type": "Cold"
                         }
                     ],
                     "crit_range": 20,
@@ -2115,7 +2248,8 @@
                     "dmg": [
                         {
                             "count": 7,
-                            "die": 8
+                            "die": 8,
+                            "type": "Cold"
                         }
                     ],
                     "crit_range": 20,
@@ -2132,7 +2266,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Fire"
                         }
                     ],
                     "crit_range": 20,
@@ -2141,7 +2276,8 @@
                         "dmg": [
                             {
                                 "count": 1,
-                                "die": 6
+                                "die": 6,
+                                "type": "Burn"
                             }
                         ]
                     }
@@ -2158,7 +2294,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Fire"
                         }
                     ],
                     "crit_range": 20,
@@ -2167,7 +2304,8 @@
                         "dmg": [
                             {
                                 "count": 1,
-                                "die": 6
+                                "die": 6,
+                                "type": "Burn"
                             }
                         ]
                     }
@@ -2179,7 +2317,8 @@
                     "dmg": [
                         {
                             "count": 2,
-                            "die": 6
+                            "die": 6,
+                            "type": "Fire"
                         }
                     ],
                     "crit_range": 20,
@@ -2188,7 +2327,8 @@
                         "dmg": [
                             {
                                 "count": 1,
-                                "die": 6
+                                "die": 6,
+                                "type": "Burn"
                             }
                         ]
                     }
@@ -2200,7 +2340,8 @@
                     "dmg": [
                         {
                             "count": 3,
-                            "die": 6
+                            "die": 6,
+                            "type": "Fire"
                         }
                     ],
                     "crit_range": 20,
@@ -2209,7 +2350,8 @@
                         "dmg": [
                             {
                                 "count": 1,
-                                "die": 6
+                                "die": 6,
+                                "type": "Burn"
                             }
                         ]
                     }
@@ -2221,7 +2363,8 @@
                     "dmg": [
                         {
                             "count": 5,
-                            "die": 4
+                            "die": 4,
+                            "type": "Fire"
                         }
                     ],
                     "crit_range": 20,
@@ -2230,7 +2373,8 @@
                         "dmg": [
                             {
                                 "count": 2,
-                                "die": 4
+                                "die": 4,
+                                "type": "Burn"
                             }
                         ]
                     }
@@ -2242,7 +2386,8 @@
                     "dmg": [
                         {
                             "count": 5,
-                            "die": 6
+                            "die": 6,
+                            "type": "Fire"
                         }
                     ],
                     "crit_range": 20,
@@ -2251,7 +2396,8 @@
                         "dmg": [
                             {
                                 "count": 2,
-                                "die": 6
+                                "die": 6,
+                                "type": "Burn"
                             }
                         ]
                     }
@@ -2263,7 +2409,8 @@
                     "dmg": [
                         {
                             "count": 7,
-                            "die": 4
+                            "die": 4,
+                            "type": "Fire"
                         }
                     ],
                     "crit_range": 20,
@@ -2272,7 +2419,8 @@
                         "dmg": [
                             {
                                 "count": 3,
-                                "die": 4
+                                "die": 4,
+                                "type": "Burn"
                             }
                         ]
                     }
@@ -2284,7 +2432,8 @@
                     "dmg": [
                         {
                             "count": 8,
-                            "die": 6
+                            "die": 6,
+                            "type": "Fire"
                         }
                     ],
                     "crit_range": 20,
@@ -2293,7 +2442,8 @@
                         "dmg": [
                             {
                                 "count": 4,
-                                "die": 6
+                                "die": 6,
+                                "type": "Burn"
                             }
                         ]
                     }
@@ -2305,7 +2455,8 @@
                     "dmg": [
                         {
                             "count": 12,
-                            "die": 4
+                            "die": 4,
+                            "type": "Fire"
                         }
                     ],
                     "crit_range": 20,
@@ -2314,7 +2465,8 @@
                         "dmg": [
                             {
                                 "count": 5,
-                                "die": 4
+                                "die": 4,
+                                "type": "Burn"
                             }
                         ]
                     }
@@ -2326,7 +2478,8 @@
                     "dmg": [
                         {
                             "count": 11,
-                            "die": 6
+                            "die": 6,
+                            "type": "Fire"
                         }
                     ],
                     "crit_range": 20,
@@ -2335,7 +2488,8 @@
                         "dmg": [
                             {
                                 "count": 5,
-                                "die": 6
+                                "die": 6,
+                                "type": "Burn"
                             }
                         ]
                     }
@@ -2352,7 +2506,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 10
+                            "die": 10,
+                            "type": "Electricity and fire"
                         }
                     ],
                     "crit_range": 20,
@@ -2361,7 +2516,8 @@
                         "dmg": [
                             {
                                 "count": 1,
-                                "die": 4
+                                "die": 4,
+                                "type": "Burn"
                             }
                         ]
                     }
@@ -2373,7 +2529,8 @@
                     "dmg": [
                         {
                             "count": 2,
-                            "die": 10
+                            "die": 10,
+                            "type": "Electricity and fire"
                         }
                     ],
                     "crit_range": 20,
@@ -2382,7 +2539,8 @@
                         "dmg": [
                             {
                                 "count": 1,
-                                "die": 8
+                                "die": 8,
+                                "type": "Burn"
                             }
                         ]
                     }
@@ -2394,7 +2552,8 @@
                     "dmg": [
                         {
                             "count": 3,
-                            "die": 10
+                            "die": 10,
+                            "type": "Electricity and fire"
                         }
                     ],
                     "crit_range": 20,
@@ -2403,7 +2562,8 @@
                         "dmg": [
                             {
                                 "count": 1,
-                                "die": 10
+                                "die": 10,
+                                "type": "Burn"
                             }
                         ]
                     }
@@ -2415,7 +2575,8 @@
                     "dmg": [
                         {
                             "count": 4,
-                            "die": 10
+                            "die": 10,
+                            "type": "Electricity and fire"
                         }
                     ],
                     "crit_range": 20,
@@ -2424,7 +2585,8 @@
                         "dmg": [
                             {
                                 "count": 2,
-                                "die": 8
+                                "die": 8,
+                                "type": "Burn"
                             }
                         ]
                     }
@@ -2436,7 +2598,8 @@
                     "dmg": [
                         {
                             "count": 5,
-                            "die": 10
+                            "die": 10,
+                            "type": "Electricity and fire"
                         }
                     ],
                     "crit_range": 20,
@@ -2445,7 +2608,8 @@
                         "dmg": [
                             {
                                 "count": 2,
-                                "die": 10
+                                "die": 10,
+                                "type": "Burn"
                             }
                         ]
                     }
@@ -2457,7 +2621,8 @@
                     "dmg": [
                         {
                             "count": 8,
-                            "die": 10
+                            "die": 10,
+                            "type": "Electricity and fire"
                         }
                     ],
                     "crit_range": 20,
@@ -2466,7 +2631,8 @@
                         "dmg": [
                             {
                                 "count": 4,
-                                "die": 8
+                                "die": 8,
+                                "type": "Burn"
                             }
                         ]
                     }
@@ -2482,7 +2648,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -2495,7 +2662,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 4
+                            "die": 4,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -2508,7 +2676,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Acid and piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -2517,7 +2686,8 @@
                         "dmg": [
                             {
                                 "count": 1,
-                                "die": 4
+                                "die": 4,
+                                "type": "Corrode"
                             }
                         ]
                     }
@@ -2528,7 +2698,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -2541,7 +2712,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 10
+                            "die": 10,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -2554,7 +2726,8 @@
                     "dmg": [
                         {
                             "count": 2,
-                            "die": 8
+                            "die": 8,
+                            "type": "Acid and piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -2563,7 +2736,8 @@
                         "dmg": [
                             {
                                 "count": 2,
-                                "die": 4
+                                "die": 4,
+                            "type": "Corrode"
                             }
                         ]
                     }
@@ -2575,7 +2749,8 @@
                     "dmg": [
                         {
                             "count": 2,
-                            "die": 8
+                            "die": 8,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -2588,7 +2763,8 @@
                     "dmg": [
                         {
                             "count": 2,
-                            "die": 10
+                            "die": 10,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -2601,7 +2777,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 12
+                            "die": 12,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -2614,7 +2791,8 @@
                     "dmg": [
                         {
                             "count": 2,
-                            "die": 8
+                            "die": 8,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -2626,7 +2804,8 @@
                     "dmg": [
                         {
                             "count": 3,
-                            "die": 8
+                            "die": 8,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -2639,7 +2818,8 @@
                     "dmg": [
                         {
                             "count": 4,
-                            "die": 8
+                            "die": 8,
+                            "type": "Acid and piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -2648,7 +2828,8 @@
                         "dmg": [
                             {
                                 "count": 4,
-                                "die": 4
+                                "die": 4,
+                                "type": "Corrode"
                             }
                         ]
                     }
@@ -2660,7 +2841,8 @@
                     "dmg": [
                         {
                             "count": 2,
-                            "die": 12
+                            "die": 12,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -2673,7 +2855,8 @@
                     "dmg": [
                         {
                             "count": 3,
-                            "die": 12
+                            "die": 12,
+                            "type": "Bludgeoning"
                         }
                     ],
                     "crit_range": 20,
@@ -2686,7 +2869,8 @@
                     "dmg": [
                         {
                             "count": 4,
-                            "die": 8
+                            "die": 8,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -2699,7 +2883,8 @@
                     "dmg": [
                         {
                             "count": 6,
-                            "die": 8
+                            "die": 8,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -2712,7 +2897,8 @@
                     "dmg": [
                         {
                             "count": 5,
-                            "die": 12
+                            "die": 12,
+                            "type": "Bludgeoning"
                         }
                     ],
                     "crit_range": 20,
@@ -2725,7 +2911,8 @@
                     "dmg": [
                         {
                             "count": 3,
-                            "die": 12
+                            "die": 12,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -2738,7 +2925,8 @@
                     "dmg": [
                         {
                             "count": 6,
-                            "die": 8
+                            "die": 8,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -2751,7 +2939,8 @@
                     "dmg": [
                         {
                             "count": 6,
-                            "die": 12
+                            "die": 12,
+                            "type": "Blugeoning"
                         }
                     ],
                     "crit_range": 20,
@@ -2764,7 +2953,8 @@
                     "dmg": [
                         {
                             "count": 9,
-                            "die": 8
+                            "die": 8,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -2777,7 +2967,8 @@
                     "dmg": [
                         {
                             "count": 4,
-                            "die": 12
+                            "die": 12,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -2790,7 +2981,8 @@
                     "dmg": [
                         {
                             "count": 8,
-                            "die": 8
+                            "die": 8,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -2803,7 +2995,8 @@
                     "dmg": [
                         {
                             "count": 8,
-                            "die": 12
+                            "die": 12,
+                            "type": "Bludgeoning"
                         }
                     ],
                     "crit_range": 20,
@@ -2816,7 +3009,8 @@
                     "dmg": [
                         {
                             "count": 12,
-                            "die": 8
+                            "die": 8,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -2833,7 +3027,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Electricity"
                         }
                     ],
                     "crit_range": 20,
@@ -2846,7 +3041,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 4
+                            "die": 4,
+                            "type": "Electricity"
                         }
                     ],
                     "crit_range": 20,
@@ -2859,7 +3055,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 12
+                            "die": 12,
+                            "type": "Electricity"
                         }
                     ],
                     "crit_range": 20,
@@ -2868,7 +3065,8 @@
                         "dmg": [
                             {
                                 "count": 1,
-                                "die": 6
+                                "die": 6,
+                                "type": "Arc"
                             }
                         ]
                     }
@@ -2880,7 +3078,8 @@
                     "dmg": [
                         {
                             "count": 2,
-                            "die": 4
+                            "die": 4,
+                            "type": "Electricity"
                         }
                     ],
                     "crit_range": 20,
@@ -2893,7 +3092,8 @@
                     "dmg": [
                         {
                             "count": 2,
-                            "die": 12
+                            "die": 12,
+                            "type": "Electricity"
                         }
                     ],
                     "crit_range": 20,
@@ -2902,7 +3102,8 @@
                         "dmg": [
                             {
                                 "count": 2,
-                                "die": 6
+                                "die": 6,
+                                "type": "Arc"
                             }
                         ]
                     }
@@ -2914,7 +3115,8 @@
                     "dmg": [
                         {
                             "count": 4,
-                            "die": 12
+                            "die": 12,
+                            "type": "Electricity"
                         }
                     ],
                     "crit_range": 20,
@@ -2923,7 +3125,8 @@
                         "dmg": [
                             {
                                 "count": 4,
-                                "die": 6
+                                "die": 6,
+                                "type": "Arc"
                             }
                         ]
                     }
@@ -2935,7 +3138,8 @@
                     "dmg": [
                         {
                             "count": 6,
-                            "die": 12
+                            "die": 12,
+                            "type": "Electricity"
                         }
                     ],
                     "crit_range": 20,
@@ -2944,7 +3148,8 @@
                         "dmg": [
                             {
                                 "count": 6,
-                                "die": 6
+                                "die": 6,
+                                "type": "Arc"
                             }
                         ]
                     }
@@ -2961,7 +3166,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 10
+                            "die": 10,
+                            "type": "Sonic"
                         }
                     ],
                     "crit_range": 20,
@@ -2974,7 +3180,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 10
+                            "die": 10,
+                            "type": "Sonic"
                         }
                     ],
                     "crit_range": 20,
@@ -2988,7 +3195,8 @@
                     "dmg": [
                         {
                             "count": 2,
-                            "die": 10
+                            "die": 10,
+                            "type": "Sonic"
                         }
                     ],
                     "crit_range": 20,
@@ -3002,7 +3210,8 @@
                     "dmg": [
                         {
                             "count": 3,
-                            "die": 10
+                            "die": 10,
+                            "type": "Sonic"
                         }
                     ],
                     "crit_range": 20,
@@ -3016,7 +3225,8 @@
                     "dmg": [
                         {
                             "count": 4,
-                            "die": 10
+                            "die": 10,
+                            "type": "Sonic"
                         }
                     ],
                     "crit_range": 20,
@@ -3030,7 +3240,8 @@
                     "dmg": [
                         {
                             "count": 5,
-                            "die": 10
+                            "die": 10,
+                            "type": "Sonic"
                         }
                     ],
                     "crit_range": 20,
@@ -3043,7 +3254,8 @@
                     "dmg": [
                         {
                             "count": 6,
-                            "die": 10
+                            "die": 10,
+                            "type": "Sonic"
                         }
                     ],
                     "crit_range": 20,
@@ -3060,7 +3272,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -3078,7 +3291,8 @@
                     "dmg": [
                         {
                             "count": 3,
-                            "die": 8
+                            "die": 8,
+                            "type": "Cold"
                         }
                     ],
                     "crit_range": 20,
@@ -3091,7 +3305,8 @@
                     "dmg": [
                         {
                             "count": 5,
-                            "die": 8
+                            "die": 8,
+                            "type": "Cold"
                         }
                     ],
                     "crit_range": 20,
@@ -3104,7 +3319,8 @@
                     "dmg": [
                         {
                             "count": 8,
-                            "die": 8
+                            "die": 8,
+                            "type": "Cold"
                         }
                     ],
                     "crit_range": 20,
@@ -3122,7 +3338,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Fire"
                         }
                     ],
                     "crit_range": 20,
@@ -3131,7 +3348,8 @@
                         "dmg": [
                             {
                                 "count": 1,
-                                "die": 6
+                                "die": 6,
+                                "type": "Burn"
                             }
                         ]
                     }
@@ -3143,7 +3361,8 @@
                     "dmg": [
                         {
                             "count": 2,
-                            "die": 6
+                            "die": 6,
+                            "type": "Fire"
                         }
                     ],
                     "crit_range": 20,
@@ -3152,7 +3371,8 @@
                         "dmg": [
                             {
                                 "count": 2,
-                                "die": 6
+                                "die": 6,
+                                "type": "Burn"
                             }
                         ]
                     }
@@ -3164,7 +3384,8 @@
                     "dmg": [
                         {
                             "count": 4,
-                            "die": 6
+                            "die": 6,
+                            "type": "Fire"
                         }
                     ],
                     "crit_range": 20,
@@ -3173,7 +3394,8 @@
                         "dmg": [
                             {
                                 "count": 4,
-                                "die": 6
+                                "die": 6,
+                                "type": "Burn"
                             }
                         ]
                     }
@@ -3185,7 +3407,8 @@
                     "dmg": [
                         {
                             "count": 6,
-                            "die": 6
+                            "die": 6,
+                            "type": "Fire"
                         }
                     ],
                     "crit_range": 20,
@@ -3194,7 +3417,8 @@
                         "dmg": [
                             {
                                 "count": 6,
-                                "die": 6
+                                "die": 6,
+                                "type": "Burn"
                             }
                         ]
                     }
@@ -3206,7 +3430,8 @@
                     "dmg": [
                         {
                             "count": 9,
-                            "die": 6
+                            "die": 6,
+                            "type": "Fire"
                         }
                     ],
                     "crit_range": 20,
@@ -3215,7 +3440,8 @@
                         "dmg": [
                             {
                                 "count": 9,
-                                "die": 6
+                                "die": 6,
+                                "type": "Burn"
                             }
                         ]
                     }
@@ -3232,7 +3458,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 10
+                            "die": 10,
+                            "type": "Fire"
                         }
                     ],
                     "crit_range": 20,
@@ -3241,7 +3468,8 @@
                         "dmg": [
                             {
                                 "count": 1,
-                                "die": 6
+                                "die": 6,
+                                "type": "Burn"
                             }
                         ]
                     }
@@ -3253,7 +3481,8 @@
                     "dmg": [
                         {
                             "count": 2,
-                            "die": 8
+                            "die": 8,
+                            "type": "Fire"
                         }
                     ],
                     "crit_range": 20,
@@ -3262,7 +3491,8 @@
                         "dmg": [
                             {
                                 "count": 1,
-                                "die": 6
+                                "die": 6,
+                                "type": "Burn"
                             }
                         ]
                     }
@@ -3274,7 +3504,8 @@
                     "dmg": [
                         {
                             "count": 3,
-                            "die": 8
+                            "die": 8,
+                            "type": "Fire"
                         }
                     ],
                     "crit_range": 20,
@@ -3283,7 +3514,8 @@
                         "dmg": [
                             {
                                 "count": 1,
-                                "die": 6
+                                "die": 6,
+                                "type": "Burn"
                             }
                         ]
                     }
@@ -3295,7 +3527,8 @@
                     "dmg": [
                         {
                             "count": 2,
-                            "die": 8
+                            "die": 8,
+                            "type": "Fire"
                         }
                     ],
                     "crit_range": 20,
@@ -3304,7 +3537,8 @@
                         "dmg": [
                             {
                                 "count": 1,
-                                "die": 8
+                                "die": 8,
+                                "type": "Burn"
                             }
                         ]
                     }
@@ -3316,7 +3550,8 @@
                     "dmg": [
                         {
                             "count": 4,
-                            "die": 8
+                            "die": 8,
+                            "type": "Fire"
                         }
                     ],
                     "crit_range": 20,
@@ -3325,7 +3560,8 @@
                         "dmg": [
                             {
                                 "count": 2,
-                                "die": 6
+                                "die": 6,
+                                "type": "Burn"
                             }
                         ]
                     }
@@ -3337,7 +3573,8 @@
                     "dmg": [
                         {
                             "count": 4,
-                            "die": 8
+                            "die": 8,
+                            "type": "Fire"
                         }
                     ],
                     "crit_range": 20,
@@ -3346,7 +3583,8 @@
                         "dmg": [
                             {
                                 "count": 2,
-                                "die": 8
+                                "die": 8,
+                                "type": "Burn"
                             }
                         ]
                     }
@@ -3358,7 +3596,8 @@
                     "dmg": [
                         {
                             "count": 7,
-                            "die": 8
+                            "die": 8,
+                            "type": "Fire"
                         }
                     ],
                     "crit_range": 20,
@@ -3367,7 +3606,8 @@
                         "dmg": [
                             {
                                 "count": 4,
-                                "die": 6
+                                "die": 6,
+                                "type": "Burn"
                             }
                         ]
                     }
@@ -3379,7 +3619,8 @@
                     "dmg": [
                         {
                             "count": 6,
-                            "die": 8
+                            "die": 8,
+                            "type": "Fire"
                         }
                     ],
                     "crit_range": 20,
@@ -3388,7 +3629,8 @@
                         "dmg": [
                             {
                                 "count": 2,
-                                "die": 10
+                                "die": 10,
+                                "type": "Burn"
                             }
                         ]
                     }
@@ -3400,7 +3642,8 @@
                     "dmg": [
                         {
                             "count": 9,
-                            "die": 8
+                            "die": 8,
+                            "type": "Fire"
                         }
                     ],
                     "crit_range": 20,
@@ -3409,7 +3652,8 @@
                         "dmg": [
                             {
                                 "count": 5,
-                                "die": 6
+                                "die": 6,
+                                "type": "Burn"
                             }
                         ]
                     }
@@ -3426,7 +3670,8 @@
                     "dmg": [
                         {
                             "count": 2,
-                            "die": 10
+                            "die": 10,
+                            "type": "Electricity and fire"
                         }
                     ],
                     "crit_range": 20,
@@ -3435,7 +3680,8 @@
                         "dmg": [
                             {
                                 "count": 1,
-                                "die": 8
+                                "die": 8,
+                                "type": "Burn"
                             }
                         ]
                     }
@@ -3447,7 +3693,8 @@
                     "dmg": [
                         {
                             "count": 4,
-                            "die": 10
+                            "die": 10,
+                            "type": "Electricity and fire"
                         }
                     ],
                     "crit_range": 20,
@@ -3456,7 +3703,8 @@
                         "dmg": [
                             {
                                 "count": 2,
-                                "die": 8
+                                "die": 8,
+                                "type": "Burn"
                             }
                         ]
                     }
@@ -3468,7 +3716,8 @@
                     "dmg": [
                         {
                             "count": 6,
-                            "die": 10
+                            "die": 10,
+                            "type": "Electricity and fire"
                         }
                     ],
                     "crit_range": 20,
@@ -3477,7 +3726,8 @@
                         "dmg": [
                             {
                                 "count": 3,
-                                "die": 8
+                                "die": 8,
+                                "type": "Burn"
                             }
                         ]
                     }
@@ -3489,7 +3739,8 @@
                     "dmg": [
                         {
                             "count": 8,
-                            "die": 10
+                            "die": 10,
+                            "type": "Electricity and fire"
                         }
                     ],
                     "crit_range": 20,
@@ -3498,7 +3749,8 @@
                         "dmg": [
                             {
                                 "count": 4,
-                                "die": 8
+                                "die": 8,
+                                "type": "Burn"
                             }
                         ]
                     }
@@ -3515,7 +3767,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 10
+                            "die": 10,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -3528,7 +3781,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 10
+                            "die": 10,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -3541,7 +3795,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 12
+                            "die": 12,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -3554,7 +3809,8 @@
                     "dmg": [
                         {
                             "count": 2,
-                            "die": 10
+                            "die": 10,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -3567,7 +3823,8 @@
                     "dmg": [
                         {
                             "count": 2,
-                            "die": 10
+                            "die": 10,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -3580,7 +3837,8 @@
                     "dmg": [
                         {
                             "count": 3,
-                            "die": 10
+                            "die": 10,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -3593,7 +3851,8 @@
                     "dmg": [
                         {
                             "count": 2,
-                            "die": 12
+                            "die": 12,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -3606,7 +3865,8 @@
                     "dmg": [
                         {
                             "count": 4,
-                            "die": 10
+                            "die": 10,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -3619,7 +3879,8 @@
                     "dmg": [
                         {
                             "count": 3,
-                            "die": 10
+                            "die": 10,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -3632,7 +3893,8 @@
                     "dmg": [
                         {
                             "count": 4,
-                            "die": 12
+                            "die": 12,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -3645,7 +3907,8 @@
                     "dmg": [
                         {
                             "count": 6,
-                            "die": 10
+                            "die": 10,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -3658,7 +3921,8 @@
                     "dmg": [
                         {
                             "count": 6,
-                            "die": 10
+                            "die": 10,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -3671,7 +3935,8 @@
                     "dmg": [
                         {
                             "count": 4,
-                            "die": 12
+                            "die": 12,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -3684,7 +3949,8 @@
                     "dmg": [
                         {
                             "count": 7,
-                            "die": 10
+                            "die": 10,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -3697,7 +3963,8 @@
                     "dmg": [
                         {
                             "count": 8,
-                            "die": 10
+                            "die": 10,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -3710,7 +3977,8 @@
                     "dmg": [
                         {
                             "count": 10,
-                            "die": 10
+                            "die": 10,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -3723,7 +3991,8 @@
                     "dmg": [
                         {
                             "count": 12,
-                            "die": 10
+                            "die": 10,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -3736,7 +4005,8 @@
                     "dmg": [
                         {
                             "count": 9,
-                            "die": 12
+                            "die": 12,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -3754,7 +4024,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 12
+                            "die": 12,
+                            "type": "Electricity"
                         }
                     ],
                     "crit_range": 20,
@@ -3767,7 +4038,8 @@
                     "dmg": [
                         {
                             "count": 2,
-                            "die": 12
+                            "die": 12,
+                            "type": "Electricity"
                         }
                     ],
                     "crit_range": 20,
@@ -3780,7 +4052,8 @@
                     "dmg": [
                         {
                             "count": 5,
-                            "die": 12
+                            "die": 12,
+                            "type": "Electricity"
                         }
                     ],
                     "crit_range": 20,
@@ -3793,7 +4066,8 @@
                     "dmg": [
                         {
                             "count": 7,
-                            "die": 12
+                            "die": 12,
+                            "type": "Electricity"
                         }
                     ],
                     "crit_range": 20,
@@ -3811,7 +4085,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 10
+                            "die": 10,
+                            "type": "Sonic"
                         }
                     ],
                     "crit_range": 20,
@@ -3825,7 +4100,8 @@
                     "dmg": [
                         {
                             "count": 2,
-                            "die": 10
+                            "die": 10,
+                            "type": "Sonic"
                         }
                     ],
                     "crit_range": 20,
@@ -3839,7 +4115,8 @@
                     "dmg": [
                         {
                             "count": 4,
-                            "die": 10
+                            "die": 10,
+                            "type": "Sonic"
                         }
                     ],
                     "crit_range": 20,
@@ -3857,7 +4134,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 10
+                            "die": 10,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -3870,7 +4148,8 @@
                     "dmg": [
                         {
                             "count": 2,
-                            "die": 10
+                            "die": 10,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -3883,7 +4162,8 @@
                     "dmg": [
                         {
                             "count": 4,
-                            "die": 10
+                            "die": 10,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -3896,7 +4176,8 @@
                     "dmg": [
                         {
                             "count": 6,
-                            "die": 10
+                            "die": 10,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -3909,7 +4190,8 @@
                     "dmg": [
                         {
                             "count": 10,
-                            "die": 10
+                            "die": 10,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -3926,7 +4208,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -3938,7 +4221,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Electricity"
                         }
                     ],
                     "crit_range": 20,
@@ -3950,11 +4234,13 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Fire"
                         },
                         {
                             "count": 1,
-                            "die": 4
+                            "die": 4,
+                            "type": "Burn"
                         }
                     ],
                     "crit_range": 20,
@@ -3966,7 +4252,8 @@
                     "dmg": [
                         {
                             "count": 2,
-                            "die": 6
+                            "die": 6,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -3978,7 +4265,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 10
+                            "die": 10,
+                            "type": "Sonic"
                         }
                     ],
                     "crit_range": 20,
@@ -3990,7 +4278,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 12
+                            "die": 12,
+                            "type": "Electricity"
                         }
                     ],
                     "crit_range": 20,
@@ -4002,7 +4291,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Cold"
                         }
                     ],
                     "crit_range": 20,
@@ -4014,11 +4304,13 @@
                     "dmg": [
                         {
                             "count": 2,
-                            "die": 6
+                            "die": 6,
+                            "type": "Fire"
                         },
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Burn"
                         }
                     ],
                     "crit_range": 20,
@@ -4030,7 +4322,8 @@
                     "dmg": [
                         {
                             "count": 4,
-                            "die": 6
+                            "die": 6,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -4042,11 +4335,13 @@
                     "dmg": [
                         {
                             "count": 3,
-                            "die": 6
+                            "die": 6,
+                            "type": "Fire"
                         },
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Burn"
                         }
                     ],
                     "crit_range": 20,
@@ -4058,7 +4353,8 @@
                     "dmg": [
                         {
                             "count": 2,
-                            "die": 10
+                            "die": 10,
+                            "type": "Sonic"
                         }
                     ],
                     "crit_range": 20,
@@ -4070,7 +4366,8 @@
                     "dmg": [
                         {
                             "count": 2,
-                            "die": 8
+                            "die": 8,
+                            "type": "Colr"
                         }
                     ],
                     "crit_range": 20,
@@ -4082,7 +4379,8 @@
                     "dmg": [
                         {
                             "count": 6,
-                            "die": 6
+                            "die": 6,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -4094,7 +4392,8 @@
                     "dmg": [
                         {
                             "count": 3,
-                            "die": 12
+                            "die": 12,
+                            "type": "Electricity"
                         }
                     ],
                     "crit_range": 20,
@@ -4106,11 +4405,13 @@
                     "dmg": [
                         {
                             "count": 5,
-                            "die": 6
+                            "die": 6,
+                            "type": "Fire"
                         },
                         {
                             "count": 3,
-                            "die": 6
+                            "die": 6,
+                            "type": "Burn"
                         }
                     ],
                     "crit_range": 20,
@@ -4122,7 +4423,8 @@
                     "dmg": [
                         {
                             "count": 4,
-                            "die": 10
+                            "die": 10,
+                            "type": "Sonic"
                         }
                     ],
                     "crit_range": 20,
@@ -4134,7 +4436,8 @@
                     "dmg": [
                         {
                             "count": 4,
-                            "die": 8
+                            "die": 8,
+                            "type": "Cold"
                         }
                     ],
                     "crit_range": 20,
@@ -4146,7 +4449,8 @@
                     "dmg": [
                         {
                             "count": 10,
-                            "die": 6
+                            "die": 6,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -4158,7 +4462,8 @@
                     "dmg": [
                         {
                             "count": 6,
-                            "die": 12
+                            "die": 12,
+                            "type": "Electricity"
                         }
                     ],
                     "crit_range": 20,
@@ -4170,7 +4475,8 @@
                     "dmg": [
                         {
                             "count": 12,
-                            "die": 6
+                            "die": 6,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -4182,11 +4488,13 @@
                     "dmg": [
                         {
                             "count": 10,
-                            "die": 6
+                            "die": 6,
+                            "type": "Fire"
                         },
                         {
                             "count": 6,
-                            "die": 6
+                            "die": 6,
+                            "type": "Burn"
                         }
                     ],
                     "crit_range": 20,
@@ -4198,7 +4506,8 @@
                     "dmg": [
                         {
                             "count": 7,
-                            "die": 10
+                            "die": 10,
+                            "type": "Sonic"
                         }
                     ],
                     "crit_range": 20,
@@ -4210,7 +4519,8 @@
                     "dmg": [
                         {
                             "count": 6,
-                            "die": 8
+                            "die": 8,
+                            "type": "Cold"
                         }
                     ],
                     "crit_range": 20,
@@ -4222,7 +4532,8 @@
                     "dmg": [
                         {
                             "count": 16,
-                            "die": 6
+                            "die": 6,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -4234,11 +4545,13 @@
                     "dmg": [
                         {
                             "count": 12,
-                            "die": 6
+                            "die": 6,
+                            "type": "Fire"
                         },
                         {
                             "count": 6,
-                            "die": 6
+                            "die": 6,
+                            "type": "Burn"
                         }
                     ],
                     "crit_range": 20,
@@ -4250,7 +4563,8 @@
                     "dmg": [
                         {
                             "count": 20,
-                            "die": 6
+                            "die": 6,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -4262,7 +4576,8 @@
                     "dmg": [
                         {
                             "count": 9,
-                            "die": 12
+                            "die": 12,
+                            "type": "Electricity"
                         }
                     ],
                     "crit_range": 20,
@@ -4279,7 +4594,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 4
+                            "die": 4,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -4288,7 +4604,8 @@
                         "dmg": [
                             {
                                 "count": 1,
-                                "die": 4
+                                "die": 4,
+                                "type": "Bleed"
                             }
                         ]
                     }
@@ -4304,7 +4621,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
