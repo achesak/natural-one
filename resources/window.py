@@ -36,9 +36,9 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         self.stack_switcher = Gtk.StackSwitcher()
         self.stack_switcher.set_stack(self.stack)
         self.header.set_custom_title(self.stack_switcher)
-        win_box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL)
-        win_box.pack_start(self.stack, False, False, 0)
-        self.add(win_box)
+        win_pane = Gtk.Paned(orientation=Gtk.Orientation.HORIZONTAL)
+        win_pane.add1(self.stack)
+        self.add(win_pane)
 
         # Create the header buttons.
         self.clear_btn = Gtk.Button()
@@ -443,7 +443,7 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         add_init_grid.attach_next_to(mode_init_box, add_init_lbl, Gtk.PositionType.BOTTOM, 3, 1)
 
         # Create the initiative mode radiobuttons.
-        self.roll_init_rbtn  = Gtk.RadioButton.new_with_label_from_widget(None, "Roll initiative")
+        self.roll_init_rbtn = Gtk.RadioButton.new_with_label_from_widget(None, "Roll initiative")
         self.add_init_rbtn = Gtk.RadioButton.new_with_label_from_widget(self.roll_init_rbtn, "Add initiative directly")
         mode_init_box.pack_start(self.roll_init_rbtn, False, False, 0)
         mode_init_box.pack_start(self.add_init_rbtn, False, False, 0)
@@ -530,7 +530,7 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         self.results_view.set_bottom_margin(5)
         self.results_buffer = self.results_view.get_buffer()
         results_scroll_win.add(self.results_view)
-        win_box.pack_end(results_scroll_win, True, True, 0)
+        win_pane.add2(results_scroll_win)
 
         # Create the CSS provider.
         self.style_provider = Gtk.CssProvider()
