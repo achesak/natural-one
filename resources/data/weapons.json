@@ -19,6 +19,10 @@
         {
             "name": "D&D 5e",
             "filename": "dnd5e.json"
+        },
+        {
+            "name": "The Modern Path",
+            "filename": "themodernpath.json"
         }
     ]
 }
