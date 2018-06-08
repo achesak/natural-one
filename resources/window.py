@@ -301,9 +301,9 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         self.sys_dam_cbox.set_hexpand(True)
         sys_btn_box.add(self.sys_dam_cbox)
         self.sys_manage_btn = Gtk.Button()
-        manage_img = Gtk.Image.new_from_gicon(Gio.ThemedIcon(name="list-add-symbolic"), Gtk.IconSize.BUTTON)
+        manage_img = Gtk.Image.new_from_gicon(Gio.ThemedIcon(name="document-properties-symbolic"), Gtk.IconSize.BUTTON)
         self.sys_manage_btn.add(manage_img)
-        self.sys_manage_btn.set_tooltip_text("Manage systems")
+        self.sys_manage_btn.set_tooltip_text("Add and manage systems")
         sys_btn_box.add(self.sys_manage_btn)
         combat_grid.attach_next_to(sys_btn_box, sys_dam_lbl, Gtk.PositionType.RIGHT, 3, 1)
 
