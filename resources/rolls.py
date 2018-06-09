@@ -138,6 +138,26 @@ class DamageRollResult(object):
         self.dmg_static = dmg_static
         self.dmg_static_type = dmg_static_type
 
+    def _format_result(self):
+        sorted_rolls = sorted(self.rolls, key=lambda x: x.type)
+        format_list = []
+        used_types = []
+        index = -1
+        for roll in sorted_rolls:
+            if roll.type in used_types:
+                format_list[index]["total"] += int(roll)
+            else:
+                used_types.append(roll.type)
+                index += 1
+                format_list.append({
+                    "type": roll.type,
+                    "total": int(roll)
+                })
+        result = []
+        for format_item in format_list:
+            result.append("%d %s" % (format_item["total"], format_item["type"].lower()))
+        return ", ".join(result)
+
     def __int__(self):
         total = sum([int(x) for x in self.rolls]) + self.mod
         if self.dmg_static is not None:
@@ -151,7 +171,7 @@ class DamageRollResult(object):
             hit_text = "Bonus critical damage"
         output = []
         if len(self.rolls) != 0 or self.dmg_static is not None:
-            output.append("%s %d: <b>%d damage</b>" % (hit_text, self.number, int(self)))
+            output.append("%s %d: <b>%s</b>" % (hit_text, self.number, self._format_result()))
         if len(self.rolls) != 0:
             for roll in self.rolls:
                 output.append("\t%s=%d %s" % (roll, roll, roll.type.lower()))
