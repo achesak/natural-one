@@ -4654,13 +4654,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 4
+                            "die": 4,
+                            "type": "Bludgeoning and piercing"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Bludgeoning and piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -4671,13 +4673,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Bludgeoning and piercing"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Bludgeoning and piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -4688,13 +4692,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Bludgeoning and piercing"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Bludgeoning and piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -4706,13 +4712,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 3
+                            "die": 3,
+                            "type": "Bludgeoning and piercing"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 4
+                            "die": 4,
+                            "type": "Bludgeoning and piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -4724,13 +4732,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 3
+                            "die": 3,
+                            "type": "Bludgeoning and piercing"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 4
+                            "die": 4,
+                            "type": "Bludgeoning and piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -4742,13 +4752,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Bludgeoning and piercing"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Bludgeoning and piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -4760,13 +4772,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 4
+                            "die": 4,
+                            "type": "Bludgeoning and piercing"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Bludgeoning and piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -4778,13 +4792,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Bludgeoning and piercing"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Bludgeoning and piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -4796,13 +4812,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 4
+                            "die": 4,
+                            "type": "Bludgeoning and piercing"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Bludgeoning and piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -4814,13 +4832,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 3
+                            "die": 3,
+                            "type": "Bludgeoning and piercing"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 4
+                            "die": 4,
+                            "type": "Bludgeoning and piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -4836,13 +4856,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Bludgeoning and piercing"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Bludgeoning and piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -4853,13 +4875,15 @@
                     "dmg_small": [
                         {
                             "count": 2,
-                            "die": 6
+                            "die": 6,
+                            "type": "Bludgeoning and piercing"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 2,
-                            "die": 8
+                            "die": 8,
+                            "type": "Bludgeoning and piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -4870,13 +4894,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Bludgeoning and piercing"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Bludgeoning and piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -4887,13 +4913,15 @@
                     "dmg_small": [
                         {
                             "count": 2,
-                            "die": 10
+                            "die": 10,
+                            "type": "Bludgeoning and piercing"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 2,
-                            "die": 12
+                            "die": 12,
+                            "type": "Bludgeoning and piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -4904,13 +4932,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 4
+                            "die": 4,
+                            "type": "Piercing"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -4921,13 +4951,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 10
+                            "die": 10,
+                            "type": "Bludgeoning and piercing"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 12
+                            "die": 12,
+                            "type": "Bludgeoning and piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -4939,13 +4971,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Bludgeoning and piercing"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Bludgeoning and piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -4957,13 +4991,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 10
+                            "die": 10,
+                            "type": "Bludgeoning and piercing"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 12
+                            "die": 12,
+                            "type": "Bludgeoning and piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -4975,13 +5011,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 10
+                            "die": 10,
+                            "type": "Bludgeoning and piercing"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 12
+                            "die": 12,
+                            "type": "Bludgeoning and piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -4993,13 +5031,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Bludgeoning and piercing"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Bludgeoning and piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -5015,13 +5055,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Bludgeoning and piercing"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Bludgeoning and piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -5037,13 +5079,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Bludgeoning and piercing"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 10
+                            "die": 10,
+                            "type": "Bludgeoning and piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -5055,13 +5099,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Bludgeoning and piercing"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 10
+                            "die": 10,
+                            "type": "Bludgeoning and piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -5072,13 +5118,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Bludgeoning and piercing"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Bludgeoning and piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -5090,13 +5138,15 @@
                     "dmg_small": [
                         {
                             "count": 1,
-                            "die": 6
+                            "die": 6,
+                            "type": "Bludgeoning and piercing"
                         }
                     ],
                     "dmg_medium": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Bludgeoning and piercing"
                         }
                     ],
                     "crit_mult": 2
@@ -5107,13 +5157,27 @@
             "category": "Siege engines",
             "weapons": [
                 {
+                    "name": "Ballista",
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                            "count": 3,
+                            "die": 8,
+                            "type": "Piercing"
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 1
+                },
+                {
                     "name": "Catapult, heavy",
                     "display": "Heavy catapult",
                     "no_size_steps": true,
                     "dmg": [
                         {
                             "count": 6,
-                            "die": 6
+                            "die": 6,
+                            "type": "Bludgeoning"
                         }
                     ],
                     "crit_range": 20,
@@ -5126,19 +5190,8 @@
                     "dmg": [
                         {
                             "count": 4,
-                            "die": 6
-                        }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 1
-                },
-                {
-                    "name": "Ballista",
-                    "no_size_steps": true,
-                    "dmg": [
-                        {
-                            "count": 3,
-                            "die": 8
+                            "die": 6,
+                            "type": "Bludgeoning"
                         }
                     ],
                     "crit_range": 20,
@@ -5150,11 +5203,100 @@
                     "dmg": [
                         {
                             "count": 3,
-                            "die": 6
+                            "die": 6,
+                            "type": "Bludgeoning"
                         }
                     ],
                     "crit_range": 20,
                     "crit_mult": 1
+                }
+            ]
+        },
+        {
+            "category": "Naval siege engines",
+            "weapons": [
+                {
+                    "name": "Ballista, heavy",
+                    "display": "Heavy ballista",
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                            "count": 4,
+                            "die": 8,
+                            "type": "Piercing"
+                        }
+                    ],
+                    "crit_range": 19,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Ballista, light",
+                    "display": "Light ballista",
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                            "count": 3,
+                            "die": 8,
+                            "type": "Piercing"
+                        }
+                    ],
+                    "crit_range": 19,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Catapult, light",
+                    "display": "Light catapult",
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                            "count": 4,
+                            "die": 6,
+                            "type": "Bludgeoning"
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Catapult, standard",
+                    "display": "Standard catapult",
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                            "count": 6,
+                            "die": 6,
+                            "type": "Bludgeoning"
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Firedrake",
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                            "count": 6,
+                            "die": 6,
+                            "type": "Fire"
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 1
+                },
+                {
+                    "name": "Springal, arrow",
+                    "display": "Arrow springal",
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                            "count": 3,
+                            "die": 8,
+                            "type": "Piercing"
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 3
                 }
             ]
         },
@@ -5169,7 +5311,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 8
+                            "die": 8,
+                            "type": "Bludgeoning and piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -5188,7 +5331,8 @@
                     "dmg": [
                         {
                             "count": 4,
-                            "die": 6
+                            "die": 6,
+                            "type": "Fire"
                         }
                     ],
                     "crit_range": 20,
@@ -5202,7 +5346,8 @@
                     "dmg": [
                         {
                             "count": 2,
-                            "die": 6
+                            "die": 6,
+                            "type": "Bludgeoning and piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -5216,7 +5361,8 @@
                     "dmg": [
                         {
                             "count": 2,
-                            "die": 8
+                            "die": 8,
+                            "type": "Bludgeoning and piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -5230,7 +5376,8 @@
                     "dmg": [
                         {
                             "count": 1,
-                            "die": 10
+                            "die": 10,
+                            "type": "Bludgeoning and piercing"
                         }
                     ],
                     "crit_range": 20,
@@ -5248,7 +5395,8 @@
                     "dmg": [
                         {
                             "count": 6,
-                            "die": 6
+                            "die": 6,
+                            "type": "Bludgeoning, piercing, and slashing"
                         }
                     ],
                     "crit_range": 20,
@@ -5261,7 +5409,8 @@
                     "dmg": [
                         {
                             "count": 8,
-                            "die": 6
+                            "die": 6,
+                            "type": "Bludgeoning, piercing, and slashing"
                         }
                     ],
                     "crit_range": 20,
@@ -5279,7 +5428,8 @@
                     "dmg": [
                         {
                             "count": 3,
-                            "die": 6
+                            "die": 6,
+                            "type": "Bludgeoning"
                         }
                     ],
                     "crit_range": 20,
@@ -5292,7 +5442,8 @@
                     "dmg": [
                         {
                             "count": 4,
-                            "die": 6
+                            "die": 6,
+                            "type": "Bludgeoning, piercing. and slashing"
                         }
                     ],
                     "crit_range": 20,
