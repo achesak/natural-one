@@ -29,6 +29,7 @@ import resources.utility as utility
 
 from resources.window import DiceRollerWindow
 
+from resources.dialogs.system_dialog import SystemDialog
 from resources.dialogs.template_dialog import TemplateDialog
 from resources.dialogs.about_dialog import NaturalOneAboutDialog
 
@@ -110,6 +111,7 @@ class DiceRoller(Gtk.Application):
         self.window.sys_dam_cbox.connect("changed", lambda x: self.change_system())
         self.window.dam_btn.connect("clicked", lambda x: self.roll_dmg())
         self.window.weap_dam_tree.connect("row-activated", lambda x, y, z: self.roll_dmg())
+        self.window.sys_manage_btn.connect("clicked", lambda x: self.manage_systems())
         self.window.new_btn.connect("clicked", lambda x: self.new_template())
         self.window.list_edit_btn.connect("clicked", lambda x: self.edit_template())
         self.window.list_delete_btn.connect("clicked", lambda x: self.remove_template())
@@ -184,7 +186,7 @@ class DiceRoller(Gtk.Application):
             valid = False
 
         min_value = -1
-        min_text =  self.window.min_ent.get_text().strip()
+        min_text = self.window.min_ent.get_text().strip()
         try:
             min_value = int(min_text)
         except ValueError:
@@ -335,6 +337,16 @@ class DiceRoller(Gtk.Application):
         total, rolls = roller.dmg(num_atks, mods, weapon, weapon_path, min_value, crit_attack)
         output = formatter.dmg(num_atks, mods, weapon, crit_attack, weapon[weapon_path], rolls, total)
         self.window.update_output(output)
+
+    def manage_systems(self):
+        """Adds or manages systems."""
+
+        dlg = SystemDialog(self.window, self.systems)
+        response = dlg.run()
+        dlg.destroy()
+
+        if response != Gtk.ResponseType.OK:
+            return
 
     def new_template(self):
         """Creates a new template."""
