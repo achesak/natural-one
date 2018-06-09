@@ -124,6 +124,9 @@ class DamageRollEachResult(object):
     def __str__(self):
         return "+".join([str(x) for x in self.rolls])
 
+    def __len__(self):
+        return len(self.rolls)
+
 
 class DamageRollResult(object):
 
@@ -178,7 +181,10 @@ class DamageRollResult(object):
             output.append("%s %d: <b>%s</b>" % (hit_text, self.number, self._format_result()))
         if len(self.rolls) != 0:
             for roll in self.rolls:
-                output.append("\t%s=%d %s" % (roll, roll, roll.type.lower()))
+                if len(roll) == 1:
+                    output.append("\t%d %s" % (roll, roll.type.lower()))
+                else:
+                    output.append("\t%s=%d %s" % (roll, roll, roll.type.lower()))
         if self.dmg_static is not None:
             output.append("\t%d %s" % (self.dmg_static, self.dmg_static_type))
         if self.mod:
