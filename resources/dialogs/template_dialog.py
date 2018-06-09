@@ -249,6 +249,10 @@ class TemplateDialog(Gtk.Dialog):
             row = [item["description"], "%dd%d%s" % (item["count"], item["die"], mod_output)]
             if item["crit_active"]:
                 row.append("x%d" % item["crit_mod"])
+            elif item["crit_max"]:
+                row.append("Max")
+            elif item["crit_only"]:
+                row.append("Only")
             else:
                 row.append("N/A")
             self.roll_store.append(row)
