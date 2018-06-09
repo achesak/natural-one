@@ -9,7 +9,7 @@
 ################################################################################
 
 
-from gi.repository import Gtk, Gdk
+from gi.repository import Gtk, Gdk, Gio
 
 
 class TemplateDialog(Gtk.Dialog):
@@ -98,6 +98,7 @@ class TemplateDialog(Gtk.Dialog):
         self.crit_apply_rbtn.set_margin_top(10)
         self.crit_max_rbtn = Gtk.RadioButton.new_with_label_from_widget(self.crit_apply_rbtn, "Maximized on critical hit")
         self.crit_no_apply_rbtn = Gtk.RadioButton.new_with_label_from_widget(self.crit_apply_rbtn, "Not multiplied by critical hit")
+        self.crit_only_rbtn = Gtk.RadioButton.new_with_label_from_widget(self.crit_apply_rbtn, "Only roll on critical hit")
         self.crit_no_apply_rbtn.set_hexpand(True)
         crit_lbl = Gtk.Label("Multiplier")
         crit_lbl.set_margin_left(25)
@@ -112,11 +113,7 @@ class TemplateDialog(Gtk.Dialog):
         add_grid.attach_next_to(crit_box, self.crit_apply_rbtn, Gtk.PositionType.BOTTOM, 7, 1)
         add_grid.attach_next_to(self.crit_max_rbtn, crit_box, Gtk.PositionType.BOTTOM, 7, 1)
         add_grid.attach_next_to(self.crit_no_apply_rbtn, self.crit_max_rbtn, Gtk.PositionType.BOTTOM, 7, 1)
-
-        # Create the critical only row.
-        self.crit_only_chk = Gtk.CheckButton("Only roll on critical hit")
-        self.crit_only_chk.set_margin_top(10)
-        add_grid.attach_next_to(self.crit_only_chk, self.crit_no_apply_rbtn, Gtk.PositionType.BOTTOM, 7, 1)
+        add_grid.attach_next_to(self.crit_only_rbtn, self.crit_no_apply_rbtn, Gtk.PositionType.BOTTOM, 7, 1)
 
         # Create the minimum value row.
         min_grid = Gtk.Grid()
@@ -131,7 +128,7 @@ class TemplateDialog(Gtk.Dialog):
         self.min_ent.set_hexpand(True)
         min_grid.add(min_lbl)
         min_grid.attach_next_to(self.min_ent, min_lbl, Gtk.PositionType.RIGHT, 2, 1)
-        add_grid.attach_next_to(min_grid, self.crit_only_chk, Gtk.PositionType.BOTTOM, 7, 1)
+        add_grid.attach_next_to(min_grid, self.crit_only_rbtn, Gtk.PositionType.BOTTOM, 7, 1)
 
         # Create the description row.
         desc_lbl = Gtk.Label("Name")
@@ -146,21 +143,22 @@ class TemplateDialog(Gtk.Dialog):
 
         # Create the rolls grid.
         roll_grid = Gtk.Grid()
-        roll_grid.set_row_spacing(8)
-        roll_grid.set_column_spacing(5)
+        roll_grid.set_row_spacing(0)
+        roll_grid.set_column_spacing(12)
         dlg_grid.attach(roll_grid, 0, 2, 1, 1)
 
         # Create the rolls main label.
         roll_lbl = Gtk.Label()
         roll_lbl.set_markup("<span size=\"x-large\">Rolls</span>")
         roll_lbl.set_alignment(0, 0.5)
-        roll_grid.attach_next_to(roll_lbl, None, Gtk.PositionType.RIGHT, 2, 1)
+        roll_lbl.set_margin_bottom(10)
+        roll_grid.attach_next_to(roll_lbl, None, Gtk.PositionType.RIGHT, 1, 1)
 
         # Create the rolls list.
         roll_scroll_win = Gtk.ScrolledWindow()
         roll_scroll_win.set_hexpand(True)
         roll_scroll_win.set_vexpand(True)
-        roll_grid.attach_next_to(roll_scroll_win, roll_lbl, Gtk.PositionType.BOTTOM, 2, 1)
+        roll_grid.attach_next_to(roll_scroll_win, roll_lbl, Gtk.PositionType.BOTTOM, 1, 1)
         self.roll_store = Gtk.ListStore(str, str, str)
         self.roll_tree = Gtk.TreeView(model=self.roll_store)
         self.roll_tree.set_headers_visible(False)
@@ -179,16 +177,28 @@ class TemplateDialog(Gtk.Dialog):
         self.roll_tree.append_column(self.crit_col)
         roll_scroll_win.add(self.roll_tree)
 
-        # Create the rolls buttons.
-        self.edit_btn = Gtk.Button("Edit")
-        roll_grid.attach_next_to(self.edit_btn, roll_scroll_win, Gtk.PositionType.BOTTOM, 1, 1)
-        self.delete_btn = Gtk.Button("Delete")
-        roll_grid.attach_next_to(self.delete_btn, self.edit_btn, Gtk.PositionType.RIGHT, 1, 1)
+        # Create the roll list action bar.
+        self.roll_action_bar = Gtk.ActionBar()
+        roll_grid.attach_next_to(self.roll_action_bar, roll_scroll_win, Gtk.PositionType.BOTTOM, 1, 1)
+
+        # Create the template list buttons.
+        roll_btn_box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL)
+        Gtk.StyleContext.add_class(roll_btn_box.get_style_context(), "linked")
+        self.roll_action_bar.pack_start(roll_btn_box)
+        self.edit_btn = Gtk.Button()
+        edit_img = Gtk.Image.new_from_gicon(Gio.ThemedIcon(name="edit-symbolic"), Gtk.IconSize.BUTTON)
+        self.edit_btn.add(edit_img)
+        self.edit_btn.set_tooltip_text("Edit selected roll")
+        self.delete_btn = Gtk.Button()
+        delete_img = Gtk.Image.new_from_gicon(Gio.ThemedIcon(name="list-remove-symbolic"), Gtk.IconSize.BUTTON)
+        self.delete_btn.add(delete_img)
+        self.delete_btn.set_tooltip_text("Delete selected roll")
+        roll_btn_box.add(self.edit_btn)
+        roll_btn_box.add(self.delete_btn)
 
         self.style_provider = Gtk.CssProvider()
         self.style_context = Gtk.StyleContext()
-        self.style_context.add_provider_for_screen(Gdk.Screen.get_default(), self.style_provider,
-                                                   Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION)
+        self.style_context.add_provider_for_screen(Gdk.Screen.get_default(), self.style_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION)
         self.style_provider.load_from_data(".bad-input {background-color: red; color: white}")
 
         save_btn = self.get_widget_for_response(response_id=Gtk.ResponseType.OK)
@@ -309,7 +319,7 @@ class TemplateDialog(Gtk.Dialog):
         crit_mod = self.crit_ent.get_text().strip()
         crit_active = self.crit_apply_rbtn.get_active()
         crit_max = self.crit_max_rbtn.get_active()
-        crit_only = self.crit_only_chk.get_active()
+        crit_only = self.crit_only_rbtn.get_active()
         min_value = self.min_ent.get_text().strip()
         desc = self.desc_ent.get_text().strip()
 
@@ -368,8 +378,8 @@ class TemplateDialog(Gtk.Dialog):
         self.crit_ent.set_text(str(roll["crit_mod"]))
         self.crit_apply_rbtn.set_active(roll["crit_active"])
         self.crit_max_rbtn.set_active(roll["crit_max"])
-        self.crit_no_apply_rbtn.set_active(not roll["crit_active"] and not roll["crit_max"])
-        self.crit_only_chk.set_active(roll["crit_only"])
+        self.crit_no_apply_rbtn.set_active(not roll["crit_active"] and not roll["crit_max"] and not roll["crit_only"])
+        self.crit_only_rbtn.set_active(roll["crit_only"])
         self.min_ent.set_text(str(roll["min_value"]))
         self.desc_ent.set_text(roll["description"])
 
