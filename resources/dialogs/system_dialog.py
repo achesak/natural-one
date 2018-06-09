@@ -81,9 +81,10 @@ class SystemDialog(Gtk.Dialog):
         self.system_tree = Gtk.TreeView(model=self.system_store)
         self.system_tree.set_reorderable(True)
         self.system_tree.get_selection().set_mode(Gtk.SelectionMode.MULTIPLE)
-        desc_text = Gtk.CellRendererText()
-        self.desc_col = Gtk.TreeViewColumn("Enabled", desc_text, text=0)
-        self.system_tree.append_column(self.desc_col)
+        enable_text = Gtk.CellRendererToggle()
+        enable_text.connect("toggled", self.toggle_system_enabled)
+        self.enable_col = Gtk.TreeViewColumn("Enabled", enable_text, active=0)
+        self.system_tree.append_column(self.enable_col)
         roll_text = Gtk.CellRendererText()
         self.system_col = Gtk.TreeViewColumn("System", roll_text, text=1)
         self.system_tree.append_column(self.system_col)
@@ -99,3 +100,9 @@ class SystemDialog(Gtk.Dialog):
         save_btn.grab_default()
 
         self.show_all()
+
+    def toggle_system_enabled(self, widget, path):
+        """Enable or disable systems."""
+
+        self.system_store[path][0] = not self.system_store[path][0]
+
