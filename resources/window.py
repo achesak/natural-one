@@ -445,13 +445,13 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         add_init_lbl = Gtk.Label()
         add_init_lbl.set_markup("<span size=\"x-large\">Add Initiative</span>")
         add_init_lbl.set_alignment(0, 0.5)
-        add_init_grid.attach(add_init_lbl, 0, 0, 3, 1)
+        add_init_grid.attach(add_init_lbl, 0, 0, 1, 1)
 
         # Create the initiative mode box.
         mode_init_box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL)
         mode_init_box.set_margin_top(5)
         mode_init_box.props.halign = Gtk.Align.CENTER
-        add_init_grid.attach_next_to(mode_init_box, add_init_lbl, Gtk.PositionType.BOTTOM, 3, 1)
+        add_init_grid.attach_next_to(mode_init_box, add_init_lbl, Gtk.PositionType.BOTTOM, 1, 1)
 
         # Create the initiative mode radiobuttons.
         self.roll_init_rbtn = Gtk.RadioButton.new_with_label_from_widget(None, "Roll initiative")
@@ -459,24 +459,33 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         mode_init_box.pack_start(self.roll_init_rbtn, False, False, 0)
         mode_init_box.pack_start(self.add_init_rbtn, False, False, 0)
 
+        # Create the roll initiative grid.
+        roll_init_grid = Gtk.Grid()
+        roll_init_grid.set_row_spacing(5)
+        roll_init_grid.set_column_spacing(12)
+        add_init_grid.attach_next_to(roll_init_grid, mode_init_box, Gtk.PositionType.BOTTOM, 1, 1)
+
         # Create the name label and entry.
         name_init_lbl = Gtk.Label("Name")
         name_init_lbl.set_alignment(1, 0.5)
-        add_init_grid.attach_next_to(name_init_lbl, mode_init_box, Gtk.PositionType.BOTTOM, 1, 1)
+        roll_init_grid.attach(name_init_lbl, 0, 0, 1, 1)
         self.name_init_ent = Gtk.Entry()
         self.name_init_ent.set_hexpand(True)
-        add_init_grid.attach_next_to(self.name_init_ent, name_init_lbl, Gtk.PositionType.RIGHT, 2, 1)
+        roll_init_grid.attach_next_to(self.name_init_ent, name_init_lbl, Gtk.PositionType.RIGHT, 1, 1)
 
         # Create the modifier label and entry.
         self.mod_init_lbl = Gtk.Label("Modifier")
         self.mod_init_lbl.set_alignment(1, 0.5)
-        add_init_grid.attach_next_to(self.mod_init_lbl, name_init_lbl, Gtk.PositionType.BOTTOM, 1, 1)
+        roll_init_grid.attach_next_to(self.mod_init_lbl, name_init_lbl, Gtk.PositionType.BOTTOM, 1, 1)
+        mod_init_box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL)
+        Gtk.StyleContext.add_class(mod_init_box.get_style_context(), "linked")
         self.mod_init_ent = Gtk.Entry()
         self.mod_init_ent.set_hexpand(True)
         self.mod_init_ent.set_text("0")
-        add_init_grid.attach_next_to(self.mod_init_ent, self.mod_init_lbl, Gtk.PositionType.RIGHT, 1, 1)
+        mod_init_box.add(self.mod_init_ent)
         self.roll_init_btn = Gtk.Button("Roll")
-        add_init_grid.attach_next_to(self.roll_init_btn, self.mod_init_ent, Gtk.PositionType.RIGHT, 1, 1)
+        mod_init_box.add(self.roll_init_btn)
+        roll_init_grid.attach_next_to(mod_init_box, self.mod_init_lbl, Gtk.PositionType.RIGHT, 1, 1)
 
         # Create the sorting check box.
         self.sort_init_chk = Gtk.CheckButton("Automatically sort initiatives")
@@ -484,7 +493,7 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         self.sort_init_chk.set_hexpand(True)
         self.sort_init_chk.set_margin_top(5)
         self.sort_init_chk.set_active(True)
-        add_init_grid.attach_next_to(self.sort_init_chk, self.mod_init_lbl, Gtk.PositionType.BOTTOM, 3, 1)
+        add_init_grid.attach_next_to(self.sort_init_chk, roll_init_grid, Gtk.PositionType.BOTTOM, 1, 1)
 
         # Create the initiative list grid.
         list_init_grid = Gtk.Grid()
