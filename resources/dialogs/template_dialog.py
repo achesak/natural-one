@@ -41,7 +41,7 @@ class TemplateDialog(Gtk.Dialog):
         # Create the template details grid.
         details_grid = Gtk.Grid()
         details_grid.set_row_spacing(8)
-        details_grid.set_column_spacing(5)
+        details_grid.set_column_spacing(12)
         dlg_grid.attach(details_grid, 0, 0, 1, 1)
 
         # Create the template details main label.
@@ -53,7 +53,6 @@ class TemplateDialog(Gtk.Dialog):
         # Create the template name row.
         name_lbl = Gtk.Label("Name")
         name_lbl.set_alignment(1, 0.5)
-        name_lbl.set_margin_right(7)
         details_grid.attach_next_to(name_lbl, details_lbl, Gtk.PositionType.BOTTOM, 1, 1)
         self.name_ent = Gtk.Entry()
         self.name_ent.set_hexpand(True)
@@ -62,7 +61,7 @@ class TemplateDialog(Gtk.Dialog):
         # Create the add roll grid.
         add_grid = Gtk.Grid()
         add_grid.set_row_spacing(8)
-        add_grid.set_column_spacing(5)
+        add_grid.set_column_spacing(12)
         dlg_grid.attach(add_grid, 0, 1, 1, 1)
 
         # Create the add roll main label.
@@ -122,7 +121,6 @@ class TemplateDialog(Gtk.Dialog):
         min_grid.set_margin_top(10)
         min_lbl = Gtk.Label("Minimum value")
         min_lbl.set_alignment(1, 0.5)
-        min_lbl.set_margin_right(5)
         self.min_ent = Gtk.Entry()
         self.min_ent.set_placeholder_text("No minimum value")
         self.min_ent.set_hexpand(True)
@@ -133,7 +131,6 @@ class TemplateDialog(Gtk.Dialog):
         # Create the description row.
         desc_lbl = Gtk.Label("Name")
         desc_lbl.set_alignment(1, 0.5)
-        desc_lbl.set_margin_right(5)
         self.desc_ent = Gtk.Entry()
         self.desc_ent.set_hexpand(True)
         self.add_btn = Gtk.Button("Add Roll")
