@@ -59,10 +59,9 @@ class AttackRollResult(BasicRollResult):
         output = "Attack %d: " % self.number
         if self.mod:
             mod_sign = "+" if self.mod > 0 else ""
-            output += "%d%s%d" % (self.value, mod_sign, self.mod)
+            output += "%d%s%d=<b>%d</b>" % (self.value, mod_sign, self.mod, val)
         else:
-            output += str(self.value)
-        output += "=<b>%d</b>" % val
+            output += "<b>%d</b>" % self.value
 
         if self.status == AttackRollStatus.CRITICAL_FAIL:
             output += "\n<span color=\"red\">Critical fail!</span>"
@@ -71,10 +70,9 @@ class AttackRollResult(BasicRollResult):
         if self.status == AttackRollStatus.CRITICAL_CONFIRM:
             output += " Critical confirm: "
             if self.mod:
-                output += "%d+%d" % (self.critical_value, self.mod)
+                output += "%d+%d=<b>%d</b>" % (self.critical_value, self.mod, self.critical_value + self.mod)
             else:
-                output += str(self.critical_value)
-            output += "=<b>%d</b>" % (self.critical_value + self.mod)
+                output += "<b>%d</b>" % self.critical_value
 
         return output
 
