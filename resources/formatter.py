@@ -91,6 +91,10 @@ def initiative(name, mod, roll):
     mod_sign = "+" if mod > 0 else ""
 
     output = "<span size=\"larger\"><b>Rolled initiative for %s: <i>%d</i></b></span>\n" % (name, roll)
-    output += "Initiative: %d%s=<b>%d</b>" % (roll - mod, "%s%d" % (mod_sign, mod) if mod else "", roll)
+    output += "Initiative: "
+    if mod:
+        output += "%d%s=<b>%d</b>" % (roll - mod, "%s%d" % (mod_sign, mod) if mod else "", roll)
+    else:
+        output += "<b>%d</b>" % roll
 
     return output
