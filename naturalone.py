@@ -341,7 +341,7 @@ class DiceRoller(Gtk.Application):
     def manage_systems(self):
         """Adds or manages systems."""
 
-        dlg = SystemDialog(self.window, self.systems)
+        dlg = SystemDialog(self.window, self.systems, self.weapon_data)
         response = dlg.run()
         dlg.destroy()
 

@@ -11,12 +11,15 @@
 
 from gi.repository import Gtk, Gdk
 
+import copy
+
 
 class SystemDialog(Gtk.Dialog):
 
-    def __init__(self, parent, systems):
+    def __init__(self, parent, systems, weapon_data):
 
-        self.systems = systems
+        self.systems = systems[:]
+        self.weapon_data = copy.deepcopy(weapon_data)
 
         Gtk.Dialog.__init__(self, "Systems", parent, Gtk.DialogFlags.MODAL, use_header_bar=True)
         self.set_size_request(500, 600)
@@ -94,6 +97,10 @@ class SystemDialog(Gtk.Dialog):
         drag_sys_lbl = Gtk.Label("Drag and drop to re-arrange systems")
         drag_sys_lbl.set_margin_top(10)
         system_grid.attach_next_to(drag_sys_lbl, system_scroll_win, Gtk.PositionType.BOTTOM, 1, 1)
+
+        # Fill the systems list.
+        for i in range(len(self.systems)):
+            self.system_store.append([False, self.systems[i]])
 
         save_btn = self.get_widget_for_response(response_id=Gtk.ResponseType.OK)
         save_btn.set_can_default(True)
