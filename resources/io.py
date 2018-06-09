@@ -30,6 +30,47 @@ def get_main_dir():
     return path
 
 
+def get_systems_dir():
+    """Returns the systems directory."""
+
+    root_path = get_main_dir()
+    systems_path = os.path.join(root_path, "systems")
+
+    if not os.path.exists(systems_path):
+        os.makedirs(systems_path)
+
+    return systems_path
+
+
+def get_systems_path():
+    """Returns the path to the systems settings file."""
+
+    root_path = get_main_dir()
+    return os.path.join(root_path, "systems.json")
+
+
+def load_systems():
+    """Loads the systems settings."""
+
+    with open(get_systems_path(), "a+") as systems_file:
+        systems_file.seek(0)
+        try:
+            return json.load(systems_file)
+        except (IOError, TypeError, ValueError):
+            systems_file.write("{}")
+            return {}
+
+
+def save_systems(systems):
+    """Saves the systems settings."""
+
+    try:
+        with open(get_systems_path(), "w") as systems_file:
+            json.dump(systems, systems_file)
+    except IOError:
+        print("IOError saving systems")
+
+
 def get_template_path():
     """Returns the path to the template file."""
 
