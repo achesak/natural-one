@@ -94,6 +94,12 @@ class TemplateRollResult(BasicRollResult):
             mod = self.item["mod"]
         self.rolls.append(BasicRollResult(value, min_value, mod))
 
+    @property
+    def roll_details(self):
+        mod_sign = "+" if self.item["mod"] > 0 else ""
+        mod = "%s%d" % (mod_sign, self.item["mod"]) if self.item["mod"] else ""
+        return "%dd%d%s" % (self.item["count"], self.item["die"], mod)
+
     def __int__(self):
         min_value = - float("inf") if self.item["min_value"] == "" else self.item["min_value"]
         total = sum(self.rolls)

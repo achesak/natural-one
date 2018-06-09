@@ -66,8 +66,8 @@ def template(template, rolls, crit_attack, total):
 
     output = "<span size=\"larger\"><b>Rolled template \"%s\": <i>%d</i></b></span>\n" % (template["name"], total)
     for roll in rolls:
-        output += "<i>Rolled \"%s\": %d</i>\n" % (roll.item["description"], roll)
-        output += "%s\n" % roll
+        output += "Rolled \"%s\" (%s): <b>%d</b>\n" % (roll.item["description"], roll.roll_details, roll)
+        output += "\t%s\n" % roll
     if crit_attack:
         output += "<i>Criticals applied</i>"
     if output.endswith("\n"):
