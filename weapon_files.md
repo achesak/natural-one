@@ -70,6 +70,8 @@ For systems that change damage die by size, two keys must be present in the weap
 and `dmg_medium`. Each key is an array of objects, with each object having `count` and `die` keys; these
 are the values that determine the number (`count`) of which die (`die`) to roll.
 
+Each roll must also have a `type` associated with it. This represents the type of damage that the roll does.
+
 Example:
 ```json
 {
@@ -77,13 +79,15 @@ Example:
     "dmg_small": [
         {
             "count": 1,
-            "die": 3
+            "die": 3,
+            "type": "Piercing"
         }
     ],
     "dmg_medium": [
         {
             "count": 1,
-            "die": 4
+            "die": 4,
+            "type": "Piercing"
         }
     ],
     "crit_range": 19,
@@ -102,7 +106,8 @@ Example:
     "dmg": [
         {
             "count": 1,
-            "die": 6
+            "die": 6,
+            "type": "Bludgeoning"
         }
     ],
     "crit_range": 20,
