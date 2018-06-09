@@ -98,6 +98,17 @@ class TemplateRollResult(BasicRollResult):
         mod = "%s%d" % (mod_sign, self.item["mod"]) if self.item["mod"] else ""
         return "%dd%d%s" % (self.item["count"], self.item["die"], mod)
 
+    @property
+    def roll_critical(self):
+        if self.item["crit_max"]:
+            return "Maximized due to critical hit"
+        elif self.item["crit_only"]:
+            return "Rolled due to critical hit"
+        elif self.item["crit_active"]:
+            return "Multiplied by %dx due to critical hit" % self.item["crit_mod"]
+        else:
+            return "Not affected by critical hit"
+
     def __int__(self):
         min_value = - float("inf") if self.item["min_value"] == "" else self.item["min_value"]
         total = sum(self.rolls)
