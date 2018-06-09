@@ -161,7 +161,6 @@ class TemplateDialog(Gtk.Dialog):
         roll_grid.attach_next_to(roll_scroll_win, roll_lbl, Gtk.PositionType.BOTTOM, 1, 1)
         self.roll_store = Gtk.ListStore(str, str, str)
         self.roll_tree = Gtk.TreeView(model=self.roll_store)
-        self.roll_tree.set_headers_visible(False)
         self.roll_tree.get_selection().set_mode(Gtk.SelectionMode.MULTIPLE)
         desc_text = Gtk.CellRendererText()
         self.desc_col = Gtk.TreeViewColumn("Name", desc_text, text=0)
