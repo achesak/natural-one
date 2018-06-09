@@ -38,7 +38,7 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         self.stack_switcher.set_stack(self.stack)
         self.header.set_custom_title(self.stack_switcher)
         win_pane = Gtk.Paned(orientation=Gtk.Orientation.HORIZONTAL)
-        win_pane.add1(self.stack)
+        win_pane.pack1(self.stack, True, False)
         self.add(win_pane)
 
         # Create the header buttons.
@@ -555,6 +555,7 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         results_scroll_win = Gtk.ScrolledWindow()
         results_scroll_win.set_hexpand(True)
         results_scroll_win.set_vexpand(True)
+        results_scroll_win.set_size_request(550, -1)
         self.results_view = Gtk.TextView()
         self.results_view.set_editable(False)
         self.results_view.set_cursor_visible(False)
@@ -565,7 +566,7 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         self.results_view.set_bottom_margin(5)
         self.results_buffer = self.results_view.get_buffer()
         results_scroll_win.add(self.results_view)
-        win_pane.add2(results_scroll_win)
+        win_pane.pack2(results_scroll_win, True, True)
 
         # Create the CSS provider.
         self.style_provider = Gtk.CssProvider()
