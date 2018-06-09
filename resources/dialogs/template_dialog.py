@@ -75,13 +75,13 @@ class TemplateDialog(Gtk.Dialog):
         self.count_ent.set_width_chars(4)
         self.count_ent.props.xalign = 0.5
         add_grid.attach_next_to(self.count_ent, add_lbl, Gtk.PositionType.BOTTOM, 1, 1)
-        d_lbl = Gtk.Label(" d ")
+        d_lbl = Gtk.Label("d")
         add_grid.attach_next_to(d_lbl, self.count_ent, Gtk.PositionType.RIGHT, 1, 1)
         self.die_ent = Gtk.Entry()
         self.die_ent.set_width_chars(4)
         self.die_ent.props.xalign = 0.5
         add_grid.attach_next_to(self.die_ent, d_lbl, Gtk.PositionType.RIGHT, 1, 1)
-        p_lbl = Gtk.Label(" + ")
+        p_lbl = Gtk.Label("+")
         add_grid.attach_next_to(p_lbl, self.die_ent, Gtk.PositionType.RIGHT, 1, 1)
         self.mod_ent = Gtk.Entry()
         self.mod_ent.set_width_chars(4)
@@ -131,12 +131,15 @@ class TemplateDialog(Gtk.Dialog):
         # Create the description row.
         desc_lbl = Gtk.Label("Name")
         desc_lbl.set_alignment(1, 0.5)
+        desc_box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL)
+        Gtk.StyleContext.add_class(desc_box.get_style_context(), "linked")
         self.desc_ent = Gtk.Entry()
         self.desc_ent.set_hexpand(True)
+        desc_box.add(self.desc_ent)
         self.add_btn = Gtk.Button("Add Roll")
+        desc_box.add(self.add_btn)
         min_grid.attach_next_to(desc_lbl, min_lbl, Gtk.PositionType.BOTTOM, 1, 1)
-        min_grid.attach_next_to(self.desc_ent, desc_lbl, Gtk.PositionType.RIGHT, 1, 1)
-        min_grid.attach_next_to(self.add_btn, self.desc_ent, Gtk.PositionType.RIGHT, 1, 1)
+        min_grid.attach_next_to(desc_box, desc_lbl, Gtk.PositionType.RIGHT, 2, 1)
 
         # Create the rolls grid.
         roll_grid = Gtk.Grid()
