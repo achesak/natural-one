@@ -29,6 +29,7 @@ import resources.utility as utility
 
 from resources.window import DiceRollerWindow
 
+import resources.dialogs.generic_dialogs as generic_dialogs
 from resources.dialogs.system_dialog import SystemDialog
 from resources.dialogs.template_dialog import TemplateDialog
 from resources.dialogs.about_dialog import NaturalOneAboutDialog
@@ -534,15 +535,25 @@ class DiceRoller(Gtk.Application):
     def remove_initiative(self, clear=False):
         """Removes initiatives from the list."""
 
+        model, treeiter = self.window.init_tree.get_selection().get_selected_rows()
+        indices = []
+        for i in treeiter:
+            indices.append(int(str(i)))
+
+        if len(indices) == 0 or (clear and len(self.initiative_list) == 0):
+            return
+
+        if clear:
+            message_text = "all initiatives"
+        else:
+            message_text = "th%s %d initiative%s" % \
+                           ("ese" if len(indices) != 1 else "is", len(indices), "s" if len(indices) != 1 else "")
+        confirm_response = generic_dialogs.question(self.window, "Remove initiative",
+                                                    "Are you sure you want to remove %s?" % message_text)
+        if confirm_response != Gtk.ResponseType.OK:
+            return
+
         if not clear:
-            model, treeiter = self.window.init_tree.get_selection().get_selected_rows()
-            indices = []
-            for i in treeiter:
-                indices.append(int(str(i)))
-
-            if len(indices) == 0:
-                return
-
             for index in reversed(indices):
                 del self.initiative_list[index]
 
