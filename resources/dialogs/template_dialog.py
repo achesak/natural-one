@@ -11,6 +11,7 @@
 
 from gi.repository import Gtk, Gdk, Gio
 
+import resources.dialogs.generic_dialogs as generic_dialogs
 from resources.window import DiceRollerWindow
 
 
@@ -417,6 +418,11 @@ class TemplateDialog(Gtk.Dialog):
             indices.append(int(str(i)))
 
         if len(indices) == 0:
+            return
+
+        message_text = "th%s %d roll%s" % ("ese" if len(indices) != 1 else "is", len(indices), "s" if len(indices) != 1 else "")
+        confirm_response = generic_dialogs.question(self, "Templates", "Are you sure you want to remove %s?" % message_text)
+        if confirm_response != Gtk.ResponseType.OK:
             return
 
         for index in reversed(indices):
