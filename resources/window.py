@@ -579,7 +579,7 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         self.stack.add_titled(dice_grid, "basic", "Basic")
         self.stack.add_titled(combat_grid, "combat", "Combat")
         self.stack.add_titled(templates_grid, "templates", "Templates")
-        self.stack.add_titled(init_grid, "initiative", "Initiative")
+        self.stack.add_titled(init_grid, "initiative", "Initiatives")
 
     @staticmethod
     def add_error(widget):
