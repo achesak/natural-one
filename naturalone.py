@@ -411,13 +411,16 @@ class DiceRoller(Gtk.Application):
         rolls = dlg.rolls
         dlg.destroy()
 
-        if response != Gtk.ResponseType.OK or name == "" or len(rolls) == 0:
+        if response != Gtk.ResponseType.OK or name == "":
             return
 
-        self.templates[index] = {
-            "name": name,
-            "rolls": rolls
-        }
+        if len(rolls) == 0:
+            del self.templates[index]
+        else:
+            self.templates[index] = {
+                "name": name,
+                "rolls": rolls
+            }
 
         io.save_templates(self.templates)
 
