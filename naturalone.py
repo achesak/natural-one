@@ -123,6 +123,8 @@ class DiceRoller(Gtk.Application):
         self.window.clear_init_btn.connect("clicked", lambda x: self.remove_initiative(clear=True))
         self.window.init_tree.connect("drag-end", lambda x, y: self.reorder_initiative())
 
+        self.window.register_limit_inputs()
+
     def fill_weapon_list(self, index):
         """Fills the weapon list with data from the selected system."""
 

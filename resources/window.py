@@ -627,3 +627,48 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         else:
             self.mod_init_lbl.set_text("Initiative")
             self.roll_init_btn.set_label("Add")
+
+    @staticmethod
+    def limit_number_input(widget, allow_negative=True, allow_comma=False, allow_whitespace=False):
+        """Restricts input to numbers only."""
+
+        allowed = "0123456789"
+        if allow_negative:
+            allowed += "-"
+        if allow_comma:
+            allowed += ","
+        if allow_whitespace:
+            allowed += " \t"
+
+        text = widget.get_text()
+        filtered_text = "".join([char for char in text if char in allowed])
+        if not allow_comma and not allow_whitespace and len(filtered_text) > 1:
+            suffix = filtered_text[1:]
+            suffix = "".join([char for char in suffix if char != "-"])
+            filtered_text = filtered_text[0] + suffix
+        widget.set_text(filtered_text)
+
+    def register_limit_inputs(self):
+        """Registers which inputs should be limited."""
+
+        number_inputs = [
+            self.d4_mod_ent, self.d6_mod_ent, self.d8_mod_ent, self.d10_mod_ent, self.d12_mod_ent, self.d20_mod_ent,
+            self.dq_mod_ent, self.min_ent, self.min_dam_ent, self.mod_init_ent
+        ]
+        count_inputs = [
+            self.d4_count_ent, self.d6_count_ent, self.d8_count_ent, self.d10_count_ent, self.d12_count_ent,
+            self.d20_count_ent, self.dq_mod_ent, self.dq_size_ent, self.num_atks_ent, self.crit_atks_ent,
+            self.num_dam_ent
+        ]
+        mod_inputs = [
+            self.mod_atks_ent, self.mod_dam_ent
+        ]
+
+        for input in number_inputs:
+            input.connect("changed", self.limit_number_input)
+
+        for input in count_inputs:
+            input.connect("changed", lambda input=input: self.limit_number_input(input, allow_negative=False))
+
+        for input in mod_inputs:
+            input.connect("changed", lambda input=input: self.limit_number_input(input, allow_comma=True, allow_whitespace=True))
