@@ -11,6 +11,8 @@
 
 from gi.repository import Gtk, Gdk, Gio
 
+import copy
+
 import resources.dialogs.generic_dialogs as generic_dialogs
 from resources.window import DiceRollerWindow
 
@@ -21,7 +23,7 @@ class TemplateDialog(Gtk.Dialog):
 
         if rolls is None:
             rolls = []
-        self.rolls = rolls
+        self.rolls = copy.deepcopy(rolls)
         self.name = name
 
         Gtk.Dialog.__init__(self, "Template", parent, Gtk.DialogFlags.MODAL, use_header_bar=True)
