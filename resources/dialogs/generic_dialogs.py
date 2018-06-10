@@ -12,20 +12,20 @@
 from gi.repository import Gtk
 
 
-def error(title="", message="", buttons=Gtk.DialogType.OK):
+def error(parent, title="", message="", buttons=Gtk.ButtonsType.OK):
     """Shows an error dialog."""
 
-    dialog = Gtk.MessageDialog(self, 0, Gtk.MessageType.ERROR, buttons, title)
+    dialog = Gtk.MessageDialog(parent, 0, Gtk.MessageType.ERROR, buttons, title)
     dialog.format_secondary_text(message)
     response = dialog.run()
     dialog.destroy()
     return response
 
 
-def question(title="", message="", buttons=Gtk.DialogType.OK_CANCEL):
+def question(parent, title="", message="", buttons=Gtk.ButtonsType.OK_CANCEL):
     """Shows a question dialog."""
 
-    dialog = Gtk.MessageDialog(self, 0, Gtk.MessageType.QUESTION, buttons, title)
+    dialog = Gtk.MessageDialog(parent, 0, Gtk.MessageType.QUESTION, buttons, title)
     dialog.format_secondary_text(message)
     response = dialog.run()
     dialog.destroy()

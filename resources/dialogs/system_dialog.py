@@ -19,6 +19,8 @@ import uuid
 
 import resources.io as io
 
+import resources.dialogs.generic_dialogs as generic_dialogs
+
 
 class SystemDialog(Gtk.Dialog):
 
@@ -162,10 +164,7 @@ class SystemDialog(Gtk.Dialog):
             errors.append("System name is already in use.")
 
         if len(errors):
-            error_dialog = Gtk.MessageDialog(self, 0, Gtk.MessageType.ERROR, Gtk.ButtonsType.OK, "Add system")
-            error_dialog.format_secondary_text("There was at least one issue with the selected file:\n\n" + "\n".join(errors))
-            error_dialog.run()
-            error_dialog.destroy()
+            generic_dialogs.error(self, "Systems", "There was at least one issue with the selected file:\n\n" + "\n".join(errors))
             return
 
         new_filename = str(uuid.uuid4()) + ".json"
