@@ -11,6 +11,8 @@
 
 from gi.repository import Gtk, Gdk, Gio
 
+from resources.window import DiceRollerWindow
+
 
 class TemplateDialog(Gtk.Dialog):
 
@@ -210,6 +212,8 @@ class TemplateDialog(Gtk.Dialog):
         self.roll_tree.connect("row-activated", lambda x, y, z: self.edit_roll())
         self.desc_ent.connect("changed", lambda x: self.check_edit_name())
 
+        self.register_limit_inputs()
+
         if self.name is not None:
             self.name_ent.set_text(self.name)
         self.update_list()
@@ -227,6 +231,22 @@ class TemplateDialog(Gtk.Dialog):
         """Removes the error class from a widget."""
 
         widget.get_style_context().remove_class("bad-input")
+
+    def register_limit_inputs(self):
+        """Registers which inputs should be limited."""
+
+        number_inputs = [
+            self.mod_ent, self.min_ent
+        ]
+        count_inputs = [
+            self.count_ent, self.die_ent, self.crit_ent
+        ]
+
+        for input in number_inputs:
+            input.connect("changed", DiceRollerWindow.limit_number_input)
+
+        for input in count_inputs:
+            input.connect("changed", lambda input=input: DiceRollerWindow.limit_number_input(input, allow_negative=False))
 
     def check_edit_name(self):
         """Checks if the current roll is being added or edited."""
