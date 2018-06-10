@@ -436,6 +436,12 @@ class DiceRoller(Gtk.Application):
         if len(indices) == 0:
             return
 
+        message_text = "th%s %d template%s" % ("ese" if len(indices) != 1 else "is", len(indices), "s" if len(indices) != 1 else "")
+        confirm_response = generic_dialogs.question(self.window, "Templates",
+                                                    "Are you sure you want to remove %s?" % message_text)
+        if confirm_response != Gtk.ResponseType.OK:
+            return
+
         for index in reversed(indices):
             del self.templates[index]
 
@@ -548,7 +554,7 @@ class DiceRoller(Gtk.Application):
         else:
             message_text = "th%s %d initiative%s" % \
                            ("ese" if len(indices) != 1 else "is", len(indices), "s" if len(indices) != 1 else "")
-        confirm_response = generic_dialogs.question(self.window, "Remove initiative",
+        confirm_response = generic_dialogs.question(self.window, "Initiatives",
                                                     "Are you sure you want to remove %s?" % message_text)
         if confirm_response != Gtk.ResponseType.OK:
             return
