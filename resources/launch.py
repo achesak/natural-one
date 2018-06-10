@@ -10,7 +10,10 @@
 
 
 import json
+import os
 import sys
+
+import resources.io as io
 
 
 def get_menu_data():
@@ -24,25 +27,23 @@ def get_menu_data():
         sys.exit()
 
 
-def get_weapon_data():
+def get_weapon_data(systems):
     """Reads and parses the weapon data."""
 
-    try:
-        with open("resources/data/weapons.json", "r") as weapon_file:
-            meta_data = json.load(weapon_file)
-    except (IOError, TypeError, ValueError) as e:
-        print("get_weapon_data(): Error reading weapons meta file:\n%s" % e)
-        sys.exit()
-
-    systems = [system["name"] for system in meta_data["systems"]]
+    system_names = [system["name"] for system in systems["systems"] if system["enabled"]]
     data = []
-    for system in meta_data["systems"]:
+    for system in systems["systems"]:
+        if not system["enabled"]:
+            continue
+        if system["user_added"]:
+            path = os.path.join(io.get_systems_dir(), system["filename"])
+        else:
+            path = os.path.join("resources/data/weapons", system["filename"])
         try:
-            with open("resources/data/weapons/%s" % system["filename"]) as data_file:
+            with open(path) as data_file:
                 data.append(json.load(data_file))
         except (IOError, TypeError, ValueError) as e:
-            print("get_weapon_data(): Error reading weapons data file %s:\n%s" % (system["filename"], e))
+            print("get_weapon_data(): Error reading weapons data file %s:\n%s" % (path, e))
             sys.exit()
 
-    return systems, data
-
+    return system_names, data

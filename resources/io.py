@@ -10,9 +10,12 @@
 
 
 import json
-import sys
 import os
 import platform
+import shutil
+import sys
+
+import launch
 
 
 def get_main_dir():
@@ -42,30 +45,40 @@ def get_systems_dir():
     return systems_path
 
 
-def get_systems_path():
+def get_systems_settings_path():
     """Returns the path to the systems settings file."""
 
     root_path = get_main_dir()
     return os.path.join(root_path, "systems.json")
 
 
-def load_systems():
+def create_systems_settings():
+    """Copies default systems settings to user data."""
+
+    try:
+        shutil.copyfile("resources/data/weapons.json", get_systems_settings_path())
+    except IOError:
+        print("IOError copying systems settings")
+        sys.exit()
+
+
+def load_systems_settings():
     """Loads the systems settings."""
 
-    with open(get_systems_path(), "a+") as systems_file:
+    with open(get_systems_settings_path(), "a+") as systems_file:
         systems_file.seek(0)
         try:
             return json.load(systems_file)
         except (IOError, TypeError, ValueError):
-            systems_file.write("{}")
-            return {}
+            create_systems_settings()
+            return load_systems_settings()
 
 
-def save_systems(systems):
+def save_systems_settings(systems):
     """Saves the systems settings."""
 
     try:
-        with open(get_systems_path(), "w") as systems_file:
+        with open(get_systems_settings_path(), "w") as systems_file:
             json.dump(systems, systems_file)
     except IOError:
         print("IOError saving systems")

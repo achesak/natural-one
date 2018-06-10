@@ -2,27 +2,39 @@
     "systems": [
         {
             "name": "Pathfinder",
-            "filename": "pathfinder.json"
+            "filename": "pathfinder.json",
+            "enabled": true,
+            "user_added": false
         },
         {
             "name": "Starfinder",
-            "filename": "starfinder.json"
+            "filename": "starfinder.json",
+            "enabled": true,
+            "user_added": false
         },
         {
             "name": "D&D 3.5e",
-            "filename": "dnd35e.json"
+            "filename": "dnd35e.json",
+            "enabled": true,
+            "user_added": false
         },
         {
             "name": "D&D 4e",
-            "filename": "dnd4e.json"
+            "filename": "dnd4e.json",
+            "enabled": true,
+            "user_added": false
         },
         {
             "name": "D&D 5e",
-            "filename": "dnd5e.json"
+            "filename": "dnd5e.json",
+            "enabled": true,
+            "user_added": false
         },
         {
             "name": "The Modern Path",
-            "filename": "themodernpath.json"
+            "filename": "themodernpath.json",
+            "enabled": false,
+            "user_added": false
         }
     ]
 }

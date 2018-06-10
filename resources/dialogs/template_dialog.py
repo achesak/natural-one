@@ -24,7 +24,7 @@ class TemplateDialog(Gtk.Dialog):
         Gtk.Dialog.__init__(self, "Template", parent, Gtk.DialogFlags.MODAL, use_header_bar=True)
         self.set_size_request(600, 800)
         self.add_button("Cancel", Gtk.ResponseType.CANCEL)
-        self.add_button("Save", Gtk.ResponseType.OK)
+        self.add_button("OK", Gtk.ResponseType.OK)
 
         # Create the header bar.
         header = self.get_header_bar()

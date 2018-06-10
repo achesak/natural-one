@@ -18,8 +18,8 @@ import gi
 gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk, Gdk, GdkPixbuf, Gio
 
-import sys
 import random
+import sys
 
 import resources.launch as launch
 import resources.io as io
@@ -46,11 +46,12 @@ class DiceRoller(Gtk.Application):
 
         Gtk.Application.do_startup(self)
 
-        self.menu = launch.get_menu_data()
-        self.systems, self.weapon_data = launch.get_weapon_data()
-        self.current_system_index = 0
-
         self.templates = io.load_templates()
+        self.systems = io.load_systems_settings()
+
+        self.menu = launch.get_menu_data()
+        self.system_names, self.weapon_data = launch.get_weapon_data(self.systems)
+        self.current_system_index = 0
 
         self.initiative_list = []
 
@@ -79,9 +80,7 @@ class DiceRoller(Gtk.Application):
         """Fills interface fields and sets events."""
 
         # Fill the system data.
-        for system in self.systems:
-            self.window.sys_dam_cbox.append_text(system)
-        self.window.sys_dam_cbox.set_active(0)
+        self.fill_systems_list()
 
         # Fill the damage roll weapon data.
         self.fill_weapon_list(self.current_system_index)
@@ -125,10 +124,21 @@ class DiceRoller(Gtk.Application):
 
         self.window.register_limit_inputs()
 
+    def fill_systems_list(self):
+        """Fills the systems list."""
+
+        self.window.sys_dam_cbox.remove_all()
+        for system in self.system_names:
+            self.window.sys_dam_cbox.append_text(system)
+        self.window.sys_dam_cbox.set_active(0)
+
     def fill_weapon_list(self, index):
         """Fills the weapon list with data from the selected system."""
 
         self.window.weap_dam_store.clear()
+
+        if len(self.system_names) == 0:
+            return
 
         system_data = self.weapon_data[index]
         for i in range(0, len(system_data["data"])):
@@ -343,12 +353,21 @@ class DiceRoller(Gtk.Application):
     def manage_systems(self):
         """Adds or manages systems."""
 
-        dlg = SystemDialog(self.window, self.systems, self.weapon_data)
+        dlg = SystemDialog(self.window, self.systems, self.system_names, self.weapon_data)
         response = dlg.run()
+        new_systems = dlg.systems
         dlg.destroy()
 
         if response != Gtk.ResponseType.OK:
             return
+
+        self.systems["systems"] = new_systems
+        self.system_names, self.weapon_data = launch.get_weapon_data(self.systems)
+        io.save_systems_settings(self.systems)
+
+        self.current_system_index = 0
+        self.fill_systems_list()
+        self.fill_weapon_list(self.current_system_index)
 
     def new_template(self):
         """Creates a new template."""
