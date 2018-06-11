@@ -22,6 +22,16 @@ def error(parent, title="", message="", buttons=Gtk.ButtonsType.OK):
     return response
 
 
+def message(parent, title="", message="", buttons=Gtk.ButtonsType.OK):
+    """Shows a message dialog."""
+
+    dialog = Gtk.MessageDialog(parent, 0, Gtk.MessageType.INFO, buttons, title)
+    dialog.format_secondary_text(message)
+    response = dialog.run()
+    dialog.destroy()
+    return response
+
+
 def question(parent, title="", message="", buttons=Gtk.ButtonsType.OK_CANCEL):
     """Shows a question dialog."""
 

@@ -140,6 +140,7 @@ class SystemDialog(Gtk.Dialog):
 
         self.file_btn.connect("clicked", lambda x: self.add_system())
         self.system_tree.connect("drag-end", lambda x, y: self.reorder_systems())
+        self.delete_btn.connect("clicked", lambda x: self.remove_system())
         self.select_all_btn.connect("clicked", lambda x: self.set_all_enable_state(state=True))
         self.deselect_all_btn.connect("clicked", lambda x: self.set_all_enable_state(state=False))
 
@@ -205,6 +206,35 @@ class SystemDialog(Gtk.Dialog):
         self.system_names.append(system_name)
 
         self.update_systems_list()
+
+    def remove_system(self):
+        """Removes a system."""
+
+        model, treeiter = self.system_tree.get_selection().get_selected_rows()
+        indices = []
+        for i in treeiter:
+            indices.append(int(str(i)))
+
+        if len(indices) == 0:
+            return
+
+        message_text = "th%s %d system%s" % ("ese" if len(indices) != 1 else "is", len(indices), "s" if len(indices) != 1 else "")
+        confirm_response = generic_dialogs.question(self, "Systems", "Are you sure you want to remove %s?" % message_text)
+        if confirm_response != Gtk.ResponseType.OK:
+            return
+
+        show_base_message = False
+        for index in indices:
+            if not self.systems[index]["user_added"]:
+                show_base_message = True
+                continue
+            del self.system_names[self.system_names.index(self.systems[index]["name"])]
+            del self.systems[index]
+
+        self.update_systems_list()
+
+        if show_base_message:
+            generic_dialogs.message(self, "Systems", "Systems built in to Natural One cannot be removed.")
 
     def reorder_systems(self):
         """Reorders the systems list after a drag and drop."""
