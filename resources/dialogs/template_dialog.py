@@ -196,7 +196,7 @@ class TemplateDialog(Gtk.Dialog):
         self.delete_btn = Gtk.Button()
         delete_img = Gtk.Image.new_from_gicon(Gio.ThemedIcon(name="list-remove-symbolic"), Gtk.IconSize.BUTTON)
         self.delete_btn.add(delete_img)
-        self.delete_btn.set_tooltip_text("Delete selected roll")
+        self.delete_btn.set_tooltip_text("Remoive selected roll")
         roll_btn_box.add(self.edit_btn)
         roll_btn_box.add(self.delete_btn)
 

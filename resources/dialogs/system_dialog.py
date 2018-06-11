@@ -9,7 +9,7 @@
 ################################################################################
 
 
-from gi.repository import Gtk, Gdk
+from gi.repository import Gtk, Gdk, Gio
 
 import copy
 import json
@@ -31,7 +31,7 @@ class SystemDialog(Gtk.Dialog):
         self.weapon_data = copy.deepcopy(weapon_data)
 
         Gtk.Dialog.__init__(self, "Systems", parent, Gtk.DialogFlags.MODAL, use_header_bar=True)
-        self.set_size_request(500, 600)
+        self.set_size_request(500, 650)
         self.add_button("Cancel", Gtk.ResponseType.CANCEL)
         self.add_button("OK", Gtk.ResponseType.OK)
 
@@ -107,10 +107,34 @@ class SystemDialog(Gtk.Dialog):
         self.system_tree.append_column(self.source_col)
         system_scroll_win.add(self.system_tree)
 
+        # Create the system list action bar.
+        self.system_action_bar = Gtk.ActionBar()
+        system_grid.attach_next_to(self.system_action_bar, system_scroll_win, Gtk.PositionType.BOTTOM, 1, 1)
+
+        # Create the system list buttons.
+        system_btn_box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL)
+        Gtk.StyleContext.add_class(system_btn_box.get_style_context(), "linked")
+        self.system_action_bar.pack_end(system_btn_box)
+        self.delete_btn = Gtk.Button()
+        delete_img = Gtk.Image.new_from_gicon(Gio.ThemedIcon(name="list-remove-symbolic"), Gtk.IconSize.BUTTON)
+        self.delete_btn.add(delete_img)
+        self.delete_btn.set_tooltip_text("Remove selected system")
+        self.system_action_bar.pack_start(self.delete_btn)
+        self.select_all_btn = Gtk.Button()
+        select_all_img = Gtk.Image.new_from_gicon(Gio.ThemedIcon(name="edit-select-all-symbolic"), Gtk.IconSize.BUTTON)
+        self.select_all_btn.add(select_all_img)
+        self.select_all_btn.set_tooltip_text("Enable all")
+        self.deselect_all_btn = Gtk.Button()
+        deselect_all_img = Gtk.Image.new_from_gicon(Gio.ThemedIcon(name="emblem-unreadable-symbolic"), Gtk.IconSize.BUTTON)
+        self.deselect_all_btn.add(deselect_all_img)
+        self.deselect_all_btn.set_tooltip_text("Disable all")
+        system_btn_box.add(self.select_all_btn)
+        system_btn_box.add(self.deselect_all_btn)
+
         # Create the systems drag and drop help text.
         drag_sys_lbl = Gtk.Label("Drag and drop to re-arrange systems")
         drag_sys_lbl.set_margin_top(10)
-        system_grid.attach_next_to(drag_sys_lbl, system_scroll_win, Gtk.PositionType.BOTTOM, 1, 1)
+        system_grid.attach_next_to(drag_sys_lbl, self.system_action_bar, Gtk.PositionType.BOTTOM, 1, 1)
 
         self.update_systems_list()
 
