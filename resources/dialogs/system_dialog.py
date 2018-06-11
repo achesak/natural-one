@@ -13,6 +13,7 @@ from gi.repository import Gtk, Gdk, Gio
 
 import copy
 import json
+import os
 import os.path
 import shutil
 import uuid
@@ -228,6 +229,9 @@ class SystemDialog(Gtk.Dialog):
             if not self.systems[index]["user_added"]:
                 show_base_message = True
                 continue
+            system_path = os.path.join(io.get_systems_dir(), self.systems[index]["filename"])
+            if os.path.exists(system_path):
+                os.remove(system_path)
             del self.system_names[self.system_names.index(self.systems[index]["name"])]
             del self.systems[index]
 
