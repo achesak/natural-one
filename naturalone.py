@@ -285,6 +285,8 @@ class DiceRoller(Gtk.Application):
     def roll_dmg(self):
         """Rolls damage."""
 
+        if len(self.system_names) == 0:
+            return
         system_data = self.weapon_data[self.current_system_index]["data"]
 
         valid = True
