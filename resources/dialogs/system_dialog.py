@@ -140,6 +140,8 @@ class SystemDialog(Gtk.Dialog):
 
         self.file_btn.connect("clicked", lambda x: self.add_system())
         self.system_tree.connect("drag-end", lambda x, y: self.reorder_systems())
+        self.select_all_btn.connect("clicked", lambda x: self.set_all_enable_state(state=True))
+        self.deselect_all_btn.connect("clicked", lambda x: self.set_all_enable_state(state=False))
 
         save_btn = self.get_widget_for_response(response_id=Gtk.ResponseType.OK)
         save_btn.set_can_default(True)
@@ -218,3 +220,10 @@ class SystemDialog(Gtk.Dialog):
             new_systems.append(copy.deepcopy(self.systems[original_index]))
 
         self.systems = new_systems
+
+    def set_all_enable_state(self, state=True):
+        """Enables or disables all systems."""
+
+        for row_index in range(len(self.system_store)):
+            self.system_store[row_index][0] = state
+            self.systems[row_index]["enabled"] = state
