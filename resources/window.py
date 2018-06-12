@@ -612,7 +612,8 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
     def update_output(self, new_text):
         """Updates the textview with new output."""
 
-        new_text += "\n\n"
+        if self.results_buffer.get_text(self.results_buffer.get_start_iter(), self.results_buffer.get_end_iter(), False) != "":
+            new_text += "\n\n"
         self.results_buffer.insert_markup(self.results_buffer.get_start_iter(), new_text, len(new_text))
 
     def toggle_initiative_mode(self):
