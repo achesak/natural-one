@@ -669,7 +669,7 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
             input.connect("changed", self.limit_number_input)
 
         for input in count_inputs:
-            input.connect("changed", lambda input=input: self.limit_number_input(input, allow_negative=False))
+            input.connect("changed", lambda i=i: self.limit_number_input(i, allow_negative=False))
 
         for input in mod_inputs:
-            input.connect("changed", lambda input=input: self.limit_number_input(input, allow_comma=True, allow_whitespace=True))
+            input.connect("changed", lambda i=i: self.limit_number_input(i, allow_comma=True, allow_whitespace=True))
