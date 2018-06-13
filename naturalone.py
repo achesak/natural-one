@@ -87,9 +87,7 @@ class DiceRoller(Gtk.Application):
         self.fill_weapon_list(self.current_system_index)
 
         # Fill the templates list.
-        self.window.template_store.clear()
-        for template in self.templates:
-            self.window.template_store.append([template["name"]])
+        self.update_templates()
 
         # Bind the events.
         self.window.clear_btn.connect("clicked",
@@ -374,6 +372,15 @@ class DiceRoller(Gtk.Application):
         self.fill_systems_list()
         self.fill_weapon_list(self.current_system_index)
 
+    def update_templates(self):
+        """Updates the templates list."""
+
+        self.templates.sort(key=lambda x: x["name"])
+
+        self.window.template_store.clear()
+        for template in self.templates:
+            self.window.template_store.append([template["name"]])
+
     def new_template(self):
         """Creates a new template."""
 
@@ -392,10 +399,7 @@ class DiceRoller(Gtk.Application):
         })
 
         io.save_templates(self.templates)
-
-        self.window.template_store.clear()
-        for template in self.templates:
-            self.window.template_store.append([template["name"]])
+        self.update_templates()
 
     def edit_template(self):
         """Edits a template."""
@@ -427,10 +431,7 @@ class DiceRoller(Gtk.Application):
             }
 
         io.save_templates(self.templates)
-
-        self.window.template_store.clear()
-        for template in self.templates:
-            self.window.template_store.append([template["name"]])
+        self.update_templates()
 
     def remove_template(self):
         """Removes a template."""
@@ -452,9 +453,7 @@ class DiceRoller(Gtk.Application):
         for index in reversed(indices):
             del self.templates[index]
 
-        self.window.template_store.clear()
-        for template in self.templates:
-            self.window.template_store.append([template["name"]])
+        self.update_templates()
 
     def roll_template(self):
         """Rolls a template."""
@@ -502,12 +501,7 @@ class DiceRoller(Gtk.Application):
         self.templates += new_templates
 
         io.save_templates(self.templates)
-
-        self.window.template_store.clear()
-        for template in self.templates:
-            self.window.template_store.append([template["name"]])
-
-        pass
+        self.update_templates()
 
     def export_templates(self):
         """Exports templates to a file."""
