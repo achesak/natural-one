@@ -477,11 +477,35 @@ class DiceRoller(Gtk.Application):
     def import_templates(self):
         """Imports templates from a file."""
 
-        # pick a file
+        dialog = Gtk.FileChooserDialog("Import templates", self.window, Gtk.FileChooserAction.OPEN,
+                                       (Gtk.STOCK_CANCEL, Gtk.ResponseType.CANCEL,
+                                        "Import", Gtk.ResponseType.OK))
 
-        # read as json
+        filter_json = Gtk.FileFilter()
+        filter_json.set_name("JSON template files")
+        filter_json.add_mime_type("application/json")
+        dialog.add_filter(filter_json)
 
-        # merge with existing templates; if conflict, ask user which to use
+        filter_any = Gtk.FileFilter()
+        filter_any.set_name("Any files")
+        filter_any.add_pattern("*")
+        dialog.add_filter(filter_any)
+
+        response = dialog.run()
+        filename = dialog.get_filename()
+        dialog.destroy()
+
+        if response != Gtk.ResponseType.OK or not filename:
+            return
+
+        new_templates = io.read_templates(filename)
+        self.templates += new_templates
+
+        io.save_templates(self.templates)
+
+        self.window.template_store.clear()
+        for template in self.templates:
+            self.window.template_store.append([template["name"]])
 
         pass
 
