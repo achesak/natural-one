@@ -115,6 +115,8 @@ class DiceRoller(Gtk.Application):
         self.window.new_btn.connect("clicked", lambda x: self.new_template())
         self.window.list_edit_btn.connect("clicked", lambda x: self.edit_template())
         self.window.list_delete_btn.connect("clicked", lambda x: self.remove_template())
+        self.window.list_open_btn.connect("clicked", lambda x: self.import_templates())
+        self.window.list_save_btn.connect("clicked", lambda x: self.export_templates())
         self.window.list_roll_btn.connect("clicked", lambda x: self.roll_template())
         self.window.template_tree.connect("row-activated", lambda x, y, z: self.roll_template())
         self.window.roll_init_rbtn.connect("toggled", lambda x: self.window.toggle_initiative_mode())
@@ -471,6 +473,47 @@ class DiceRoller(Gtk.Application):
         total, rolls = roller.template(template, crit_attack)
         output = formatter.template(template, rolls, crit_attack, total)
         self.window.update_output(output)
+
+    def import_templates(self):
+        """Imports templates from a file."""
+
+        # pick a file
+
+        # read as json
+
+        # merge with existing templates; if conflict, ask user which to use
+
+        pass
+
+    def export_templates(self):
+        """Exports templates to a file."""
+
+        if len(self.templates) == 0:
+            return
+
+        dialog = Gtk.FileChooserDialog("Export templates", self.window, Gtk.FileChooserAction.SAVE,
+                                       (Gtk.STOCK_CANCEL, Gtk.ResponseType.CANCEL,
+                                        "Export", Gtk.ResponseType.OK))
+        dialog.set_do_overwrite_confirmation(True)
+
+        filter_json = Gtk.FileFilter()
+        filter_json.set_name("JSON template files")
+        filter_json.add_mime_type("application/json")
+        dialog.add_filter(filter_json)
+
+        filter_any = Gtk.FileFilter()
+        filter_any.set_name("Any files")
+        filter_any.add_pattern("*")
+        dialog.add_filter(filter_any)
+
+        response = dialog.run()
+        filename = dialog.get_filename()
+        dialog.destroy()
+
+        if response != Gtk.ResponseType.OK or not filename:
+            return
+
+        io.write_templates(filename, self.templates)
 
     def add_initiative(self):
         """Adds to the initiative list directly."""

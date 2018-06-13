@@ -106,8 +106,24 @@ def load_templates():
 def save_templates(templates):
     """Saves the templates."""
 
+    write_templates(get_template_path(), templates)
+
+
+def read_templates(filename):
+    """Reads the templates from a file."""
+
+    with open(filename, "r") as template_file:
+        try:
+            return json.load(template_file)
+        except (IOError, TypeError, ValueError):
+            print("Error reading templates")
+
+
+def write_templates(filename, templates):
+    """Writes the templates to a file."""
+
     try:
-        with open(get_template_path(), "w") as template_file:
+        with open(filename, "w") as template_file:
             json.dump(templates, template_file)
     except IOError:
-        print("IOError saving templates")
+        print("IOError writing templates")
