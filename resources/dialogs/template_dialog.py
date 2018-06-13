@@ -249,7 +249,7 @@ class TemplateDialog(Gtk.Dialog):
             input.connect("changed", DiceRollerWindow.limit_number_input)
 
         for input in count_inputs:
-            input.connect("changed", lambda i=i: DiceRollerWindow.limit_number_input(i, allow_negative=False))
+            input.connect("changed", lambda i=input: DiceRollerWindow.limit_number_input(i, allow_negative=False))
 
     def check_edit_name(self):
         """Checks if the current roll is being added or edited."""
