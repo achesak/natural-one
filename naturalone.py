@@ -379,7 +379,7 @@ class DiceRoller(Gtk.Application):
 
         self.window.template_store.clear()
         for template in self.templates:
-            self.window.template_store.append([template["name"]])
+            self.window.template_store.append([template["name"], len(template["rolls"])])
 
     def new_template(self):
         """Creates a new template."""
