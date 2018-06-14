@@ -45,7 +45,7 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         self.clear_btn = Gtk.Button()
         clear_img = Gtk.Image.new_from_gicon(Gio.ThemedIcon(name="edit-clear-symbolic"), Gtk.IconSize.BUTTON)
         self.clear_btn.add(clear_img)
-        self.clear_btn.set_tooltip_text("Clear the output")
+        self.clear_btn.set_tooltip_text("Clear rolls")
         self.header.pack_end(self.clear_btn)
 
         # Create the Basic grid.
