@@ -176,50 +176,10 @@ class DiceRoller(Gtk.Application):
     def roll(self, die, count_ent, mod_ent):
         """Rolls the value."""
 
-        valid = True
-        self.window.remove_errors()
-
-        # Check validity of the entries.
-        count = -1
-        try:
-            count = int(count_ent.get_text().strip())
-        except ValueError:
-            self.window.add_error(count_ent)
-            valid = False
-
-        if count < 1:
-            self.window.add_error(count_ent)
-            valid = False
-
-        min_value = -1
-        min_text = self.window.min_ent.get_text().strip()
-        try:
-            min_value = int(min_text)
-        except ValueError:
-            if min_text == "":
-                min_value = - float("inf")
-            else:
-                self.window.add_error(self.window.min_ent)
-                valid = False
-
-        if count < 1:
-            self.window.add_error(count_ent)
-            valid = False
-
-        mod = -1
-        try:
-            mod = int(mod_ent.get_text().strip())
-        except ValueError:
-            self.window.add_error(mod_ent)
-            valid = False
-
-        if not valid:
-            return
-
-        mod_once = 0
-        mod_each = mod
-        if not self.window.dice_mod_chk.get_active():
-            mod_once, mod_each = mod_each, mod_once
+        count = self.window.int_or(count_ent, 1)
+        mod = self.window.int_or(mod_ent, 0)
+        mod_once, mod_each = (0, mod) if self.window.dice_mod_chk.get_active() else (mod, 0)
+        min_value = self.window.int_or(self.window.min_ent, -float("inf"))
 
         total, rolls = roller.basic(count, die, mod_each, mod_once, min_value)
         output = formatter.basic(count, die, mod_each, mod_once, rolls, total)
@@ -227,49 +187,16 @@ class DiceRoller(Gtk.Application):
 
     def roll_attack(self):
         """Rolls an attack."""
-        
-        valid = True
+
         self.window.remove_errors()
 
-        # Check validity of the entries.
-        num_atks = -1
-        try:
-            num_atks = int(self.window.num_atks_ent.get_text().strip())
-        except ValueError:
-            self.window.add_error(self.window.num_atks_ent)
-            valid = False
-
-        if num_atks < 1:
-            self.window.add_error(self.window.num_atks_ent)
-            valid = False
-
-        mods = []
-        try:
-            mods = self.window.mod_atks_ent.get_text().split(",")
-            mods = [x.strip() for x in mods]
-            mods = [int(x) for x in mods]
-        except ValueError:
-            self.window.add_error(self.window.mod_atks_ent)
-            valid = False
-
+        num_atks = self.window.int_or(self.window.num_atks_ent, 1)
+        mods = self.window.mods_or(self.window.mod_atks_ent, [0])
         mods = utility.expand_mod(mods, num_atks, False, 0)
+        crit_range = self.window.int_or(self.window.crit_atks_ent, 20)
 
-        try:
-            crit_range = int(self.window.crit_atks_ent.get_text().strip())
-        except ValueError:
-            self.window.add_error(self.window.crit_atks_ent)
-            crit_range = -1
-            valid = False
-        
-        if crit_range < 0 or crit_range > 20:
-            self.window.add_error(self.window.crit_atks_ent)
-            valid = False
-        
         stop_on_crit = self.window.stop_atks_chk.get_active()
         confirm_crit = self.window.confirm_atks_chk.get_active()
-
-        if not valid:
-            return
 
         rolls = roller.atk(num_atks, mods, crit_range, stop_on_crit, confirm_crit)
         output = formatter.atk(num_atks, mods, crit_range, rolls)
@@ -280,58 +207,22 @@ class DiceRoller(Gtk.Application):
 
         if len(self.system_names) == 0:
             return
+
         system_data = self.weapon_data[self.current_system_index]["data"]
 
-        valid = True
-        self.window.remove_errors()
-
-        # Check validity of the entries.
         model, weapon_iter = self.window.weap_dam_tree.get_selection().get_selected()
-        section_iter = None
-        weapon = None
-        if weapon_iter is not None:
-            section_iter = self.window.weap_dam_store.iter_parent(weapon_iter)
-        if weapon_iter is None or section_iter is None:
-            self.window.add_error(self.window.weap_dam_tree)
-            valid = False
-        else:
-            weapon = utility.get_weapon(system_data, model[weapon_iter][0], model[section_iter][0])
+        if weapon_iter is None:
+            return
+        section_iter = self.window.weap_dam_store.iter_parent(weapon_iter)
+        if section_iter is None:
+            return
+        weapon = utility.get_weapon(system_data, model[weapon_iter][0], model[section_iter][0])
 
         crit_attack = self.window.crit_dam_chk.get_active()
 
-        num_atks = -1
-        try:
-            num_atks = int(self.window.num_dam_ent.get_text().strip())
-        except ValueError:
-            self.window.add_error(self.window.num_dam_ent)
-            valid = False
-
-        if num_atks < 1:
-            self.window.add_error(self.window.num_dam_ent)
-            valid = False
-
-        min_value = -1
-        min_text = self.window.min_dam_ent.get_text().strip()
-        try:
-            min_value = int(min_text)
-        except ValueError:
-            if min_text == "":
-                min_value = - float("inf")
-            else:
-                self.window.add_error(self.window.min_dam_ent)
-                valid = False
-
-        mods = []
-        try:
-            mods = self.window.mod_dam_ent.get_text().split(",")
-            mods = [x.strip() for x in mods]
-            mods = [int(x) for x in mods]
-        except ValueError:
-            self.window.add_error(self.window.mod_dam_ent)
-            valid = False
-
-        if not valid:
-            return
+        num_atks = self.window.int_or(self.window.num_dam_ent, 1)
+        min_value = self.window.int_or(self.window.min_dam_ent, -float("inf"))
+        mods = self.window.mods_or(self.window.mod_dam_ent, [0])
 
         mods = utility.expand_mod(mods, num_atks, crit_attack, weapon["crit_mult"])
 
@@ -526,63 +417,22 @@ class DiceRoller(Gtk.Application):
 
         io.write_templates(filename, self.templates)
 
-    def add_initiative(self):
-        """Adds to the initiative list directly."""
-
-        valid = True
-        self.window.remove_errors()
-
-        name = self.window.name_init_ent.get_text().strip()
-        if not name:
-            self.window.add_error(self.window.name_init_ent)
-            valid = False
-
-        initiative = -1
-        try:
-            initiative = int(self.window.init_init_ent.get_text().strip())
-        except ValueError:
-            self.window.add_error(self.window.init_init_ent)
-            valid = False
-
-        if not valid:
-            return
-
-        self.initiative_list.append({
-            "name": name,
-            "initiative": initiative
-        })
-        self.initiative_list = sorted(self.initiative_list, reverse=True, key=lambda x: x["initiative"])
-
-        self.window.init_store.clear()
-        for init in self.initiative_list:
-            self.window.init_store.append([init["name"], init["initiative"]])
-
     def roll_initiative(self):
         """"Rolls for an initiative."""
 
-        valid = True
         self.window.remove_errors()
 
         name = self.window.name_init_ent.get_text().strip()
         if not name:
             self.window.add_error(self.window.name_init_ent)
-            valid = False
-
-        mod = -1
-        try:
-            mod = int(self.window.mod_init_ent.get_text().strip())
-        except ValueError:
-            self.window.add_error(self.window.mod_init_ent)
-            valid = False
-
-        if not valid:
             return
+
+        mod = self.window.int_or(self.window.mod_init_ent, 0)
 
         if self.window.roll_init_rbtn.get_active():
             initiative, _ = roller.basic(1, 20, mod, 0, -float("inf"))
             output = formatter.initiative(name, mod, initiative)
             self.window.update_output(output)
-
         else:
             initiative = mod
 
@@ -590,6 +440,7 @@ class DiceRoller(Gtk.Application):
             "name": name,
             "initiative": initiative
         })
+
         if self.window.sort_init_chk.get_active():
             self.initiative_list = sorted(self.initiative_list, reverse=True, key=lambda x: x["initiative"])
 
