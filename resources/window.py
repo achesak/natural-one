@@ -59,7 +59,7 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         d4_img = Gtk.Image.new_from_pixbuf(d4_pixbuf)
         dice_grid.attach(d4_img, 0, 0, 1, 1)
         self.d4_count_ent = Gtk.Entry()
-        self.d4_count_ent.set_text("1")
+        self.d4_count_ent.set_placeholder_text("1")
         self.d4_count_ent.set_width_chars(4)
         self.d4_count_ent.props.xalign = 0.5
         dice_grid.attach_next_to(self.d4_count_ent, d4_img, Gtk.PositionType.RIGHT, 1, 1)
@@ -68,7 +68,7 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         d4_plus_lbl = Gtk.Label("+")
         dice_grid.attach_next_to(d4_plus_lbl, d4_d_lbl, Gtk.PositionType.RIGHT, 1, 1)
         self.d4_mod_ent = Gtk.Entry()
-        self.d4_mod_ent.set_text("0")
+        self.d4_mod_ent.set_placeholder_text("0")
         self.d4_mod_ent.set_width_chars(4)
         self.d4_mod_ent.props.xalign = 0.5
         dice_grid.attach_next_to(self.d4_mod_ent, d4_plus_lbl, Gtk.PositionType.RIGHT, 1, 1)
@@ -80,7 +80,7 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         d6_img = Gtk.Image.new_from_pixbuf(d6_pixbuf)
         dice_grid.attach_next_to(d6_img, d4_img, Gtk.PositionType.BOTTOM, 1, 1)
         self.d6_count_ent = Gtk.Entry()
-        self.d6_count_ent.set_text("1")
+        self.d6_count_ent.set_placeholder_text("1")
         self.d6_count_ent.set_width_chars(4)
         self.d6_count_ent.props.xalign = 0.5
         dice_grid.attach_next_to(self.d6_count_ent, d6_img, Gtk.PositionType.RIGHT, 1, 1)
@@ -89,7 +89,7 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         d6_plus_lbl = Gtk.Label("+")
         dice_grid.attach_next_to(d6_plus_lbl, d6_d_lbl, Gtk.PositionType.RIGHT, 1, 1)
         self.d6_mod_ent = Gtk.Entry()
-        self.d6_mod_ent.set_text("0")
+        self.d6_mod_ent.set_placeholder_text("0")
         self.d6_mod_ent.set_width_chars(4)
         self.d6_mod_ent.props.xalign = 0.5
         dice_grid.attach_next_to(self.d6_mod_ent, d6_plus_lbl, Gtk.PositionType.RIGHT, 1, 1)
@@ -101,7 +101,7 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         d8_img = Gtk.Image.new_from_pixbuf(d8_pixbuf)
         dice_grid.attach_next_to(d8_img, d6_img, Gtk.PositionType.BOTTOM, 1, 1)
         self.d8_count_ent = Gtk.Entry()
-        self.d8_count_ent.set_text("1")
+        self.d8_count_ent.set_placeholder_text("1")
         self.d8_count_ent.set_width_chars(4)
         self.d8_count_ent.props.xalign = 0.5
         dice_grid.attach_next_to(self.d8_count_ent, d8_img, Gtk.PositionType.RIGHT, 1, 1)
@@ -110,7 +110,7 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         d8_plus_lbl = Gtk.Label("+")
         dice_grid.attach_next_to(d8_plus_lbl, d8_d_lbl, Gtk.PositionType.RIGHT, 1, 1)
         self.d8_mod_ent = Gtk.Entry()
-        self.d8_mod_ent.set_text("0")
+        self.d8_mod_ent.set_placeholder_text("0")
         self.d8_mod_ent.set_width_chars(4)
         self.d8_mod_ent.props.xalign = 0.5
         dice_grid.attach_next_to(self.d8_mod_ent, d8_plus_lbl, Gtk.PositionType.RIGHT, 1, 1)
@@ -122,7 +122,7 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         d10_img = Gtk.Image.new_from_pixbuf(d10_pixbuf)
         dice_grid.attach_next_to(d10_img, d8_img, Gtk.PositionType.BOTTOM, 1, 1)
         self.d10_count_ent = Gtk.Entry()
-        self.d10_count_ent.set_text("1")
+        self.d10_count_ent.set_placeholder_text("1")
         self.d10_count_ent.set_width_chars(4)
         self.d10_count_ent.props.xalign = 0.5
         dice_grid.attach_next_to(self.d10_count_ent, d10_img, Gtk.PositionType.RIGHT, 1, 1)
@@ -131,7 +131,7 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         d10_plus_lbl = Gtk.Label("+")
         dice_grid.attach_next_to(d10_plus_lbl, d10_d_lbl, Gtk.PositionType.RIGHT, 1, 1)
         self.d10_mod_ent = Gtk.Entry()
-        self.d10_mod_ent.set_text("0")
+        self.d10_mod_ent.set_placeholder_text("0")
         self.d10_mod_ent.set_width_chars(4)
         self.d10_mod_ent.props.xalign = 0.5
         dice_grid.attach_next_to(self.d10_mod_ent, d10_plus_lbl, Gtk.PositionType.RIGHT, 1, 1)
@@ -143,7 +143,7 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         d12_img = Gtk.Image.new_from_pixbuf(d12_pixbuf)
         dice_grid.attach_next_to(d12_img, d10_img, Gtk.PositionType.BOTTOM, 1, 1)
         self.d12_count_ent = Gtk.Entry()
-        self.d12_count_ent.set_text("1")
+        self.d12_count_ent.set_placeholder_text("1")
         self.d12_count_ent.set_width_chars(4)
         self.d12_count_ent.props.xalign = 0.5
         dice_grid.attach_next_to(self.d12_count_ent, d12_img, Gtk.PositionType.RIGHT, 1, 1)
@@ -152,7 +152,7 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         d12_plus_lbl = Gtk.Label("+")
         dice_grid.attach_next_to(d12_plus_lbl, d12_d_lbl, Gtk.PositionType.RIGHT, 1, 1)
         self.d12_mod_ent = Gtk.Entry()
-        self.d12_mod_ent.set_text("0")
+        self.d12_mod_ent.set_placeholder_text("0")
         self.d12_mod_ent.set_width_chars(4)
         self.d12_mod_ent.props.xalign = 0.5
         dice_grid.attach_next_to(self.d12_mod_ent, d12_plus_lbl, Gtk.PositionType.RIGHT, 1, 1)
@@ -164,7 +164,7 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         d20_img = Gtk.Image.new_from_pixbuf(d20_pixbuf)
         dice_grid.attach_next_to(d20_img, d12_img, Gtk.PositionType.BOTTOM, 1, 1)
         self.d20_count_ent = Gtk.Entry()
-        self.d20_count_ent.set_text("1")
+        self.d20_count_ent.set_placeholder_text("1")
         self.d20_count_ent.set_width_chars(4)
         self.d20_count_ent.props.xalign = 0.5
         dice_grid.attach_next_to(self.d20_count_ent, d20_img, Gtk.PositionType.RIGHT, 1, 1)
@@ -173,7 +173,7 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         d20_plus_lbl = Gtk.Label("+")
         dice_grid.attach_next_to(d20_plus_lbl, d20_d_lbl, Gtk.PositionType.RIGHT, 1, 1)
         self.d20_mod_ent = Gtk.Entry()
-        self.d20_mod_ent.set_text("0")
+        self.d20_mod_ent.set_placeholder_text("0")
         self.d20_mod_ent.set_width_chars(4)
         self.d20_mod_ent.props.xalign = 0.5
         dice_grid.attach_next_to(self.d20_mod_ent, d20_plus_lbl, Gtk.PositionType.RIGHT, 1, 1)
@@ -185,7 +185,7 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         dq_img = Gtk.Image.new_from_pixbuf(dq_pixbuf)
         dice_grid.attach_next_to(dq_img, d20_img, Gtk.PositionType.BOTTOM, 1, 1)
         self.dq_count_ent = Gtk.Entry()
-        self.dq_count_ent.set_text("1")
+        self.dq_count_ent.set_placeholder_text("1")
         self.dq_count_ent.set_width_chars(4)
         self.dq_count_ent.props.xalign = 0.5
         dice_grid.attach_next_to(self.dq_count_ent, dq_img, Gtk.PositionType.RIGHT, 1, 1)
@@ -202,7 +202,7 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         dq_plus_lbl = Gtk.Label("+")
         dice_grid.attach_next_to(dq_plus_lbl, dq_box, Gtk.PositionType.RIGHT, 1, 1)
         self.dq_mod_ent = Gtk.Entry()
-        self.dq_mod_ent.set_text("0")
+        self.dq_mod_ent.set_placeholder_text("0")
         self.dq_mod_ent.set_width_chars(4)
         self.dq_mod_ent.props.xalign = 0.5
         dice_grid.attach_next_to(self.dq_mod_ent, dq_plus_lbl, Gtk.PositionType.RIGHT, 1, 1)
@@ -242,7 +242,7 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         combat_grid.attach_next_to(num_atks_lbl, atk_lbl, Gtk.PositionType.BOTTOM, 1, 1)
         self.num_atks_ent = Gtk.Entry()
         self.num_atks_ent.set_hexpand(True)
-        self.num_atks_ent.set_text("1")
+        self.num_atks_ent.set_placeholder_text("1")
         combat_grid.attach_next_to(self.num_atks_ent, num_atks_lbl, Gtk.PositionType.RIGHT, 3, 1)
 
         # Create the modifiers row.
@@ -251,7 +251,7 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         combat_grid.attach_next_to(mod_atks_lbl, num_atks_lbl, Gtk.PositionType.BOTTOM, 1, 1)
         self.mod_atks_ent = Gtk.Entry()
         self.mod_atks_ent.set_hexpand(True)
-        self.mod_atks_ent.set_text("0")
+        self.mod_atks_ent.set_placeholder_text("0")
         combat_grid.attach_next_to(self.mod_atks_ent, mod_atks_lbl, Gtk.PositionType.RIGHT, 3, 1)
 
         # Create the critical range row.
@@ -261,7 +261,7 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         crit_atks_box = Gtk.Box(Gtk.Orientation.HORIZONTAL)
         self.crit_atks_ent = Gtk.Entry()
         self.crit_atks_ent.set_hexpand(True)
-        self.crit_atks_ent.set_text("20")
+        self.crit_atks_ent.set_placeholder_text("20")
         crit_20_atks_lbl = Gtk.Label("- 20")
         crit_20_atks_lbl.set_alignment(1, 0.5)
         crit_20_atks_lbl.set_margin_left(5)
@@ -327,7 +327,7 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         combat_grid.attach_next_to(num_dam_lbl, dam_scroll_win, Gtk.PositionType.BOTTOM, 1, 1)
         self.num_dam_ent = Gtk.Entry()
         self.num_dam_ent.set_hexpand(True)
-        self.num_dam_ent.set_text("1")
+        self.num_dam_ent.set_placeholder_text("1")
         combat_grid.attach_next_to(self.num_dam_ent, num_dam_lbl, Gtk.PositionType.RIGHT, 3, 1)
 
         # Create the damage modifier row.
@@ -336,7 +336,7 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         combat_grid.attach_next_to(mod_dam_lbl, num_dam_lbl, Gtk.PositionType.BOTTOM, 1, 1)
         self.mod_dam_ent = Gtk.Entry()
         self.mod_dam_ent.set_hexpand(True)
-        self.mod_dam_ent.set_text("0")
+        self.mod_dam_ent.set_placeholder_text("0")
         combat_grid.attach_next_to(self.mod_dam_ent, mod_dam_lbl, Gtk.PositionType.RIGHT, 3, 1)
 
         # Create the minimum value row.
@@ -497,7 +497,7 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         Gtk.StyleContext.add_class(mod_init_box.get_style_context(), "linked")
         self.mod_init_ent = Gtk.Entry()
         self.mod_init_ent.set_hexpand(True)
-        self.mod_init_ent.set_text("0")
+        self.mod_init_ent.set_placeholder_text("0")
         mod_init_box.add(self.mod_init_ent)
         self.roll_init_btn = Gtk.Button("Roll")
         mod_init_box.add(self.roll_init_btn)
@@ -646,7 +646,7 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
             self.roll_init_btn.set_label("Add")
 
     @staticmethod
-    def limit_number_input(widget, allow_negative=True, allow_comma=False, allow_whitespace=False):
+    def limit_number_input(widget, allow_negative=True, allow_comma=False, allow_whitespace=False, max_limit=None):
         """Restricts input to numbers only."""
 
         allowed = "0123456789"
@@ -663,6 +663,13 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
             suffix = filtered_text[1:]
             suffix = "".join([char for char in suffix if char != "-"])
             filtered_text = filtered_text[0] + suffix
+
+        try:
+            if max_limit is not None and int(filtered_text) > max_limit:
+                filtered_text = str(max_limit)
+        except ValueError:
+            pass
+
         widget.set_text(filtered_text)
 
     def register_limit_inputs(self):
@@ -674,8 +681,7 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         ]
         count_inputs = [
             self.d4_count_ent, self.d6_count_ent, self.d8_count_ent, self.d10_count_ent, self.d12_count_ent,
-            self.d20_count_ent, self.dq_mod_ent, self.dq_size_ent, self.num_atks_ent, self.crit_atks_ent,
-            self.num_dam_ent
+            self.d20_count_ent, self.dq_mod_ent, self.dq_size_ent, self.num_atks_ent, self.num_dam_ent
         ]
         mod_inputs = [
             self.mod_atks_ent, self.mod_dam_ent
@@ -689,3 +695,26 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
 
         for input in mod_inputs:
             input.connect("changed", lambda i=input: self.limit_number_input(i, allow_comma=True, allow_whitespace=True))
+
+        self.crit_atks_ent.connect("changed", lambda i: self.limit_number_input(i, allow_negative=False, max_limit=20))
+
+    @staticmethod
+    def int_or(widget, default):
+        """Gets the int value of a widget, or a default value."""
+
+        try:
+            return int(widget.get_text().strip())
+        except ValueError:
+            return default
+
+    @staticmethod
+    def mods_or(widget, default):
+        """Gets a set of mods, or a default value."""
+
+        try:
+            mods = widget.get_text().split(",")
+            mods = [x.strip() for x in mods]
+            mods = [int(x) for x in mods]
+            return mods
+        except ValueError:
+            return default
