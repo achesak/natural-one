@@ -386,7 +386,6 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         templates_grid.attach_next_to(templates_scroll_win, list_lbl, Gtk.PositionType.BOTTOM, 1, 1)
         self.template_store = Gtk.ListStore(str)
         self.template_tree = Gtk.TreeView(model=self.template_store)
-        self.template_tree.set_headers_visible(False)
         self.template_tree.get_selection().set_mode(Gtk.SelectionMode.MULTIPLE)
         renderer = Gtk.CellRendererText()
         column = Gtk.TreeViewColumn("Name", renderer, text=0)
