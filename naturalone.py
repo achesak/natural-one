@@ -90,20 +90,13 @@ class DiceRoller(Gtk.Application):
         self.update_templates()
 
         # Bind the events.
-        self.window.clear_btn.connect("clicked",
-                                      lambda x: self.window.results_buffer.set_text(""))
-        self.window.d4_btn.connect("clicked",
-                                   lambda x: self.roll(4, self.window.d4_count_ent, self.window.d4_mod_ent))
-        self.window.d6_btn.connect("clicked",
-                                   lambda x: self.roll(6, self.window.d6_count_ent, self.window.d6_mod_ent))
-        self.window.d8_btn.connect("clicked",
-                                   lambda x: self.roll(8, self.window.d8_count_ent, self.window.d8_mod_ent))
-        self.window.d10_btn.connect("clicked",
-                                    lambda x: self.roll(10, self.window.d10_count_ent, self.window.d10_mod_ent))
-        self.window.d12_btn.connect("clicked",
-                                    lambda x: self.roll(12, self.window.d12_count_ent, self.window.d12_mod_ent))
-        self.window.d20_btn.connect("clicked",
-                                    lambda x: self.roll(20, self.window.d20_count_ent, self.window.d20_mod_ent))
+        self.window.clear_btn.connect("clicked", lambda x: self.window.results_buffer.set_text(""))
+        self.window.d4_btn.connect("clicked", lambda x: self.roll(4, self.window.d4_count_ent, self.window.d4_mod_ent))
+        self.window.d6_btn.connect("clicked", lambda x: self.roll(6, self.window.d6_count_ent, self.window.d6_mod_ent))
+        self.window.d8_btn.connect("clicked", lambda x: self.roll(8, self.window.d8_count_ent, self.window.d8_mod_ent))
+        self.window.d10_btn.connect("clicked", lambda x: self.roll(10, self.window.d10_count_ent, self.window.d10_mod_ent))
+        self.window.d12_btn.connect("clicked", lambda x: self.roll(12, self.window.d12_count_ent, self.window.d12_mod_ent))
+        self.window.d20_btn.connect("clicked", lambda x: self.roll(20, self.window.d20_count_ent, self.window.d20_mod_ent))
         self.window.dq_btn.connect("clicked", lambda x: self.roll_custom())
         self.window.atk_btn.connect("clicked", lambda x: self.roll_attack())
         self.window.sys_dam_cbox.connect("changed", lambda x: self.change_system())
