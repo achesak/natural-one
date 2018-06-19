@@ -80,16 +80,10 @@ class DiceRoller(Gtk.Application):
     def setup_interface(self):
         """Fills interface fields and sets events."""
 
-        # Fill the system data.
         self.fill_systems_list()
-
-        # Fill the damage roll weapon data.
         self.fill_weapon_list(self.current_system_index)
-
-        # Fill the templates list.
         self.update_templates()
 
-        # Bind the events.
         self.window.clear_btn.connect("clicked", lambda x: self.window.results_buffer.set_text(""))
         self.window.d4_btn.connect("clicked", lambda x: self.roll(4, self.window.d4_count_ent, self.window.d4_mod_ent))
         self.window.d6_btn.connect("clicked", lambda x: self.roll(6, self.window.d6_count_ent, self.window.d6_mod_ent))
