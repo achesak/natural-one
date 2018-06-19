@@ -1,21 +1,11 @@
 # -*- coding: utf-8 -*-
-
-
-################################################################################
-#
-# resources/io.py
-# This file defines functions for saving and loading user data.
-#
-################################################################################
-
-
 import json
 import os
 import platform
 import shutil
 import sys
 
-import launch
+import resources.launch as launch
 
 
 def get_main_dir():

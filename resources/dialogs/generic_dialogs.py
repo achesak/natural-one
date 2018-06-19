@@ -1,14 +1,4 @@
 # -*- coding: utf-8 -*-
-
-
-################################################################################
-#
-# resources/dialogs/generic_dialogs.py
-# These are generic dialogs for various purposes.
-#
-################################################################################
-
-
 from gi.repository import Gtk
 
 

@@ -1,19 +1,9 @@
 # -*- coding: utf-8 -*-
-
-
-################################################################################
-#
-# resources/dialogs/template_dialog.py
-# This dialog is used to add and edit templates.
-#
-################################################################################
-
-
-from gi.repository import Gtk, Gdk, Gio
-
 import copy
 
-import resources.dialogs.generic_dialogs as generic_dialogs
+from gi.repository import Gdk, Gio, Gtk
+
+from resources.dialogs.generic_dialogs import question
 from resources.window import DiceRollerWindow
 
 
@@ -423,7 +413,7 @@ class TemplateDialog(Gtk.Dialog):
             return
 
         message_text = "th%s %d roll%s" % ("ese" if len(indices) != 1 else "is", len(indices), "s" if len(indices) != 1 else "")
-        confirm_response = generic_dialogs.question(self, "Templates", "Are you sure you want to remove %s?" % message_text)
+        confirm_response = question(self, "Templates", "Are you sure you want to remove %s?" % message_text)
         if confirm_response != Gtk.ResponseType.OK:
             return
 

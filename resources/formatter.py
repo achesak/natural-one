@@ -1,14 +1,4 @@
 # -*- coding: utf-8 -*-
-
-
-################################################################################
-#
-# resources/formatter.py
-# This file contains functions for formatting dice roll output.
-#
-################################################################################
-
-
 from resources.rolls import *
 
 

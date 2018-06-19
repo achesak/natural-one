@@ -1,14 +1,6 @@
 # -*- coding: utf-8 -*-
 
 
-################################################################################
-#
-# resources/utility.py
-# This file contains functions for utility purposes.
-#
-################################################################################
-
-
 def expand_mod(mods, count, crit_applied, crit_mod):
     """Expands a modifier list as needed. Ensures len(mods) == count"""
 

@@ -1,17 +1,7 @@
 # -*- coding: utf-8 -*-
-
-
-################################################################################
-#
-# resources/window.py
-# This file defines the main UI.
-#
-################################################################################
-
-
 import gi
 gi.require_version("Gtk", "3.0")
-from gi.repository import Gtk, Gdk, GdkPixbuf, Gio
+from gi.repository import Gdk, GdkPixbuf, Gio, Gtk
 
 
 class DiceRollerWindow(Gtk.ApplicationWindow):

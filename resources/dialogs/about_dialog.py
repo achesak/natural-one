@@ -1,14 +1,4 @@
 # -*- coding: utf-8 -*-
-
-
-################################################################################
-#
-# resources/dialogs/about_dialog.py
-# This dialog displays information about the application.
-#
-################################################################################
-
-
 from gi.repository import Gtk
 
 

@@ -1,26 +1,14 @@
 # -*- coding: utf-8 -*-
-
-
-################################################################################
-#
-# resources/dialogs/system_dialog.py
-# This dialog is used to manage systems
-#
-################################################################################
-
-
-from gi.repository import Gtk, Gdk, Gio
-
 import copy
 import json
 import os
-import os.path
 import shutil
 import uuid
 
-import resources.io as io
+from gi.repository import Gdk, Gio, Gtk
 
-import resources.dialogs.generic_dialogs as generic_dialogs
+from resource.dialogs.generic_dialogs import error, message, question
+import resources.io as io
 
 
 class SystemDialog(Gtk.Dialog):
@@ -192,7 +180,7 @@ class SystemDialog(Gtk.Dialog):
             errors.append("System name is already in use.")
 
         if len(errors):
-            generic_dialogs.error(self, "Systems", "There was at least one issue with the selected file:\n\n" + "\n".join(errors))
+            error(self, "Systems", "There was at least one issue with the selected file:\n\n" + "\n".join(errors))
             return
 
         new_filename = str(uuid.uuid4()) + ".json"
@@ -220,7 +208,7 @@ class SystemDialog(Gtk.Dialog):
             return
 
         message_text = "th%s %d system%s" % ("ese" if len(indices) != 1 else "is", len(indices), "s" if len(indices) != 1 else "")
-        confirm_response = generic_dialogs.question(self, "Systems", "Are you sure you want to remove %s?" % message_text)
+        confirm_response = question(self, "Systems", "Are you sure you want to remove %s?" % message_text)
         if confirm_response != Gtk.ResponseType.OK:
             return
 
@@ -238,7 +226,7 @@ class SystemDialog(Gtk.Dialog):
         self.update_systems_list()
 
         if show_base_message:
-            generic_dialogs.message(self, "Systems", "Systems built in to Natural One cannot be removed.")
+            message(self, "Systems", "Systems built in to Natural One cannot be removed.")
 
     def reorder_systems(self):
         """Reorders the systems list after a drag and drop."""

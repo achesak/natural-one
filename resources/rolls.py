@@ -1,15 +1,5 @@
 # -*- coding: utf-8 -*-
-
-
-################################################################################
-#
-# resources/rolls.py
-# This file contains classes to represent rolls.
-#
-################################################################################
-
-
-from resources.constants import *
+from resources.constants import AttackRollStatus
 
 
 class BasicRollResult(object):
