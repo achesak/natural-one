@@ -7,7 +7,7 @@ import uuid
 
 from gi.repository import Gdk, Gio, Gtk
 
-from resource.dialogs.generic_dialogs import error, message, question
+from resources.dialogs.generic_dialogs import error, message, question
 import resources.io as io
 
 
