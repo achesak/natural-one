@@ -63,9 +63,9 @@ def dmg(num_atks, mods, weapon, crit_attack, weapon_rolls, rolls, total):
 def template(template, rolls, crit_attack, total):
     """Builds the output for the template rolls."""
 
-    output = "<span size=\"larger\"><b>Rolled template \"%s\": <i>%d</i></b></span>\n" % (template["name"], total)
+    output = "<span size=\"larger\"><b>Rolled template %s: <i>%d</i></b></span>\n" % (template["name"], total)
     for roll in rolls:
-        output += "Rolled \"%s\" (%s): <b>%d</b>\n" % (roll.item["description"], roll.roll_details, roll)
+        output += "Rolled %s (%s): <b>%d</b>\n" % (roll.item["description"], roll.roll_details, roll)
         output += "\t%s\n" % roll
         if crit_attack:
             output += "\t<i>%s</i>\n" % roll.roll_critical
