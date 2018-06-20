@@ -92,7 +92,7 @@ class TemplateDialog(Gtk.Dialog):
         self.crit_apply_rbtn.set_margin_top(10)
         self.crit_max_rbtn = Gtk.RadioButton.new_with_label_from_widget(self.crit_apply_rbtn, "Maximized on critical hit")
         self.crit_no_apply_rbtn = Gtk.RadioButton.new_with_label_from_widget(self.crit_apply_rbtn, "Not multiplied by critical hit")
-        self.crit_only_rbtn = Gtk.RadioButton.new_with_label_from_widget(self.crit_apply_rbtn, "Only roll on critical hit")
+        self.crit_only_rbtn = Gtk.RadioButton.new_with_label_from_widget(self.crit_apply_rbtn, "Only rolled on critical hit")
         self.crit_no_apply_rbtn.set_hexpand(True)
         crit_lbl = Gtk.Label("Multiplier")
         crit_lbl.set_margin_left(25)
