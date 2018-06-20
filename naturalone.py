@@ -51,6 +51,7 @@ class DiceRoller(Gtk.Application):
         self.systems = io.load_systems_settings()
 
         self.menu = launch.get_menu_data()
+        self.style_css = launch.get_style_data()
         self.system_names, self.weapon_data = launch.get_weapon_data(self.systems)
         self.current_system_index = 0
 
@@ -69,7 +70,7 @@ class DiceRoller(Gtk.Application):
     def do_activate(self):
 
         if not self.window:
-            self.window = DiceRollerWindow(application=self, title="Natural One")
+            self.window = DiceRollerWindow(application=self, title="Natural One", style_css=self.style_css)
             self.window.set_wmclass("Natural One", "Natural One")
 
         self.setup_interface()
@@ -262,7 +263,7 @@ class DiceRoller(Gtk.Application):
     def new_template(self):
         """Creates a new template."""
 
-        dlg = TemplateDialog(self.window, "Create New Template")
+        dlg = TemplateDialog(self.window, "Create New Template", style_css=self.style_css)
         response = dlg.run()
         name = dlg.name_ent.get_text().strip()
         rolls = dlg.rolls
@@ -291,7 +292,7 @@ class DiceRoller(Gtk.Application):
             return
 
         template = self.templates[index]
-        dlg = TemplateDialog(self.window, template["name"], template["name"], template["rolls"])
+        dlg = TemplateDialog(self.window, template["name"], template["name"], template["rolls"], style_css=self.style_css)
         response = dlg.run()
         name = dlg.name_ent.get_text().strip()
         rolls = dlg.rolls

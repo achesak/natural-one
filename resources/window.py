@@ -6,7 +6,7 @@ from gi.repository import Gdk, GdkPixbuf, Gio, Gtk
 
 class DiceRollerWindow(Gtk.ApplicationWindow):
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, style_css=None, *args, **kwargs):
         super(Gtk.ApplicationWindow, self).__init__(*args, **kwargs)
 
         self.set_icon_from_file("resources/images/icon128.png")
@@ -579,7 +579,7 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         self.style_context = Gtk.StyleContext()
         self.style_context.add_provider_for_screen(Gdk.Screen.get_default(), self.style_provider,
                                                    Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION)
-        self.style_provider.load_from_data(".bad-input {background-color: red; color: white}")
+        self.style_provider.load_from_data(style_css)
 
         # Set up the stack.
         self.stack.add_titled(dice_grid, "basic", "Basic")

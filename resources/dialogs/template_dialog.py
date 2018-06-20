@@ -9,7 +9,7 @@ from resources.window import DiceRollerWindow
 
 class TemplateDialog(Gtk.Dialog):
 
-    def __init__(self, parent, subtitle, name=None, rolls=None):
+    def __init__(self, parent, subtitle, name=None, rolls=None, style_css=None):
 
         if rolls is None:
             rolls = []
@@ -193,7 +193,7 @@ class TemplateDialog(Gtk.Dialog):
         self.style_provider = Gtk.CssProvider()
         self.style_context = Gtk.StyleContext()
         self.style_context.add_provider_for_screen(Gdk.Screen.get_default(), self.style_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION)
-        self.style_provider.load_from_data(".bad-input {background-color: red; color: white}")
+        self.style_provider.load_from_data(style_css)
 
         save_btn = self.get_widget_for_response(response_id=Gtk.ResponseType.OK)
         save_btn.set_can_default(True)

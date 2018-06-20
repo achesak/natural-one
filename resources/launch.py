@@ -17,6 +17,17 @@ def get_menu_data():
         sys.exit()
 
 
+def get_style_data():
+    """Reads the CSS."""
+
+    try:
+        with open("resources/ui/style.css", "r") as style_file:
+            return style_file.read()
+    except IOError as e:
+        print("get_style_data():  Error reading style data:\n%s" % e)
+        sys.exit()
+
+
 def get_weapon_data(systems):
     """Reads and parses the weapon data."""
 
