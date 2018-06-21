@@ -32,6 +32,5 @@ Natural One has only been tested on Linux.
 Natural One is released under the [GNU General Public License version 3](https://www.gnu.org/licenses/gpl-3.0.txt).
 See the `LICENSE.md` file for more information.
 
-Icons:
-* Program icon from a set by [Nick Roach](https://www.iconfinder.com/iconsets/circle-icons-1), released
+Program icon from a set by [Nick Roach](https://www.iconfinder.com/iconsets/circle-icons-1), released
 under the GNU GPL v3.
