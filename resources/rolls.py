@@ -147,11 +147,10 @@ class DamageRollResult(object):
         self.dmg_static_type = dmg_static_type
 
     def _format_result(self):
-        sorted_rolls = sorted(self.rolls, key=lambda x: x.type)
         format_list = []
         used_types = []
         index = -1
-        for roll in sorted_rolls:
+        for roll in self.rolls:
             if roll.type in used_types:
                 format_list[index]["total"] += int(roll)
             else:
