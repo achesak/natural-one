@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+from collections import defaultdict
+
 from resources.constants import AttackRollStatus
 
 
@@ -147,22 +149,12 @@ class DamageRollResult(object):
         self.dmg_static_type = dmg_static_type
 
     def _format_result(self):
-        format_list = []
-        used_types = []
-        index = -1
+        format_dict = defaultdict(int)
         for roll in self.rolls:
-            if roll.type in used_types:
-                format_list[index]["total"] += int(roll)
-            else:
-                used_types.append(roll.type)
-                index += 1
-                format_list.append({
-                    "type": roll.type,
-                    "total": int(roll)
-                })
+            format_dict[roll.type] += int(roll)
         result = []
-        for format_item in format_list:
-            result.append("%d %s" % (format_item["total"], format_item["type"].lower()))
+        for type, total in format_dict.items():
+            result.append("%d %s" % (total, type.lower()))
         return ", ".join(result)
 
     def __int__(self):
