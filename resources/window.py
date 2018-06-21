@@ -529,7 +529,6 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         self.init_tree.append_column(column)
         renderer = Gtk.CellRendererText()
         column = Gtk.TreeViewColumn("Initiative", renderer, text=1)
-        column.set_expand(True)
         self.init_tree.append_column(column)
         init_scroll_win.add(self.init_tree)
 
