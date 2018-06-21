@@ -176,8 +176,8 @@ class DiceRoller(Gtk.Application):
         mod_once, mod_each = (0, mod) if self.window.dice_mod_chk.get_active() else (mod, 0)
         min_value = self.window.int_or(self.window.min_ent, -float("inf"))
 
-        total, rolls = roller.basic(count, die, mod_each, mod_once, min_value)
-        output = formatter.basic(count, die, mod_each, mod_once, rolls, total)
+        total, rolls = roller.roll_basic(count, die, mod_each, mod_once, min_value)
+        output = formatter.format_basic(count, die, mod_each, mod_once, rolls, total)
         self.window.update_output(output)
 
     def roll_attack(self):
@@ -193,8 +193,8 @@ class DiceRoller(Gtk.Application):
         stop_on_crit = self.window.stop_atks_chk.get_active()
         confirm_crit = self.window.confirm_atks_chk.get_active()
 
-        rolls = roller.atk(num_atks, mods, crit_range, stop_on_crit, confirm_crit)
-        output = formatter.atk(num_atks, mods, crit_range, rolls)
+        rolls = roller.roll_attack(num_atks, mods, crit_range, stop_on_crit, confirm_crit)
+        output = formatter.format_attack(num_atks, mods, crit_range, rolls)
         self.window.update_output(output)
 
     def roll_dmg(self):
@@ -228,8 +228,8 @@ class DiceRoller(Gtk.Application):
         else:
             weapon_path = "dmg_medium"
 
-        total, rolls = roller.dmg(num_atks, mods, weapon, weapon_path, min_value, crit_attack)
-        output = formatter.dmg(num_atks, mods, weapon, crit_attack, weapon[weapon_path], rolls, total)
+        total, rolls = roller.roll_damage(num_atks, mods, weapon, weapon_path, min_value, crit_attack)
+        output = formatter.format_damage(num_atks, mods, weapon, crit_attack, weapon[weapon_path], rolls, total)
         self.window.update_output(output)
 
     def manage_systems(self):
@@ -347,8 +347,8 @@ class DiceRoller(Gtk.Application):
         template = self.templates[index]
         crit_attack = self.window.list_crit_chk.get_active()
 
-        total, rolls = roller.template(template, crit_attack)
-        output = formatter.template(template, rolls, crit_attack, total)
+        total, rolls = roller.roll_template(template, crit_attack)
+        output = formatter.format_template(template, rolls, crit_attack, total)
         self.window.update_output(output)
 
     def import_templates(self):
@@ -424,8 +424,8 @@ class DiceRoller(Gtk.Application):
         mod = self.window.int_or(self.window.mod_init_ent, 0)
 
         if self.window.roll_init_rbtn.get_active():
-            initiative, _ = roller.basic(1, 20, mod, 0, -float("inf"))
-            output = formatter.initiative(name, mod, initiative)
+            initiative, _ = roller.roll_basic(1, 20, mod, 0, -float("inf"))
+            output = formatter.format_initiative(name, mod, initiative)
             self.window.update_output(output)
         else:
             initiative = mod

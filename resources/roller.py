@@ -4,7 +4,7 @@ import random
 from resources.rolls import *
 
 
-def basic(count, die, mod_each, mod_once, min_value):
+def roll_basic(count, die, mod_each, mod_once, min_value):
     """Rolls dice."""
 
     rolls = []
@@ -20,7 +20,7 @@ def basic(count, die, mod_each, mod_once, min_value):
     return total, rolls
 
 
-def atk(num_atks, mods, crit_range, stop_on_crit, confirm_crit):
+def roll_attack(num_atks, mods, crit_range, stop_on_crit, confirm_crit):
     """Rolls an attack roll."""
 
     rolls = []
@@ -36,7 +36,7 @@ def atk(num_atks, mods, crit_range, stop_on_crit, confirm_crit):
     return rolls
 
 
-def dmg_die(weapon, die_data, max_damage):
+def roll_damage_die(weapon, die_data, max_damage):
     """Roll damage die."""
 
     roll_data = []
@@ -54,7 +54,7 @@ def dmg_die(weapon, die_data, max_damage):
     return roll_data
 
 
-def dmg(num_atks, mods, weapon, weapon_path, min_value, crit_attack):
+def roll_damage(num_atks, mods, weapon, weapon_path, min_value, crit_attack):
     """Rolls a damage roll."""
 
     weapon_rolls = weapon[weapon_path]
@@ -72,7 +72,7 @@ def dmg(num_atks, mods, weapon, weapon_path, min_value, crit_attack):
         for crit_index in range(0, crit_count):
             for die_index in range(0, len(weapon_rolls)):
                 die_data = weapon_rolls[die_index]
-                roll_data = dmg_die(weapon, die_data, max_damage)
+                roll_data = roll_damage_die(weapon, die_data, max_damage)
                 if len(roll_data):
                     roll_result.add_weapon_roll(roll_data, die_data["type"])
 
@@ -89,7 +89,7 @@ def dmg(num_atks, mods, weapon, weapon_path, min_value, crit_attack):
             roll_result = DamageRollResult(atk_index + 1, True, min_value, 0)
             for die_index in range(0, len(crit_rolls)):
                 die_data = crit_rolls[die_index]
-                roll_data = dmg_die(weapon, die_data, False)
+                roll_data = roll_damage_die(weapon, die_data, False)
                 if len(roll_data):
                     roll_result.add_weapon_roll(roll_data, die_data["type"])
 
@@ -102,7 +102,7 @@ def dmg(num_atks, mods, weapon, weapon_path, min_value, crit_attack):
     return total, rolls
 
 
-def template(template, crit_attack):
+def roll_template(template, crit_attack):
     """Rolls a template."""
 
     rolls = []

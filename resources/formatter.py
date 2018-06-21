@@ -2,7 +2,7 @@
 from resources.rolls import *
 
 
-def basic(count, die, mod_each, mod_once, rolls, total):
+def format_basic(count, die, mod_each, mod_once, rolls, total):
     """Builds the output for a standard dice roll."""
 
     mod = mod_each if mod_each != 0 else mod_once
@@ -15,7 +15,7 @@ def basic(count, die, mod_each, mod_once, rolls, total):
     return output
 
 
-def atk(num_atks, mods, crit_range, rolls):
+def format_attack(num_atks, mods, crit_range, rolls):
     """Builds the output for attack rolls."""
 
     output = "<span size=\"larger\"><b>Rolled %d attack%s</b>:</span>\n" % (num_atks, "" if num_atks == 1 else "s")
@@ -25,7 +25,7 @@ def atk(num_atks, mods, crit_range, rolls):
     return output
 
 
-def dmg(num_atks, mods, weapon, crit_attack, weapon_rolls, rolls, total):
+def format_damage(num_atks, mods, weapon, crit_attack, weapon_rolls, rolls, total):
     """Builds the output for damage rolls."""
 
     damage_dice = ", ".join(["%dd%d" % (roll["count"], roll["die"]) for roll in weapon_rolls])
@@ -60,7 +60,7 @@ def dmg(num_atks, mods, weapon, crit_attack, weapon_rolls, rolls, total):
     return output
 
 
-def template(template, rolls, crit_attack, total):
+def format_template(template, rolls, crit_attack, total):
     """Builds the output for the template rolls."""
 
     output = "<span size=\"larger\"><b>Rolled template %s: <i>%d</i></b></span>\n" % (template["name"], total)
@@ -75,7 +75,7 @@ def template(template, rolls, crit_attack, total):
     return output
 
 
-def initiative(name, mod, roll):
+def format_initiative(name, mod, roll):
     """Builds the output for initiative rolls."""
 
     mod_sign = "+" if mod > 0 else ""
