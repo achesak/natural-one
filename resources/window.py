@@ -552,7 +552,7 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
         init_btn_box.add(self.clear_init_btn)
 
         # Create the initiative drag and drop help text.
-        drag_init_lbl = Gtk.Label("Drag and drop to re-arrange initiative order")
+        drag_init_lbl = Gtk.Label("Drag and drop to rearrange initiative order")
         drag_init_lbl.set_margin_top(10)
         list_init_grid.attach_next_to(drag_init_lbl, self.init_action_bar, Gtk.PositionType.BOTTOM, 1, 1)
 

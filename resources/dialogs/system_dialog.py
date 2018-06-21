@@ -121,7 +121,7 @@ class SystemDialog(Gtk.Dialog):
         system_btn_box.add(self.deselect_all_btn)
 
         # Create the systems drag and drop help text.
-        drag_sys_lbl = Gtk.Label("Drag and drop to re-arrange systems")
+        drag_sys_lbl = Gtk.Label("Drag and drop to rearrange systems")
         drag_sys_lbl.set_margin_top(10)
         system_grid.attach_next_to(drag_sys_lbl, self.system_action_bar, Gtk.PositionType.BOTTOM, 1, 1)
 
