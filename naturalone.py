@@ -52,7 +52,7 @@ class NaturalOne(Gtk.Application):
         self.systems = io.load_systems_settings()
 
         self.menu = launch.get_menu_data()
-        self.style_css = launch.get_style_data()
+        self.style_css = launch.get_style_data().encode()
         self.system_names, self.weapon_data = launch.get_weapon_data(
             self.systems,
         )
