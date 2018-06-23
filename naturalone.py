@@ -261,7 +261,7 @@ class NaturalOne(Gtk.Application):
             self.window.add_error(self.window.dq_size_ent)
             self.window.show_popup(
                 self.window.dq_error_popover,
-                'Enter a die',
+                message='Enter a die',
             )
             valid = False
 
@@ -269,7 +269,7 @@ class NaturalOne(Gtk.Application):
             self.window.add_error(self.window.dq_size_ent)
             self.window.show_popup(
                 self.window.dq_error_popover,
-                'Enter a die',
+                message='Enter a die',
             )
             valid = False
 
@@ -325,14 +325,14 @@ class NaturalOne(Gtk.Application):
         if weapon_iter is None:
             self.window.show_popup(
                 self.window.weap_error_popover,
-                'Select a weapon to roll',
+                message='Select a weapon to roll',
             )
             return
         section_iter = self.window.weap_dam_store.iter_parent(weapon_iter)
         if section_iter is None:
             self.window.show_popup(
                 self.window.weap_error_popover,
-                'Select a weapon to roll',
+                message='Select a weapon to roll',
             )
             return
         weapon = utility.get_weapon(
@@ -563,7 +563,7 @@ class NaturalOne(Gtk.Application):
             self.window.add_error(self.window.name_init_ent)
             self.window.show_popup(
                 self.window.name_init_error_popover,
-                'Enter a character or opponent name',
+                message='Enter a character or opponent name',
             )
             return
 

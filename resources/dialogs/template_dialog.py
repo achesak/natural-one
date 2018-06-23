@@ -105,6 +105,8 @@ class TemplateDialog(Gtk.Dialog):
             Gtk.PositionType.BOTTOM,
             1, 1,
         )
+        self.count_error_popover = Gtk.Popover()
+        self.count_error_popover.set_relative_to(self.count_ent)
         d_lbl = Gtk.Label('d')
         add_grid.attach_next_to(
             d_lbl,
@@ -121,6 +123,8 @@ class TemplateDialog(Gtk.Dialog):
             Gtk.PositionType.RIGHT,
             1, 1,
         )
+        self.die_error_popover = Gtk.Popover()
+        self.die_error_popover.set_relative_to(self.die_ent)
         plus_lbl = Gtk.Label('+')
         add_grid.attach_next_to(
             plus_lbl,
@@ -137,6 +141,8 @@ class TemplateDialog(Gtk.Dialog):
             Gtk.PositionType.RIGHT,
             1, 1,
         )
+        self.mod_error_popover = Gtk.Popover()
+        self.mod_error_popover.set_relative_to(self.mod_ent)
         self.mod_chk = Gtk.CheckButton('Add modifier to every roll')
         self.mod_chk.set_active(True)
         self.mod_chk.set_margin_left(15)
@@ -173,6 +179,8 @@ class TemplateDialog(Gtk.Dialog):
         self.crit_ent.set_width_chars(4)
         self.crit_ent.props.xalign = 0.5
         crit_box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL)
+        self.crit_error_popover = Gtk.Popover()
+        self.crit_error_popover.set_relative_to(self.crit_ent)
         crit_box.pack_start(crit_lbl, False, False, 0)
         crit_box.pack_start(self.crit_ent, False, False, 0)
         add_grid.attach_next_to(
@@ -238,6 +246,8 @@ class TemplateDialog(Gtk.Dialog):
         self.desc_ent = Gtk.Entry()
         self.desc_ent.set_hexpand(True)
         desc_box.add(self.desc_ent)
+        self.desc_error_popover = Gtk.Popover()
+        self.desc_error_popover.set_relative_to(self.desc_ent)
         self.add_btn = Gtk.Button('Add Roll')
         desc_box.add(self.add_btn)
         min_value_grid.attach_next_to(
@@ -420,6 +430,7 @@ class TemplateDialog(Gtk.Dialog):
             assert roll['description'] != ''
         except AssertionError:
             NaturalOneWindow.add_error(self.desc_ent)
+            NaturalOneWindow.show_popup(self.desc_error_popover)
             valid = False
 
         try:
@@ -427,6 +438,7 @@ class TemplateDialog(Gtk.Dialog):
             assert roll['count'] >= 1
         except (ValueError, AssertionError):
             NaturalOneWindow.add_error(self.count_ent)
+            NaturalOneWindow.show_popup(self.count_error_popover)
             valid = False
 
         try:
@@ -434,20 +446,15 @@ class TemplateDialog(Gtk.Dialog):
             assert roll['die'] >= 1
         except (ValueError, AssertionError):
             NaturalOneWindow.add_error(self.die_ent)
+            NaturalOneWindow.show_popup(self.die_error_popover)
             valid = False
 
         try:
             roll['mod'] = int(roll['mod'])
         except (ValueError, AssertionError):
             NaturalOneWindow.add_error(self.mod_ent)
+            NaturalOneWindow.add_error(self.mod_error_popover)
             valid = False
-
-        try:
-            roll['min_value'] = int(roll['min_value'])
-        except (ValueError, AssertionError):
-            if roll['min_value'] != '':
-                NaturalOneWindow.add_error(self.min_value_ent)
-                valid = False
 
         if roll['crit_active']:
             try:
@@ -455,6 +462,7 @@ class TemplateDialog(Gtk.Dialog):
                 assert roll['crit_mod'] >= 1
             except (ValueError, AssertionError):
                 NaturalOneWindow.add_error(self.crit_ent)
+                NaturalOneWindow.show_popup(self.crit_error_popover)
                 valid = False
 
         return valid
@@ -506,12 +514,8 @@ class TemplateDialog(Gtk.Dialog):
         self.update_list()
 
     def edit_roll(self):
-        model, treeiter = self.roll_tree.get_selection().get_selected_rows()
-        index = -1
-        for i in treeiter:
-            index = int(str(i))
-
-        if index == -1:
+        index = NaturalOneWindow.get_selected_index(self.roll_tree)
+        if index is None:
             return
 
         roll = self.rolls[index]

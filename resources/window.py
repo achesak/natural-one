@@ -1072,10 +1072,16 @@ class NaturalOneWindow(Gtk.ApplicationWindow):
         widget.get_style_context().remove_class('bad-input')
 
     @staticmethod
-    def show_popup(widget, message):
+    def show_popup(widget, message='', required=True):
         children = widget.get_children()
         for child in children:
             child.destroy()
+
+        if required:
+            if message:
+                message = 'Required: ' + message[0].lower() + message[1:]
+            else:
+                message = 'Required'
 
         box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL)
 
