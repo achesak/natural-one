@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 
-################################################################################
+###############################################################################
 #
 # Natural One
 # Version 1.5
@@ -11,15 +11,12 @@
 #
 # Released under the GNU General Public License version 3.
 #
-################################################################################
+###############################################################################
 
-
-import random
-import sys
 
 import gi
 gi.require_version("Gtk", "3.0")
-from gi.repository import Gtk, Gdk, GdkPixbuf, Gio
+from gi.repository import Gtk, GdkPixbuf, Gio
 
 import resources.formatter as formatter
 import resources.io as io
@@ -30,7 +27,7 @@ import resources.utility as utility
 from resources.window import NaturalOneWindow
 
 from resources.dialogs.about_dialog import NaturalOneAboutDialog
-from resources.dialogs.generic_dialogs import question
+from resources.dialogs.generic_dialogs import show_question
 from resources.dialogs.system_dialog import SystemDialog
 from resources.dialogs.template_dialog import TemplateDialog
 
@@ -315,7 +312,7 @@ class NaturalOne(Gtk.Application):
             return
 
         message_text = "th%s %d template%s" % ("ese" if len(indices) != 1 else "is", len(indices), "s" if len(indices) != 1 else "")
-        confirm_response = question(self.window, "Templates", "Are you sure you want to remove %s?" % message_text)
+        confirm_response = show_question(self.window, "Templates", "Are you sure you want to remove %s?" % message_text)
         if confirm_response != Gtk.ResponseType.OK:
             return
 
@@ -441,7 +438,7 @@ class NaturalOne(Gtk.Application):
         else:
             message_text = "th%s %d initiative%s" % \
                            ("ese" if len(indices) != 1 else "is", len(indices), "s" if len(indices) != 1 else "")
-        confirm_response = question(self.window, "Initiatives", "Are you sure you want to remove %s?" % message_text)
+        confirm_response = show_question(self.window, "Initiatives", "Are you sure you want to remove %s?" % message_text)
         if confirm_response != Gtk.ResponseType.OK:
             return
 
