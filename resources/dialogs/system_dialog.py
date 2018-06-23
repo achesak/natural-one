@@ -5,7 +5,7 @@ import os
 import shutil
 import uuid
 
-from gi.repository import Gio, Gtk
+from gi.repository import Gtk
 
 from resources.dialogs.generic_dialogs import (
     show_error,
@@ -13,6 +13,7 @@ from resources.dialogs.generic_dialogs import (
     show_question,
 )
 import resources.io as io
+from resources.load_images import load_symbolic
 from resources.window import NaturalOneWindow
 
 
@@ -139,36 +140,16 @@ class SystemDialog(Gtk.Dialog):
         )
 
         # Create the system list buttons.
-        system_btn_box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL)
-        Gtk.StyleContext.add_class(
-            system_btn_box.get_style_context(),
-            'linked',
-        )
-        self.system_action_bar.pack_end(system_btn_box)
         self.delete_btn = Gtk.Button()
-        delete_img = Gtk.Image.new_from_gicon(
-            Gio.ThemedIcon(name='list-remove-symbolic'),
-            Gtk.IconSize.BUTTON,
-        )
+        delete_img = load_symbolic('list-remove')
         self.delete_btn.add(delete_img)
-        self.delete_btn.set_tooltip_text('Remove selected system')
+        self.delete_btn.set_tooltip_text('Remove selected systems')
         self.system_action_bar.pack_start(self.delete_btn)
         self.select_all_btn = Gtk.Button()
-        select_all_img = Gtk.Image.new_from_gicon(
-            Gio.ThemedIcon(name='edit-select-all-symbolic'),
-            Gtk.IconSize.BUTTON,
-        )
+        select_all_img = load_symbolic('edit-select-all')
         self.select_all_btn.add(select_all_img)
-        self.select_all_btn.set_tooltip_text('Enable all')
-        self.deselect_all_btn = Gtk.Button()
-        deselect_all_img = Gtk.Image.new_from_gicon(
-            Gio.ThemedIcon(name='emblem-unreadable-symbolic'),
-            Gtk.IconSize.BUTTON,
-        )
-        self.deselect_all_btn.add(deselect_all_img)
-        self.deselect_all_btn.set_tooltip_text('Disable all')
-        system_btn_box.add(self.select_all_btn)
-        system_btn_box.add(self.deselect_all_btn)
+        self.select_all_btn.set_tooltip_text('Toggle enable/disable all')
+        self.system_action_bar.pack_end(self.select_all_btn)
 
         # Create the systems drag and drop help text.
         drag_sys_lbl = Gtk.Label('Drag and drop to rearrange systems')
@@ -196,11 +177,7 @@ class SystemDialog(Gtk.Dialog):
         )
         self.select_all_btn.connect(
             'clicked',
-            lambda x: self.set_all_enable_state(state=True),
-        )
-        self.deselect_all_btn.connect(
-            'clicked',
-            lambda x: self.set_all_enable_state(state=False),
+            lambda x: self.toggle_all_enable_state(),
         )
 
         save_btn = self.get_widget_for_response(
@@ -223,7 +200,13 @@ class SystemDialog(Gtk.Dialog):
         self.system_store[path][0] = not self.system_store[path][0]
         self.systems[int(path)]['enabled'] ^= 1
 
-    def set_all_enable_state(self, state=True):
+    def toggle_all_enable_state(self):
+        state = False
+        for row_index in range(len(self.system_store)):
+            if not self.system_store[row_index][0]:
+                state = True
+                break
+
         for row_index in range(len(self.system_store)):
             self.system_store[row_index][0] = state
             self.systems[row_index]['enabled'] = state
