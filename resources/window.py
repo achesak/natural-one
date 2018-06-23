@@ -707,3 +707,25 @@ class DiceRollerWindow(Gtk.ApplicationWindow):
             return mods
         except ValueError:
             return default
+
+    @staticmethod
+    def get_selected_index(widget):
+        """Returns the selected index."""
+
+        model, treeiter = widget.get_selection().get_selected_rows()
+        index = None
+        for i in treeiter:
+            index = int(str(i))
+
+        return index
+
+    @staticmethod
+    def get_selected_indices(widget):
+        """Returns the selected indices."""
+
+        model, treeiter = widget.get_selection().get_selected_rows()
+        indices = []
+        for i in treeiter:
+            indices.append(int(str(i)))
+
+        return indices

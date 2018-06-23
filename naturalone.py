@@ -283,12 +283,8 @@ class DiceRoller(Gtk.Application):
     def edit_template(self):
         """Edits a template."""
 
-        model, treeiter = self.window.template_tree.get_selection().get_selected_rows()
-        index = -1
-        for i in treeiter:
-            index = int(str(i))
-
-        if index == -1:
+        index = self.window.get_selected_index(self.window.template_tree)
+        if index is None:
             return
 
         template = self.templates[index]
@@ -315,12 +311,8 @@ class DiceRoller(Gtk.Application):
     def remove_template(self):
         """Removes a template."""
 
-        model, treeiter = self.window.template_tree.get_selection().get_selected_rows()
-        indices = []
-        for i in treeiter:
-            indices.append(int(str(i)))
-
-        if len(indices) == 0:
+        indices = self.window.get_selected_indices(self.window.template_tree)
+        if not indices:
             return
 
         message_text = "th%s %d template%s" % ("ese" if len(indices) != 1 else "is", len(indices), "s" if len(indices) != 1 else "")
@@ -336,12 +328,8 @@ class DiceRoller(Gtk.Application):
     def roll_template(self):
         """Rolls a template."""
 
-        model, treeiter = self.window.template_tree.get_selection().get_selected_rows()
-        index = -1
-        for i in treeiter:
-            index = int(str(i))
-
-        if index == -1:
+        index = self.window.get_selected_index(self.window.template_tree)
+        if index is None:
             return
 
         template = self.templates[index]
@@ -445,12 +433,8 @@ class DiceRoller(Gtk.Application):
     def remove_initiative(self, clear=False):
         """Removes initiatives from the list."""
 
-        model, treeiter = self.window.init_tree.get_selection().get_selected_rows()
-        indices = []
-        for i in treeiter:
-            indices.append(int(str(i)))
-
-        if len(indices) == 0 or (clear and len(self.initiative_list) == 0):
+        indices = self.window.get_selected_indices(self.window.init_tree)
+        if not indices or (clear and not self.initiative_list):
             return
 
         if clear:
