@@ -1077,13 +1077,25 @@ class NaturalOneWindow(Gtk.ApplicationWindow):
         for child in children:
             child.destroy()
 
-        label = Gtk.Label(message)
-        label.set_margin_top(10)
-        label.set_margin_bottom(10)
-        label.set_margin_left(10)
-        label.set_margin_right(10)
+        box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL)
 
-        widget.add(label)
+        error_img = Gtk.Image.new_from_gicon(
+            Gio.ThemedIcon(name='dialog-error-symbolic'),
+            Gtk.IconSize.BUTTON,
+        )
+        error_img.set_margin_top(10)
+        error_img.set_margin_bottom(10)
+        error_img.set_margin_left(10)
+        error_img.set_margin_right(5)
+        box.pack_start(error_img, False, False, 0)
+
+        message_lbl = Gtk.Label(message)
+        message_lbl.set_margin_top(10)
+        message_lbl.set_margin_bottom(10)
+        message_lbl.set_margin_right(10)
+        box.pack_end(message_lbl, True, True, 0)
+
+        widget.add(box)
         widget.show_all()
         widget.popup()
 
