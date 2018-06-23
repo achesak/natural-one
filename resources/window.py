@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
-from gi.repository import Gdk, GdkPixbuf, Gio, Gtk
+from gi.repository import Gdk, GdkPixbuf, Gtk
+
+from resources.load_images import load_symbolic
 
 
 class NaturalOneWindow(Gtk.ApplicationWindow):
@@ -33,10 +35,7 @@ class NaturalOneWindow(Gtk.ApplicationWindow):
 
         # Create the header buttons.
         self.clear_btn = Gtk.Button()
-        clear_img = Gtk.Image.new_from_gicon(
-            Gio.ThemedIcon(name='edit-clear-symbolic'),
-            Gtk.IconSize.BUTTON,
-        )
+        clear_img = load_symbolic('edit-clear')
         self.clear_btn.add(clear_img)
         self.clear_btn.set_tooltip_text('Clear rolls')
         self.header.pack_end(self.clear_btn)
@@ -589,10 +588,7 @@ class NaturalOneWindow(Gtk.ApplicationWindow):
         self.sys_dam_cbox.set_hexpand(True)
         sys_btn_box.add(self.sys_dam_cbox)
         self.sys_manage_btn = Gtk.Button()
-        manage_img = Gtk.Image.new_from_gicon(
-            Gio.ThemedIcon(name='document-properties-symbolic'),
-            Gtk.IconSize.BUTTON,
-        )
+        manage_img = load_symbolic('document-properties')
         self.sys_manage_btn.add(manage_img)
         self.sys_manage_btn.set_tooltip_text('Add and manage systems')
         sys_btn_box.add(self.sys_manage_btn)
@@ -777,26 +773,17 @@ class NaturalOneWindow(Gtk.ApplicationWindow):
         )
         self.template_action_bar.pack_start(template_edit_btn_box)
         self.new_btn = Gtk.Button()
-        new_img = Gtk.Image.new_from_gicon(
-            Gio.ThemedIcon(name='list-add-symbolic'),
-            Gtk.IconSize.BUTTON,
-        )
+        new_img = load_symbolic('list-add')
         self.new_btn.add(new_img)
         self.new_btn.set_tooltip_text('Create a new template')
         template_edit_btn_box.add(self.new_btn)
         self.list_edit_btn = Gtk.Button()
-        edit_img = Gtk.Image.new_from_gicon(
-            Gio.ThemedIcon(name='edit-symbolic'),
-            Gtk.IconSize.BUTTON,
-        )
+        edit_img = load_symbolic('edit')
         self.list_edit_btn.add(edit_img)
         self.list_edit_btn.set_tooltip_text('Edit selected template')
         template_edit_btn_box.add(self.list_edit_btn)
         self.list_delete_btn = Gtk.Button()
-        delete_img = Gtk.Image.new_from_gicon(
-            Gio.ThemedIcon(name='list-remove-symbolic'),
-            Gtk.IconSize.BUTTON,
-        )
+        delete_img = load_symbolic('list-remove')
         self.list_delete_btn.add(delete_img)
         self.list_delete_btn.set_tooltip_text('Delete selected template')
         template_edit_btn_box.add(self.list_delete_btn)
@@ -807,26 +794,17 @@ class NaturalOneWindow(Gtk.ApplicationWindow):
         )
         self.template_action_bar.pack_start(template_file_btn_box)
         self.list_save_btn = Gtk.Button()
-        save_img = Gtk.Image.new_from_gicon(
-            Gio.ThemedIcon(name='document-save-symbolic'),
-            Gtk.IconSize.BUTTON,
-        )
+        save_img = load_symbolic('document-save')
         self.list_save_btn.add(save_img)
         self.list_save_btn.set_tooltip_text('Export templates')
         template_file_btn_box.add(self.list_save_btn)
         self.list_open_btn = Gtk.Button()
-        open_img = Gtk.Image.new_from_gicon(
-            Gio.ThemedIcon(name='document-open-symbolic'),
-            Gtk.IconSize.BUTTON,
-        )
+        open_img = load_symbolic('document-open')
         self.list_open_btn.add(open_img)
         self.list_open_btn.set_tooltip_text('Import templates')
         template_file_btn_box.add(self.list_open_btn)
         self.list_roll_btn = Gtk.Button()
-        roll_img = Gtk.Image.new_from_gicon(
-            Gio.ThemedIcon(name='go-jump-symbolic'),
-            Gtk.IconSize.BUTTON,
-        )
+        roll_img = load_symbolic('go-jump')
         self.list_roll_btn.add(roll_img)
         self.list_roll_btn.set_tooltip_text('Roll selected template')
         self.template_action_bar.pack_end(self.list_roll_btn)
@@ -1002,18 +980,12 @@ class NaturalOneWindow(Gtk.ApplicationWindow):
         Gtk.StyleContext.add_class(init_btn_box.get_style_context(), 'linked')
         self.init_action_bar.pack_start(init_btn_box)
         self.remove_init_btn = Gtk.Button()
-        remove_img = Gtk.Image.new_from_gicon(
-            Gio.ThemedIcon(name='list-remove-symbolic'),
-            Gtk.IconSize.BUTTON,
-        )
+        remove_img = load_symbolic('list-remove')
         self.remove_init_btn.add(remove_img)
         self.remove_init_btn.set_tooltip_text('Remove selected initiative')
         init_btn_box.add(self.remove_init_btn)
         self.clear_init_btn = Gtk.Button()
-        clear_img = Gtk.Image.new_from_gicon(
-            Gio.ThemedIcon(name='edit-clear-symbolic'),
-            Gtk.IconSize.BUTTON,
-        )
+        clear_img = load_symbolic('edit-clear')
         self.clear_init_btn.add(clear_img)
         self.clear_init_btn.set_tooltip_text('Clear all initiatives')
         init_btn_box.add(self.clear_init_btn)
@@ -1085,10 +1057,7 @@ class NaturalOneWindow(Gtk.ApplicationWindow):
 
         box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL)
 
-        error_img = Gtk.Image.new_from_gicon(
-            Gio.ThemedIcon(name='dialog-error-symbolic'),
-            Gtk.IconSize.BUTTON,
-        )
+        error_img = load_symbolic('dialog-error')
         error_img.set_margin_top(10)
         error_img.set_margin_bottom(10)
         error_img.set_margin_left(10)

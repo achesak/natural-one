@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
 import copy
 
-from gi.repository import Gdk, Gio, Gtk
+from gi.repository import Gdk, Gtk
 
 from resources.dialogs.generic_dialogs import show_question
+from resources.load_images import load_symbolic
 from resources.window import NaturalOneWindow
 
 
@@ -317,17 +318,11 @@ class TemplateDialog(Gtk.Dialog):
         Gtk.StyleContext.add_class(roll_btn_box.get_style_context(), 'linked')
         self.roll_action_bar.pack_start(roll_btn_box)
         self.edit_btn = Gtk.Button()
-        edit_img = Gtk.Image.new_from_gicon(
-            Gio.ThemedIcon(name='edit-symbolic'),
-            Gtk.IconSize.BUTTON,
-        )
+        edit_img = load_symbolic('edit')
         self.edit_btn.add(edit_img)
         self.edit_btn.set_tooltip_text('Edit selected roll')
         self.delete_btn = Gtk.Button()
-        delete_img = Gtk.Image.new_from_gicon(
-            Gio.ThemedIcon(name='list-remove-symbolic'),
-            Gtk.IconSize.BUTTON,
-        )
+        delete_img = load_symbolic('list-remove')
         self.delete_btn.add(delete_img)
         self.delete_btn.set_tooltip_text('Remove selected roll')
         roll_btn_box.add(self.edit_btn)
