@@ -355,14 +355,6 @@ class TemplateDialog(Gtk.Dialog):
 
         self.show_all()
 
-    @staticmethod
-    def add_error(widget):
-        widget.get_style_context().add_class('bad-input')
-
-    @staticmethod
-    def remove_error(widget):
-        widget.get_style_context().remove_class('bad-input')
-
     def register_limit_inputs(self):
         number_inputs = [
             self.mod_ent, self.min_value_ent
@@ -415,46 +407,46 @@ class TemplateDialog(Gtk.Dialog):
             self.roll_store.append(row)
 
     def check_roll_validity(self, roll):
-        self.remove_error(self.count_ent)
-        self.remove_error(self.die_ent)
-        self.remove_error(self.mod_ent)
-        self.remove_error(self.crit_ent)
-        self.remove_error(self.min_value_ent)
-        self.remove_error(self.desc_ent)
+        NaturalOneWindow.remove_error(self.count_ent)
+        NaturalOneWindow.remove_error(self.die_ent)
+        NaturalOneWindow.remove_error(self.mod_ent)
+        NaturalOneWindow.remove_error(self.crit_ent)
+        NaturalOneWindow.remove_error(self.min_value_ent)
+        NaturalOneWindow.remove_error(self.desc_ent)
 
         valid = True
 
         try:
             assert roll['description'] != ''
         except AssertionError:
-            self.add_error(self.desc_ent)
+            NaturalOneWindow.add_error(self.desc_ent)
             valid = False
 
         try:
             roll['count'] = int(roll['count'])
             assert roll['count'] >= 1
         except (ValueError, AssertionError):
-            self.add_error(self.count_ent)
+            NaturalOneWindow.add_error(self.count_ent)
             valid = False
 
         try:
             roll['die'] = int(roll['die'])
             assert roll['die'] >= 1
         except (ValueError, AssertionError):
-            self.add_error(self.die_ent)
+            NaturalOneWindow.add_error(self.die_ent)
             valid = False
 
         try:
             roll['mod'] = int(roll['mod'])
         except (ValueError, AssertionError):
-            self.add_error(self.mod_ent)
+            NaturalOneWindow.add_error(self.mod_ent)
             valid = False
 
         try:
             roll['min_value'] = int(roll['min_value'])
         except (ValueError, AssertionError):
             if roll['min_value'] != '':
-                self.add_error(self.min_value_ent)
+                NaturalOneWindow.add_error(self.min_value_ent)
                 valid = False
 
         if roll['crit_active']:
@@ -462,7 +454,7 @@ class TemplateDialog(Gtk.Dialog):
                 roll['crit_mod'] = int(roll['crit_mod'])
                 assert roll['crit_mod'] >= 1
             except (ValueError, AssertionError):
-                self.add_error(self.crit_ent)
+                NaturalOneWindow.add_error(self.crit_ent)
                 valid = False
 
         return valid
