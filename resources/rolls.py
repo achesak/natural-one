@@ -2,6 +2,7 @@
 from collections import defaultdict
 
 from resources.constants import AttackRollStatus
+from resources.utility import sign
 
 
 class BasicRollResult(object):
@@ -17,8 +18,12 @@ class BasicRollResult(object):
     def __str__(self):
         val = int(self)
         if self.mod:
-            mod_sign = '+' if self.mod > 0 else ''
-            return '%d%s%d (%d)' % (self.value, mod_sign, self.mod, val)
+            return '{value}{mod_sign}{mod} ({val})'.format(
+                value=self.value,
+                mod_sign=sign(self.mod),
+                mod=self.mod,
+                val=val,
+            )
         return str(val)
 
     def __add__(self, other):
@@ -48,17 +53,16 @@ class AttackRollResult(BasicRollResult):
 
     def __str__(self):
         val = int(self)
-        output = 'Attack %d: ' % self.number
+        output = 'Attack {number}: '.format(number=self.number)
         if self.mod:
-            mod_sign = '+' if self.mod > 0 else ''
-            output += '%d%s%d=<b>%d</b>' % (
-                self.value,
-                mod_sign,
-                self.mod,
-                val,
+            output += '{value}{mod_sign}{mod}=<b>{val}</b>'.format(
+                value=self.value,
+                mod_sign=sign(self.mod),
+                mod=self.mod,
+                val=val,
             )
         else:
-            output += '<b>%d</b>' % self.value
+            output += '<b>{value}</b>'.format(value=self.value)
 
         if self.status == AttackRollStatus.CRITICAL_FAIL:
             output += '\n<span color="red">Critical fail!</span>'
@@ -68,13 +72,16 @@ class AttackRollResult(BasicRollResult):
         if self.status == AttackRollStatus.CRITICAL_CONFIRM:
             output += ' Critical confirm: '
             if self.mod:
-                output += '%d+%d=<b>%d</b>' % (
-                    self.critical_value,
-                    self.mod,
-                    self.critical_value + self.mod,
+                output += '{crit_value}{mod_sign}{mod}=<b>{val}</b>'.format(
+                    crit_value=self.critical_value,
+                    mod_sign=sign(self.mod),
+                    mod=self.mod,
+                    val=self.critical_value + self.mod,
                 )
             else:
-                output += '<b>%d</b>' % self.critical_value
+                output += '<b>{crit_value}</b>'.format(
+                    crit_value=self.critical_value,
+                )
 
         return output
 
@@ -98,9 +105,15 @@ class TemplateRollResult(BasicRollResult):
 
     @property
     def roll_details(self):
-        mod_sign = '+' if self.item['mod'] > 0 else ''
-        mod = '%s%d' % (mod_sign, self.item['mod']) if self.item['mod'] else ''
-        return '%dd%d%s' % (self.item['count'], self.item['die'], mod)
+        mod = '{mod_sign}{mod}'.format(
+            mod_sign=sign(self.item['mod']),
+            mod=self.item['mod']
+        ) if self.item['mod'] else ''
+        return '{count}d{die}{mod}'.format(
+            count=self.item['count'],
+            die=self.item['die'],
+            mod=mod,
+        )
 
     @property
     def roll_critical(self):
@@ -109,8 +122,9 @@ class TemplateRollResult(BasicRollResult):
         elif self.item['crit_only']:
             return 'Rolled due to critical hit'
         elif self.item['crit_active']:
-            return 'Multiplied by %dx due to critical hit' % \
-                   self.item['crit_mod']
+            return 'Multiplied by {crit_mod}x due to critical hit'.format(
+                   crit_mod=self.item['crit_mod'],
+            )
         else:
             return 'Not affected by critical hit'
 
@@ -169,7 +183,10 @@ class DamageRollResult(object):
             format_dict[roll.type] += int(roll)
         result = []
         for type, total in format_dict.items():
-            result.append('%d %s' % (total, type.lower()))
+            result.append('{total} {type}'.format(
+                total=total,
+                type=type.lower(),
+            ))
         return ', '.join(result)
 
     def __int__(self):
@@ -185,26 +202,34 @@ class DamageRollResult(object):
             hit_text = 'Bonus critical damage'
         output = []
         if len(self.rolls) != 0 or self.dmg_static is not None:
-            output.append('%s %d: <b>%s</b>' % (
-                hit_text,
-                self.number,
-                self._format_result(),
+            output.append('{hit_text} {number}: <b>{result}</b>'.format(
+                hit_text=hit_text,
+                number=self.number,
+                result=self._format_result(),
             ))
         if len(self.rolls) != 0:
             for roll in self.rolls:
                 if len(roll) == 1:
-                    output.append('\t%d %s' % (roll, roll.type.lower()))
+                    output.append('\t{roll} {type}'.format(
+                        roll=roll,
+                        type=roll.type.lower(),
+                    ))
                 else:
-                    output.append('\t%s=%d %s' % (
-                        roll,
-                        roll,
-                        roll.type.lower(),
-                        ))
+                    output.append('\t{roll}={roll_num} {type}'.format(
+                        roll=str(roll),
+                        roll_num=int(roll),
+                        type=roll.type.lower(),
+                    ))
         if self.dmg_static is not None:
-            output.append('\t%d %s' % (self.dmg_static, self.dmg_static_type))
+            output.append('\t{static_amount} {static_type}'.format(
+                static_amount=self.dmg_static,
+                static_type=self.dmg_static_type,
+            ))
         if self.mod:
-            mod_sign = '+' if self.mod > 0 else ''
-            output.append('\t%s%d modifier' % (mod_sign, self.mod))
+            output.append('\t{mod_sign}{mod} modifier'.format(
+                mod_sign=sign(self.mod),
+                mod=self.mod,
+            ))
         return '\n'.join(output).strip()
 
     def __add__(self, other):

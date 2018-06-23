@@ -23,7 +23,12 @@ import resources.formatter as formatter
 import resources.io as io
 import resources.launch as launch
 import resources.roller as roller
-import resources.utility as utility
+from resources.utility import (
+    expand_mod,
+    get_weapon,
+    pluralize,
+    pluralize_adj,
+)
 
 from resources.window import NaturalOneWindow
 
@@ -302,7 +307,7 @@ class NaturalOne(Gtk.Application):
 
         num_atks = self.window.int_or(self.window.num_atks_ent, 1)
         mods = self.window.mods_or(self.window.mod_atks_ent, [0])
-        mods = utility.expand_mod(mods, num_atks, False, 0)
+        mods = expand_mod(mods, num_atks, False, 0)
         crit_range = self.window.int_or(self.window.crit_atks_ent, 20)
 
         stop_on_crit = self.window.stop_atks_chk.get_active()
@@ -335,7 +340,7 @@ class NaturalOne(Gtk.Application):
                 message='Select a weapon to roll',
             )
             return
-        weapon = utility.get_weapon(
+        weapon = get_weapon(
             system_data,
             model[weapon_iter][0],
             model[section_iter][0],
@@ -347,7 +352,7 @@ class NaturalOne(Gtk.Application):
         min_value = self.window.int_or(self.window.min_dam_ent, -float('inf'))
         mods = self.window.mods_or(self.window.mod_dam_ent, [0])
 
-        mods = utility.expand_mod(
+        mods = expand_mod(
             mods,
             num_atks,
             crit_attack,
@@ -462,11 +467,12 @@ class NaturalOne(Gtk.Application):
         if not indices:
             return
 
-        message_text = 'Are you sure you want to remove th%s %d template%s' % (
-            'ese' if len(indices) != 1 else 'is',
-            len(indices),
-            's' if len(indices) != 1 else '',
-        )
+        message_text = 'Are you sure you want to remove ' \
+            '{plural_adj} {count} template{plural}?'.format(
+                plural_adj=pluralize_adj(indices),
+                count=len(indices),
+                plural=pluralize(indices),
+            )
         if not show_question(self.window, 'Templates', message_text):
             return
 
@@ -600,15 +606,17 @@ class NaturalOne(Gtk.Application):
         if clear:
             message_text = 'all initiatives'
         else:
-            message_text = 'th%s %d initiative%s' % (
-                'ese' if len(indices) != 1 else 'is',
-                len(indices),
-                's' if len(indices) != 1 else '',
+            message_text = '{plural_adj} {count} initiative{plural}'.format(
+                plural_adj=pluralize_adj(indices),
+                count=len(indices),
+                plural=pluralize(indices),
             )
         if not show_question(
                 self.window,
                 'Initiatives',
-                'Are you sure you want to remove %s?' % message_text,
+                'Are you sure you want to remove {message}?'.format(
+                    message=message_text,
+                )
         ):
             return
 

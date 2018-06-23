@@ -25,3 +25,19 @@ def get_weapon(weapon_data, weapon_name, section_name):
         if weapon['name'] == weapon_name
     ).next()
     return weapon_elem
+
+
+def pluralize(items):
+    return 's' if len(items) else ''
+
+
+def pluralize_adj(items):
+    return 'these' if len(items) else 'this'
+
+
+def singularize(item):
+    return '' if item == 1 else 's'
+
+
+def sign(item):
+    return '+' if item > 0 else ''

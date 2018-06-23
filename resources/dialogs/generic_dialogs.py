@@ -41,4 +41,4 @@ def show_question(parent, title='', message='', buttons=None):
     dialog.format_secondary_text(message)
     response = dialog.run()
     dialog.destroy()
-    return response == Gtk.ButtonsType.OK
+    return response == Gtk.ResponseType.OK

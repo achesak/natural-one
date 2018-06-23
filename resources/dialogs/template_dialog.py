@@ -5,6 +5,7 @@ from gi.repository import Gdk, Gtk
 
 from resources.dialogs.generic_dialogs import show_question
 from resources.load_images import load_symbolic
+from resources.utility import pluralize, pluralize_adj, sign
 from resources.window import NaturalOneWindow
 
 
@@ -391,18 +392,21 @@ class TemplateDialog(Gtk.Dialog):
     def update_list(self):
         self.roll_store.clear()
         for item in self.rolls:
-            mod_sign = '+' if item['mod'] > 0 else ''
-            mod_output = '%s%d' % (
-                mod_sign,
-                item['mod'],
+            mod_output = '{sign}{mod}'.format(
+                sign=sign(item['mod']),
+                mod=item['mod'],
             ) if item['mod'] else ''
 
             row = [
                 item['description'],
-                '%dd%d%s' % (item['count'], item['die'], mod_output),
+                '{count}d{die}{mods}'.format(
+                    count=item['count'],
+                    die=item['die'],
+                    mods=mod_output,
+                ),
             ]
             if item['crit_active']:
-                row.append('x%d' % item['crit_mod'])
+                row.append('x{crit_mod}'.format(crit_mod=item['crit_mod']))
             elif item['crit_max']:
                 row.append('Max')
             elif item['crit_only']:
@@ -537,11 +541,12 @@ class TemplateDialog(Gtk.Dialog):
         if not indices:
             return
 
-        message_text = 'Are you sure you want to remove th%s %d roll%s?' % (
-            'ese' if len(indices) != 1 else 'is',
-            len(indices),
-            's' if len(indices) != 1 else '',
-        )
+        message_text = 'Are you sure you want to remove ' \
+            '{plural_adj} {count} roll{plural}?'.format(
+                plural_adj=pluralize_adj(indices),
+                count=len(indices),
+                plural=pluralize(indices),
+            )
         if not show_question(self, 'Templates', message_text):
             return
 

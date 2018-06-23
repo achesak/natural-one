@@ -12,7 +12,9 @@ def get_menu_data():
         with open('resources/ui/menu.xml', 'r') as menu_file:
             return menu_file.read()
     except IOError as e:
-        print('get_menu_data(): Error reading menu data:\n%s' % e)
+        print('get_menu_data(): Error reading menu data:\n{error}'.format(
+            error=e,
+        ))
         sys.exit()
 
 
@@ -22,7 +24,9 @@ def get_style_data():
         with open('resources/ui/style.css', 'r') as style_file:
             return style_file.read()
     except IOError as e:
-        print('get_style_data():  Error reading style data:\n%s' % e)
+        print('get_style_data():  Error reading style data:\n{error}'.format(
+            error=e,
+        ))
         sys.exit()
 
 
@@ -44,10 +48,12 @@ def get_weapon_data(systems):
             with open(path) as data_file:
                 data.append(json.load(data_file))
         except (IOError, TypeError, ValueError) as e:
-            print(
-                'get_weapon_data(): Error reading weapons data file %s:'
-                '\n%s' % (path, e)
-            )
+            print('get_weapon_data(): Error reading weapons data file '
+                  '{path}:\n{error}'.format(
+                      path=path,
+                      error=e,
+                  ),
+                  )
             sys.exit()
 
     return system_names, data

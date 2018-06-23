@@ -1,14 +1,21 @@
 # -*- coding: utf-8 -*-
+from resources.utility import sign, singularize
 
 
 def format_basic(count, die, mod_each, mod_once, rolls, total):
     mod = mod_each if mod_each != 0 else mod_once
-    mod_sign = '+' if mod > 0 else ''
-    mod_output = '%s%d' % (mod_sign, mod) if mod else ''
+    mod_output = '{mod_sign}{mod}'.format(
+        mod_sign=sign(mod),
+        mod=mod
+    ) if mod else ''
 
-    output = '<span size="larger">' \
-        '<b>Rolled %dd%d%s: <i>%d</i></b></span>\n' % \
-        (count, die, mod_output, total)
+    output = '<span size="larger"><b>Rolled ' \
+        '{count}d{die}{mod_output}: <i>{total}</i></b></span>\n'.format(
+            count=count,
+            die=die,
+            mod_output=mod_output,
+            total=total,
+        )
     output += ', '.join([str(x) for x in rolls])
 
     return output
@@ -16,11 +23,13 @@ def format_basic(count, die, mod_each, mod_once, rolls, total):
 
 def format_attack(num_atks, mods, crit_range, rolls):
     output = '<span size="larger">' \
-        '<b>Rolled %d attack%s</b>:</span>\n' % \
-        (num_atks, '' if num_atks == 1 else 's')
-    output += '<i>Modifiers %s\nCritical range %d-20</i>\n' % (
-        ', '.join([str(x) for x in mods]),
-        crit_range,
+        '<b>Rolled {num_atks} attack{singular}</b>:</span>\n'.format(
+            num_atks=num_atks,
+            singular=singularize(num_atks),
+        )
+    output += '<i>Modifiers {mods}\nCritical range {crit_low}-20</i>\n'.format(
+        mods=', '.join([str(x) for x in mods]),
+        crit_low=crit_range,
     )
     output += '\n'.join([str(x) for x in rolls])
 
@@ -36,9 +45,9 @@ def format_damage(
         rolls,
         total,
 ):
-    damage_dice = ', '.join(['%dd%d' % (
-        roll['count'],
-        roll['die'],
+    damage_dice = ', '.join(['{count}d{die}'.format(
+        count=roll['count'],
+        die=roll['die'],
     ) for roll in weapon_rolls])
 
     display_name = weapon['name']
@@ -50,25 +59,37 @@ def format_damage(
     use_an = display_name.lower()[0] in ['a', 'e', 'i', 'o', 'u']
 
     if crit_attack:
-        weapon_hits = '%d critical hit%s' % (
-            num_atks,
-            's' if num_atks != 1 else '',
+        weapon_hits = '{num_atks} critical hit{singular}'.format(
+            num_atks=num_atks,
+            singular=singularize(num_atks),
         )
     else:
-        weapon_hits = '%d hit%s' % (num_atks, 's' if num_atks != 1 else '')
+        weapon_hits = '{num_atks} hit{singular}'.format(
+            num_atks=num_atks,
+            singular=singularize(num_atks),
+        )
 
-    output = '<span size="larger">' \
-        '<b>Rolled %s with a%s %s: <i>%d damage</i></b></span>\n' % \
-        (weapon_hits, 'n' if use_an else '', display_name, total)
-    output += '<i>Modifiers %s</i>\n' % ', '.join([str(x) for x in mods])
+    output = '<span size="larger"><b>Rolled ' \
+        '{hits} with a{n} {weapon}: <i>{total} damage</i></b></span>\n'.format(
+            hits=weapon_hits,
+            n='n' if use_an else '',
+            weapon=display_name,
+            total=total,
+        )
+    output += '<i>Modifiers {mods}</i>\n'.format(
+        mods=', '.join([str(x) for x in mods]),
+    )
 
     if weapon_rolls[0]['count'] != 0:
-        output += '<i>Damage dice %s</i>\n' % damage_dice
+        output += '<i>Damage dice {dice}</i>\n'.format(
+            dice=damage_dice,
+        )
     output += '\n'.join([str(x) for x in rolls])
 
     if crit_attack and weapon['crit_mult'] > 1:
-        output += '\n<i>Multiplied by %dx due to critical hit</i>' % \
-                  weapon['crit_mult']
+        output += '\n<i>Multiplied by {mult}x due to critical hit</i>'.format(
+            mult=weapon['crit_mult'],
+        )
     elif crit_attack and 'max_on_crit' in weapon:
         output += '\n<i>Maximized due to critical hit</i>'
     elif crit_attack and weapon['crit_mult'] == 1:
@@ -79,19 +100,19 @@ def format_damage(
 
 def format_template(template, rolls, crit_attack, total):
     output = '<span size="larger">' \
-        '<b>Rolled template %s: <i>%d</i></b></span>\n' % (
-            template['name'],
-            total,
+        '<b>Rolled template {name}: <i>{total}</i></b></span>\n'.format(
+            name=template['name'],
+            total=total,
         )
     for roll in rolls:
-        output += 'Rolled %s (%s): <b>%d</b>\n' % (
-            roll.item['description'],
-            roll.roll_details,
-            roll,
+        output += 'Rolled {desc} ({details}): <b>{roll}</b>\n'.format(
+            desc=roll.item['description'],
+            details=roll.roll_details,
+            roll=int(roll),
         )
-        output += '\t%s\n' % roll
+        output += '\t{roll}\n'.format(roll=roll)
         if crit_attack:
-            output += '\t<i>%s</i>\n' % roll.roll_critical
+            output += '\t<i>{roll}</i>\n'.format(roll=roll.roll_critical)
     if output.endswith('\n'):
         output = output[:-1]
 
@@ -99,18 +120,19 @@ def format_template(template, rolls, crit_attack, total):
 
 
 def format_initiative(name, mod, roll):
-    mod_sign = '+' if mod > 0 else ''
-
-    output = '<span size="larger">' \
-        '<b>Rolled initiative for %s: <i>%d</i></b></span>\n' % (name, roll)
+    output = '<span size="larger"><b>Rolled initiative ' \
+        'for {name}: <i>{roll}</i></b></span>\n'.format(
+            name=name,
+            roll=roll,
+        )
     output += 'Initiative: '
     if mod:
-        output += '%d%s=<b>%d</b>' % (
-            roll - mod,
-            '%s%d' % (mod_sign, mod) if mod else '',
-            roll,
+        output += '{roll}{mod}=<b>{total}</b>'.format(
+            roll=roll - mod,
+            mod='{sign}{mod}'.format(sign=sign(mod), mod=mod) if mod else '',
+            total=roll,
         )
     else:
-        output += '<b>%d</b>' % roll
+        output += '<b>{roll}</b>'.format(roll=roll)
 
     return output

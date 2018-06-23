@@ -14,6 +14,7 @@ from resources.dialogs.generic_dialogs import (
 )
 import resources.io as io
 from resources.load_images import load_symbolic
+from resources.utility import pluralize, pluralize_adj
 from resources.window import NaturalOneWindow
 
 
@@ -280,11 +281,12 @@ class SystemDialog(Gtk.Dialog):
         if not indices:
             return
 
-        message_text = 'Are you sure you want to remove th%s %d system%s' % (
-            'ese' if len(indices) != 1 else 'is',
-            len(indices),
-            's' if len(indices) != 1 else '',
-        )
+        message_text = 'Are you sure you want to remove ' \
+            '{plural_adj} {count} system{plural}'.format(
+                plural_adj=pluralize_adj(indices),
+                count=len(indices),
+                plural=pluralize(indices),
+            )
         if not show_question(self, 'Systems', message_text):
             return
 
