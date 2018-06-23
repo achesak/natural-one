@@ -27,7 +27,7 @@ import resources.launch as launch
 import resources.roller as roller
 import resources.utility as utility
 
-from resources.window import DiceRollerWindow
+from resources.window import NaturalOneWindow
 
 from resources.dialogs.about_dialog import NaturalOneAboutDialog
 from resources.dialogs.generic_dialogs import question
@@ -35,12 +35,11 @@ from resources.dialogs.system_dialog import SystemDialog
 from resources.dialogs.template_dialog import TemplateDialog
 
 
-class DiceRoller(Gtk.Application):
-    """Creates the dice roller application."""
+class NaturalOne(Gtk.Application):
 
     def __init__(self, *args, **kwargs):
 
-        super(DiceRoller, self).__init__(*args, application_id="com.achesak.naturalone", **kwargs)
+        super(NaturalOne, self).__init__(*args, application_id="com.achesak.naturalone", **kwargs)
         self.window = None
 
     def do_startup(self):
@@ -70,7 +69,7 @@ class DiceRoller(Gtk.Application):
     def do_activate(self):
 
         if not self.window:
-            self.window = DiceRollerWindow(application=self, title="Natural One", style_css=self.style_css)
+            self.window = NaturalOneWindow(application=self, title="Natural One", style_css=self.style_css)
             self.window.set_wmclass("Natural One", "Natural One")
 
         self.setup_interface()
@@ -490,5 +489,5 @@ class DiceRoller(Gtk.Application):
 
 if __name__ == "__main__":
 
-    win = DiceRoller()
+    win = NaturalOne()
     win.run()

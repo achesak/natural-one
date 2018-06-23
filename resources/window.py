@@ -4,7 +4,7 @@ gi.require_version("Gtk", "3.0")
 from gi.repository import Gdk, GdkPixbuf, Gio, Gtk
 
 
-class DiceRollerWindow(Gtk.ApplicationWindow):
+class NaturalOneWindow(Gtk.ApplicationWindow):
 
     def __init__(self, style_css=None, *args, **kwargs):
         super(Gtk.ApplicationWindow, self).__init__(*args, **kwargs)

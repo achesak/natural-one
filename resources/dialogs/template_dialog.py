@@ -4,7 +4,7 @@ import copy
 from gi.repository import Gdk, Gio, Gtk
 
 from resources.dialogs.generic_dialogs import question
-from resources.window import DiceRollerWindow
+from resources.window import NaturalOneWindow
 
 
 class TemplateDialog(Gtk.Dialog):
@@ -236,10 +236,10 @@ class TemplateDialog(Gtk.Dialog):
         ]
 
         for input in number_inputs:
-            input.connect("changed", DiceRollerWindow.limit_number_input)
+            input.connect("changed", NaturalOneWindow.limit_number_input)
 
         for input in count_inputs:
-            input.connect("changed", lambda i=input: DiceRollerWindow.limit_number_input(i, allow_negative=False))
+            input.connect("changed", lambda i=input: NaturalOneWindow.limit_number_input(i, allow_negative=False))
 
     def check_edit_name(self):
         """Checks if the current roll is being added or edited."""
