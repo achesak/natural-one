@@ -393,6 +393,8 @@ class NaturalOneWindow(Gtk.ApplicationWindow):
         self.dq_size_ent.set_width_chars(4)
         self.dq_size_ent.props.xalign = 0.5
         self.dq_size_ent.set_margin_left(5)
+        self.dq_error_popover = Gtk.Popover()
+        self.dq_error_popover.set_relative_to(self.dq_size_ent)
         dq_box.add(self.dq_size_ent)
         dice_grid.attach_next_to(
             dq_box,
@@ -619,6 +621,8 @@ class NaturalOneWindow(Gtk.ApplicationWindow):
             Gtk.PositionType.BOTTOM,
             4, 1,
         )
+        self.weap_error_popover = Gtk.Popover()
+        self.weap_error_popover.set_relative_to(self.weap_dam_tree)
 
         # Create the number of attacks row.
         num_dam_lbl = Gtk.Label('Number of attacks')
@@ -903,6 +907,8 @@ class NaturalOneWindow(Gtk.ApplicationWindow):
             Gtk.PositionType.RIGHT,
             1, 1,
         )
+        self.name_init_error_popover = Gtk.Popover()
+        self.name_init_error_popover.set_relative_to(self.name_init_ent)
 
         # Create the modifier label and entry.
         self.mod_init_lbl = Gtk.Label('Modifier')
@@ -1064,6 +1070,22 @@ class NaturalOneWindow(Gtk.ApplicationWindow):
     @staticmethod
     def remove_error(widget):
         widget.get_style_context().remove_class('bad-input')
+
+    @staticmethod
+    def show_popup(widget, message):
+        children = widget.get_children()
+        for child in children:
+            child.destroy()
+
+        label = Gtk.Label(message)
+        label.set_margin_top(10)
+        label.set_margin_bottom(10)
+        label.set_margin_left(10)
+        label.set_margin_right(10)
+
+        widget.add(label)
+        widget.show_all()
+        widget.popup()
 
     def remove_errors(self):
         widgets = [

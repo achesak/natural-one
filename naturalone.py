@@ -155,11 +155,11 @@ class NaturalOne(Gtk.Application):
         )
         self.window.dam_btn.connect(
             'clicked',
-            lambda x: self.roll_dmg(),
+            lambda x: self.roll_damage(),
         )
         self.window.weap_dam_tree.connect(
             'row-activated',
-            lambda x, y, z: self.roll_dmg(),
+            lambda x, y, z: self.roll_damage(),
         )
         self.window.sys_manage_btn.connect(
             'clicked',
@@ -258,10 +258,18 @@ class NaturalOne(Gtk.Application):
         except ValueError:
             die = 0
             self.window.add_error(self.window.dq_size_ent)
+            self.window.show_popup(
+                self.window.dq_error_popover,
+                'Enter a die',
+            )
             valid = False
 
         if die < 1:
             self.window.add_error(self.window.dq_size_ent)
+            self.window.show_popup(
+                self.window.dq_error_popover,
+                'Enter a die',
+            )
             valid = False
 
         if not valid:
@@ -305,7 +313,7 @@ class NaturalOne(Gtk.Application):
         output = formatter.format_attack(num_atks, mods, crit_range, rolls)
         self.window.update_output(output)
 
-    def roll_dmg(self):
+    def roll_damage(self):
         if len(self.system_names) == 0:
             return
 
@@ -314,9 +322,17 @@ class NaturalOne(Gtk.Application):
         selection = self.window.weap_dam_tree.get_selection()
         model, weapon_iter = selection.get_selected()
         if weapon_iter is None:
+            self.window.show_popup(
+                self.window.weap_error_popover,
+                'Select a weapon to roll',
+            )
             return
         section_iter = self.window.weap_dam_store.iter_parent(weapon_iter)
         if section_iter is None:
+            self.window.show_popup(
+                self.window.weap_error_popover,
+                'Select a weapon to roll',
+            )
             return
         weapon = utility.get_weapon(
             system_data,
@@ -544,6 +560,10 @@ class NaturalOne(Gtk.Application):
         name = self.window.name_init_ent.get_text().strip()
         if not name:
             self.window.add_error(self.window.name_init_ent)
+            self.window.show_popup(
+                self.window.name_init_error_popover,
+                'Enter a character or opponent name',
+            )
             return
 
         mod = self.window.int_or(self.window.mod_init_ent, 0)
