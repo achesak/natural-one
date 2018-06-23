@@ -7,7 +7,8 @@
 # Natural One
 # Version 1.6
 #
-# A simple dice roller application for the Pathfinder roll playing game.
+# Natural One is a dice roller designed primarily for the Pathfinder
+# tabletop roll-playing game.
 #
 # Released under the GNU General Public License version 3.
 #
