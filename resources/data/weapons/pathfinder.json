@@ -6227,6 +6227,363 @@
             ]
         },
         {
+            "category": "Alchemical simple light melee weapons",
+            "weapons": [
+                {
+                    "name": "Liquid blade",
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                            "count": 1,
+                            "die": 6,
+                            "type": "Piercing"
+                        }
+                    ],
+                    "crit_range": 19,
+                    "crit_mult": 2
+                }
+            ]
+        },
+        {
+            "category": "Alchemical simple one-handed melee weapons",
+            "weapons": [
+                {
+                    "name": "Firework, flame fountain",
+                    "display": "Flame fountain firework",
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                            "count": 1,
+                            "die": 8,
+                            "type": "Fire"
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                }
+            ]
+        },
+        {
+            "category": "Alchemical simple ranged weapons",
+            "weapons": [
+                {
+                    "name": "Acid",
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                            "count": 1,
+                            "die": 6,
+                            "type": "Acid"
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Alchemist's fire",
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                            "count": 1,
+                            "die": 6,
+                            "type": "Fire"
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Alkali flask",
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                            "count": 1,
+                            "die": 6,
+                            "type": "Acid"
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Bottled lightning",
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                            "count": 1,
+                            "die": 8,
+                            "type": "Electricity"
+                        }
+                    ],
+                    "dmg_static": 1,
+                    "dmg_static_type": "Sonic",
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Burst jar",
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                            "count": 0,
+                            "die": 0
+                        }
+                    ],
+                    "dmg_static": 1,
+                    "dmg_static_type": "Sonic",
+                    "crit_range": 20,
+                    "crit_mult": 1
+                },
+                {
+                    "name": "Firecracker",
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                            "count": 1,
+                            "die": 2,
+                            "type": "Nonlethal sonic"
+                        }
+                    ],
+                    "dmg_static": 1,
+                    "dmg_static_type": "Nonlethal sonic",
+                    "crit_range": 20,
+                    "crit_mult": 1
+                },
+                {
+                    "name": "Firecracker, spirit",
+                    "display": "Spirit firecracker",
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                            "count": 1,
+                            "die": 4,
+                            "type": "Only affects incorporeal"
+                        }
+                    ],
+                    "dmg_static": 1,
+                    "dmg_static_type": "Only affects incorporeal",
+                    "crit_range": 20,
+                    "crit_mult": 1
+                },
+                {
+                    "name": "Firework, dancing peonies",
+                    "display": "Dancing peonies firework",
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                            "count": 0,
+                            "die": 0
+                        }
+                    ],
+                    "dmg_static": 1,
+                    "dmg_static_type": "Fire",
+                    "crit_range": 20,
+                    "crit_mult": 1
+                },
+                {
+                    "name": "Firework, jumping jenny",
+                    "display": "Jumping jenny firework",
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                            "count": 0,
+                            "die": 0
+                        }
+                    ],
+                    "dmg_static": 1,
+                    "dmg_static_type": "Fire",
+                    "crit_range": 20,
+                    "crit_mult": 1
+                },
+                {
+                    "name": "Firework, skydragon",
+                    "display": "Skydragon firework",
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                            "count": 2,
+                            "die": 6,
+                            "type": "Fire"
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 1
+                },
+                {
+                    "name": "Firework, skyrocket",
+                    "display": "Skyrocket firework",
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                            "count": 2,
+                            "die": 6,
+                            "type": "Fire"
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 1
+                },
+                {
+                    "name": "Firework, sparking pinwheel",
+                    "display": "Sparking pinwheel firework",
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                            "count": 0,
+                            "die": 0
+                        }
+                    ],
+                    "dmg_static": 1,
+                    "dmg_static_type": "Fire",
+                    "crit_range": 20,
+                    "crit_mult": 1
+                },
+                {
+                    "name": "Firework, star candle",
+                    "display": "Star candle firework",
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                            "count": 1,
+                            "die": 1,
+                            "type": "Fire"
+                        },
+                        {
+                            "count": 1,
+                            "die": 1,
+                            "type": "Nonlethal"
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 1
+                },
+                {
+                    "name": "Firework, starfountain",
+                    "display": "Starfountain firework",
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                            "count": 1,
+                            "die": 6,
+                            "type": "Fire"
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 1
+                },
+                {
+                    "name": "Gel, shard",
+                    "display": "Shard gel",
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                            "count": 1,
+                            "die": 4,
+                            "type": "Piercing"
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Grenade, fuse",
+                    "display": "Fuse grenade",
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                            "count": 2,
+                            "die": 6,
+                            "type": "Bludgeoning"
+                        },
+                        {
+                            "count": 1,
+                            "die": 6,
+                            "type": "Fire"
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Grenade, pellet",
+                    "display": "Pellet grenade",
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                            "count": 1,
+                            "die": 6,
+                            "type": "Bludgeoning"
+                        },
+                        {
+                            "count": 1,
+                            "die": 6,
+                            "type": "Piercing"
+                        },
+                        {
+                            "count": 1,
+                            "die": 6,
+                            "type": "Fire"
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 1
+                },
+                {
+                    "name": "Holy water",
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                            "count": 2,
+                            "die": 4,
+                            "type": "Positive energy"
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Liquid ice",
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                            "count": 1,
+                            "die": 6,
+                            "type": "Cold"
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Oil, keros",
+                    "display": "Keros oil",
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                            "count": 1,
+                            "die": 3,
+                            "type": "Fire"
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 2
+                },
+                {
+                    "name": "Tangleburn bag",
+                    "no_size_steps": true,
+                    "dmg": [
+                        {
+                            "count": 1,
+                            "die": 6,
+                            "type": "Fire"
+                        }
+                    ],
+                    "crit_range": 20,
+                    "crit_mult": 1
+                }
+            ]
+        },
+        {
             "category": "Technological martial one-handed melee weapons",
             "weapons": [
                 {
