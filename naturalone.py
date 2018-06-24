@@ -16,7 +16,7 @@
 
 
 import sys
-if sys.version_info > (3, 0):
+if sys.version_info < (3, 0):
     reload(sys)
     sys.setdefaultencoding('UTF-8')
 
