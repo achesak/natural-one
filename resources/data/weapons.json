@@ -31,6 +31,12 @@
             "user_added": false
         },
         {
+            "name": "Pure Steam",
+            "filename": "puresteam.json",
+            "enabled": false,
+            "user_added": false
+        },
+        {
             "name": "The Modern Path",
             "filename": "themodernpath.json",
             "enabled": false,
