@@ -105,7 +105,7 @@ def format_template(template, rolls, crit_attack, total):
             total=total,
         )
     for roll in rolls:
-        output += 'Rolled {desc} ({details}): <b>{roll}</b>\n'.format(
+        output += 'uRolled {desc} ({details}): <b>{roll}</b>\n'.format(
             desc=roll.item['description'],
             details=roll.roll_details,
             roll=int(roll),
