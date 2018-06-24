@@ -4,6 +4,7 @@ import os
 import platform
 import shutil
 import sys
+import uuid
 
 
 def get_main_dir():
@@ -97,3 +98,23 @@ def write_templates(filename, templates):
             json.dump(templates, template_file)
     except IOError:
         print('IOError writing templates')
+
+
+def add_system(filename):
+    new_filename = '{new_filename}.json'.format(
+        new_filename=str(uuid.uuid4()),
+    )
+    shutil.copyfile(
+        filename,
+        os.path.join(get_systems_dir(), new_filename),
+    )
+    return new_filename
+
+
+def remove_system(filename):
+    system_path = os.path.join(
+        get_systems_dir(),
+        filename,
+    )
+    if os.path.exists(system_path):
+        os.remove(system_path)

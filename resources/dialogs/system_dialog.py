@@ -2,8 +2,6 @@
 import copy
 import json
 import os
-import shutil
-import uuid
 
 from gi.repository import Gtk
 
@@ -260,11 +258,7 @@ class SystemDialog(Gtk.Dialog):
             )
             return
 
-        new_filename = str(uuid.uuid4()) + '.json'
-        shutil.copyfile(
-            filename,
-            os.path.join(io.get_systems_dir(), new_filename),
-        )
+        new_filename = io.add_system(filename)
 
         self.systems.append({
             'name': system_name,
@@ -295,12 +289,7 @@ class SystemDialog(Gtk.Dialog):
             if not self.systems[index]['user_added']:
                 show_base_message = True
                 continue
-            system_path = os.path.join(
-                io.get_systems_dir(),
-                self.systems[index]['filename'],
-            )
-            if os.path.exists(system_path):
-                os.remove(system_path)
+            io.remove_system(self.systems[index]['filename'])
             name_index = self.system_names.index(self.systems[index]['name'])
             del self.system_names[name_index]
             del self.systems[index]
