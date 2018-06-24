@@ -16,8 +16,9 @@
 
 
 import sys
-reload(sys)
-sys.setdefaultencoding('UTF-8')
+if sys.version_info > (3, 0):
+    reload(sys)
+    sys.setdefaultencoding('UTF-8')
 
 import gi
 gi.require_version('Gtk', '3.0')
