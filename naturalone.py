@@ -262,6 +262,20 @@ class NaturalOne(Gtk.Application):
         self.current_system_index = current_selection
         self.fill_weapon_list(current_selection)
 
+    def update_templates(self):
+        self.window.template_store.clear()
+        for index, template in enumerate(self.templates):
+            self.window.template_store.append(
+                [index, template['name'], len(template['rolls'])],
+            )
+
+    def update_initiative(self):
+        self.window.init_store.clear()
+        for index, init in enumerate(self.initiative_list):
+            self.window.init_store.append(
+                [index, init['name'], init['initiative']],
+            )
+
     def roll_custom(self):
         valid = True
         self.window.remove_errors()
@@ -407,13 +421,6 @@ class NaturalOne(Gtk.Application):
         self.fill_systems_list()
         self.fill_weapon_list(self.current_system_index)
 
-    def update_templates(self):
-        self.window.template_store.clear()
-        for index, template in enumerate(self.templates):
-            self.window.template_store.append(
-                [template['name'], len(template['rolls']), index],
-            )
-
     def new_template(self):
         dlg = TemplateDialog(
             self.window,
@@ -502,7 +509,7 @@ class NaturalOne(Gtk.Application):
     def reorder_templates(self):
         new_templates = []
         for row_index in range(len(self.window.template_store)):
-            old_index = self.window.template_store[row_index][2]
+            old_index = self.window.template_store[row_index][0]
             new_templates.append(self.templates[old_index])
         self.templates = new_templates
 
@@ -610,13 +617,13 @@ class NaturalOne(Gtk.Application):
                 key=lambda x: x['initiative'],
             )
 
-        self.window.init_store.clear()
-        for init in self.initiative_list:
-            self.window.init_store.append([init['name'], init['initiative']])
+        self.update_initiative()
 
     def remove_initiative(self, clear=False):
         indices = self.window.get_selected_indices(self.window.init_tree)
-        if not indices or (clear and not self.initiative_list):
+        if clear and not self.initiative_list:
+            return
+        elif not clear and not indices:
             return
 
         if clear:
@@ -643,22 +650,16 @@ class NaturalOne(Gtk.Application):
         else:
             self.initiative_list = []
 
-        self.window.init_store.clear()
-        for init in self.initiative_list:
-            self.window.init_store.append([init['name'], init['initiative']])
+        self.update_initiative()
 
     def reorder_initiative(self):
         new_initiatives = []
         for row_index in range(len(self.window.init_store)):
-            new_initiatives.append({
-                'name': self.window.init_store[row_index][0],
-                'initiative': self.window.init_store[row_index][1]
-            })
+            old_index = self.window.init_store[row_index][0]
+            new_initiatives.append(self.initiative_list[old_index])
         self.initiative_list = new_initiatives
 
-        self.window.init_store.clear()
-        for init in self.initiative_list:
-            self.window.init_store.append([init['name'], init['initiative']])
+        self.update_initiative()
 
     def about(self):
         with open('resources/images/icon256.png', 'rb') as img_file:

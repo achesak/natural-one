@@ -744,16 +744,16 @@ class NaturalOneWindow(Gtk.ApplicationWindow):
             Gtk.PositionType.BOTTOM,
             1, 1,
         )
-        self.template_store = Gtk.ListStore(str, int, int)
+        self.template_store = Gtk.ListStore(int, str, int)
         self.template_tree = Gtk.TreeView(model=self.template_store)
         self.template_tree.get_selection().set_mode(Gtk.SelectionMode.MULTIPLE)
         self.template_tree.set_reorderable(True)
         renderer = Gtk.CellRendererText()
-        column = Gtk.TreeViewColumn('Name', renderer, text=0)
+        column = Gtk.TreeViewColumn('Name', renderer, text=1)
         column.set_expand(True)
         self.template_tree.append_column(column)
         renderer = Gtk.CellRendererText()
-        column = Gtk.TreeViewColumn('Rolls', renderer, text=1)
+        column = Gtk.TreeViewColumn('Rolls', renderer, text=2)
         self.template_tree.append_column(column)
         templates_scroll_win.add(self.template_tree)
 
@@ -966,16 +966,16 @@ class NaturalOneWindow(Gtk.ApplicationWindow):
             Gtk.PositionType.BOTTOM,
             1, 1,
         )
-        self.init_store = Gtk.ListStore(str, int)
+        self.init_store = Gtk.ListStore(int, str, int)
         self.init_tree = Gtk.TreeView(model=self.init_store)
         self.init_tree.set_reorderable(True)
         self.init_tree.get_selection().set_mode(Gtk.SelectionMode.MULTIPLE)
         renderer = Gtk.CellRendererText()
-        column = Gtk.TreeViewColumn('Name', renderer, text=0)
+        column = Gtk.TreeViewColumn('Name', renderer, text=1)
         column.set_expand(True)
         self.init_tree.append_column(column)
         renderer = Gtk.CellRendererText()
-        column = Gtk.TreeViewColumn('Initiative', renderer, text=1)
+        column = Gtk.TreeViewColumn('Initiative', renderer, text=2)
         self.init_tree.append_column(column)
         init_scroll_win.add(self.init_tree)
 
