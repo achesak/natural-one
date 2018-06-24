@@ -203,6 +203,10 @@ class NaturalOne(Gtk.Application):
             'row-activated',
             lambda x, y, z: self.roll_template(),
         )
+        self.window.template_tree.connect(
+            'drag-end',
+            lambda x, y: self.reorder_templates(),
+        )
         self.window.roll_init_rbtn.connect(
             'toggled',
             lambda x: self.window.toggle_initiative_mode(),
@@ -404,12 +408,10 @@ class NaturalOne(Gtk.Application):
         self.fill_weapon_list(self.current_system_index)
 
     def update_templates(self):
-        self.templates.sort(key=lambda x: x['name'])
-
         self.window.template_store.clear()
-        for template in self.templates:
+        for index, template in enumerate(self.templates):
             self.window.template_store.append(
-                [template['name'], len(template['rolls'])],
+                [template['name'], len(template['rolls']), index],
             )
 
     def new_template(self):
@@ -496,6 +498,16 @@ class NaturalOne(Gtk.Application):
         total, rolls = roller.roll_template(template, crit_attack)
         output = formatter.format_template(template, rolls, crit_attack, total)
         self.window.update_output(output)
+
+    def reorder_templates(self):
+        new_templates = []
+        for row_index in range(len(self.window.template_store)):
+            old_index = self.window.template_store[row_index][2]
+            new_templates.append(self.templates[old_index])
+        self.templates = new_templates
+
+        io.save_templates(self.templates)
+        self.update_templates()
 
     def import_templates(self):
         dialog = Gtk.FileChooserDialog(

@@ -744,9 +744,10 @@ class NaturalOneWindow(Gtk.ApplicationWindow):
             Gtk.PositionType.BOTTOM,
             1, 1,
         )
-        self.template_store = Gtk.ListStore(str, int)
+        self.template_store = Gtk.ListStore(str, int, int)
         self.template_tree = Gtk.TreeView(model=self.template_store)
         self.template_tree.get_selection().set_mode(Gtk.SelectionMode.MULTIPLE)
+        self.template_tree.set_reorderable(True)
         renderer = Gtk.CellRendererText()
         column = Gtk.TreeViewColumn('Name', renderer, text=0)
         column.set_expand(True)
@@ -817,6 +818,18 @@ class NaturalOneWindow(Gtk.ApplicationWindow):
         templates_grid.attach_next_to(
             self.list_crit_chk,
             self.template_action_bar,
+            Gtk.PositionType.BOTTOM,
+            1, 1,
+        )
+
+        # Create the template drag and drop help text.
+        drag_list_lbl = Gtk.Label(
+            'Drag and drop to rearrange templates',
+        )
+        drag_list_lbl.set_margin_top(10)
+        templates_grid.attach_next_to(
+            drag_list_lbl,
+            self.list_crit_chk,
             Gtk.PositionType.BOTTOM,
             1, 1,
         )
