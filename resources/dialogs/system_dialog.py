@@ -39,58 +39,12 @@ class SystemDialog(Gtk.Dialog):
         header = self.get_header_bar()
         header.set_title('Systems')
 
-        # Create the main grid.
-        dlg_grid = Gtk.Grid()
-        dlg_grid.set_row_spacing(18)
-        dlg_grid.set_column_spacing(12)
-        dlg_grid.set_border_width(18)
-        self.get_content_area().add(dlg_grid)
-
-        # Create the add system grid.
-        add_grid = Gtk.Grid()
-        add_grid.set_row_spacing(8)
-        add_grid.set_column_spacing(12)
-        dlg_grid.attach(add_grid, 0, 0, 1, 1)
-
-        # Create the add system main label.
-        add_lbl = Gtk.Label()
-        add_lbl.set_markup('<span size="x-large">Add System</span>')
-        add_lbl.set_alignment(0, 0.5)
-        add_grid.attach_next_to(add_lbl, None, Gtk.PositionType.RIGHT, 2, 1)
-
-        # Create the system file row.
-        file_lbl = Gtk.Label('File')
-        file_lbl.set_alignment(1, 0.5)
-        add_grid.attach_next_to(
-            file_lbl,
-            add_lbl,
-            Gtk.PositionType.BOTTOM,
-            1,
-            1,
-        )
-        file_btn_box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL)
-        Gtk.StyleContext.add_class(file_btn_box.get_style_context(), 'linked')
-        self.file_pick_btn = Gtk.FileChooserButton(
-            'Select a file',
-            Gtk.FileChooserAction.OPEN,
-        )
-        self.file_pick_btn.set_current_folder(os.path.expanduser('~'))
-        self.file_pick_btn.set_hexpand(True)
-        file_btn_box.add(self.file_pick_btn)
-        self.file_btn = Gtk.Button('Add')
-        file_btn_box.add(self.file_btn)
-        add_grid.attach_next_to(
-            file_btn_box,
-            file_lbl,
-            Gtk.PositionType.RIGHT,
-            1, 1,
-        )
-
         # Create the systems grid.
         system_grid = Gtk.Grid()
         system_grid.set_row_spacing(5)
         system_grid.set_column_spacing(12)
-        dlg_grid.attach(system_grid, 0, 2, 1, 1)
+        system_grid.set_border_width(18)
+        self.get_content_area().add(system_grid)
 
         # Create the systems main label.
         system_lbl = Gtk.Label()
@@ -139,11 +93,22 @@ class SystemDialog(Gtk.Dialog):
         )
 
         # Create the system list buttons.
+        system_btn_box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL)
+        Gtk.StyleContext.add_class(
+            system_btn_box.get_style_context(),
+            'linked',
+        )
+        self.system_action_bar.pack_start(system_btn_box)
+        self.add_btn = Gtk.Button()
+        add_img = load_symbolic('list-add')
+        self.add_btn.add(add_img)
+        self.add_btn.set_tooltip_text('Add system')
+        system_btn_box.add(self.add_btn)
         self.delete_btn = Gtk.Button()
         delete_img = load_symbolic('list-remove')
         self.delete_btn.add(delete_img)
         self.delete_btn.set_tooltip_text('Remove selected systems')
-        self.system_action_bar.pack_start(self.delete_btn)
+        system_btn_box.add(self.delete_btn)
         self.select_all_btn = Gtk.Button()
         select_all_img = load_symbolic('edit-select-all')
         self.select_all_btn.add(select_all_img)
@@ -162,13 +127,13 @@ class SystemDialog(Gtk.Dialog):
 
         self.update_systems_list()
 
-        self.file_btn.connect(
-            'clicked',
-            lambda x: self.add_system(),
-        )
         self.system_tree.connect(
             'drag-end',
             lambda x, y: self.reorder_systems(),
+        )
+        self.add_btn.connect(
+            'clicked',
+            lambda x: self.add_system(),
         )
         self.delete_btn.connect(
             'clicked',
@@ -224,8 +189,32 @@ class SystemDialog(Gtk.Dialog):
         self.systems = new_systems
 
     def add_system(self):
-        filename = self.file_pick_btn.get_filename()
-        if not filename:
+        dialog = Gtk.FileChooserDialog(
+            'Add System',
+            self,
+            Gtk.FileChooserAction.OPEN,
+            (
+                Gtk.STOCK_CANCEL, Gtk.ResponseType.CANCEL,
+                Gtk.STOCK_OK, Gtk.ResponseType.OK,
+            ),
+        )
+        dialog.set_current_folder(os.path.expanduser('~'))
+
+        filter_json = Gtk.FileFilter()
+        filter_json.set_name('JSON system files')
+        filter_json.add_mime_type('application/json')
+        dialog.add_filter(filter_json)
+
+        filter_any = Gtk.FileFilter()
+        filter_any.set_name('Any files')
+        filter_any.add_pattern('*')
+        dialog.add_filter(filter_any)
+
+        response = dialog.run()
+        filename = dialog.get_filename()
+        dialog.destroy()
+
+        if response != Gtk.ResponseType.OK or not filename:
             return
 
         errors = []
