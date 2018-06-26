@@ -32,7 +32,7 @@ class TemplateDialog(Gtk.Dialog):
             Gtk.DialogFlags.MODAL,
             use_header_bar=True,
         )
-        self.set_size_request(600, 800)
+        self.set_size_request(600, 900)
         self.add_button('Cancel', Gtk.ResponseType.CANCEL)
         self.add_button('OK', Gtk.ResponseType.OK)
 
