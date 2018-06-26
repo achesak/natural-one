@@ -342,9 +342,22 @@ class TemplateDialog(Gtk.Dialog):
         save_btn.set_can_default(True)
         save_btn.grab_default()
 
-        self.add_btn.connect('clicked', lambda x: self.add_roll())
-        self.edit_btn.connect('clicked', lambda x: self.edit_roll())
-        self.delete_btn.connect('clicked', lambda x: self.remove_roll())
+        self.add_btn.connect(
+            'clicked',
+            lambda x: self.add_roll(),
+        )
+        self.edit_btn.connect(
+            'clicked',
+            lambda x: self.edit_roll(),
+        )
+        self.delete_btn.connect(
+            'clicked',
+            lambda x: self.remove_roll(),
+        )
+        self.crit_apply_rbtn.connect(
+            'toggled',
+            lambda x: self.update_multipler_active(),
+        )
         self.roll_tree.connect(
             'row-activated',
             lambda x, y, z: self.edit_roll(),
@@ -412,6 +425,9 @@ class TemplateDialog(Gtk.Dialog):
             else:
                 row.append('N/A')
             self.roll_store.append(row)
+
+    def update_multipler_active(self):
+        self.crit_ent.set_sensitive(self.crit_apply_rbtn.get_active())
 
     def check_roll_validity(self, roll):
         NaturalOneWindow.remove_error(self.count_ent)
@@ -520,7 +536,12 @@ class TemplateDialog(Gtk.Dialog):
         self.die_ent.set_text(str(roll['die']))
         self.mod_ent.set_text(str(roll['mod']))
         self.mod_chk.set_active(roll['mod_every'])
-        self.crit_ent.set_text(str(roll['crit_mod']))
+        if roll['crit_active']:
+            self.crit_ent.set_sensitive(True)
+            self.crit_ent.set_text(str(roll['crit_mod']))
+        else:
+            self.crit_ent.set_sensitive(False)
+            self.crit_ent.set_text("")
         self.crit_apply_rbtn.set_active(roll['crit_active'])
         self.crit_max_rbtn.set_active(roll['crit_max'])
         self.crit_no_apply_rbtn.set_active(
