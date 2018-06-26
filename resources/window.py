@@ -860,6 +860,7 @@ class NaturalOneWindow(Gtk.ApplicationWindow):
             None,
             'Roll initiative',
         )
+        self.roll_init_rbtn.set_margin_left(10)
         self.add_init_rbtn = Gtk.RadioButton.new_with_label_from_widget(
             self.roll_init_rbtn,
             'Add initiative directly',
