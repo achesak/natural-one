@@ -28,11 +28,11 @@ def get_weapon(weapon_data, weapon_name, section_name):
 
 
 def pluralize(items):
-    return 's' if len(items) else ''
+    return 's' if len(items) > 1 else ''
 
 
 def pluralize_adj(items):
-    return 'these' if len(items) else 'this'
+    return 'these' if len(items) > 1else 'this'
 
 
 def singularize(item):
