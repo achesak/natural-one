@@ -56,7 +56,11 @@ def format_damage(
     if 'no_format' not in weapon:
         display_name = display_name.lower()
 
-    use_an = display_name.lower()[0] in ['a', 'e', 'i', 'o', 'u']
+    pre = ' a'
+    if display_name.lower()[0] in ['a', 'e', 'i', 'o', 'u']:
+        pre = ' an'
+    if display_name.endswith('es'):
+        pre = ''
 
     if crit_attack:
         weapon_hits = '{num_atks} critical hit{singular}'.format(
@@ -70,20 +74,21 @@ def format_damage(
         )
 
     output = '<span size="larger"><b>Rolled ' \
-        '{hits} with a{n} {weapon}: <i>{total} damage</i></b></span>\n'.format(
+        '{hits}: <i>{total} damage</i></b></span>\n'.format(
             hits=weapon_hits,
-            n='n' if use_an else '',
-            weapon=display_name,
             total=total,
         )
-    output += '<i>Modifiers {mods}</i>\n'.format(
-        mods=', '.join([str(x) for x in mods]),
+    output += "<i>Using{pre} {weapon}</i>".format(
+        pre=pre,
+        weapon=display_name,
     )
-
     if weapon_rolls[0]['count'] != 0:
-        output += '<i>Damage dice {dice}</i>\n'.format(
+        output += '<i>: {dice}</i>'.format(
             dice=damage_dice,
         )
+    output += '\n<i>Modifiers {mods}</i>\n'.format(
+        mods=', '.join([str(x) for x in mods]),
+    )
     output += '\n'.join([str(x) for x in rolls])
 
     if crit_attack and weapon['crit_mult'] > 1:
