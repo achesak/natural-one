@@ -65,10 +65,10 @@ class AttackRollResult(BasicRollResult):
             output += '<b>{value}</b>'.format(value=self.value)
 
         if self.status == AttackRollStatus.CRITICAL_FAIL:
-            output += '\n<span color="red">Critical fail!</span>'
+            output += '\n<span color="red"><b>Critical fail!</b></span>'
         elif self.status == AttackRollStatus.CRITICAL or \
                 self.status == AttackRollStatus.CRITICAL_CONFIRM:
-            output += '\n<span color="green">Critical hit!</span>'
+            output += '\n<span color="green"><b>Critical hit!</b></span>'
         if self.status == AttackRollStatus.CRITICAL_CONFIRM:
             output += ' Critical confirm: '
             if self.mod:
