@@ -1165,22 +1165,22 @@ class NaturalOneWindow(Gtk.ApplicationWindow):
             self.mod_atks_ent, self.mod_dam_ent,
         ]
 
-        for input in number_inputs:
-            input.connect('changed', self.limit_number_input)
+        for limited_imput in number_inputs:
+            limited_imput.connect('changed', self.limit_number_input)
 
-        for input in count_inputs:
-            input.connect(
+        for limited_imput in count_inputs:
+            limited_imput.connect(
                 'changed',
-                lambda limited_input=input: self.limit_number_input(
+                lambda limited_input=limited_imput: self.limit_number_input(
                     limited_input,
                     allow_negative=False,
                 ),
             )
 
-        for input in mod_inputs:
-            input.connect(
+        for limited_imput in mod_inputs:
+            limited_imput.connect(
                 'changed',
-                lambda limited_input=input: self.limit_number_input(
+                lambda limited_input=limited_imput: self.limit_number_input(
                     limited_input,
                     allow_comma=True,
                     allow_whitespace=True,
