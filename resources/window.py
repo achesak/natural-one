@@ -1017,6 +1017,7 @@ class NaturalOneWindow(Gtk.ApplicationWindow):
         self.results_tree = Gtk.TreeView(model=self.results_store)
         self.results_tree.set_headers_visible(False)
         renderer = Gtk.CellRendererText()
+        renderer.set_padding(12, 12)
         column = Gtk.TreeViewColumn('Name', renderer, markup=0)
         column.set_expand(True)
         self.results_tree.append_column(column)
@@ -1095,8 +1096,6 @@ class NaturalOneWindow(Gtk.ApplicationWindow):
             self.remove_error(widget)
 
     def update_output(self, new_text):
-        if self.results:
-            self.results.insert(0, [''])
         self.results.insert(0, [new_text])
 
         self.results_store.clear()
