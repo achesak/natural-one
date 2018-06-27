@@ -19,8 +19,7 @@ directly, with automatic sorting and drag and drop to reorder as needed.
 
 # Using Natural One
 
-Natural One requires the Python interpreter to run. Development is done using 2.7.x, but it should work
-with 3.x as well. GTK+ 3 and its Python bindings are also required. 
+Natural One requires Python >= 3.5. GTK+ 3 and its Python bindings are also required. 
 
 To run Natural One, open a terminal in the directory containing the files and type `python naturalone.py`.
 On some systems double-clicking on the `naturalone.py` file will also work.
