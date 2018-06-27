@@ -15,11 +15,6 @@
 ###############################################################################
 
 
-import sys
-if sys.version_info < (3, 0):
-    reload(sys)
-    sys.setdefaultencoding('UTF-8')
-
 import gi
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk, GdkPixbuf, Gio

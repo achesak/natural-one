@@ -1095,11 +1095,12 @@ class NaturalOneWindow(Gtk.ApplicationWindow):
             self.remove_error(widget)
 
     def update_output(self, new_text):
-        if self.results_buffer.get_text(
-                self.results_buffer.get_start_iter(),
-                self.results_buffer.get_end_iter(),
-                False,
-        ) != '':
+        current_text = self.results_buffer.get_text(
+            self.results_buffer.get_start_iter(),
+            self.results_buffer.get_end_iter(),
+            False,
+        )
+        if current_text != '':
             new_text += '\n\n'
         self.results_buffer.insert_markup(
             self.results_buffer.get_start_iter(),
