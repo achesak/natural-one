@@ -288,19 +288,20 @@ class TemplateDialog(Gtk.Dialog):
             Gtk.PositionType.BOTTOM,
             1, 1,
         )
-        self.roll_store = Gtk.ListStore(str, str, str)
+        self.roll_store = Gtk.ListStore(int, str, str, str)
         self.roll_tree = Gtk.TreeView(model=self.roll_store)
         self.roll_tree.get_selection().set_mode(Gtk.SelectionMode.MULTIPLE)
+        self.roll_tree.set_reorderable(True)
         desc_text = Gtk.CellRendererText()
-        self.desc_col = Gtk.TreeViewColumn('Name', desc_text, text=0)
+        self.desc_col = Gtk.TreeViewColumn('Name', desc_text, text=1)
         self.desc_col.set_expand(True)
         self.roll_tree.append_column(self.desc_col)
         roll_text = Gtk.CellRendererText()
-        self.roll_col = Gtk.TreeViewColumn('Roll', roll_text, text=1)
+        self.roll_col = Gtk.TreeViewColumn('Roll', roll_text, text=2)
         self.roll_col.set_expand(True)
         self.roll_tree.append_column(self.roll_col)
         crit_text = Gtk.CellRendererText()
-        self.crit_col = Gtk.TreeViewColumn('Critical', crit_text, text=2)
+        self.crit_col = Gtk.TreeViewColumn('Critical', crit_text, text=3)
         self.crit_col.set_expand(True)
         self.roll_tree.append_column(self.crit_col)
         roll_scroll_win.add(self.roll_tree)
@@ -326,6 +327,18 @@ class TemplateDialog(Gtk.Dialog):
         self.delete_btn.set_tooltip_text('Remove selected roll')
         roll_btn_box.add(self.edit_btn)
         roll_btn_box.add(self.delete_btn)
+
+        # Create the roll drag and drop help text.
+        drag_roll_lbl = Gtk.Label(
+            'Drag and drop to rearrange roll order',
+        )
+        drag_roll_lbl.set_margin_top(10)
+        roll_grid.attach_next_to(
+            drag_roll_lbl,
+            self.roll_action_bar,
+            Gtk.PositionType.BOTTOM,
+            1, 1,
+        )
 
         self.style_provider = Gtk.CssProvider()
         self.style_context = Gtk.StyleContext()
@@ -362,7 +375,14 @@ class TemplateDialog(Gtk.Dialog):
             'row-activated',
             lambda x, y, z: self.edit_roll(),
         )
-        self.desc_ent.connect('changed', lambda x: self.check_edit_name())
+        self.roll_tree.connect(
+            'drag-end',
+            lambda x, y: self.reorder_rolls(),
+        )
+        self.desc_ent.connect(
+            'changed',
+            lambda x: self.check_edit_name(),
+        )
 
         self.register_limit_inputs()
 
@@ -402,13 +422,14 @@ class TemplateDialog(Gtk.Dialog):
 
     def update_list(self):
         self.roll_store.clear()
-        for item in self.rolls:
+        for index, item in enumerate(self.rolls):
             mod_output = '{sign}{mod}'.format(
                 sign=sign(item['mod']),
                 mod=item['mod'],
             ) if item['mod'] else ''
 
             row = [
+                index,
                 item['description'],
                 '{count}d{die}{mods}'.format(
                     count=item['count'],
@@ -428,6 +449,13 @@ class TemplateDialog(Gtk.Dialog):
 
     def update_multipler_active(self):
         self.crit_ent.set_sensitive(self.crit_apply_rbtn.get_active())
+
+    def reorder_rolls(self):
+        new_rolls = []
+        for row_index in range(len(self.roll_store)):
+            old_index = self.roll_store[row_index][0]
+            new_rolls.append(self.rolls[old_index])
+        self.rolls = new_rolls
 
     def check_roll_validity(self, roll):
         NaturalOneWindow.remove_error(self.count_ent)
