@@ -1017,9 +1017,11 @@ class NaturalOneWindow(Gtk.ApplicationWindow):
         self.results_tree = Gtk.TreeView(model=self.results_store)
         self.results_tree.set_headers_visible(False)
         renderer = Gtk.CellRendererText()
+        renderer.props.wrap_mode = Gtk.WrapMode.WORD_CHAR
         renderer.set_padding(12, 12)
         column = Gtk.TreeViewColumn('Name', renderer, markup=0)
         column.set_expand(True)
+        column.set_sizing(Gtk.TreeViewColumnSizing.AUTOSIZE)
         self.results_tree.append_column(column)
         self.results_scroll_win.add(self.results_tree)
         win_pane.pack2(self.results_scroll_win, True, True)
