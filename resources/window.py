@@ -12,6 +12,8 @@ class NaturalOneWindow(Gtk.ApplicationWindow):
         self.set_icon_from_file('resources/images/icon128.png')
         self.set_size_request(1000, -1)
 
+        self.results = []
+
         # Create the header bar.
         self.header = Gtk.HeaderBar()
         self.header.set_title('Dice Roller')
@@ -1007,21 +1009,19 @@ class NaturalOneWindow(Gtk.ApplicationWindow):
         )
 
         # Create the results display.
-        results_scroll_win = Gtk.ScrolledWindow()
-        results_scroll_win.set_hexpand(True)
-        results_scroll_win.set_vexpand(True)
-        results_scroll_win.set_size_request(550, -1)
-        self.results_view = Gtk.TextView()
-        self.results_view.set_editable(False)
-        self.results_view.set_cursor_visible(False)
-        self.results_view.set_wrap_mode(Gtk.WrapMode.WORD_CHAR)
-        self.results_view.set_left_margin(5)
-        self.results_view.set_right_margin(5)
-        self.results_view.set_top_margin(5)
-        self.results_view.set_bottom_margin(5)
-        self.results_buffer = self.results_view.get_buffer()
-        results_scroll_win.add(self.results_view)
-        win_pane.pack2(results_scroll_win, True, True)
+        self.results_scroll_win = Gtk.ScrolledWindow()
+        self.results_scroll_win.set_hexpand(True)
+        self.results_scroll_win.set_vexpand(True)
+        self.results_scroll_win.set_size_request(550, -1)
+        self.results_store = Gtk.ListStore(str)
+        self.results_tree = Gtk.TreeView(model=self.results_store)
+        self.results_tree.set_headers_visible(False)
+        renderer = Gtk.CellRendererText()
+        column = Gtk.TreeViewColumn('Name', renderer, markup=0)
+        column.set_expand(True)
+        self.results_tree.append_column(column)
+        self.results_scroll_win.add(self.results_tree)
+        win_pane.pack2(self.results_scroll_win, True, True)
 
         # Create the CSS provider.
         self.style_provider = Gtk.CssProvider()
@@ -1095,18 +1095,17 @@ class NaturalOneWindow(Gtk.ApplicationWindow):
             self.remove_error(widget)
 
     def update_output(self, new_text):
-        current_text = self.results_buffer.get_text(
-            self.results_buffer.get_start_iter(),
-            self.results_buffer.get_end_iter(),
-            False,
-        )
-        if current_text != '':
-            new_text += '\n\n'
-        self.results_buffer.insert_markup(
-            self.results_buffer.get_start_iter(),
-            new_text,
-            len(new_text),
-        )
+        if self.results:
+            self.results.insert(0, [''])
+        self.results.insert(0, [new_text])
+
+        self.results_store.clear()
+        for result in self.results:
+            self.results_store.append(result)
+
+    def clear_output(self):
+        self.results = []
+        self.results_store.clear()
 
     def toggle_initiative_mode(self):
         roll_is_active = self.roll_init_rbtn.get_active()

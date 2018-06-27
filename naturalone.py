@@ -97,7 +97,7 @@ class NaturalOne(Gtk.Application):
 
         self.window.clear_btn.connect(
             'clicked',
-            lambda x: self.window.results_buffer.set_text(''),
+            lambda x: self.window.clear_output(),
         )
         self.window.d4_btn.connect(
             'clicked',
