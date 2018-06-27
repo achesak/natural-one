@@ -510,7 +510,6 @@ class NaturalOne(Gtk.Application):
         self.templates = new_templates
 
         io.save_templates(self.templates)
-        self.update_templates()
 
     def import_templates(self):
         dialog = Gtk.FileChooserDialog(
@@ -654,8 +653,6 @@ class NaturalOne(Gtk.Application):
             old_index = self.window.init_store[row_index][0]
             new_initiatives.append(self.initiative_list[old_index])
         self.initiative_list = new_initiatives
-
-        self.update_initiative()
 
     def about(self):
         with open('resources/images/icon256.png', 'rb') as img_file:
