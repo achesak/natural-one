@@ -1103,6 +1103,8 @@ class NaturalOneWindow(Gtk.ApplicationWindow):
         for result in self.results:
             self.results_store.append(result)
 
+        self.results_scroll_win.get_vadjustment().set_value(0)
+
     def clear_output(self):
         self.results = []
         self.results_store.clear()
