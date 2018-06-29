@@ -1078,7 +1078,10 @@ class NaturalOneWindow(Gtk.ApplicationWindow):
 
         widget.add(box)
         widget.show_all()
-        widget.popup()
+        try:
+            widget.popup()
+        except:
+            pass
 
     def remove_errors(self):
         widgets = [
