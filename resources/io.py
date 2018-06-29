@@ -48,13 +48,20 @@ def create_systems_settings():
 
 
 def load_systems_settings():
-    with open(get_systems_settings_path(), 'a+') as systems_file:
-        systems_file.seek(0)
+    with open(get_systems_settings_path(), 'r') as systems_file:
         try:
             return json.load(systems_file)
         except (IOError, TypeError, ValueError):
             create_systems_settings()
             return load_systems_settings()
+
+
+def load_default_systems_settings():
+    with open('resources/data/weapons.json', 'r') as systems_file:
+        try:
+            return json.load(systems_file)
+        except (IOError, TypeError, ValueError):
+            return {"systems": []}
 
 
 def save_systems_settings(systems):

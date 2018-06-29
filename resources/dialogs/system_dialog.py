@@ -18,11 +18,10 @@ from resources.window import NaturalOneWindow
 
 class SystemDialog(Gtk.Dialog):
 
-    def __init__(self, parent, systems, system_names, weapon_data):
+    def __init__(self, parent, systems, system_names):
 
         self.systems = copy.deepcopy(systems['systems'])
         self.system_names = copy.deepcopy(system_names)
-        self.weapon_data = copy.deepcopy(weapon_data)
 
         Gtk.Dialog.__init__(
             self,
@@ -122,6 +121,7 @@ class SystemDialog(Gtk.Dialog):
             1, 1,
         )
 
+        self.check_base_updates()
         self.update_systems_list()
 
         self.system_tree.connect(
@@ -148,6 +148,18 @@ class SystemDialog(Gtk.Dialog):
         save_btn.grab_default()
 
         self.show_all()
+
+    def check_base_updates(self):
+        default_systems = io.load_default_systems_settings()["systems"]
+        system_names = [system["name"] for system in default_systems]
+        for system in self.systems:
+            if system["user_added"]:
+                continue
+            if system["name"] in system_names:
+                index = system_names.index(system["name"])
+                del default_systems[index]
+                del system_names[index]
+        self.systems += default_systems
 
     def update_systems_list(self):
         self.system_store.clear()

@@ -398,7 +398,6 @@ class NaturalOne(Gtk.Application):
             self.window,
             self.systems,
             self.system_names,
-            self.weapon_data,
         )
         response = dlg.run()
         new_systems = dlg.systems
