@@ -1080,7 +1080,7 @@ class NaturalOneWindow(Gtk.ApplicationWindow):
         widget.show_all()
         try:
             widget.popup()
-        except:
+        except AttributeError:
             pass
 
     def remove_errors(self):
