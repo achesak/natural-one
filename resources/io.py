@@ -8,12 +8,11 @@ import uuid
 
 
 def get_main_dir():
-
     # Windows support here for future full implementation.
     if platform.system().lower() == 'windows':
-        path = os.environ['LOCALAPPDATA'] + '\\naturalone'
+        path = os.path.join(os.environ['LOCALAPPDATA'], '\\naturalone')
     else:
-        path = os.path.expanduser('~') + '/.local/share/naturalone'
+        path = os.path.join(os.path.expanduser('~'), '.local/share/naturalone')
 
     if not os.path.exists(path):
         os.makedirs(path)
@@ -48,7 +47,10 @@ def create_systems_settings():
 
 
 def load_systems_settings():
-    with open(get_systems_settings_path(), 'r') as systems_file:
+    path = get_systems_settings_path()
+    if not os.path.exists(path):
+        create_systems_settings()
+    with open(path, 'r') as systems_file:
         try:
             return json.load(systems_file)
         except (IOError, TypeError, ValueError):
