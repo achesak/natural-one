@@ -10,7 +10,7 @@ import uuid
 def get_main_dir():
     # Windows support here for future full implementation.
     if platform.system().lower() == 'windows':
-        path = os.path.join(os.environ['LOCALAPPDATA'], '\\naturalone')
+        path = os.path.join(os.environ['LOCALAPPDATA'], 'naturalone')
     else:
         path = os.path.join(os.path.expanduser('~'), '.local/share/naturalone')
 
