@@ -55,6 +55,7 @@ class NaturalOne(Gtk.Application):
 
         self.templates = io.load_templates()
         self.systems = io.load_systems_settings()
+        self.dice_progression = io.load_dice_progression()
 
         self.menu = launch.get_menu_data()
         self.style_css = launch.get_style_data().encode()

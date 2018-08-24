@@ -74,6 +74,14 @@ def save_systems_settings(systems):
         print('IOError saving systems')
 
 
+def load_dice_progression():
+    try:
+        with open('resources/data/dice_progression.json') as dice_file:
+            return json.load(dice_file)
+    except (IOError, TypeError, ValueError):
+        print('Error reading dice progression data')
+
+
 def get_template_path():
     root_path = get_main_dir()
     return os.path.join(root_path, 'templates.json')

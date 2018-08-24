@@ -1,0 +1,82 @@
+[
+    {
+        "count": 1,
+        "die": 1
+    },
+    {
+        "count": 1,
+        "die": 2
+    },
+    {
+        "count": 1,
+        "die": 3
+    },
+    {
+        "count": 1,
+        "die": 4
+    },
+    {
+        "count": 1,
+        "die": 6
+    },
+    {
+        "count": 1,
+        "die": 8
+    },
+    {
+        "count": 1,
+        "die": 10
+    },
+    {
+        "count": 2,
+        "die": 6
+    },
+    {
+        "count": 2,
+        "die": 8
+    },
+    {
+        "count": 3,
+        "die": 6
+    },
+    {
+        "count": 3,
+        "die": 8
+    },
+    {
+        "count": 4,
+        "die": 6
+    },
+    {
+        "count": 4,
+        "die": 8
+    },
+    {
+        "count": 6,
+        "die": 6
+    },
+    {
+        "count": 6,
+        "die": 8
+    },
+    {
+        "count": 8,
+        "die": 6
+    },
+    {
+        "count": 8,
+        "die": 8
+    },
+    {
+        "count": 12,
+        "die": 6
+    },
+    {
+        "count": 12,
+        "die": 8
+    },
+    {
+        "count": 16,
+        "die": 6
+    }
+]

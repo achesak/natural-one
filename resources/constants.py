@@ -18,6 +18,18 @@ class CriticalOptions(object):
     NONE = 4
 
 
+class SizeProgression(object):
+    FINE = 0
+    DIMINUTIVE = 1
+    TINY = 2
+    SMALL = 3
+    MEDIUM = 4
+    LARGE = 5
+    HUGE = 6
+    GARGANTUAN = 7
+    COLOSSAL = 8
+
+
 class AttackRollStatus(object):
     NORMAL = 0
     CRITICAL = 1

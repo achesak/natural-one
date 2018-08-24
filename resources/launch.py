@@ -7,7 +7,6 @@ import io
 
 
 def get_menu_data():
-
     try:
         with open('resources/ui/menu.xml', 'r') as menu_file:
             return menu_file.read()
@@ -19,7 +18,6 @@ def get_menu_data():
 
 
 def get_style_data():
-
     try:
         with open('resources/ui/style.css', 'r') as style_file:
             return style_file.read()
@@ -31,7 +29,6 @@ def get_style_data():
 
 
 def get_weapon_data(systems):
-
     system_names = [
         system['name'] for system in systems['systems']
         if system['enabled']
