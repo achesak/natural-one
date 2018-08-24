@@ -533,31 +533,44 @@ class NaturalOneWindow(Gtk.ApplicationWindow):
             3, 1,
         )
 
-        # Create the confirm critical row.
+        # Create the critical options rows.
+        crit_opt_atks_lbl = Gtk.Label('Critical options')
+        crit_opt_atks_lbl.set_alignment(1, 0.5)
+        combat_grid.attach_next_to(
+            crit_opt_atks_lbl,
+            crit_atks_lbl,
+            Gtk.PositionType.BOTTOM,
+            1, 1,
+        )
         self.confirm_atks_chk = Gtk.CheckButton('Confirm critical hits')
         self.confirm_atks_chk.set_active(True)
         combat_grid.attach_next_to(
             self.confirm_atks_chk,
-            crit_atks_lbl,
-            Gtk.PositionType.BOTTOM,
-            2, 1,
+            crit_opt_atks_lbl,
+            Gtk.PositionType.RIGHT,
+            3, 1,
         )
-
-        # Create the stop on fail row.
+        crit_opt_atks_placeholder = Gtk.Label('')
+        combat_grid.attach_next_to(
+            crit_opt_atks_placeholder,
+            crit_opt_atks_lbl,
+            Gtk.PositionType.BOTTOM,
+            1, 1,
+        )
         self.stop_atks_chk = Gtk.CheckButton('Stop on critical fail')
         self.stop_atks_chk.set_active(True)
         combat_grid.attach_next_to(
             self.stop_atks_chk,
-            self.confirm_atks_chk,
+            crit_opt_atks_placeholder,
             Gtk.PositionType.RIGHT,
-            2, 1,
+            3, 1,
         )
 
         # Create the attack roll button.
         atk_btn_placeholder = Gtk.Label('')
         combat_grid.attach_next_to(
             atk_btn_placeholder,
-            self.confirm_atks_chk,
+            crit_opt_atks_placeholder,
             Gtk.PositionType.BOTTOM,
             2, 1
         )
