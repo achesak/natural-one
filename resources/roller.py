@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import random
 
+from resources.constants import CriticalOptions
 from resources.rolls import (
     BasicRollResult,
     AttackRollResult,
@@ -12,7 +13,7 @@ from resources.rolls import (
 def roll_basic(count, die, mod_each, mod_once, min_value):
     rolls = []
     total = 0
-    for _ in range(0, count):
+    for _ in range(count):
         roll = random.randint(1, die)
         roll_result = BasicRollResult(roll, min_value, mod_each)
         rolls.append(roll_result)
@@ -25,7 +26,7 @@ def roll_basic(count, die, mod_each, mod_once, min_value):
 
 def roll_attack(num_atks, mods, crit_range, stop_on_crit, confirm_crit):
     rolls = []
-    for i in range(0, num_atks):
+    for i in range(num_atks):
         roll = random.randint(1, 20)
         roll_result = AttackRollResult(i + 1, roll, mods[i])
         rolls.append(roll_result)
@@ -42,7 +43,7 @@ def roll_damage_die(weapon, die_data, max_damage):
 
     reroll_below = 0 if 'reroll_below' not in weapon \
         else weapon['reroll_below']
-    for _ in range(0, die_data['count']):
+    for _ in range(die_data['count']):
         roll = -1
         while roll <= reroll_below:
             if max_damage:
@@ -65,15 +66,15 @@ def roll_damage(num_atks, mods, weapon, weapon_path, min_value, crit_attack):
 
     rolls = []
     total = 0
-    for atk_index in range(0, num_atks):
+    for atk_index in range(num_atks):
         roll_result = DamageRollResult(
             atk_index + 1,
             False,
             min_value,
             mods[atk_index] * crit_count,
         )
-        for crit_index in range(0, crit_count):
-            for die_index in range(0, len(weapon_rolls)):
+        for crit_index in range(crit_count):
+            for die_index in range(len(weapon_rolls)):
                 die_data = weapon_rolls[die_index]
                 roll_data = roll_damage_die(weapon, die_data, max_damage)
                 if len(roll_data):
@@ -93,9 +94,9 @@ def roll_damage(num_atks, mods, weapon, weapon_path, min_value, crit_attack):
         crit_rolls = crit_extra[weapon_path] \
             if weapon_path in crit_extra \
             else []
-        for atk_index in range(0, num_atks):
+        for atk_index in range(num_atks):
             roll_result = DamageRollResult(atk_index + 1, True, min_value, 0)
-            for die_index in range(0, len(crit_rolls)):
+            for die_index in range(len(crit_rolls)):
                 die_data = crit_rolls[die_index]
                 roll_data = roll_damage_die(weapon, die_data, False)
                 if len(roll_data):
@@ -117,14 +118,16 @@ def roll_template(template, crit_attack):
     rolls = []
     total = 0
     for item in template['rolls']:
-        if item['crit_only'] and not crit_attack:
-            continue
         roll_result = TemplateRollResult(item)
         count = item['count']
-        if crit_attack and item['crit_active'] and not item['crit_only']:
+        if item['crit_option'] == CriticalOptions.NONE and crit_attack:
+            continue
+        if item['crit_option'] == CriticalOptions.ONLY and not crit_attack:
+            continue
+        if item['crit_option'] == CriticalOptions.MULTIPLY and crit_attack:
             count *= item['crit_mod']
-        for _ in range(0, count):
-            if crit_attack and item['crit_max']:
+        for _ in range(count):
+            if item['crit_option'] == CriticalOptions.MAXIMIZE and crit_attack:
                 roll = item['die']
             else:
                 roll = random.randint(1, item['die'])

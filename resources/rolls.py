@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from collections import defaultdict
 
-from resources.constants import AttackRollStatus
+from resources.constants import AttackRollStatus, CriticalOptions
 from resources.utility import sign
 
 
@@ -117,11 +117,11 @@ class TemplateRollResult(BasicRollResult):
 
     @property
     def roll_critical(self):
-        if self.item['crit_max']:
+        if self.item['crit_option'] == CriticalOptions.MAXIMIZE:
             return 'Maximized due to critical hit'
-        elif self.item['crit_only']:
+        elif self.item['crit_option'] == CriticalOptions.ONLY:
             return 'Rolled due to critical hit'
-        elif self.item['crit_active']:
+        elif self.item['crit_option'] == CriticalOptions.MULTIPLY:
             return 'Multiplied by {crit_mod}x due to critical hit'.format(
                    crit_mod=self.item['crit_mod'],
             )

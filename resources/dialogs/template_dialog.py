@@ -3,10 +3,12 @@ import copy
 
 from gi.repository import Gdk, Gtk
 
+from resources.constants import CriticalOptions, CRITICAL_OPTIONS
 from resources.dialogs.generic_dialogs import show_question
 from resources.load_images import load_symbolic
 from resources.utility import pluralize, pluralize_adj, sign
 from resources.window import NaturalOneWindow
+
 
 
 class TemplateDialog(Gtk.Dialog):
@@ -155,89 +157,78 @@ class TemplateDialog(Gtk.Dialog):
             2, 1,
         )
 
-        # Create the critical rows.
-        self.crit_apply_rbtn = Gtk.RadioButton.new_with_label_from_widget(
-            None,
-            'Multiplied by critical hit',
+        # Create the options grid.
+        options_grid = Gtk.Grid()
+        options_grid.set_row_spacing(5)
+        options_grid.set_column_spacing(12)
+        add_grid.attach_next_to(
+            options_grid,
+            self.count_ent,
+            Gtk.PositionType.BOTTOM,
+            7, 1,
         )
-        self.crit_apply_rbtn.set_margin_top(10)
-        self.crit_max_rbtn = Gtk.RadioButton.new_with_label_from_widget(
-            self.crit_apply_rbtn,
-            'Maximized on critical hit',
+
+        # Create the critical row.
+        crit_lbl = Gtk.Label('On critical')
+        crit_lbl.set_alignment(1, 0.5)
+        crit_store = Gtk.ListStore(str, int)
+        for crit_option in CRITICAL_OPTIONS:
+            crit_store.append(crit_option)
+        self.crit_cbox = Gtk.ComboBox.new_with_model(crit_store)
+        self.crit_cbox.set_active(0)
+        crit_renderer = Gtk.CellRendererText()
+        self.crit_cbox.pack_start(crit_renderer, True)
+        self.crit_cbox.add_attribute(crit_renderer, 'text', 0)
+        options_grid.add(crit_lbl)
+        options_grid.attach_next_to(
+            self.crit_cbox,
+            crit_lbl,
+            Gtk.PositionType.RIGHT,
+            2, 1,
         )
-        self.crit_no_apply_rbtn = Gtk.RadioButton.new_with_label_from_widget(
-            self.crit_apply_rbtn,
-            'Not multiplied by critical hit',
-        )
-        self.crit_only_rbtn = Gtk.RadioButton.new_with_label_from_widget(
-            self.crit_apply_rbtn,
-            'Only rolled on critical hit',
-        )
-        self.crit_no_apply_rbtn.set_hexpand(True)
-        crit_lbl = Gtk.Label('Multiplier')
-        crit_lbl.set_margin_left(25)
-        crit_lbl.set_margin_right(5)
+
+        # Create the critical multiplier row.
+        crit_placeholder_lbl = Gtk.Label('')
+        crit_mult_lbl = Gtk.Label('Multiplier')
+        crit_mult_lbl.set_margin_right(12)
         self.crit_ent = Gtk.Entry()
         self.crit_ent.set_width_chars(4)
         self.crit_ent.props.xalign = 0.5
         crit_box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL)
         self.crit_error_popover = Gtk.Popover()
         self.crit_error_popover.set_relative_to(self.crit_ent)
-        crit_box.pack_start(crit_lbl, False, False, 0)
+        crit_box.pack_start(crit_mult_lbl, False, False, 0)
         crit_box.pack_start(self.crit_ent, False, False, 0)
-        add_grid.attach_next_to(
-            self.crit_apply_rbtn,
-            self.count_ent,
+        options_grid.attach_next_to(
+            crit_placeholder_lbl,
+            crit_lbl,
             Gtk.PositionType.BOTTOM,
-            7, 1,
+            1, 1,
         )
-        add_grid.attach_next_to(
+        options_grid.attach_next_to(
             crit_box,
-            self.crit_apply_rbtn,
-            Gtk.PositionType.BOTTOM,
-            7, 1,
-        )
-        add_grid.attach_next_to(
-            self.crit_max_rbtn,
-            crit_box,
-            Gtk.PositionType.BOTTOM,
-            7, 1,
-        )
-        add_grid.attach_next_to(
-            self.crit_no_apply_rbtn,
-            self.crit_max_rbtn,
-            Gtk.PositionType.BOTTOM,
-            7, 1,
-        )
-        add_grid.attach_next_to(
-            self.crit_only_rbtn,
-            self.crit_no_apply_rbtn,
-            Gtk.PositionType.BOTTOM,
-            7, 1,
+            crit_placeholder_lbl,
+            Gtk.PositionType.RIGHT,
+            2, 1,
         )
 
         # Create the minimum value row.
-        min_value_grid = Gtk.Grid()
-        min_value_grid.set_row_spacing(5)
-        min_value_grid.set_column_spacing(12)
-        min_value_grid.set_margin_top(10)
         min_value_lbl = Gtk.Label('Minimum value')
         min_value_lbl.set_alignment(1, 0.5)
         self.min_value_ent = Gtk.Entry()
         self.min_value_ent.set_placeholder_text('No minimum value')
         self.min_value_ent.set_hexpand(True)
-        min_value_grid.add(min_value_lbl)
-        min_value_grid.attach_next_to(
+        options_grid.attach_next_to(
+            min_value_lbl,
+            crit_placeholder_lbl,
+            Gtk.PositionType.BOTTOM,
+            1, 1,
+        )
+        options_grid.attach_next_to(
             self.min_value_ent,
             min_value_lbl,
             Gtk.PositionType.RIGHT,
             2, 1,
-        )
-        add_grid.attach_next_to(
-            min_value_grid,
-            self.crit_only_rbtn,
-            Gtk.PositionType.BOTTOM,
-            7, 1,
         )
 
         # Create the description row.
@@ -252,13 +243,13 @@ class TemplateDialog(Gtk.Dialog):
         self.desc_error_popover.set_relative_to(self.desc_ent)
         self.add_btn = Gtk.Button('Add Roll')
         desc_box.add(self.add_btn)
-        min_value_grid.attach_next_to(
+        options_grid.attach_next_to(
             desc_lbl,
             min_value_lbl,
             Gtk.PositionType.BOTTOM,
             1, 1,
         )
-        min_value_grid.attach_next_to(
+        options_grid.attach_next_to(
             desc_box,
             desc_lbl,
             Gtk.PositionType.RIGHT,
@@ -367,8 +358,8 @@ class TemplateDialog(Gtk.Dialog):
             'clicked',
             lambda x: self.remove_roll(),
         )
-        self.crit_apply_rbtn.connect(
-            'toggled',
+        self.crit_cbox.connect(
+            'changed',
             lambda x: self.update_multipler_active(),
         )
         self.roll_tree.connect(
@@ -394,10 +385,10 @@ class TemplateDialog(Gtk.Dialog):
 
     def register_limit_inputs(self):
         number_inputs = [
-            self.mod_ent, self.min_value_ent
+            self.mod_ent, self.min_value_ent,
         ]
         count_inputs = [
-            self.count_ent, self.die_ent, self.crit_ent
+            self.count_ent, self.die_ent, self.crit_ent,
         ]
 
         for input in number_inputs:
@@ -437,18 +428,24 @@ class TemplateDialog(Gtk.Dialog):
                     mods=mod_output,
                 ),
             ]
-            if item['crit_active']:
-                row.append('x{crit_mod}'.format(crit_mod=item['crit_mod']))
-            elif item['crit_max']:
-                row.append('Max')
-            elif item['crit_only']:
+            if item['crit_option'] == CriticalOptions.MULTIPLY:
+                row.append('Multiply x{crit_mod}'.format(crit_mod=item['crit_mod']))
+            elif item['crit_option'] == CriticalOptions.MAXIMIZE:
+                row.append('Maximize')
+            elif item['crit_option'] == CriticalOptions.NO_CHANGE:
+                row.append('No change')
+            elif item['crit_option'] == CriticalOptions.ONLY:
                 row.append('Only')
             else:
                 row.append('N/A')
             self.roll_store.append(row)
 
     def update_multipler_active(self):
-        self.crit_ent.set_sensitive(self.crit_apply_rbtn.get_active())
+        iter = self.crit_cbox.get_active_iter()
+        if iter is None:
+            return
+        on_crit_id = self.crit_cbox.get_model()[iter][1]
+        self.crit_ent.set_sensitive(on_crit_id == CriticalOptions.MULTIPLY)
 
     def reorder_rolls(self):
         new_rolls = []
@@ -497,7 +494,7 @@ class TemplateDialog(Gtk.Dialog):
             NaturalOneWindow.add_error(self.mod_error_popover)
             valid = False
 
-        if roll['crit_active']:
+        if roll['crit_option'] == CriticalOptions.MULTIPLY:
             try:
                 roll['crit_mod'] = int(roll['crit_mod'])
                 assert roll['crit_mod'] >= 1
@@ -514,11 +511,13 @@ class TemplateDialog(Gtk.Dialog):
         mod = self.mod_ent.get_text().strip()
         mod_every = self.mod_chk.get_active()
         crit_mod = self.crit_ent.get_text().strip()
-        crit_active = self.crit_apply_rbtn.get_active()
-        crit_max = self.crit_max_rbtn.get_active()
-        crit_only = self.crit_only_rbtn.get_active()
         min_value = self.min_value_ent.get_text().strip()
         desc = self.desc_ent.get_text().strip()
+
+        iter = self.crit_cbox.get_active_iter()
+        if iter is None:
+            return
+        crit_option = self.crit_cbox.get_model()[iter][1]
 
         roll = {
             'description': desc,
@@ -526,10 +525,8 @@ class TemplateDialog(Gtk.Dialog):
             'die': die,
             'mod': mod,
             'mod_every': mod_every,
-            'crit_active': crit_active,
-            'crit_max': crit_max,
+            'crit_option': crit_option,
             'crit_mod': crit_mod,
-            'crit_only': crit_only,
             'min_value': min_value
         }
 
@@ -564,20 +561,13 @@ class TemplateDialog(Gtk.Dialog):
         self.die_ent.set_text(str(roll['die']))
         self.mod_ent.set_text(str(roll['mod']))
         self.mod_chk.set_active(roll['mod_every'])
-        if roll['crit_active']:
+        if roll['crit_option'] == CriticalOptions.MULTIPLY:
             self.crit_ent.set_sensitive(True)
             self.crit_ent.set_text(str(roll['crit_mod']))
         else:
             self.crit_ent.set_sensitive(False)
             self.crit_ent.set_text("")
-        self.crit_apply_rbtn.set_active(roll['crit_active'])
-        self.crit_max_rbtn.set_active(roll['crit_max'])
-        self.crit_no_apply_rbtn.set_active(
-            not roll['crit_active'] and
-            not roll['crit_max'] and
-            not roll['crit_only'],
-        )
-        self.crit_only_rbtn.set_active(roll['crit_only'])
+        self.crit_cbox.set_active(roll['crit_option'])
         self.min_value_ent.set_text(str(roll['min_value']))
         self.desc_ent.set_text(roll['description'])
 
