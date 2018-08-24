@@ -105,7 +105,7 @@ def format_damage(
 
 def format_template(template, rolls, crit_attack, total):
     output = '<span size="larger">' \
-        '<b>Rolled template {name}: <i>{total}</i></b></span>\n'.format(
+        '<b>Rolled {name}: <i>{total}</i></b></span>\n'.format(
             name=template['name'],
             total=total,
         )
