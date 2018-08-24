@@ -243,7 +243,7 @@ class NaturalOne(Gtk.Application):
         for i in range(0, len(system_data['data'])):
             row_iter = self.window.weap_dam_store.append(
                 None,
-                [system_data['data'][i]['category']],
+                [system_data['data'][i]['name']],
             )
             for j in range(0, len(system_data['data'][i]['weapons'])):
                 self.window.weap_dam_store.append(

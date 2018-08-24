@@ -18,7 +18,7 @@ def expand_mod(mods, count, crit_applied, crit_mod):
 def get_weapon(weapon_data, weapon_name, section_name):
     section_elem = next(
         section for section in weapon_data
-        if section['category'] == section_name
+        if section['name'] == section_name
     )
     weapon_elem = next(
         weapon for weapon in section_elem['weapons']
