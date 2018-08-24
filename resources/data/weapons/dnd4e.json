@@ -1,390 +1,258 @@
 {
-    "system": "D&D 4e",
+    "name": "D&D 4e",
+    "has_size_steps": true,
     "data": [
         {
-            "category": "Simple one-handed melee weapons",
+            "name": "Simple one-handed melee weapons",
             "weapons": [
                 {
                     "name": "Club",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 4,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 6,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Dagger",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 3,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 4,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Javelin",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 4,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 6,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Light mace",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 4,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 6,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Mace",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 6,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 8,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Sickle",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 4,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 6,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Spear",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 6,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 8,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Spear, short",
                     "display": "Short spear",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 4,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 6,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Spiked gauntlet",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 4,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 6,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Talid",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 4,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 6,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Widow's knife",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 3,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 4,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Wrist razor",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 3,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 4,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 }
             ]
         },
         {
-            "category": "Simple two-handed melee weapons",
+            "name": "Simple two-handed melee weapons",
             "weapons": [
                 {
                     "name": "Greatclub",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 8,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 4,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Morningstar",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 8,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 10,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Quarterstaff",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 6,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 8,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Scythe",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 8,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 4,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 }
             ]
         },
         {
-            "category": "Military one-handed melee weapons",
+            "name": "Military one-handed melee weapons",
             "weapons": [
                 {
                     "name": "Battleaxe",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 8,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 10,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Broadsword",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 8,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 10,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Carrikal",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 6,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 8,
@@ -392,60 +260,39 @@
                         }
                     ],
                     "reroll_below": 2,
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Flail",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 8,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 10,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Handaxe",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 4,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 6,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Khopesh",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 6,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 8,
@@ -453,513 +300,338 @@
                         }
                     ],
                     "reroll_below": 1,
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Lance",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 8,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 10,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Longsword",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 6,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 8,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Rapier",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 6,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 8,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Scimitar",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 6,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 8,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Scourge",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 6,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 8,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Short sword",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 4,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 6,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Throwing hammer",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 4,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 6,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Trident",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 6,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 8,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Warhammer",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 8,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 10,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "War pick",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 6,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 8,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "War pick, light",
                     "display": "Light war pick",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 4,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 6,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 }
             ]
         },
         {
-            "category": "Military two-handed melee weapons",
+            "name": "Military two-handed melee weapons",
             "weapons": [
                 {
                     "name": "Falchion",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 6,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 4,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Flail, heavy",
                     "display": "Heavy flail",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 10,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 6,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Glaive",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 6,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 4,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Greataxe",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 10,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 12,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Greatsword",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 8,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 10,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Halberd",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 8,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 10,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Longspear",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 8,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 10,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Maul",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 10,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 6,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Pike",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 8,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 10,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Trikal",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 8,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 10,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "War pick, heavy",
                     "display": "Heavy war pick",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 10,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 12,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 }
             ]
         },
         {
-            "category": "Superior one-handed melee weapons",
+            "name": "Superior one-handed melee weapons",
             "weapons": [
                 {
                     "name": "Bastard sword",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 8,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 10,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Bola",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 3,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 4,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Craghammer",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 8,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 10,
@@ -967,102 +639,67 @@
                         }
                     ],
                     "reroll_below": 2,
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Dagger, parrying",
                     "display": "Parrying dagger",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 8,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 10,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Flail, triple-headed",
                     "display": "Triple-headed flail",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 8,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 10,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Gauntlet axe",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 6,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 8,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Katar",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 4,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 6,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Kukri",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 4,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 6,
@@ -1070,208 +707,138 @@
                         }
                     ],
                     "reroll_below": 1,
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Net",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 4,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 6,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Pick, serrated",
                     "display": "Serrated pick",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 8,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 10,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Puchik",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 4,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 6,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Shield, spiked",
                     "display": "Spiked shield",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 4,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 6,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Singing stick",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 4,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 6,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Tortoise blade",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 4,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 6,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Tratnyr",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 6,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 8,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Waraxe",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 10,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 12,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Whip",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 3,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 4,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 }
             ]
         },
         {
-            "category": "Superior two-handed melee weapons",
+            "name": "Superior two-handed melee weapons",
             "weapons": [
                 {
                     "name": "Axe, execution",
                     "display": "Execution axe",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 10,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 12,
@@ -1279,81 +846,53 @@
                         }
                     ],
                     "reroll_below": 2,
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Chain, spiked",
                     "display": "Spiked chain",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 6,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 4,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Fullblade",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 10,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 12,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Garrote",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 3,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 4,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Gouge",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 10,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 6,
@@ -1361,40 +900,26 @@
                         }
                     ],
                     "reroll_below": 1,
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Greatspear",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 8,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 10,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Mordenkrad",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 10,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 6,
@@ -1402,687 +927,470 @@
                         }
                     ],
                     "reroll_below": 1,
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 }
             ]
         },
         {
-            "category": "Superior double melee weapons",
+            "name": "Superior double melee weapons",
             "weapons": [
                 {
                     "name": "Axe, double",
                     "display": "Double axe",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 8,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 10,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Cahalaks",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 6,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 8,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Dragon paw (end)",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 6,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 8,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Dragon paw (middle)",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 4,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 6,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Flail, double",
                     "display": "Double flail",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 6,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 8,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Gythka",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 6,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 8,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Kusari-gama (flail)",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 8,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 10,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Kusari-gama (light blade)",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 4,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 6,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Lotulis (primary blade)",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 8,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 10,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Lotulis (secondary blade)",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 6,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 8,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Sword, double",
                     "display": "Double sword",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 4,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 6,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Urgrosh (axe)",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 10,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 12,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Urgrosh (spear)",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 4,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 6,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 }
             ]
         },
         {
-            "category": "Improvised one-handed melee weapons",
+            "name": "Improvised one-handed melee weapons",
             "weapons": [
                 {
                     "name": "Improvised weapon",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 3,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 4,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Unarmed attack",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 3,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 4,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 }
             ]
         },
         {
-            "category": "Improvised two-handed melee weapons",
+            "name": "Improvised two-handed melee weapons",
             "weapons": [
                 {
                     "name": "Improvised weapon",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 6,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 8,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 }
             ]
         },
         {
-            "category": "Simple one-handed ranged weapons",
+            "name": "Simple one-handed ranged weapons",
             "weapons": [
                 {
                     "name": "Crossbow, hand",
                     "display": "Hand crossbow",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 4,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 6,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Dejada",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 6,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 8,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Sling",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 4,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 6,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 }
             ]
         },
         {
-            "category": "Simple two-handed ranged weapons",
+            "name": "Simple two-handed ranged weapons",
             "weapons": [
                 {
                     "name": "Crossbow",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 6,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 8,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Crossbow, repeating",
                     "display": "Repeating crossbow",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 6,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 8,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 }
             ]
         },
         {
-            "category": "Military one-handed ranged weapons",
+            "name": "Military one-handed ranged weapons",
             "weapons": [
                 {
                     "name": "Chatkcha",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 4,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 6,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 }
             ]
         },
         {
-            "category": "Military two-handed ranged weapons",
+            "name": "Military two-handed ranged weapons",
             "weapons": [
                 {
                     "name": "Longbow",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 8,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 10,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Shortbow",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 6,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 8,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 }
             ]
         },
         {
-            "category": "Superior one-handed ranged weapons",
+            "name": "Superior one-handed ranged weapons",
             "weapons": [
                 {
                     "name": "Boomerang, talenta",
                     "display": "Talenta boomerang",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 3,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 4,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Boomerang, xen'drik",
                     "display": "Xen'drik boomerang",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 4,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 6,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Shuriken",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 3,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 4,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 }
             ]
         },
         {
-            "category": "Superior two-handed ranged weapons",
+            "name": "Superior two-handed ranged weapons",
             "weapons": [
                 {
                     "name": "Blowgun",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 3,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 4,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Crossbow, superior",
                     "display": "Superior crossbow",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 8,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 10,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 },
                 {
                     "name": "Greatbow",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 10,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 12,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 }
             ]
         },
         {
-            "category": "Improvised one-handed ranged weapons",
+            "name": "Improvised one-handed ranged weapons",
             "weapons": [
                 {
                     "name": "Improvised weapon",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 3,
-                            "type": "Physical"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 4,
                             "type": "Physical"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1,
-                    "max_on_crit": true
+                    "critical": {
+                        "maximize": true
+                    }
                 }
             ]
         }

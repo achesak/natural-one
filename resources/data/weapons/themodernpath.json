@@ -1,717 +1,881 @@
 {
-    "system": "The Modern Path",
+    "name": "The Modern Path",
+    "has_size_steps": false,
     "data": [
         {
-            "category": "No proficiency ranged weapons",
             "weapons": [
                 {
                     "name": "Taser",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 4,
                             "type": "Electricity"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 1
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 1
+                    }
                 }
-            ]
+            ],
+            "name": "No proficiency ranged weapons"
         },
         {
-            "category": "Simple ranged weapons",
             "weapons": [
                 {
                     "name": "Benelli 121 M1",
                     "no_format": true,
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 8,
                             "type": "Piercing"
                         }
                     ],
-                    "dmg_static": 2,
-                    "dmg_static_type": "Piercing",
-                    "crit_range": 19,
-                    "crit_mult": 2
+                    "damage_static": [
+                        {
+                            "damage": 2,
+                            "type": "Piercing"
+                        }
+                    ],
+                    "critical": {
+                        "range": 19,
+                        "multiplier": 2
+                    }
                 },
                 {
                     "name": "Beretta 92F",
                     "no_format": true,
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 6,
                             "type": "Piercing"
                         }
                     ],
-                    "dmg_static": 2,
-                    "dmg_static_type": "Piercing",
-                    "crit_range": 20,
-                    "crit_mult": 4
+                    "damage_static": [
+                        {
+                            "damage": 2,
+                            "type": "Piercing"
+                        }
+                    ],
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 4
+                    }
                 },
                 {
                     "name": "Beretta M3P",
                     "no_format": true,
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 8,
                             "type": "Piercing"
                         }
                     ],
-                    "dmg_static": 2,
-                    "dmg_static_type": "Piercing",
-                    "crit_range": 19,
-                    "crit_mult": 2
+                    "damage_static": [
+                        {
+                            "damage": 2,
+                            "type": "Piercing"
+                        }
+                    ],
+                    "critical": {
+                        "range": 19,
+                        "multiplier": 2
+                    }
                 },
                 {
                     "name": "Browning BPS",
                     "no_format": true,
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 10,
                             "type": "Piercing"
                         }
                     ],
-                    "dmg_static": 3,
-                    "dmg_static_type": "Piercing",
-                    "crit_range": 19,
-                    "crit_mult": 2
+                    "damage_static": [
+                        {
+                            "damage": 3,
+                            "type": "Piercing"
+                        }
+                    ],
+                    "critical": {
+                        "range": 19,
+                        "multiplier": 2
+                    }
                 },
                 {
                     "name": "Colt Double Eagle",
                     "no_format": true,
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 6,
                             "type": "Piercing"
                         }
                     ],
-                    "dmg_static": 3,
-                    "dmg_static_type": "Piercing",
-                    "crit_range": 20,
-                    "crit_mult": 4
+                    "damage_static": [
+                        {
+                            "damage": 3,
+                            "type": "Piercing"
+                        }
+                    ],
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 4
+                    }
                 },
                 {
                     "name": "Colt M1911",
                     "no_format": true,
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 6,
                             "type": "Piercing"
                         }
                     ],
-                    "dmg_static": 2,
-                    "dmg_static_type": "Piercing",
-                    "crit_range": 20,
-                    "crit_mult": 4
+                    "damage_static": [
+                        {
+                            "damage": 2,
+                            "type": "Piercing"
+                        }
+                    ],
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 4
+                    }
                 },
                 {
                     "name": "Colt Python",
                     "no_format": true,
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 6,
                             "type": "Piercing"
                         }
                     ],
-                    "dmg_static": 1,
-                    "dmg_static_type": "Piercing",
-                    "crit_range": 20,
-                    "crit_mult": 4
+                    "damage_static": [
+                        {
+                            "damage": 1,
+                            "type": "Piercing"
+                        }
+                    ],
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 4
+                    }
                 },
                 {
                     "name": "Compound bow",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 8,
                             "type": "Piercing"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 2
+                    }
                 },
                 {
                     "name": "Derringer",
                     "no_format": true,
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 6,
                             "type": "Piercing"
                         }
                     ],
-                    "dmg_static": 2,
-                    "dmg_static_type": "Piercing",
-                    "crit_range": 20,
-                    "crit_mult": 4
+                    "damage_static": [
+                        {
+                            "damage": 2,
+                            "type": "Piercing"
+                        }
+                    ],
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 4
+                    }
                 },
                 {
                     "name": "Desert Eagle",
                     "no_format": true,
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 8,
                             "type": "Piercing"
                         }
                     ],
-                    "dmg_static": 3,
-                    "dmg_static_type": "Piercing",
-                    "crit_range": 20,
-                    "crit_mult": 4
+                    "damage_static": [
+                        {
+                            "damage": 3,
+                            "type": "Piercing"
+                        }
+                    ],
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 4
+                    }
                 },
                 {
                     "name": "Glock 17",
                     "no_format": true,
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 6,
                             "type": "Piercing"
                         }
                     ],
-                    "dmg_static": 2,
-                    "dmg_static_type": "Piercing",
-                    "crit_range": 20,
-                    "crit_mult": 4
+                    "damage_static": [
+                        {
+                            "damage": 2,
+                            "type": "Piercing"
+                        }
+                    ],
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 4
+                    }
                 },
                 {
                     "name": "Glock 20",
                     "no_format": true,
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 6,
                             "type": "Piercing"
                         }
                     ],
-                    "dmg_static": 3,
-                    "dmg_static_type": "Piercing",
-                    "crit_range": 20,
-                    "crit_mult": 4
+                    "damage_static": [
+                        {
+                            "damage": 3,
+                            "type": "Piercing"
+                        }
+                    ],
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 4
+                    }
                 },
                 {
                     "name": "Mossberg",
                     "no_format": true,
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 8,
                             "type": "Piercing"
                         }
                     ],
-                    "dmg_static": 2,
-                    "dmg_static_type": "Piercing",
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    "damage_static": [
+                        {
+                            "damage": 2,
+                            "type": "Piercing"
+                        }
+                    ],
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 2
+                    }
                 },
                 {
                     "name": "Pathfinder",
                     "no_format": true,
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 4,
                             "type": "Piercing"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 4
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 4
+                    }
                 },
                 {
                     "name": "Remington 700",
                     "no_format": true,
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 10,
                             "type": "Piercing"
                         }
                     ],
-                    "dmg_static": 1,
-                    "dmg_static_type": "Piercing",
-                    "crit_range": 20,
-                    "crit_mult": 4
+                    "damage_static": [
+                        {
+                            "damage": 1,
+                            "type": "Piercing"
+                        }
+                    ],
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 4
+                    }
                 },
                 {
                     "name": "Ruger Service-Six",
                     "no_format": true,
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 6,
                             "type": "Piercing"
                         }
                     ],
-                    "dmg_static": 1,
-                    "dmg_static_type": "Piercing",
-                    "crit_range": 20,
-                    "crit_mult": 4
+                    "damage_static": [
+                        {
+                            "damage": 1,
+                            "type": "Piercing"
+                        }
+                    ],
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 4
+                    }
                 },
                 {
                     "name": "S&W M29",
                     "no_format": true,
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 8,
                             "type": "Piercing"
                         }
                     ],
-                    "dmg_static": 2,
-                    "dmg_static_type": "Piercing",
-                    "crit_range": 20,
-                    "crit_mult": 4
+                    "damage_static": [
+                        {
+                            "damage": 2,
+                            "type": "Piercing"
+                        }
+                    ],
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 4
+                    }
                 },
                 {
                     "name": "Sawed-off shotgun",
                     "no_format": true,
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 8,
                             "type": "Piercing"
                         }
                     ],
-                    "dmg_static": 3,
-                    "dmg_static_type": "Piercing",
-                    "crit_range": 19,
-                    "crit_mult": 2
+                    "damage_static": [
+                        {
+                            "damage": 3,
+                            "type": "Piercing"
+                        }
+                    ],
+                    "critical": {
+                        "range": 19,
+                        "multiplier": 2
+                    }
                 },
                 {
                     "name": "SITES M9",
                     "no_format": true,
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 6,
                             "type": "Piercing"
                         }
                     ],
-                    "dmg_static": 2,
-                    "dmg_static_type": "Piercing",
-                    "crit_range": 20,
-                    "crit_mult": 4
+                    "damage_static": [
+                        {
+                            "damage": 2,
+                            "type": "Piercing"
+                        }
+                    ],
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 4
+                    }
                 },
                 {
                     "name": "Walther PPK",
                     "no_format": true,
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 4,
                             "type": "Piercing"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 4
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 4
+                    }
                 },
                 {
                     "name": "Winchester 94",
                     "no_format": true,
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 10,
                             "type": "Piercing"
                         }
                     ],
-                    "dmg_static": 1,
-                    "dmg_static_type": "Piercing",
-                    "crit_range": 20,
-                    "crit_mult": 4
+                    "damage_static": [
+                        {
+                            "damage": 1,
+                            "type": "Piercing"
+                        }
+                    ],
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 4
+                    }
                 }
-            ]
+            ],
+            "name": "Simple ranged weapons"
         },
         {
-            "category": "Martial ranged weapons",
             "weapons": [
                 {
                     "name": "AKM/AK-47",
                     "no_format": true,
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 8,
                             "type": "Piercing"
                         }
                     ],
-                    "dmg_static": 1,
-                    "dmg_static_type": "Piercing",
-                    "crit_range": 19,
-                    "crit_mult": 4
+                    "damage_static": [
+                        {
+                            "damage": 1,
+                            "type": "Piercing"
+                        }
+                    ],
+                    "critical": {
+                        "range": 19,
+                        "multiplier": 4
+                    }
                 },
                 {
                     "name": "Barrett Light Fifty",
                     "no_format": true,
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 12,
                             "type": "Piercing"
                         }
                     ],
-                    "dmg_static": 3,
-                    "dmg_static_type": "Piercing",
-                    "crit_range": 19,
-                    "crit_mult": 4
+                    "damage_static": [
+                        {
+                            "damage": 3,
+                            "type": "Piercing"
+                        }
+                    ],
+                    "critical": {
+                        "range": 19,
+                        "multiplier": 4
+                    }
                 },
                 {
                     "name": "Beretta 93R",
                     "no_format": true,
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 6,
                             "type": "Piercing"
                         }
                     ],
-                    "dmg_static": 2,
-                    "dmg_static_type": "Piercing",
-                    "crit_range": 19,
-                    "crit_mult": 4
+                    "damage_static": [
+                        {
+                            "damage": 2,
+                            "type": "Piercing"
+                        }
+                    ],
+                    "critical": {
+                        "range": 19,
+                        "multiplier": 4
+                    }
                 },
                 {
                     "name": "HK G3",
                     "no_format": true,
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 10,
                             "type": "Piercing"
                         }
                     ],
-                    "dmg_static": 1,
-                    "dmg_static_type": "Piercing",
-                    "crit_range": 19,
-                    "crit_mult": 4
+                    "damage_static": [
+                        {
+                            "damage": 1,
+                            "type": "Piercing"
+                        }
+                    ],
+                    "critical": {
+                        "range": 19,
+                        "multiplier": 4
+                    }
                 },
                 {
                     "name": "HK MP5",
                     "no_format": true,
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 6,
                             "type": "Piercing"
                         }
                     ],
-                    "dmg_static": 2,
-                    "dmg_static_type": "Piercing",
-                    "crit_range": 19,
-                    "crit_mult": 4
+                    "damage_static": [
+                        {
+                            "damage": 2,
+                            "type": "Piercing"
+                        }
+                    ],
+                    "critical": {
+                        "range": 19,
+                        "multiplier": 4
+                    }
                 },
                 {
                     "name": "HK MP5K",
                     "no_format": true,
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 6,
                             "type": "Piercing"
                         }
                     ],
-                    "dmg_static": 2,
-                    "dmg_static_type": "Piercing",
-                    "crit_range": 19,
-                    "crit_mult": 4
+                    "damage_static": [
+                        {
+                            "damage": 2,
+                            "type": "Piercing"
+                        }
+                    ],
+                    "critical": {
+                        "range": 19,
+                        "multiplier": 4
+                    }
                 },
                 {
                     "name": "HK PSG1",
                     "no_format": true,
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 10,
                             "type": "Piercing"
                         }
                     ],
-                    "dmg_static": 1,
-                    "dmg_static_type": "Piercing",
-                    "crit_range": 19,
-                    "crit_mult": 4
+                    "damage_static": [
+                        {
+                            "damage": 1,
+                            "type": "Piercing"
+                        }
+                    ],
+                    "critical": {
+                        "range": 19,
+                        "multiplier": 4
+                    }
                 },
                 {
                     "name": "M16",
                     "no_format": true,
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 8,
                             "type": "Piercing"
                         }
                     ],
-                    "crit_range": 19,
-                    "crit_mult": 4
+                    "critical": {
+                        "range": 19,
+                        "multiplier": 4
+                    }
                 },
                 {
                     "name": "M4 Carbine",
                     "no_format": true,
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 8,
                             "type": "Piercing"
                         }
                     ],
-                    "crit_range": 19,
-                    "crit_mult": 4
+                    "critical": {
+                        "range": 19,
+                        "multiplier": 4
+                    }
                 },
                 {
                     "name": "M-60",
                     "no_format": true,
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 10,
                             "type": "Piercing"
                         }
                     ],
-                    "dmg_static": 1,
-                    "dmg_static_type": "Piercing",
-                    "crit_range": 19,
-                    "crit_mult": 4
+                    "damage_static": [
+                        {
+                            "damage": 1,
+                            "type": "Piercing"
+                        }
+                    ],
+                    "critical": {
+                        "range": 19,
+                        "multiplier": 4
+                    }
                 },
                 {
                     "name": "MAC Ingram M10",
                     "no_format": true,
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 8,
                             "type": "Piercing"
                         }
                     ],
-                    "dmg_static": 2,
-                    "dmg_static_type": "Piercing",
-                    "crit_range": 19,
-                    "crit_mult": 4
+                    "damage_static": [
+                        {
+                            "damage": 2,
+                            "type": "Piercing"
+                        }
+                    ],
+                    "critical": {
+                        "range": 19,
+                        "multiplier": 4
+                    }
                 },
                 {
                     "name": "Skorpion",
                     "no_format": true,
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 4,
                             "type": "Piercing"
                         }
                     ],
-                    "crit_range": 19,
-                    "crit_mult": 4
+                    "critical": {
+                        "range": 19,
+                        "multiplier": 4
+                    }
                 },
                 {
                     "name": "Steyr AUG",
                     "no_format": true,
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 8,
                             "type": "Piercing"
                         }
                     ],
-                    "crit_range": 19,
-                    "crit_mult": 4
+                    "critical": {
+                        "range": 19,
+                        "multiplier": 4
+                    }
                 },
                 {
                     "name": "TEC-9",
                     "no_format": true,
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 6,
                             "type": "Piercing"
                         }
                     ],
-                    "dmg_static": 2,
-                    "dmg_static_type": "Piercing",
-                    "crit_range": 19,
-                    "crit_mult": 4
+                    "damage_static": [
+                        {
+                            "damage": 2,
+                            "type": "Piercing"
+                        }
+                    ],
+                    "critical": {
+                        "range": 19,
+                        "multiplier": 4
+                    }
                 },
                 {
                     "name": "Uzi",
                     "no_format": true,
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 6,
                             "type": "Piercing"
                         }
                     ],
-                    "dmg_static": 2,
-                    "dmg_static_type": "Piercing",
-                    "crit_range": 19,
-                    "crit_mult": 4
+                    "damage_static": [
+                        {
+                            "damage": 2,
+                            "type": "Piercing"
+                        }
+                    ],
+                    "critical": {
+                        "range": 19,
+                        "multiplier": 4
+                    }
                 }
-            ]
+            ],
+            "name": "Martial ranged weapons"
         },
         {
-            "category": "Exotic ranged weapons",
             "weapons": [
                 {
                     "name": "Flamethrower",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 3,
                             "die": 6,
                             "type": "Fire"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 4
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 4
+                    }
                 },
                 {
                     "name": "M2HB",
                     "no_format": true,
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 12,
                             "type": "Piercing"
                         }
                     ],
-                    "dmg_static": 3,
-                    "dmg_static_type": "Piercing",
-                    "crit_range": 19,
-                    "crit_mult": 4
+                    "damage_static": [
+                        {
+                            "damage": 3,
+                            "type": "Piercing"
+                        }
+                    ],
+                    "critical": {
+                        "range": 19,
+                        "multiplier": 4
+                    }
                 },
                 {
                     "name": "M72A3 LAW",
                     "no_format": true,
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 10,
                             "die": 6,
                             "type": "Piercing"
                         }
                     ],
-                    "crit_range": 19,
-                    "crit_mult": 4
+                    "critical": {
+                        "range": 19,
+                        "multiplier": 4
+                    }
                 }
-            ]
+            ],
+            "name": "Exotic ranged weapons"
         },
         {
-            "category": "Grenades and explosives",
             "weapons": [
                 {
                     "name": "40mm fragmentation grenade",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 6,
                             "die": 6,
                             "type": "Slashing"
                         }
                     ],
-                    "crit_range": 19,
-                    "crit_mult": 4
+                    "critical": {
+                        "range": 19,
+                        "multiplier": 4
+                    }
                 },
                 {
                     "name": "C4/Semtex",
                     "no_format": true,
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 4,
                             "die": 6,
                             "type": "Bludgeoning"
                         }
                     ],
-                    "crit_range": 19,
-                    "crit_mult": 4
+                    "critical": {
+                        "range": 19,
+                        "multiplier": 4
+                    }
                 },
                 {
                     "name": "Det cord",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 6,
                             "type": "Fire"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 4
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 4
+                    }
                 },
                 {
                     "name": "Dynamite",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 6,
                             "type": "Bludgeoning"
                         }
                     ],
-                    "crit_range": 19,
-                    "crit_mult": 4
+                    "critical": {
+                        "range": 19,
+                        "multiplier": 4
+                    }
                 },
                 {
                     "name": "Fragmentation grenade",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 6,
                             "die": 6,
                             "type": "Slasing"
                         }
                     ],
-                    "crit_range": 19,
-                    "crit_mult": 4
+                    "critical": {
+                        "range": 19,
+                        "multiplier": 4
+                    }
                 },
                 {
                     "name": "Molotov cocktail",
                     "no_format": true,
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 6,
@@ -723,155 +887,168 @@
                             "type": "Fire (splash)"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 2
+                    }
                 },
                 {
                     "name": "Thermite grenade",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 8,
                             "die": 6,
                             "type": "Fire"
                         }
                     ],
-                    "crit_range": 19,
-                    "crit_mult": 4
+                    "critical": {
+                        "range": 19,
+                        "multiplier": 4
+                    }
                 },
                 {
                     "name": "White phosphorus grenade",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 8,
                             "die": 6,
                             "type": "Fire"
                         }
                     ],
-                    "crit_range": 19,
-                    "crit_mult": 4
+                    "critical": {
+                        "range": 19,
+                        "multiplier": 4
+                    }
                 }
-            ]
+            ],
+            "name": "Grenades and explosives"
         },
         {
-            "category": "No feat required melee weapons",
             "weapons": [
                 {
                     "name": "Pistol whip",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 4,
                             "type": "Bludgeoning"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 2
+                    }
                 },
                 {
                     "name": "Rifle butt",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 46,
                             "type": "Bludgeoning"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 2
+                    }
                 },
                 {
                     "name": "Straight razor",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 3,
                             "type": "Slashing"
                         }
                     ],
-                    "crit_range": 18,
-                    "crit_mult": 2
+                    "critical": {
+                        "range": 18,
+                        "multiplier": 2
+                    }
                 },
                 {
                     "name": "Stun gun",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 3,
                             "type": "Electricity"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 2
+                    }
                 }
-            ]
+            ],
+            "name": "No feat required melee weapons"
         },
         {
-            "category": "Simple melee weapons",
             "weapons": [
                 {
                     "name": "Cleaver",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 6,
                             "type": "Slashing"
                         }
                     ],
-                    "crit_range": 19,
-                    "crit_mult": 2
+                    "critical": {
+                        "range": 19,
+                        "multiplier": 2
+                    }
                 },
                 {
                     "name": "Knife",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 6,
                             "type": "Piercing"
                         }
                     ],
-                    "crit_range": 19,
-                    "crit_mult": 2
+                    "critical": {
+                        "range": 19,
+                        "multiplier": 2
+                    }
                 },
                 {
                     "name": "Metal baton",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 6,
                             "type": "Bludgeoning"
                         }
                     ],
-                    "crit_range": 19,
-                    "crit_mult": 2
+                    "critical": {
+                        "range": 19,
+                        "multiplier": 2
+                    }
                 }
-            ]
+            ],
+            "name": "Simple melee weapons"
         },
         {
-            "category": "Exotic melee weapons",
             "weapons": [
                 {
                     "name": "Chainsaw",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 3,
                             "die": 6,
                             "type": "Slashing"
                         }
                     ],
-                    "crit_range": 18,
-                    "crit_mult": 4
+                    "critical": {
+                        "range": 18,
+                        "multiplier": 4
+                    }
                 }
-            ]
+            ],
+            "name": "Exotic melee weapons"
         }
     ]
 }

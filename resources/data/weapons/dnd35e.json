@@ -1,1469 +1,1108 @@
 {
-    "system": "D&D 3.5e",
+    "name": "D&D 3.5e",
+    "has_size_steps": true,
     "data": [
         {
-            "category": "Simple unarmed melee weapons",
             "weapons": [
                 {
                     "name": "Gauntlet",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 2,
-                            "type": "Bludgeoning"
-                        }
-                    ],
-                    "dmg_medium":[
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 3,
                             "type": "Bludgeoning"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 2
+                    }
                 },
                 {
                     "name": "Unarmed strike",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 2,
-                            "type": "Bludgeoning"
-                        }
-                    ],
-                    "dmg_medium":[
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 3,
                             "type": "Bludgeoning"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 2
+                    }
                 }
-            ]
+            ],
+            "name": "Simple unarmed melee weapons"
         },
         {
-            "category": "Simple light melee weapons",
             "weapons": [
                 {
                     "name": "Dagger",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 3,
-                            "type": "Piercing or slashing"
-                        }
-                    ],
-                    "dmg_medium":[
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 4,
                             "type": "Piercing or slashing"
                         }
                     ],
-                    "crit_range": 19,
-                    "crit_mult": 2
+                    "critical": {
+                        "range": 19,
+                        "multiplier": 2
+                    }
                 },
                 {
                     "name": "Dagger, punching",
                     "display": "Punching dagger",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 3,
-                            "type": "Piercing"
-                        }
-                    ],
-                    "dmg_medium":[
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 4,
                             "type": "Piercing"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 3
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 3
+                    }
                 },
                 {
                     "name": "Gauntlet, spiked",
                     "display": "Spiked gauntlet",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 3,
-                            "type": "Piercing"
-                        }
-                    ],
-                    "dmg_medium":[
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 4,
                             "type": "Piercing"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 2
+                    }
                 },
                 {
                     "name": "Mace, light",
                     "display": "Light mace",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 4,
-                            "type": "Bludgeoning"
-                        }
-                    ],
-                    "dmg_medium":[
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 6,
                             "type": "Bludgeoning"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 2
+                    }
                 },
                 {
                     "name": "Sickle",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 4,
-                            "type": "Slashing"
-                        }
-                    ],
-                    "dmg_medium":[
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 6,
                             "type": "Slashing"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 2
+                    }
                 }
-            ]
+            ],
+            "name": "Simple light melee weapons"
         },
         {
-            "category": "Simple one-handed melee weapons",
             "weapons": [
                 {
                     "name": "Club",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 4,
-                            "type": "Bludgeoning"
-                        }
-                    ],
-                    "dmg_medium":[
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 6,
                             "type": "Bludgeoning"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 2
+                    }
                 },
                 {
                     "name": "Mace, heavy",
                     "display": "Heavy mace",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 6,
-                            "type": "Bludgeoning"
-                        }
-                    ],
-                    "dmg_medium":[
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 8,
                             "type": "Bludgeoning"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 2
+                    }
                 },
                 {
                     "name": "Morningstar",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 6,
-                            "type": "Bludgeoning and piercing"
-                        }
-                    ],
-                    "dmg_medium":[
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 8,
                             "type": "Bludgeoning and piercing"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 2
+                    }
                 },
                 {
                     "name": "Shortspear",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 4,
-                            "type": "Piercing"
-                        }
-                    ],
-                    "dmg_medium":[
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 6,
                             "type": "Piercing"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 2
+                    }
                 }
-            ]
+            ],
+            "name": "Simple one-handed melee weapons"
         },
         {
-            "category": "Simple two-handed melee weapons",
             "weapons": [
                 {
                     "name": "Longspear",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 6,
-                            "type": "Piercing"
-                        }
-                    ],
-                    "dmg_medium":[
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 8,
                             "type": "Piercing"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 3
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 3
+                    }
                 },
                 {
                     "name": "Quarterstaff",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 4,
-                            "type": "Bludgeoning"
-                        }
-                    ],
-                    "dmg_medium":[
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 6,
                             "type": "Bludgeoning"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 2
+                    }
                 },
                 {
                     "name": "Spear",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 6,
-                            "type": "Piercing"
-                        }
-                    ],
-                    "dmg_medium":[
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 8,
                             "type": "Piercing"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 3
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 3
+                    }
                 }
-            ]
+            ],
+            "name": "Simple two-handed melee weapons"
         },
         {
-            "category": "Simple ranged weapons",
             "weapons": [
                 {
                     "name": "Crossbow, heavy",
                     "display": "Heavy crossbow",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 8,
-                            "type": "Piercing"
-                        }
-                    ],
-                    "dmg_medium":[
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 10,
                             "type": "Piercing"
                         }
                     ],
-                    "crit_range": 19,
-                    "crit_mult": 2
+                    "critical": {
+                        "range": 19,
+                        "multiplier": 2
+                    }
                 },
                 {
                     "name": "Crossbow, light",
                     "display": "Light crossbow",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 6,
-                            "type": "Piercing"
-                        }
-                    ],
-                    "dmg_medium":[
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 8,
                             "type": "Piercing"
                         }
                     ],
-                    "crit_range": 19,
-                    "crit_mult": 2
+                    "critical": {
+                        "range": 19,
+                        "multiplier": 2
+                    }
                 },
                 {
                     "name": "Dart",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 3,
-                            "type": "Piercing"
-                        }
-                    ],
-                    "dmg_medium":[
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 4,
                             "type": "Piercing"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 2
+                    }
                 },
                 {
                     "name": "Javelin",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 4,
-                            "type": "Piercing"
-                        }
-                    ],
-                    "dmg_medium":[
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 6,
                             "type": "Piercing"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 2
+                    }
                 },
                 {
                     "name": "Sling",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 3,
-                            "type": "Bludgeoning"
-                        }
-                    ],
-                    "dmg_medium":[
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 4,
                             "type": "Bludgeoning"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 2
+                    }
                 }
-            ]
+            ],
+            "name": "Simple ranged weapons"
         },
         {
-            "category": "Martial light melee weapons",
             "weapons": [
                 {
                     "name": "Axe, throwing",
                     "display": "Throwing axe",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 4,
-                            "type": "Slashing"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 6,
                             "type": "Slashing"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 2
+                    }
                 },
                 {
                     "name": "Hammer, light",
                     "display": "Light hammer",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 3,
-                            "type": "Bludgeoning"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 4,
                             "type": "Bludgeoning"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 2
+                    }
                 },
                 {
                     "name": "Handaxe",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 4,
-                            "type": "Slashing"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 6,
                             "type": "Slashing"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 3
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 3
+                    }
                 },
                 {
                     "name": "Kukri",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 3,
-                            "type": "Slashing"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 4,
                             "type": "Slashing"
                         }
                     ],
-                    "crit_range": 18,
-                    "crit_mult": 2
+                    "critical": {
+                        "range": 18,
+                        "multiplier": 2
+                    }
                 },
                 {
                     "name": "Pick, light",
                     "display": "Light pick",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 3,
-                            "type": "Piercing"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 4,
                             "type": "Piercing"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 4
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 4
+                    }
                 },
                 {
                     "name": "Sap",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 4,
-                            "type": "Bludgeoning"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 6,
                             "type": "Bludgeoning"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 2
+                    }
                 },
                 {
                     "name": "Shield, light",
                     "display": "Light shield",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 2,
-                            "type": "Bludgeoning"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 3,
                             "type": "Bludgeoning"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 2
+                    }
                 },
                 {
                     "name": "Spiked armor",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 4,
-                            "type": "Piercing"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 6,
                             "type": "Piercing"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 2
+                    }
                 },
                 {
                     "name": "Spiked shield, light",
                     "display": "Light spiked shield",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 3,
-                            "type": "Piercing"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 4,
                             "type": "Piercing"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 2
+                    }
                 },
                 {
                     "name": "Sword, short",
                     "display": "Short sword",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 4,
-                            "type": "Piercing"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 6,
                             "type": "Piercing"
                         }
                     ],
-                    "crit_range": 19,
-                    "crit_mult": 2
+                    "critical": {
+                        "range": 19,
+                        "multiplier": 2
+                    }
                 }
-            ]
+            ],
+            "name": "Martial light melee weapons"
         },
         {
-            "category": "Martial one-handed melee weapons",
             "weapons": [
                 {
                     "name": "Battleaxe",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 6,
-                            "type": "Slashing"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 8,
                             "type": "Slashing"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 3
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 3
+                    }
                 },
                 {
                     "name": "Flail",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 6,
-                            "type": "Bludgeoning"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 8,
                             "type": "Bludgeoning"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 2
+                    }
                 },
                 {
                     "name": "Longsword",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 6,
-                            "type": "Slashing"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 8,
                             "type": "Slashing"
                         }
                     ],
-                    "crit_range": 18,
-                    "crit_mult": 2
+                    "critical": {
+                        "range": 18,
+                        "multiplier": 2
+                    }
                 },
                 {
                     "name": "Pick, heavy",
                     "display": "Heavy pick",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 4,
-                            "type": "Piercing"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 6,
                             "type": "Piercing"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 4
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 4
+                    }
                 },
                 {
                     "name": "Rapier",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 4,
-                            "type": "Piercing"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 6,
                             "type": "Piercing"
                         }
                     ],
-                    "crit_range": 18,
-                    "crit_mult": 2
+                    "critical": {
+                        "range": 18,
+                        "multiplier": 2
+                    }
                 },
                 {
                     "name": "Scimitar",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 4,
-                            "type": "Slashing"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 6,
                             "type": "Slashing"
                         }
                     ],
-                    "crit_range": 18,
-                    "crit_mult": 2
+                    "critical": {
+                        "range": 18,
+                        "multiplier": 2
+                    }
                 },
                 {
                     "name": "Shield, heavy",
                     "display": "Heavy shield",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 3,
-                            "type": "Bludgeoning"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 4,
                             "type": "Bludgeoning"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 2
+                    }
                 },
                 {
                     "name": "Spiked shield, heavy",
                     "display": "Heavy spiked shield",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 4,
-                            "type": "Piercing"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 6,
                             "type": "Piercing"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 2
+                    }
                 },
                 {
                     "name": "Trident",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 6,
-                            "type": "Piercing"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 8,
                             "type": "Piercing"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 2
+                    }
                 },
                 {
                     "name": "Warhammer",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 6,
-                            "type": "Bludgeoning"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 8,
                             "type": "Bludgeoning"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 3
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 3
+                    }
                 }
-            ]
+            ],
+            "name": "Martial one-handed melee weapons"
         },
         {
-            "category": "Martial two-handed melee weapons",
             "weapons": [
                 {
                     "name": "Falchion",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 6,
-                            "type": "Slashing"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 4,
                             "type": "Slashing"
                         }
                     ],
-                    "crit_range": 18,
-                    "crit_mult": 2
+                    "critical": {
+                        "range": 18,
+                        "multiplier": 2
+                    }
                 },
                 {
                     "name": "Glaive",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 8,
-                            "type": "Slashing"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 10,
                             "type": "Slashing"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 3
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 3
+                    }
                 },
                 {
                     "name": "Greataxe",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 10,
-                            "type": "Slashing"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 12,
                             "type": "Slashing"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 3
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 3
+                    }
                 },
                 {
                     "name": "Greatclub",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 8,
-                            "type": "Bludgeoning"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 10,
                             "type": "Bludgeoning"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 2
+                    }
                 },
                 {
                     "name": "Flail, heavy",
                     "display": "Heavy flail",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 8,
-                            "type": "Bludgeoning"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 10,
                             "type": "Bludgeoning"
                         }
                     ],
-                    "crit_range": 19,
-                    "crit_mult": 2
+                    "critical": {
+                        "range": 19,
+                        "multiplier": 2
+                    }
                 },
                 {
                     "name": "Greatsword",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 10,
-                            "type": "Slashing"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 6,
                             "type": "Slashing"
                         }
                     ],
-                    "crit_range": 19,
-                    "crit_mult": 2
+                    "critical": {
+                        "range": 19,
+                        "multiplier": 2
+                    }
                 },
                 {
                     "name": "Guisarme",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 6,
-                            "type": "Slashing"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 4,
                             "type": "Slashing"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 3
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 3
+                    }
                 },
                 {
                     "name": "Halberd",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 8,
-                            "type": "Piercing or slashing"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 10,
                             "type": "Piercing or slashing"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 3
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 3
+                    }
                 },
                 {
                     "name": "Lance",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 6,
-                            "type": "Piercing"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 8,
                             "type": "Piercing"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 3
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 3
+                    }
                 },
                 {
                     "name": "Ranseur",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 6,
-                            "type": "Piercing"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 4,
                             "type": "Pierciing"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 3
-                }
-                ,
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 3
+                    }
+                },
                 {
                     "name": "Scythe",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 6,
-                            "type": "Piercing or slashing"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 4,
                             "type": "Piercing or slashing"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 4
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 4
+                    }
                 }
-            ]
+            ],
+            "name": "Martial two-handed melee weapons"
         },
         {
-            "category": "Martial ranged weapons",
             "weapons": [
                 {
                     "name": "Longbow",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 6,
-                            "type": "Piercing"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 8,
                             "type": "Piercing"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 3
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 3
+                    }
                 },
                 {
                     "name": "Shortbow",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 4,
-                            "type": "Piercing"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 6,
                             "type": "Piercing"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 3
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 3
+                    }
                 }
-            ]
+            ],
+            "name": "Martial ranged weapons"
         },
         {
-            "category": "Exotic light melee weapons",
             "weapons": [
                 {
                     "name": "Kama",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 4,
-                            "type": "Slashing"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 6,
                             "type": "Slashing"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 2
+                    }
                 },
                 {
                     "name": "Nunchaku",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 4,
-                            "type": "Bludgeoning"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 6,
                             "type": "Bludgeoning"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 2
+                    }
                 },
                 {
                     "name": "Sai",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 3,
-                            "type": "Bludgeoning"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 4,
                             "type": "Bludgeoning"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 2
+                    }
                 },
                 {
                     "name": "Siangham",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 4,
-                            "type": "Piercing"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 6,
                             "type": "Piercing"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 2
+                    }
                 }
-            ]
+            ],
+            "name": "Exotic light melee weapons"
         },
         {
-            "category": "Exotic one-handed melee weapons",
             "weapons": [
                 {
                     "name": "Sword, bastard",
                     "display": "Bastard sword",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 8,
-                            "type": "Slashing"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 10,
                             "type": "Slashing"
                         }
                     ],
-                    "crit_range": 19,
-                    "crit_mult": 2
+                    "critical": {
+                        "range": 19,
+                        "multiplier": 2
+                    }
                 },
                 {
                     "name": "Waraxe, dwarven",
                     "display": "Dwarven waraxe",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 8,
-                            "type": "Slashing"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 10,
                             "type": "Slashing"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 3
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 3
+                    }
                 },
                 {
                     "name": "Whip",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 2,
-                            "type": "Slashing"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 3,
                             "type": "Slashing"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 2
+                    }
                 }
-            ]
+            ],
+            "name": "Exotic one-handed melee weapons"
         },
         {
-
-            "category": "Exotic two-handed melee weapons",
             "weapons": [
                 {
                     "name": "Axe, orc double",
                     "display": "Orc double axe",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 6,
-                            "type": "Slashing"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 8,
                             "type": "Slashing"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 3
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 3
+                    }
                 },
                 {
                     "name": "Chain, spiked",
                     "display": "Spiked chain",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 6,
-                            "type": "Piercing"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 4,
                             "type": "Piercing"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 2
+                    }
                 },
                 {
                     "name": "Flail, dire",
                     "display": "Dire flail",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 6,
-                            "type": "Bludgeoning"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 8,
                             "type": "Bludgeoning"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 2
+                    }
                 },
                 {
                     "name": "Hammer, gnome hooked (hammer)",
                     "display": "Gnome hooked hammer (hammer)",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 6,
-                            "type": "Bludgeoning"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 8,
                             "type": "Bludgeoning"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 3
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 3
+                    }
                 },
                 {
                     "name": "Hammer, gnome hooked (hook)",
                     "display": "Gnome hooked hammer (hook)",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 4,
-                            "type": "Piercing"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 6,
                             "type": "Piercing"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 4
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 4
+                    }
                 },
                 {
                     "name": "Sword, two-bladed",
                     "display": "Two-bladed sword",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 6,
-                            "type": "Slashing"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 8,
                             "type": "Slashing"
                         }
                     ],
-                    "crit_range": 19,
-                    "crit_mult": 2
+                    "critical": {
+                        "range": 19,
+                        "multiplier": 2
+                    }
                 },
                 {
                     "name": "Urgrosh, dwarven (axe)",
                     "display": "Dwarven urgrosh (axe)",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 6,
-                            "type": "Slashing"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 8,
                             "type": "Slashing"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 3
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 3
+                    }
                 },
                 {
                     "name": "Urgrosh, dwarven (spear)",
                     "display": "Dwarven urgrosh (spear)",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 4,
-                            "type": "Piercing"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 6,
                             "type": "Piercing"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 3
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 3
+                    }
                 }
-            ]
+            ],
+            "name": "Exotic two-handed melee weapons"
         },
         {
-            "category": "Exotic ranged weapons",
             "weapons": [
                 {
                     "name": "Bolas",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 3,
-                            "type": "Bludgeoning"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 4,
                             "type": "Bludgeoning"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 2
+                    }
                 },
                 {
                     "name": "Crossbow, hand",
                     "display": "Hand crossbow",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 3,
-                            "type": "Piercing"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 4,
                             "type": "Piercing"
                         }
                     ],
-                    "crit_range": 19,
-                    "crit_mult": 2
+                    "critical": {
+                        "range": 19,
+                        "multiplier": 2
+                    }
                 },
                 {
                     "name": "Crossbow, repeating heavy",
                     "display": "Repeating heavy crossbow",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 8,
-                            "type": "Piercing"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 10,
                             "type": "Piercing"
                         }
                     ],
-                    "crit_range": 19,
-                    "crit_mult": 2
+                    "critical": {
+                        "range": 19,
+                        "multiplier": 2
+                    }
                 },
                 {
                     "name": "Crossbow, repeating light",
                     "display": "Repeating light crossbow",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 6,
-                            "type": "Piercing"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 8,
                             "type": "Piercing"
                         }
                     ],
-                    "crit_range": 19,
-                    "crit_mult": 2
+                    "critical": {
+                        "range": 19,
+                        "multiplier": 2
+                    }
                 },
                 {
                     "name": "Shuriken",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 1,
-                            "type": "Piercing"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 2,
                             "type": "Piercing"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 2
+                    }
                 }
-            ]
+            ],
+            "name": "Exotic ranged weapons"
         }
     ]
 }

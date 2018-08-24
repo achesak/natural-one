@@ -1,422 +1,335 @@
 {
-    "system": "Starfinder",
+    "name": "Starfinder",
+    "has_size_steps": false,
     "data": [
         {
-            "category": "Basic one-handed weapons - uncategorized",
             "weapons": [
                 {
                     "name": "Unarmed strike",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 3,
                             "type": "Bludgeoning"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Club",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 6,
                             "type": "Bludgeoning"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Baton, tactical",
                     "display": "Tactical baton",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 4,
                             "type": "Bludgeoning"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Battleglove, cestus",
                     "display": "Cestus battleglove",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 4,
                             "type": "Bludgeoning"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Knife, survival",
                     "display": "Survival knife",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 4,
                             "type": "Slashing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Dueling sword, tactical",
                     "display": "Tactical dueling sword",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 6,
                             "type": "Slashing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Knife, tactical",
                     "display": "Tactical knife",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 4,
                             "type": "Slashing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Dueling sword, buzzblade",
                     "display": "Buzzblade dueling sword",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 6,
                             "type": "Slashing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Incapacitator",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 3,
                             "die": 4,
                             "type": "Bludgeoning"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Battleglove, power",
                     "display": "Power battleglove",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 8,
                             "type": "Bludgeoning"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Dueling sword, ultrathin",
                     "display": "Ultrathin dueling sword",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 3,
                             "die": 6,
                             "type": "Slashing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Dagger, ultrathin",
                     "display": "Ultrathin dagger",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 4,
                             "die": 4,
                             "type": "Slashing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Battleglove, nova",
                     "display": "Nova battleglove",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 3,
                             "die": 10,
                             "type": "Bludgeoning"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Dagger, zero-edge",
                     "display": "Zero-edge dagger",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 6,
                             "die": 4,
                             "type": "Slashing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Dueling sword, ripper",
                     "display": "Ripper dueling sword",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 7,
                             "die": 6,
                             "type": "Slashing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Peacemaker",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 6,
                             "die": 6,
                             "type": "Bludgeoning"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Battleglove, gravity",
                     "display": "Gravity battleglove",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 5,
                             "die": 10,
                             "type": "Bludgeoning"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Dagger, molecular rift",
                     "display": "Molecular rift dagger",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 10,
                             "die": 4,
                             "type": "Slashing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Dueling sword, molecular rift",
                     "display": "Molecular rift dueling sword",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 10,
                             "die": 6,
                             "type": "Slashing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Baton, advanced",
                     "display": "Advanced baton",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 8,
                             "die": 6,
                             "type": "Bludgeoning"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 }
-            ]
+            ],
+            "name": "Basic one-handed weapons - uncategorized"
         },
         {
-            "category": "Basic two-handed weapons - uncategorized",
             "weapons": [
                 {
                     "name": "Spear, tactical",
                     "display": "Tactical spear",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 6,
                             "type": "Piercing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Staff, battle",
                     "display": "Battle staff",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 4,
                             "type": "Bludgeoning"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Staff, carbon",
                     "display": "Carbon staff",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 8,
                             "type": "Bludgeoning"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Spear, sentinel",
                     "display": "Sentinel spear",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 6,
                             "type": "Piercing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Spear, buzzblade",
                     "display": "Buzzblade spear",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 3,
                             "die": 6,
                             "type": "Piercing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Spear, zero-edge",
                     "display": "Zero-edge spear",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 7,
                             "die": 6,
                             "type": "Piercing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Staff, hardlight",
                     "display": "Hardlight spear",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 8,
                             "die": 8,
                             "type": "Bludgeoning"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Spear, gravity",
                     "display": "Gravity spear",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 12,
                             "die": 6,
                             "type": "Piercing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 }
-            ]
+            ],
+            "name": "Basic two-handed weapons - uncategorized"
         },
         {
-            "category": "Advanced one-handed weapons - flame",
             "weapons": [
                 {
                     "name": "Skyfire sword, tactical",
                     "display": "Tactical skyfire sword",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 4,
                             "type": "Fire"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2,
-                    "crit_extra": {
-                        "dmg": [
+                    "critical": {
+                        "damage_rolls": [
                             {
                                 "count": 1,
                                 "die": 8,
@@ -428,18 +341,15 @@
                 {
                     "name": "Skyfire sword, inferno",
                     "display": "Inferno skyfire sword",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 7,
                             "die": 8,
                             "type": "Fire"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2,
-                    "crit_extra": {
-                        "dmg": [
+                    "critical": {
+                        "damage_rolls": [
                             {
                                 "count": 4,
                                 "die": 12,
@@ -448,101 +358,83 @@
                         ]
                     }
                 }
-            ]
+            ],
+            "name": "Advanced one-handed weapons - flame"
         },
         {
-            "category": "Advanced one-handed weapons - plasma",
             "weapons": [
                 {
                     "name": "Plasma sword, tactical",
                     "display": "Tactical plasma sword",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 8,
                             "type": "Electricity and fire"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Plasma sword, red star",
                     "display": "Red star plasma sword",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 4,
                             "die": 8,
                             "type": "Electricity and fire"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Plasma sword, yellow star",
                     "display": "Yellow star plasma sword",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 5,
                             "die": 8,
                             "type": "Electricity and fire"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Plasma sword, white star",
                     "display": "White star plasma sword",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 8,
                             "die": 8,
                             "type": "Electricity and fire"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Plasma sword, blue star",
                     "display": "Blue star plasma sword",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 10,
                             "die": 8,
                             "type": "Electricity and fire"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 }
-            ]
+            ],
+            "name": "Advanced one-handed weapons - plasma"
         },
         {
-            "category": "Advanced one-handed weapons - shock",
             "weapons": [
                 {
                     "name": "Shock truncheon, static",
                     "display": "Static shock truncheon",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 12,
                             "type": "Electricity"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2,
-                    "crit_extra": {
-                        "dmg": [
+                    "critical": {
+                        "damage_rolls": [
                             {
                                 "count": 1,
                                 "die": 4,
@@ -554,18 +446,15 @@
                 {
                     "name": "Shock truncheon, aurora",
                     "display": "Aurora shock truncheon",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 12,
                             "type": "Electricity"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2,
-                    "crit_extra": {
-                        "dmg": [
+                    "critical": {
+                        "damage_rolls": [
                             {
                                 "count": 2,
                                 "die": 4,
@@ -577,18 +466,15 @@
                 {
                     "name": "Shock truncheon, storm",
                     "display": "Storm shock truncheon",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 3,
                             "die": 12,
                             "type": "Electricity"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2,
-                    "crit_extra": {
-                        "dmg": [
+                    "critical": {
+                        "damage_rolls": [
                             {
                                 "count": 3,
                                 "die": 4,
@@ -600,18 +486,15 @@
                 {
                     "name": "Shock truncheon, tempest",
                     "display": "Tempest shock truncheon",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 6,
                             "die": 12,
                             "type": "Electricity"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2,
-                    "crit_extra": {
-                        "dmg": [
+                    "critical": {
+                        "damage_rolls": [
                             {
                                 "count": 6,
                                 "die": 4,
@@ -620,156 +503,126 @@
                         ]
                     }
                 }
-            ]
+            ],
+            "name": "Advanced one-handed weapons - shock"
         },
         {
-            "category": "Advanced one-handed weapons - sonic",
             "weapons": [
                 {
                     "name": "Pulse gauntlet, thunderstrike",
                     "display": "Thunderstrike pulse gauntlet",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 6,
                             "type": "Bludgeoning and sonic"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Pulse gauntlet, LFD",
                     "display": "LFD pulse gauntlet",
                     "no_format": true,
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 6,
                             "type": "Bludgeoning and sonic"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Pulse gauntlet, HFD",
                     "display": "HFD pulse gauntlet",
                     "no_format": true,
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 5,
                             "die": 6,
                             "type": "Bludgeoning and sonic"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Pulse gauntlet, banshee",
                     "display": "Banshee pulse gauntlet",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 10,
                             "die": 6,
                             "type": "Bludgeoning and sonic"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 }
-            ]
+            ],
+            "name": "Advanced one-handed weapons - sonic"
         },
         {
-            "category": "Advanced one-handed weapons - uncategorized",
             "weapons": [
                 {
                     "name": "Hammer, assault",
                     "display": "Assault hammer",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 6,
                             "type": "Bludgeoning"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Longsword",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 8,
                             "type": "Slashing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Starknife, tactical",
                     "display": "Tactical starknife",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 4,
                             "type": "Piercing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Taclash, standard",
                     "display": "Standard taclash",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 4,
                             "type": "Slashing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Injection glove",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 4,
                             "type": "Piercing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Fangblade",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 12,
                             "type": "Slashing"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2,
-                    "crit_extra": {
-                        "dmg": [
+                    "critical": {
+                        "damage_rolls": [
                             {
                                 "count": 1,
                                 "die": 8,
@@ -781,46 +634,37 @@
                 {
                     "name": "Longsword, sintered",
                     "display": "Sintered longsword",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 8,
                             "type": "Slashing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Starknife, sintered",
                     "display": "Sintered starknife",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 4,
                             "die": 4,
                             "type": "Piercing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Longsword, microserrated",
                     "display": "Microserrated longsword",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 10,
                             "type": "Slashing"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2,
-                    "crit_extra": {
-                        "dmg": [
+                    "critical": {
+                        "damage_rolls": [
                             {
                                 "count": 2,
                                 "die": 6,
@@ -832,73 +676,58 @@
                 {
                     "name": "Hammer, comet",
                     "display": "Comet hammer",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 4,
                             "die": 6,
                             "type": "Bludgeoning"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Longsword, ultrathin",
                     "display": "Ultrathin longsword",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 4,
                             "die": 8,
                             "type": "Slashing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Taclash, numbing",
                     "display": "Numbing taclash",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 5,
                             "die": 4,
                             "type": "Slashing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Starknife, accelerated",
                     "display": "Accelerated starknife",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 4,
                             "die": 8,
                             "type": "Fire and piercing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Grindblade",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 4,
                             "die": 10,
                             "type": "Slashing"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2,
-                    "crit_extra": {
-                        "dmg": [
+                    "critical": {
+                        "damage_rolls": [
                             {
                                 "count": 2,
                                 "die": 8,
@@ -910,87 +739,69 @@
                 {
                     "name": "Longsword, zero-edge",
                     "display": "Zero-edge longsword",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 7,
                             "die": 8,
                             "type": "Slashing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Monowhip",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 10,
                             "die": 4,
                             "type": "Slashing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Hammer, meteoric",
                     "display": "Meteoric hammer",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 11,
                             "die": 6,
                             "type": "Bludgeoning"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Starknife, lightspeed",
                     "display": "Lightspeed starknife",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 8,
                             "die": 8,
                             "type": "Fire and piercing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Longsword, molecular rift",
                     "display": "Molecular rift longsword",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 10,
                             "die": 8,
                             "type": "Slashing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Longsword, ultraserrated",
                     "display": "Ultraserrated longsword",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 8,
                             "die": 10,
                             "type": "Slashing"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2,
-                    "crit_extra": {
-                        "dmg": [
+                    "critical": {
+                        "damage_rolls": [
                             {
                                 "count": 6,
                                 "die": 6,
@@ -1002,248 +813,200 @@
                 {
                     "name": "Hammer, gravity well",
                     "display": "Gravity well hammer",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 15,
                             "die": 6,
                             "type": "Bludgeoning"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Starknife, dimensional slice",
                     "display": "Dimensional slice starknife",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 8,
                             "die": 12,
                             "type": "Piercing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Longsword, dimensional slice",
                     "display": "Dimensional slice longsword",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 14,
                             "die": 8,
                             "type": "Slashing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 }
-            ]
+            ],
+            "name": "Advanced one-handed weapons - uncategorized"
         },
         {
-            "category": "Advanced two-handed weapons - cryo",
             "weapons": [
                 {
                     "name": "Cryopike, tactical",
                     "display": "Tactical cryopike",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 8,
                             "type": "Cold"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Cryopike, advanced",
                     "display": "Advanced cryopike",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 8,
                             "type": "Cold"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 }
-            ]
+            ],
+            "name": "Advanced two-handed weapons - cryo"
         },
         {
-            "category": "Advanced two-handed weapons - flame",
             "weapons": [
                 {
                     "name": "Flame doshko, ember",
                     "display": "Ember flame doshko",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 8,
                             "type": "Fire"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Flame doshko, blaze",
                     "display": "Blaze flame doshko",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 8,
                             "type": "Fire"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Flame doshko, inferno",
                     "display": "Inferno flame doshko",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 5,
                             "die": 8,
                             "type": "Fire"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Flame doshko, solar flare",
                     "display": "Solar flare flame doshko",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 10,
                             "die": 8,
                             "type": "Fire"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 }
-            ]
+            ],
+            "name": "Advanced two-handed weapons - flame"
         },
         {
-            "category": "Advanced two-handed weapons - plasma",
             "weapons": [
                 {
                     "name": "Plasma doshko, red star",
                     "display": "Red star plasma doshko",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 10,
                             "type": "Electricity and fire"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Plasma doshko, yellow star",
                     "display": "Yellow star plasma doshko",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 10,
                             "type": "Electricity and fire"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Plasma doshko, white star",
                     "display": "White star plasma doshko",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 5,
                             "die": 10,
                             "type": "Electricity and fire"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Plasma doshko, blue star",
                     "display": "Blue star plasma doshko",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 7,
                             "die": 10,
                             "type": "Electricity and fire"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 }
-            ]
+            ],
+            "name": "Advanced two-handed weapons - plasma"
         },
         {
-            "category": "Advanced two-handed weapons - uncategorized",
             "weapons": [
                 {
                     "name": "Doshko, tactical",
                     "display": "Tactical doshko",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 12,
                             "type": "Piercing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Pike, tactical",
                     "display": "Tactical pike",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 8,
                             "type": "Piercing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Curve blade, carbon steel",
                     "display": "Carbon steel curve blade",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 10,
                             "type": "Slashing"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2,
-                    "crit_extra": {
-                        "dmg": [
+                    "critical": {
+                        "damage_rolls": [
                             {
                                 "count": 1,
                                 "die": 6,
@@ -1255,74 +1018,59 @@
                 {
                     "name": "Swoop hammer, tactical",
                     "display": "Tactical swoop hammer",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 10,
                             "type": "Bludgeoning"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Devastation blade, wrack",
                     "display": "Wrack devastation blade",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 8,
                             "type": "Slashing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Doshko, advanced",
                     "display": "Advanced doshko",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 12,
                             "type": "Piercing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Staff, sentinel",
                     "display": "Sentinel staff",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 10,
                             "type": "Bludgeoning"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Pike, advanced",
                     "display": "Advanced pike",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 8,
                             "type": "Piercing"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2,
-                    "crit_extra": {
-                        "dmg": [
+                    "critical": {
+                        "damage_rolls": [
                             {
                                 "count": 1,
                                 "die": 8,
@@ -1334,32 +1082,26 @@
                 {
                     "name": "Swoop hammer, advanced",
                     "display": "Advanced swoop hammer",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 3,
                             "die": 10,
                             "type": "Bludgeoning"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Curve blade, ultrathin",
                     "display": "Ultrathin curve blade",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 3,
                             "die": 10,
                             "type": "Slashing"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2,
-                    "crit_extra": {
-                        "dmg": [
+                    "critical": {
+                        "damage_rolls": [
                             {
                                 "count": 2,
                                 "die": 6,
@@ -1371,88 +1113,70 @@
                 {
                     "name": "Doskho, ultrathin",
                     "display": "Ultrathin doshko",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 4,
                             "die": 12,
                             "type": "Piercing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Devastation blade, ruin",
                     "display": "Ruin devastation blade",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 5,
                             "die": 8,
                             "type": "Slashing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Staff, repeller",
                     "display": "Repeller staff",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 3,
                             "die": 8,
                             "type": "Bludgeoning"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Swoop hammer, mach 1",
                     "display": "Mach 1 swoop hammer",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 5,
                             "die": 10,
                             "type": "Bludgeoning"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Doshko, zero-edge",
                     "display": "Zero-edge doshko",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 7,
                             "die": 12,
                             "type": "Piercing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Pike, elite",
                     "display": "Elite pike",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 7,
                             "die": 8,
                             "type": "Piercing"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2,
-                    "crit_extra": {
-                        "dmg": [
+                    "critical": {
+                        "damage_rolls": [
                             {
                                 "count": 3,
                                 "die": 8,
@@ -1464,18 +1188,15 @@
                 {
                     "name": "Curve blade, buzzblade",
                     "display": "Buzzblade curve blade",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 8,
                             "die": 10,
                             "type": "Slashing"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2,
-                    "crit_extra": {
-                        "dmg": [
+                    "critical": {
+                        "damage_rolls": [
                             {
                                 "count": 5,
                                 "die": 6,
@@ -1487,74 +1208,59 @@
                 {
                     "name": "Doshko, molecular rift",
                     "display": "Molecular rift doshko",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 10,
                             "die": 12,
                             "type": "Piercing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Swoop hammer, mach 2",
                     "display": "Mach 2 swoop hammer",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 10,
                             "die": 10,
                             "type": "Bludgeoning"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Devastation blade, apocalypse",
                     "display": "Apocalypse devastation blade",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 12,
                             "die": 8,
                             "type": "Slashing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Doshko, dimensional blade",
                     "display": "Dimensional blade doshko",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 13,
                             "die": 12,
                             "type": "Piercing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Curve blade, dimensional slice",
                     "display": "Dimensional slice curve blade",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 12,
                             "die": 10,
                             "type": "Slashing"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2,
-                    "crit_extra": {
-                        "dmg": [
+                    "critical": {
+                        "damage_rolls": [
                             {
                                 "count": 6,
                                 "die": 6,
@@ -1566,98 +1272,80 @@
                 {
                     "name": "Swoop hammer, mach 3",
                     "display": "Mach 3 swoop hammer",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 14,
                             "die": 10,
                             "type": "Bludgeoning and fire"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 }
-            ]
+            ],
+            "name": "Advanced two-handed weapons - uncategorized"
         },
         {
-            "category": "Small arms - cryo",
             "weapons": [
                 {
                     "name": "Zero pistol, frostbite-class",
                     "display": "Frostbite-class zero pistol",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 6,
                             "type": "Cold"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Zero pistol, hailstorm-class",
                     "display": "Hailstorm-class zero pistol",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 6,
                             "type": "Cold"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Zero pistol, blizzard-class",
                     "display": "Blizzard-class zero pistol",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 4,
                             "die": 6,
                             "type": "Cold"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Zero pistol, avalanche-class",
                     "display": "Avalanche-class zero pistol",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 6,
                             "die": 6,
                             "type": "Cold"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 }
-            ]
+            ],
+            "name": "Small arms - cryo"
         },
         {
-            "category": "Small arms - flame",
             "weapons": [
                 {
                     "name": "Flare gun, survival",
                     "display": "Survival flare gun",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 3,
                             "type": "Fire"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2,
-                    "crit_extra": {
-                        "dmg": [
+                    "critical": {
+                        "damage_rolls": [
                             {
                                 "count": 1,
                                 "die": 6,
@@ -1668,18 +1356,15 @@
                 },
                 {
                     "name": "Flame pistol",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 4,
                             "type": "Fire"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2,
-                    "crit_extra": {
-                        "dmg": [
+                    "critical": {
+                        "damage_rolls": [
                             {
                                 "count": 1,
                                 "die": 4,
@@ -1688,26 +1373,23 @@
                         ]
                     }
                 }
-            ]
+            ],
+            "name": "Small arms - flame"
         },
         {
-            "category": "Small arms - laser",
             "weapons": [
                 {
                     "name": "Laser pistol, azimuth",
                     "display": "Azimuth laser pistol",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 4,
                             "type": "Fire"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2,
-                    "crit_extra": {
-                        "dmg": [
+                    "critical": {
+                        "damage_rolls": [
                             {
                                 "count": 1,
                                 "die": 4,
@@ -1719,18 +1401,15 @@
                 {
                     "name": "Laser pistol, corona",
                     "display": "Corona laser pistol",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 4,
                             "type": "Fire"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2,
-                    "crit_extra": {
-                        "dmg": [
+                    "critical": {
+                        "damage_rolls": [
                             {
                                 "count": 1,
                                 "die": 4,
@@ -1742,18 +1421,15 @@
                 {
                     "name": "Laser pistol, aphelion",
                     "display": "Aphelion laser pistol",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 3,
                             "die": 4,
                             "type": "Fire"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2,
-                    "crit_extra": {
-                        "dmg": [
+                    "critical": {
+                        "damage_rolls": [
                             {
                                 "count": 1,
                                 "die": 4,
@@ -1765,18 +1441,15 @@
                 {
                     "name": "Laser pistol, perihelion",
                     "display": "Perihelion laser pistol",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 4,
                             "die": 4,
                             "type": "Fire"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2,
-                    "crit_extra": {
-                        "dmg": [
+                    "critical": {
+                        "damage_rolls": [
                             {
                                 "count": 2,
                                 "die": 4,
@@ -1788,18 +1461,15 @@
                 {
                     "name": "Laser pistol, parallax",
                     "display": "Parallax laser pistol",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 5,
                             "die": 4,
                             "type": "Fire"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2,
-                    "crit_extra": {
-                        "dmg": [
+                    "critical": {
+                        "damage_rolls": [
                             {
                                 "count": 3,
                                 "die": 4,
@@ -1811,18 +1481,15 @@
                 {
                     "name": "Laser pistol, zenith",
                     "display": "Zenith laser pistol",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 8,
                             "die": 4,
                             "type": "Fire"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2,
-                    "crit_extra": {
-                        "dmg": [
+                    "critical": {
+                        "damage_rolls": [
                             {
                                 "count": 4,
                                 "die": 4,
@@ -1831,26 +1498,23 @@
                         ]
                     }
                 }
-            ]
+            ],
+            "name": "Small arms - laser"
         },
         {
-            "category": "Small arms - plasma",
             "weapons": [
                 {
                     "name": "Plasma pistol, red star",
                     "display": "Red star plasma pistol",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 8,
                             "type": "Electricity and fire"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2,
-                    "crit_extra": {
-                        "dmg": [
+                    "critical": {
+                        "damage_rolls": [
                             {
                                 "count": 1,
                                 "die": 8,
@@ -1862,18 +1526,15 @@
                 {
                     "name": "Plasma pistol, yellow star",
                     "display": "Yellow star plasma pistol",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 8,
                             "type": "Electricity and fire"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2,
-                    "crit_extra": {
-                        "dmg": [
+                    "critical": {
+                        "damage_rolls": [
                             {
                                 "count": 1,
                                 "die": 8,
@@ -1885,18 +1546,15 @@
                 {
                     "name": "Plasma pistol, white star",
                     "display": "White star plasma pistol",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 3,
                             "die": 8,
                             "type": "Electricity and fire"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2,
-                    "crit_extra": {
-                        "dmg": [
+                    "critical": {
+                        "damage_rolls": [
                             {
                                 "count": 2,
                                 "die": 8,
@@ -1908,18 +1566,15 @@
                 {
                     "name": "Plasma pistol, blue star",
                     "display": "Blue star plasma pistol",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 5,
                             "die": 8,
                             "type": "Electricity and fire"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2,
-                    "crit_extra": {
-                        "dmg": [
+                    "critical": {
+                        "damage_rolls": [
                             {
                                 "count": 3,
                                 "die": 8,
@@ -1928,160 +1583,134 @@
                         ]
                     }
                 }
-            ]
+            ],
+            "name": "Small arms - plasma"
         },
         {
-            "category": "Small arms - projectile",
             "weapons": [
                 {
                     "name": "Semi-auto pistol, tactical",
                     "display": "Tactical semi-auto pistol",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 6,
                             "type": "Piercing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Semi-auto pistol, advanced",
                     "display": "Advanced semi-auto pistol",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 6,
                             "type": "Piercing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Semi-auto pistol, elite",
                     "display": "Elite semi-auto pistol",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 3,
                             "die": 6,
                             "type": "Piercing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Semi-auto pistol, paragon",
                     "display": "Paragon semi-auto pistol",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 4,
                             "die": 6,
                             "type": "Piercing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Gyrojet pistol, tactical",
                     "display": "Tactical gyrojet pistol",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 3,
                             "die": 12,
                             "type": "Bludgeoning"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Gyrojet pistol, advanced",
                     "display": "Advanced gyrojet pistol",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 4,
                             "die": 12,
                             "type": "Bludgeoning"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Gyrojet pistol, elite",
                     "display": "Elite gyrojet pistol",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 5,
                             "die": 12,
                             "type": "Bludgeoning"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 }
-            ]
+            ],
+            "name": "Small arms - projectile"
         },
         {
-            "category": "Small arms - shock",
             "weapons": [
                 {
                     "name": "Pulsecaster pistol",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 4,
                             "type": "Electricity"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Arc pistol, static",
                     "display": "Static arc pistol",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 6,
                             "type": "Electricity"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2,
-                    "crit_extra": {
-                        "dmg_static": 2,
-                        "dmg_static_type": "Arc"
+                    "critical": {
+                        "damage_static": [
+                            {
+                                "damage": 2,
+                                "type": "Arc"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "Arc pistol, aurora",
                     "display": "Aurora arc pistol",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 3,
                             "die": 6,
                             "type": "Electricity"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2,
-                    "crit_extra": {
-                        "dmg": [
+                    "critical": {
+                        "damage_rolls": [
                             {
                                 "count": 2,
                                 "die": 6,
@@ -2093,18 +1722,15 @@
                 {
                     "name": "Arc pistol, storm",
                     "display": "Storm arc pistol",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 3,
                             "die": 12,
                             "type": "Electricity"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2,
-                    "crit_extra": {
-                        "dmg": [
+                    "critical": {
+                        "damage_rolls": [
                             {
                                 "count": 4,
                                 "die": 6,
@@ -2113,167 +1739,137 @@
                         ]
                     }
                 }
-            ]
+            ],
+            "name": "Small arms - shock"
         },
         {
-            "category": "Small arms - sonic",
             "weapons": [
                 {
                     "name": "Sonic pistol, thunderstrike",
                     "display": "Thunderstrike sonic pistol",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 8,
                             "type": "Sonic"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Sonic pistol, LFD",
                     "display": "LFD sonic pistol",
                     "no_format": true,
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 8,
                             "type": "Sonic"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Sonic pistol, HFD",
                     "display": "HFD sonic pistol",
                     "no_format": true,
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 3,
                             "die": 8,
                             "type": "Sonic"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Sonic pistol, banshee",
                     "display": "Banshee sonic pistol",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 4,
                             "die": 8,
                             "type": "Sonic"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 }
-            ]
+            ],
+            "name": "Small arms - sonic"
         },
         {
-            "category": "Small arms - uncategorized",
             "weapons": [
                 {
                     "name": "Needler pistol",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 4,
                             "type": "Piercing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 }
-            ]
+            ],
+            "name": "Small arms - uncategorized"
         },
         {
-            "category": "Longarms - cryo",
             "weapons": [
                 {
                     "name": "Zero rifle, frostbite-class",
                     "display": "Frostbite-class zero rifle",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 8,
                             "type": "Cold"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Zero rifle, hailstorm-class",
                     "display": "Hailstorm-class zero rifle",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 8,
                             "type": "Cold"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Zero rifle, blizzard-class",
                     "display": "Blizzard-class zero rifle",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 4,
                             "die": 8,
                             "type": "Cold"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Zero rifle, avalanche-class",
                     "display": "Avalanche-class zero rifle",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 7,
                             "die": 8,
                             "type": "Cold"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 }
-            ]
+            ],
+            "name": "Longarms - cryo"
         },
         {
-            "category": "Longarms - flame",
             "weapons": [
                 {
                     "name": "Flame rifle",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 6,
                             "type": "Fire"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2,
-                    "crit_extra": {
-                        "dmg": [
+                    "critical": {
+                        "damage_rolls": [
                             {
                                 "count": 1,
                                 "die": 6,
@@ -2282,26 +1878,23 @@
                         ]
                     }
                 }
-            ]
+            ],
+            "name": "Longarms - flame"
         },
         {
-            "category": "Longarms - laser",
             "weapons": [
                 {
                     "name": "Laser rifle, azimuth",
                     "display": "Azimuth laser rifle",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 8,
                             "type": "Fire"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2,
-                    "crit_extra": {
-                        "dmg": [
+                    "critical": {
+                        "damage_rolls": [
                             {
                                 "count": 1,
                                 "die": 6,
@@ -2313,18 +1906,15 @@
                 {
                     "name": "Laser rifle, corona",
                     "display": "Corona laser rifle",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 6,
                             "type": "Fire"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2,
-                    "crit_extra": {
-                        "dmg": [
+                    "critical": {
+                        "damage_rolls": [
                             {
                                 "count": 1,
                                 "die": 6,
@@ -2336,18 +1926,15 @@
                 {
                     "name": "Laser rifle, aphelion",
                     "display": "Aphelion laser rifle",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 3,
                             "die": 6,
                             "type": "Fire"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2,
-                    "crit_extra": {
-                        "dmg": [
+                    "critical": {
+                        "damage_rolls": [
                             {
                                 "count": 1,
                                 "die": 6,
@@ -2359,18 +1946,15 @@
                 {
                     "name": "Autobeam rifle, tactical",
                     "display": "Tactical autobeam rifle",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 5,
                             "die": 4,
                             "type": "Fire"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2,
-                    "crit_extra": {
-                        "dmg": [
+                    "critical": {
+                        "damage_rolls": [
                             {
                                 "count": 2,
                                 "die": 4,
@@ -2382,18 +1966,15 @@
                 {
                     "name": "Laser rifle, perihelion",
                     "display": "Perihelion laser rifle",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 5,
                             "die": 6,
                             "type": "Fire"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2,
-                    "crit_extra": {
-                        "dmg": [
+                    "critical": {
+                        "damage_rolls": [
                             {
                                 "count": 2,
                                 "die": 6,
@@ -2405,18 +1986,15 @@
                 {
                     "name": "Autobeam rifle, advanced",
                     "display": "Advanced autobeam rifle",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 7,
                             "die": 4,
                             "type": "Fire"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2,
-                    "crit_extra": {
-                        "dmg": [
+                    "critical": {
+                        "damage_rolls": [
                             {
                                 "count": 3,
                                 "die": 4,
@@ -2428,18 +2006,15 @@
                 {
                     "name": "Laser rifle, parallax",
                     "display": "Parallax laser rifle",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 8,
                             "die": 6,
                             "type": "Fire"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2,
-                    "crit_extra": {
-                        "dmg": [
+                    "critical": {
+                        "damage_rolls": [
                             {
                                 "count": 4,
                                 "die": 6,
@@ -2451,18 +2026,15 @@
                 {
                     "name": "Autobeam rifle, elite",
                     "display": "Elite autobeam rifle",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 12,
                             "die": 4,
                             "type": "Fire"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2,
-                    "crit_extra": {
-                        "dmg": [
+                    "critical": {
+                        "damage_rolls": [
                             {
                                 "count": 5,
                                 "die": 4,
@@ -2474,18 +2046,15 @@
                 {
                     "name": "Laser rifle, zenith",
                     "display": "Zenith laser rifle",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 11,
                             "die": 6,
                             "type": "Fire"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2,
-                    "crit_extra": {
-                        "dmg": [
+                    "critical": {
+                        "damage_rolls": [
                             {
                                 "count": 5,
                                 "die": 6,
@@ -2494,26 +2063,23 @@
                         ]
                     }
                 }
-            ]
+            ],
+            "name": "Longarms - laser"
         },
         {
-            "category": "Longarms - plasma",
             "weapons": [
                 {
                     "name": "Plasma rifle, red star",
                     "display": "Red star plasma rifle",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 10,
                             "type": "Electricity and fire"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2,
-                    "crit_extra": {
-                        "dmg": [
+                    "critical": {
+                        "damage_rolls": [
                             {
                                 "count": 1,
                                 "die": 4,
@@ -2525,18 +2091,15 @@
                 {
                     "name": "Plasma rifle, yellow star",
                     "display": "Yellow star plasma rifle",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 10,
                             "type": "Electricity and fire"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2,
-                    "crit_extra": {
-                        "dmg": [
+                    "critical": {
+                        "damage_rolls": [
                             {
                                 "count": 1,
                                 "die": 8,
@@ -2548,18 +2111,15 @@
                 {
                     "name": "Plasma caster, white star",
                     "display": "White star plasma caster",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 3,
                             "die": 10,
                             "type": "Electricity and fire"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2,
-                    "crit_extra": {
-                        "dmg": [
+                    "critical": {
+                        "damage_rolls": [
                             {
                                 "count": 1,
                                 "die": 10,
@@ -2571,18 +2131,15 @@
                 {
                     "name": "Plasma rifle, white star",
                     "display": "White star plasma rifle",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 4,
                             "die": 10,
                             "type": "Electricity and fire"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2,
-                    "crit_extra": {
-                        "dmg": [
+                    "critical": {
+                        "damage_rolls": [
                             {
                                 "count": 2,
                                 "die": 8,
@@ -2594,18 +2151,15 @@
                 {
                     "name": "Plasma caster, blue star",
                     "display": "Blue star plasma caster",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 5,
                             "die": 10,
                             "type": "Electricity and fire"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2,
-                    "crit_extra": {
-                        "dmg": [
+                    "critical": {
+                        "damage_rolls": [
                             {
                                 "count": 2,
                                 "die": 10,
@@ -2617,18 +2171,15 @@
                 {
                     "name": "Plasma rifle, blue star",
                     "display": "Blue star plasma rifle",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 8,
                             "die": 10,
                             "type": "Electricity and fire"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2,
-                    "crit_extra": {
-                        "dmg": [
+                    "critical": {
+                        "damage_rolls": [
                             {
                                 "count": 4,
                                 "die": 8,
@@ -2637,53 +2188,44 @@
                         ]
                     }
                 }
-            ]
+            ],
+            "name": "Longarms - plasma"
         },
         {
-            "category": "Longarms - projectile",
             "weapons": [
                 {
                     "name": "Hunting rifle",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 8,
                             "type": "Piercing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Scattergun, utility",
                     "display": "Utility scattergun",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 4,
                             "type": "Piercing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Acid dart rifle, tactical",
                     "display": "Tactical acid dart rifle",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 8,
                             "type": "Acid and piercing"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2,
-                    "crit_extra": {
-                        "dmg": [
+                    "critical": {
+                        "damage_rolls": [
                             {
                                 "count": 1,
                                 "die": 4,
@@ -2694,50 +2236,41 @@
                 },
                 {
                     "name": "Autotarget rifle",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 6,
                             "type": "Piercing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Crossbolter, tactical",
                     "display": "Tactical crossbolter",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 10,
                             "type": "Piercing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Acid dart rifle, dual",
                     "display": "Dual acid dart rifle",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 8,
                             "type": "Acid and piercing"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2,
-                    "crit_extra": {
-                        "dmg": [
+                    "critical": {
+                        "damage_rolls": [
                             {
                                 "count": 2,
                                 "die": 4,
-                            "type": "Corrode"
+                                "type": "Corrode"
                             }
                         ]
                     }
@@ -2745,87 +2278,69 @@
                 {
                     "name": "Seeker rifle, tactical",
                     "display": "Tactical seeker rifle",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 8,
                             "type": "Piercing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Crossbolter, dual",
                     "display": "Dual crossbolter",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 10,
                             "type": "Piercing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Scattergun, snub",
                     "display": "Snub scattergun",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 12,
                             "type": "Piercing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Magnetar rifle, tactical",
                     "display": "Tactical magnetar rifle",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 8,
                             "type": "Piercing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Combat rifle",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 3,
                             "die": 8,
                             "type": "Piercing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Acid dart rifle, complex",
                     "display": "Complex acid dart rifle",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 4,
                             "die": 8,
                             "type": "Acid and piercing"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2,
-                    "crit_extra": {
-                        "dmg": [
+                    "critical": {
+                        "damage_rolls": [
                             {
                                 "count": 4,
                                 "die": 4,
@@ -2837,232 +2352,184 @@
                 {
                     "name": "Scattergun, impact",
                     "display": "Impact scattergun",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 12,
                             "type": "Piercing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Gyrojet rifle, tactical",
                     "display": "Tactical gyrojet rifle",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 3,
                             "die": 12,
                             "type": "Bludgeoning"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Magnetar rifle, advanced",
                     "display": "Advanced magnetar rifle",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 4,
                             "die": 8,
                             "type": "Piercing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Seeker rifle, advanced",
                     "display": "Advanced seeker rifle",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 6,
                             "die": 8,
                             "type": "Piercing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Gyrojet rifle, advanced",
                     "display": "Advanced gyrojet rifle",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 5,
                             "die": 12,
                             "type": "Bludgeoning"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Scattergun, vortex",
                     "display": "Vortex scattergun",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 3,
                             "die": 12,
                             "type": "Piercing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Magnetar rifle, elite",
                     "display": "Elite magnetar rifle",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 6,
                             "die": 8,
                             "type": "Piercing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Gyrojet rifle, elite",
                     "display": "Elite gyrojet rifle",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 6,
                             "die": 12,
                             "type": "Blugeoning"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Seeker rifle, elite",
                     "display": "Elite seeker rifle",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 9,
                             "die": 8,
                             "type": "Piercing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Scattergun, grapeshot",
                     "display": "Grapeshot scattergun",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 4,
                             "die": 12,
                             "type": "Piercing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Magnetar rifle, paragon",
                     "display": "Paragon magnetar rifle",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 8,
                             "die": 8,
                             "type": "Piercing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Gyrojet rifle, paragon",
                     "display": "Paragon gyrojet rifle",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 8,
                             "die": 12,
                             "type": "Bludgeoning"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Seeker rifle, paragon",
                     "display": "Paragon seeker rifle",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 12,
                             "die": 8,
                             "type": "Piercing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 }
-            ]
+            ],
+            "name": "Longarms - projectile"
         },
         {
-            "category": "Longarms - shock",
             "weapons": [
                 {
                     "name": "Pulsecaster rifle",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 6,
                             "type": "Electricity"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Arc emitter, tactical",
                     "display": "Tactical arc emitter",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 4,
                             "type": "Electricity"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Arc rifle, static",
                     "display": "Static arc rifle",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 12,
                             "type": "Electricity"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2,
-                    "crit_extra": {
-                        "dmg": [
+                    "critical": {
+                        "damage_rolls": [
                             {
                                 "count": 1,
                                 "die": 6,
@@ -3074,32 +2541,26 @@
                 {
                     "name": "Arc emitter, advanced",
                     "display": "Advanced arc emitter",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 4,
                             "type": "Electricity"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Arc rifle, aurora",
                     "display": "Aurora arc rifle",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 12,
                             "type": "Electricity"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2,
-                    "crit_extra": {
-                        "dmg": [
+                    "critical": {
+                        "damage_rolls": [
                             {
                                 "count": 2,
                                 "die": 6,
@@ -3111,18 +2572,15 @@
                 {
                     "name": "Arc rifle, storm",
                     "display": "Storm arc rifle",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 4,
                             "die": 12,
                             "type": "Electricity"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2,
-                    "crit_extra": {
-                        "dmg": [
+                    "critical": {
+                        "damage_rolls": [
                             {
                                 "count": 4,
                                 "die": 6,
@@ -3134,18 +2592,15 @@
                 {
                     "name": "Arc rifle, tempest",
                     "display": "Tempest arc rifle",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 6,
                             "die": 12,
                             "type": "Electricity"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2,
-                    "crit_extra": {
-                        "dmg": [
+                    "critical": {
+                        "damage_rolls": [
                             {
                                 "count": 6,
                                 "die": 6,
@@ -3154,198 +2609,162 @@
                         ]
                     }
                 }
-            ]
+            ],
+            "name": "Longarms - shock"
         },
         {
-            "category": "Longarms - sonic",
             "weapons": [
                 {
                     "name": "Sonic rifle, thunderstrike",
                     "display": "Thunderstrike sonic rifle",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 10,
                             "type": "Sonic"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Streetsweeper, thunderstrike",
                     "display": "Thunderstrike streetsweeper",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 10,
                             "type": "Sonic"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Sonic rifle, LFD",
                     "display": "LFD sonic rifle",
                     "no_format": true,
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 10,
                             "type": "Sonic"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Streetsweeper, LFD",
                     "display": "LFD streetsweeper",
                     "no_format": true,
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 3,
                             "die": 10,
                             "type": "Sonic"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Sonic rifle, HFD",
                     "display": "HFD sonic rifle",
                     "no_format": true,
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 4,
                             "die": 10,
                             "type": "Sonic"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Streetsweeper, HFD",
                     "display": "HFD streetsweeper",
                     "no_format": true,
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 5,
                             "die": 10,
                             "type": "Sonic"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Sonic rifle, banshee",
                     "display": "Banshee sonic rifle",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 6,
                             "die": 10,
                             "type": "Sonic"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 }
-            ]
+            ],
+            "name": "Longarms - sonic"
         },
         {
-            "category": "Longarms - uncategorized",
             "weapons": [
                 {
                     "name": "Needler rifle",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 6,
                             "type": "Piercing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 }
-            ]
+            ],
+            "name": "Longarms - uncategorized"
         },
         {
-            "category": "Heavy weapons - cryo",
             "weapons": [
                 {
                     "name": "Zero cannon, tactical",
                     "display": "Tactical zero cannon",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 3,
                             "die": 8,
                             "type": "Cold"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Zero cannon, advanced",
                     "display": "Advanced zero cannon",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 5,
                             "die": 8,
                             "type": "Cold"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Zero cannon, elite",
                     "display": "Elite zero cannon",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 8,
                             "die": 8,
                             "type": "Cold"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 }
-            ]
+            ],
+            "name": "Heavy weapons - cryo"
         },
         {
-            "category": "Heavy weapons - flame",
             "weapons": [
                 {
                     "name": "Flamethrower, ifrit-class",
                     "display": "Ifrit-class flamethrower",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 6,
                             "type": "Fire"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2,
-                    "crit_extra": {
-                        "dmg": [
+                    "critical": {
+                        "damage_rolls": [
                             {
                                 "count": 1,
                                 "die": 6,
@@ -3357,18 +2776,15 @@
                 {
                     "name": "Flamethrower, salamander-class",
                     "display": "Salamander-class flamethrower",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 6,
                             "type": "Fire"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2,
-                    "crit_extra": {
-                        "dmg": [
+                    "critical": {
+                        "damage_rolls": [
                             {
                                 "count": 2,
                                 "die": 6,
@@ -3380,18 +2796,15 @@
                 {
                     "name": "Flamethrower, hellhound-class",
                     "display": "Hellhound-class flamethrower",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 4,
                             "die": 6,
                             "type": "Fire"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2,
-                    "crit_extra": {
-                        "dmg": [
+                    "critical": {
+                        "damage_rolls": [
                             {
                                 "count": 4,
                                 "die": 6,
@@ -3403,18 +2816,15 @@
                 {
                     "name": "Flamethrower, firedrake-class",
                     "display": "Firedrake-class flamethrower",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 6,
                             "die": 6,
                             "type": "Fire"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2,
-                    "crit_extra": {
-                        "dmg": [
+                    "critical": {
+                        "damage_rolls": [
                             {
                                 "count": 6,
                                 "die": 6,
@@ -3426,18 +2836,15 @@
                 {
                     "name": "Flamethrower, phoenix-class",
                     "display": "Phoenix-class flamethrower",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 9,
                             "die": 6,
                             "type": "Fire"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2,
-                    "crit_extra": {
-                        "dmg": [
+                    "critical": {
+                        "damage_rolls": [
                             {
                                 "count": 9,
                                 "die": 6,
@@ -3446,26 +2853,23 @@
                         ]
                     }
                 }
-            ]
+            ],
+            "name": "Heavy weapons - flame"
         },
         {
-            "category": "Heavy weapons - laser",
             "weapons": [
                 {
                     "name": "Artillery laser, azimuth",
                     "display": "Azimuth artillery laser",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 10,
                             "type": "Fire"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2,
-                    "crit_extra": {
-                        "dmg": [
+                    "critical": {
+                        "damage_rolls": [
                             {
                                 "count": 1,
                                 "die": 6,
@@ -3477,18 +2881,15 @@
                 {
                     "name": "Artillery laser, corona",
                     "display": "Corona artillery laser",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 8,
                             "type": "Fire"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2,
-                    "crit_extra": {
-                        "dmg": [
+                    "critical": {
+                        "damage_rolls": [
                             {
                                 "count": 1,
                                 "die": 6,
@@ -3500,18 +2901,15 @@
                 {
                     "name": "Artillery laser, aphelion",
                     "display": "Aphelion artillery laser",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 3,
                             "die": 8,
                             "type": "Fire"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2,
-                    "crit_extra": {
-                        "dmg": [
+                    "critical": {
+                        "damage_rolls": [
                             {
                                 "count": 1,
                                 "die": 6,
@@ -3523,18 +2921,15 @@
                 {
                     "name": "Autobeam artillery, tactical",
                     "display": "Tactical autobeam artillery",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 8,
                             "type": "Fire"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2,
-                    "crit_extra": {
-                        "dmg": [
+                    "critical": {
+                        "damage_rolls": [
                             {
                                 "count": 1,
                                 "die": 8,
@@ -3546,18 +2941,15 @@
                 {
                     "name": "Artillery laser, perihelion",
                     "display": "Perihelion artillery laser",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 4,
                             "die": 8,
                             "type": "Fire"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2,
-                    "crit_extra": {
-                        "dmg": [
+                    "critical": {
+                        "damage_rolls": [
                             {
                                 "count": 2,
                                 "die": 6,
@@ -3569,18 +2961,15 @@
                 {
                     "name": "Autobeam artillery, advanced",
                     "display": "Advanced autobeam artillery",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 4,
                             "die": 8,
                             "type": "Fire"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2,
-                    "crit_extra": {
-                        "dmg": [
+                    "critical": {
+                        "damage_rolls": [
                             {
                                 "count": 2,
                                 "die": 8,
@@ -3592,18 +2981,15 @@
                 {
                     "name": "Artillery laser, parallax",
                     "display": "Parallax artillery laser",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 7,
                             "die": 8,
                             "type": "Fire"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2,
-                    "crit_extra": {
-                        "dmg": [
+                    "critical": {
+                        "damage_rolls": [
                             {
                                 "count": 4,
                                 "die": 6,
@@ -3615,18 +3001,15 @@
                 {
                     "name": "Autobeam artillery, elite",
                     "display": "Elite autobeam artillery",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 6,
                             "die": 8,
                             "type": "Fire"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2,
-                    "crit_extra": {
-                        "dmg": [
+                    "critical": {
+                        "damage_rolls": [
                             {
                                 "count": 2,
                                 "die": 10,
@@ -3638,18 +3021,15 @@
                 {
                     "name": "Artillery laser, zenith",
                     "display": "Zenith artillery laser",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 9,
                             "die": 8,
                             "type": "Fire"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2,
-                    "crit_extra": {
-                        "dmg": [
+                    "critical": {
+                        "damage_rolls": [
                             {
                                 "count": 5,
                                 "die": 6,
@@ -3658,26 +3038,23 @@
                         ]
                     }
                 }
-            ]
+            ],
+            "name": "Heavy weapons - laser"
         },
         {
-            "category": "Heavy weapons - plasma",
             "weapons": [
                 {
                     "name": "Plasma cannon, red star",
                     "display": "Red star plasma cannon",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 10,
                             "type": "Electricity and fire"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2,
-                    "crit_extra": {
-                        "dmg": [
+                    "critical": {
+                        "damage_rolls": [
                             {
                                 "count": 1,
                                 "die": 8,
@@ -3689,18 +3066,15 @@
                 {
                     "name": "Plasma cannon, yellow star",
                     "display": "Yellow star plasma cannon",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 4,
                             "die": 10,
                             "type": "Electricity and fire"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2,
-                    "crit_extra": {
-                        "dmg": [
+                    "critical": {
+                        "damage_rolls": [
                             {
                                 "count": 2,
                                 "die": 8,
@@ -3712,18 +3086,15 @@
                 {
                     "name": "Plasma cannon, white star",
                     "display": "White star plasma cannon",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 6,
                             "die": 10,
                             "type": "Electricity and fire"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2,
-                    "crit_extra": {
-                        "dmg": [
+                    "critical": {
+                        "damage_rolls": [
                             {
                                 "count": 3,
                                 "die": 8,
@@ -3735,18 +3106,15 @@
                 {
                     "name": "Plasma cannon, blue star",
                     "display": "Blue star plasma cannon",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 8,
                             "die": 10,
                             "type": "Electricity and fire"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2,
-                    "crit_extra": {
-                        "dmg": [
+                    "critical": {
+                        "damage_rolls": [
                             {
                                 "count": 4,
                                 "die": 8,
@@ -3755,483 +3123,386 @@
                         ]
                     }
                 }
-            ]
+            ],
+            "name": "Heavy weapons - plasma"
         },
         {
-            "category": "Heavy weapons - projectile",
             "weapons": [
                 {
                     "name": "Reaction cannon, light",
                     "display": "Light reaction cannon",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 10,
                             "type": "Piercing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Machine gun, squad",
                     "display": "Squad machine gun",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 10,
                             "type": "Piercing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "X-gen gun, tactical",
                     "display": "Tactical X-gen gun",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 12,
                             "type": "Piercing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Reaction cannon, tactical",
                     "display": "Tactical reaction cannon",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 10,
                             "type": "Piercing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Machine gun, light",
                     "display": "Light machine gun",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 10,
                             "type": "Piercing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Reaction cannon, heavy",
                     "display": "Heavy reaction cannon",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 3,
                             "die": 10,
                             "type": "Piercing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Stellar canon, light",
                     "display": "Light stellar cannon",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 12,
                             "type": "Piercing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Crossbolter, advanced",
                     "display": "Advanced crossbolter",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 4,
                             "die": 10,
                             "type": "Piercing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Machine gun, medium",
                     "display": "Medium machine gun",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 3,
                             "die": 10,
                             "type": "Piercing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "X-gen gun, elite",
                     "display": "Elite X-gen gun",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 4,
                             "die": 12,
                             "type": "Piercing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Crossbolter, elite",
                     "display": "Elite crossbolter",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 6,
                             "die": 10,
                             "type": "Piercing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Reaction cannon, advanced",
                     "display": "Advanced reaction cannon",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 6,
                             "die": 10,
                             "type": "Piercing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Stellar cannon, heavy",
                     "display": "Heavy stellar cannon",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 4,
                             "die": 12,
                             "type": "Piercing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Machine gun, heavy",
                     "display": "Heavy machine gun",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 7,
                             "die": 10,
                             "type": "Piercing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Reaction cannon, elite",
                     "display": "Elite reaction cannon",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 8,
                             "die": 10,
                             "type": "Piercing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Crossbolter, paragon",
                     "display": "Paragon crossbolter",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 10,
                             "die": 10,
                             "type": "Piercing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Reaction cannon, paragon",
                     "display": "Paragon reaction cannon",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 12,
                             "die": 10,
                             "type": "Piercing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "X-gen gun, paragon",
                     "display": "Paragon X-gen gun",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 9,
                             "die": 12,
                             "type": "Piercing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 }
-            ]
+            ],
+            "name": "Heavy weapons - projectile"
         },
         {
-            "category": "Heavy weapons - shock",
             "weapons": [
                 {
                     "name": "Shock caster, static",
                     "display": "Static shock caster",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 12,
                             "type": "Electricity"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Shock caster, aurora",
                     "display": "Aurora shock caster",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 12,
                             "type": "Electricity"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Shock caster, storm",
                     "display": "Storm shock caster",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 5,
                             "die": 12,
                             "type": "Electricity"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Shock caster, tempest",
                     "display": "Tempest shock caster",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 7,
                             "die": 12,
                             "type": "Electricity"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 }
-            ]
+            ],
+            "name": "Heavy weapons - shock"
         },
         {
-            "category": "Heavy weapons - sonic",
             "weapons": [
                 {
                     "name": "Screamer, thunderstrike",
                     "display": "Thunderstrike screamer",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 10,
                             "type": "Sonic"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Screamer, LFD",
                     "display": "LFD screamer",
                     "no_format": true,
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 10,
                             "type": "Sonic"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Screamer, HFD",
                     "display": "HFD screamer",
                     "no_format": true,
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 4,
                             "die": 10,
                             "type": "Sonic"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 }
-            ]
+            ],
+            "name": "Heavy weapons - sonic"
         },
         {
-            "category": "Sniper weapons - projectile",
             "weapons": [
                 {
                     "name": "Shirren-eye rifle, tactical",
                     "display": "Tactical shirren-eye rifle",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 10,
                             "type": "Piercing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Shirren-eye rifle, advanced",
                     "display": "Advanced shirren-eye rifle",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 10,
                             "type": "Piercing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Shirren-eye rifle, elite",
                     "display": "Elite shirren-eye rifle",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 4,
                             "die": 10,
                             "type": "Piercing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Shirren-eye rifle, paragon",
                     "display": "Paragon shirren-eye rifle",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 6,
                             "die": 10,
                             "type": "Piercing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Shirren-eye rifle, warpshot",
                     "display": "Warpshot shirren-eye rifle",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 10,
                             "die": 10,
                             "type": "Piercing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 }
-            ]
+            ],
+            "name": "Sniper weapons - projectile"
         },
         {
-            "category": "Grenades",
             "weapons": [
                 {
                     "name": "Frag grenade 1",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 6,
                             "type": "Piercing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Shock grenade 1",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 8,
                             "type": "Electricity"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Incendiary grenade 1",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 6,
@@ -4242,66 +3513,51 @@
                             "die": 4,
                             "type": "Burn"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Frag grenade 2",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 6,
                             "type": "Piercing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Screamer grenade 1",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 10,
                             "type": "Sonic"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Shock grenade 2",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 12,
                             "type": "Electricity"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Cryo grenade 1",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 8,
                             "type": "Cold"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Incendiary grenade 2",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 6,
@@ -4312,27 +3568,21 @@
                             "die": 6,
                             "type": "Burn"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Frag grenade 3",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 4,
                             "die": 6,
                             "type": "Piercing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Incendiary grenade 3",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 3,
                             "die": 6,
@@ -4343,66 +3593,51 @@
                             "die": 6,
                             "type": "Burn"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Screamer grenade 2",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 10,
                             "type": "Sonic"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Cryo grenade 2",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 8,
                             "type": "Colr"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Frag grenade 4",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 6,
                             "die": 6,
                             "type": "Piercing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Shock grenade 3",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 3,
                             "die": 12,
                             "type": "Electricity"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Incendiary grenade 4",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 5,
                             "die": 6,
@@ -4413,79 +3648,61 @@
                             "die": 6,
                             "type": "Burn"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Screamer grenade 3",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 4,
                             "die": 10,
                             "type": "Sonic"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Cryo grenade 3",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 4,
                             "die": 8,
                             "type": "Cold"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Frag grenade 5",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 10,
                             "die": 6,
                             "type": "Piercing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Shock grenade 4",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 6,
                             "die": 12,
                             "type": "Electricity"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Frag grenade 6",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 12,
                             "die": 6,
                             "type": "Piercing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Incendiary grenade 5",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 10,
                             "die": 6,
@@ -4496,53 +3713,41 @@
                             "die": 6,
                             "type": "Burn"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Screamer grenade 4",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 7,
                             "die": 10,
                             "type": "Sonic"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Cryo grenade 4",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 6,
                             "die": 8,
                             "type": "Cold"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Frag grenade 7",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 16,
                             "die": 6,
                             "type": "Piercing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Incendiary grenade 6",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 12,
                             "die": 6,
@@ -4553,55 +3758,44 @@
                             "die": 6,
                             "type": "Burn"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Frag grenade 8",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 20,
                             "die": 6,
                             "type": "Piercing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 },
                 {
                     "name": "Shock grenade 5",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 9,
                             "die": 12,
                             "type": "Electricity"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 }
-            ]
+            ],
+            "name": "Grenades"
         },
         {
-            "category": "Special one-handed weapons - uncategorized",
             "weapons": [
                 {
                     "name": "Carbonedge shuriken",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 4,
                             "type": "Piercing"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2,
-                    "crit_extra": {
-                        "dmg": [
+                    "critical": {
+                        "damage_rolls": [
                             {
                                 "count": 1,
                                 "die": 4,
@@ -4610,25 +3804,23 @@
                         ]
                     }
                 }
-            ]
+            ],
+            "name": "Special one-handed weapons - uncategorized"
         },
         {
-            "category": "Special two-handed weapons - uncategorized",
             "weapons": [
                 {
                     "name": "Bow",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 6,
                             "type": "Piercing"
                         }
-                    ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    ]
                 }
-            ]
+            ],
+            "name": "Special two-handed weapons - uncategorized"
         }
     ]
 }

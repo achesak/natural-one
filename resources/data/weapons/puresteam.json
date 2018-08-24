@@ -1,431 +1,344 @@
 {
-    "system": "Pure Steam",
+    "name": "Pure Steam",
+    "has_size_steps": true,
     "data": [
         {
-            "category": "Simple light melee weapons",
             "weapons": [
                 {
                     "name": "Boot blade",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 2,
-                            "type": "Piercing or slashing"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 3,
                             "type": "Piercing or slashing"
                         }
                     ],
-                    "crit_range": 19,
-                    "crit_mult": 2
+                    "critical": {
+                        "range": 19,
+                        "multiplier": 2
+                    }
                 }
-            ]
+            ],
+            "name": "Simple light melee weapons"
         },
         {
-            "category": "Simple ranged weapons",
             "weapons": [
                 {
                     "name": "Slingshot",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 3,
-                            "type": "Bludgeoning and piercing"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 4,
                             "type": "Bludgeoning and piercing"
                         }
                     ],
-                    "crit_range": 19,
-                    "crit_mult": 2
+                    "critical": {
+                        "range": 19,
+                        "multiplier": 2
+                    }
                 }
-            ]
+            ],
+            "name": "Simple ranged weapons"
         },
         {
-            "category": "Martial light melee weapons",
             "weapons": [
                 {
                     "name": "Alchemist's blade, gnome",
                     "display": "Gnome alchemist's blade",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 4,
-                            "type": "Piercing or slashing"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 6,
                             "type": "Piercing or slashing"
                         }
                     ],
-                    "crit_range": 19,
-                    "crit_mult": 2
+                    "critical": {
+                        "range": 19,
+                        "multiplier": 2
+                    }
                 }
-            ]
+            ],
+            "name": "Martial light melee weapons"
         },
         {
-            "category": "Martial one-handed melee weapons",
             "weapons": [
                 {
                     "name": "Boarding axe, dwarven",
                     "display": "Dwarven boarding axe",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 4,
-                            "type": "Piercing or slashing"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 6,
                             "type": "Piercing or slashing"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 3
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 3
+                    }
                 }
-            ]
+            ],
+            "name": "Martial one-handed melee weapons"
         },
         {
-            "category": "Martial ranged weapons",
             "weapons": [
                 {
                     "name": "Pneumatic gun, hand",
                     "display": "Hand pneumatic gun",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 3,
-                            "type": "Piercing"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 4,
                             "type": "Piercing"
                         }
                     ],
-                    "crit_range": 19,
-                    "crit_mult": 2
+                    "critical": {
+                        "range": 19,
+                        "multiplier": 2
+                    }
                 },
                 {
                     "name": "Pneumatic gun, heavy",
                     "display": "Heavy pneumatic gun",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 8,
-                            "type": "Piercing"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 10,
                             "type": "Piercing"
                         }
                     ],
-                    "crit_range": 19,
-                    "crit_mult": 2
+                    "critical": {
+                        "range": 19,
+                        "multiplier": 2
+                    }
                 },
                 {
                     "name": "Pneumatic gun, light",
                     "display": "Light pneumatic gun",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 6,
-                            "type": "Piercing"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 8,
                             "type": "Piercing"
                         }
                     ],
-                    "crit_range": 19,
-                    "crit_mult": 2
+                    "critical": {
+                        "range": 19,
+                        "multiplier": 2
+                    }
                 }
-            ]
+            ],
+            "name": "Martial ranged weapons"
         },
         {
-            "category": "Exotic light melee weapons",
             "weapons": [
                 {
                     "name": "Felidae knife, halfling",
                     "display": "Halfling felidae knife",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 2,
-                            "type": "Slashing"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 3,
                             "type": "Slashing"
                         }
                     ],
-                    "crit_range": 19,
-                    "crit_mult": 3
+                    "critical": {
+                        "range": 19,
+                        "multiplier": 3
+                    }
                 },
                 {
                     "name": "Widowman baton",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 4,
-                            "type": "Bludgeoning"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 6,
                             "type": "Bludgeoning"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 2
+                    }
                 }
-            ]
+            ],
+            "name": "Exotic light melee weapons"
         },
         {
-            "category": "Exotic one-handed melee weapons",
             "weapons": [
                 {
                     "name": "Shillelagh club, halfling",
                     "display": "Halfling shillelagh club",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 6,
-                            "type": "Bludgeoning"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 8,
                             "type": "Bludgeoning"
                         }
                     ],
-                    "crit_range": 19,
-                    "crit_mult": 2
+                    "critical": {
+                        "range": 19,
+                        "multiplier": 2
+                    }
                 },
                 {
                     "name": "Maulaxe, dwarven",
                     "display": "Dwarven maulaxe",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 6,
-                            "type": "Bludgeoning or slashing"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 8,
                             "type": "Bludgeoning or slashing"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 4
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 4
+                    }
                 }
-            ]
+            ],
+            "name": "Exotic one-handed melee weapons"
         },
         {
-            "category": "Exotic two-handed melee weapons",
             "weapons": [
                 {
                     "name": "Bang stick, orc",
                     "display": "Orc bang stick",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 4,
-                            "type": "Bludgeoning"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 6,
                             "type": "Bludgeoning"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 2
+                    }
                 },
                 {
                     "name": "Shillelagh staff, halfling (staff)",
                     "display": "Halfling shillelagh staff (staff)",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 4,
-                            "type": "Bludgeoning"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 6,
                             "type": "Bludgeoning"
                         }
                     ],
-                    "crit_range": 19,
-                    "crit_mult": 2
+                    "critical": {
+                        "range": 19,
+                        "multiplier": 2
+                    }
                 },
                 {
                     "name": "Shillelagh staff, halfling (weight)",
                     "display": "Halfling shillelagh staff (weight)",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 6,
-                            "type": "Bludgeoning"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 8,
                             "type": "Bludgeoning"
                         }
                     ],
-                    "crit_range": 19,
-                    "crit_mult": 2
+                    "critical": {
+                        "range": 19,
+                        "multiplier": 2
+                    }
                 },
                 {
                     "name": "Sledgeaxe, dwarven",
                     "display": "Dwarven sledgeaxe",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 10,
-                            "type": "Bludgeoning or slashing"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 12,
                             "type": "Bludgeoning or slashing"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 4
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 4
+                    }
                 }
-            ]
+            ],
+            "name": "Exotic two-handed melee weapons"
         },
         {
-            "category": "Exotic ranged weapons",
             "weapons": [
                 {
                     "name": "Sling mine, halfling",
                     "display": "Halfling sling mine",
-                    "no_size_steps": true,
-                    "dmg": [
+                    "size_steps": false,
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 6,
                             "type": "Bludgeoning, slashing, and fire"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 2
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 2
+                    }
                 }
-            ]
+            ],
+            "name": "Exotic ranged weapons"
         },
         {
-            "category": "One-handed firearms",
             "weapons": [
                 {
                     "name": "Pistol, dwarven boarding",
                     "display": "Dwarven boarding pistol",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 6,
-                            "type": "Bludgeoning and piercing"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 8,
                             "type": "Bludgeoning and piercing"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 4
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 4
+                    }
                 },
                 {
                     "name": "Pistol, gnome rocket",
                     "display": "Gnome rocket pistol",
-                    "dmg_small": [
-                        {
-                            "count": 1,
-                            "die": 6,
-                            "type": "Bludgeoning and piercing"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 1,
                             "die": 8,
                             "type": "Bludgeoning and piercing"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 4
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 4
+                    }
                 }
-            ]
+            ],
+            "name": "One-handed firearms"
         },
         {
-            "category": "Two-handed firearms",
             "weapons": [
                 {
                     "name": "Tunnel sweeper, dwarven",
                     "display": "Dwarven tunnel sweeper",
-                    "dmg_small": [
-                        {
-                            "count": 2,
-                            "die": 4,
-                            "type": "Bludgeoning and piercing"
-                        }
-                    ],
-                    "dmg_medium": [
+                    "damage_rolls": [
                         {
                             "count": 2,
                             "die": 6,
                             "type": "Bludgeoning and piercing"
                         }
                     ],
-                    "crit_range": 20,
-                    "crit_mult": 4
+                    "critical": {
+                        "range": 20,
+                        "multiplier": 4
+                    }
                 }
-            ]
+            ],
+            "name": "Two-handed firearms"
         }
     ]
 }
