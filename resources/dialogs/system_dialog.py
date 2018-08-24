@@ -150,13 +150,13 @@ class SystemDialog(Gtk.Dialog):
         self.show_all()
 
     def check_base_updates(self):
-        default_systems = io.load_default_systems_settings()["systems"]
-        system_names = [system["name"] for system in default_systems]
+        default_systems = io.load_default_systems_settings()['systems']
+        system_names = [system['name'] for system in default_systems]
         for system in self.systems:
-            if system["user_added"]:
+            if system['user_added']:
                 continue
-            if system["name"] in system_names:
-                index = system_names.index(system["name"])
+            if system['name'] in system_names:
+                index = system_names.index(system['name'])
                 del default_systems[index]
                 del system_names[index]
         self.systems += default_systems

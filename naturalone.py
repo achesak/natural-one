@@ -365,7 +365,7 @@ class NaturalOne(Gtk.Application):
             model[section_iter][0],
         )
 
-        crit_attack = self.window.crit_dam_chk.get_active()
+        crit_attack = self.window.crit_dam_btn.get_active()
 
         num_atks = self.window.int_or(self.window.num_dam_ent, 1)
         min_value = self.window.int_or(self.window.min_dam_ent, -float('inf'))
@@ -496,7 +496,7 @@ class NaturalOne(Gtk.Application):
             return
 
         template = self.templates[index]
-        crit_attack = self.window.list_crit_chk.get_active()
+        crit_attack = self.window.list_crit_btn.get_active()
 
         total, rolls = roller.roll_template(template, crit_attack)
         output = formatter.format_template(template, rolls, crit_attack, total)

@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from gi.repository import Gdk, GdkPixbuf, Gtk
 
+from resources.constants import SizeProgression, SIZE_PROGRESSION
 from resources.load_images import load_symbolic
 
 
@@ -548,15 +549,22 @@ class NaturalOneWindow(Gtk.ApplicationWindow):
         combat_grid.attach_next_to(
             self.stop_atks_chk,
             self.confirm_atks_chk,
-            Gtk.PositionType.BOTTOM,
+            Gtk.PositionType.RIGHT,
             2, 1,
         )
 
         # Create the attack roll button.
+        atk_btn_placeholder = Gtk.Label('')
+        combat_grid.attach_next_to(
+            atk_btn_placeholder,
+            self.confirm_atks_chk,
+            Gtk.PositionType.BOTTOM,
+            2, 1
+        )
         self.atk_btn = Gtk.Button('Roll')
         combat_grid.attach_next_to(
             self.atk_btn,
-            self.stop_atks_chk,
+            atk_btn_placeholder,
             Gtk.PositionType.RIGHT,
             2, 1,
         )
@@ -568,7 +576,7 @@ class NaturalOneWindow(Gtk.ApplicationWindow):
         dam_lbl.set_margin_top(15)
         combat_grid.attach_next_to(
             dam_lbl,
-            self.stop_atks_chk,
+            atk_btn_placeholder,
             Gtk.PositionType.BOTTOM,
             4, 1,
         )
@@ -678,45 +686,51 @@ class NaturalOneWindow(Gtk.ApplicationWindow):
         )
 
         # Create the size row.
-        size_combat_grid = Gtk.Grid()
-        size_combat_grid.set_column_spacing(15)
-        self.small_dam_rbtn = Gtk.RadioButton.new_with_label_from_widget(
-            None,
-            'Small',
-        )
-        self.med_dam_rbtn = Gtk.RadioButton.new_with_label_from_widget(
-            self.small_dam_rbtn,
-            'Medium',
-        )
-        self.med_dam_rbtn.set_active(True)
-        size_combat_grid.add(self.small_dam_rbtn)
-        size_combat_grid.attach_next_to(
-            self.med_dam_rbtn,
-            self.small_dam_rbtn,
-            Gtk.PositionType.RIGHT,
-            1, 1,
-        )
+        size_lbl = Gtk.Label('Size')
+        size_lbl.set_alignment(1, 0.5)
         combat_grid.attach_next_to(
-            size_combat_grid,
+            size_lbl,
             min_dam_lbl,
             Gtk.PositionType.BOTTOM,
+            1, 1,
+        )
+        size_store = Gtk.ListStore(str, int)
+        for size in SIZE_PROGRESSION:
+            size_store.append(size)
+        self.size_cbox = Gtk.ComboBox.new_with_model(size_store)
+        self.size_cbox.set_active(SizeProgression.MEDIUM)
+        size_renderer = Gtk.CellRendererText()
+        self.size_cbox.pack_start(size_renderer, True)
+        self.size_cbox.add_attribute(size_renderer, 'text', 0)
+        combat_grid.attach_next_to(
+            self.size_cbox,
+            size_lbl,
+            Gtk.PositionType.RIGHT,
             3, 1,
         )
 
-        # Create the critical row.
-        self.crit_dam_chk = Gtk.CheckButton('Critical hit')
+        # Create the damage roll button.
+        dam_btn_placeholder = Gtk.Label('')
         combat_grid.attach_next_to(
-            self.crit_dam_chk,
-            size_combat_grid,
+            dam_btn_placeholder,
+            size_lbl,
             Gtk.PositionType.BOTTOM,
             2, 1,
         )
-
-        # Create the damage roll button.
+        dam_btn_box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL)
+        dam_btn_box.set_hexpand(True)
+        Gtk.StyleContext.add_class(dam_btn_box.get_style_context(), 'linked')
+        self.crit_dam_btn = Gtk.ToggleButton()
+        self.crit_dam_btn.add(load_symbolic('security-high'))
+        self.crit_dam_btn.set_tooltip_text('Roll a critical hit')
+        self.crit_dam_btn.set_active(False)
+        dam_btn_box.add(self.crit_dam_btn)
         self.dam_btn = Gtk.Button('Roll')
+        self.dam_btn.set_hexpand(True)
+        dam_btn_box.add(self.dam_btn)
         combat_grid.attach_next_to(
-            self.dam_btn,
-            self.crit_dam_chk,
+            dam_btn_box,
+            dam_btn_placeholder,
             Gtk.PositionType.RIGHT,
             2, 1,
         )
@@ -799,22 +813,18 @@ class NaturalOneWindow(Gtk.ApplicationWindow):
         self.list_open_btn.add(load_symbolic('document-open'))
         self.list_open_btn.set_tooltip_text('Import templates')
         template_file_btn_box.add(self.list_open_btn)
+        template_roll_btn_box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL)
+        Gtk.StyleContext.add_class(template_roll_btn_box.get_style_context(), 'linked')
+        self.list_crit_btn = Gtk.ToggleButton()
+        self.list_crit_btn.add(load_symbolic('security-high'))
+        self.list_crit_btn.set_tooltip_text('Apply critical hit')
+        self.list_crit_btn.set_active(False)
+        template_roll_btn_box.add(self.list_crit_btn)
         self.list_roll_btn = Gtk.Button()
         self.list_roll_btn.add(load_symbolic('go-jump'))
         self.list_roll_btn.set_tooltip_text('Roll selected template')
-        self.template_action_bar.pack_end(self.list_roll_btn)
-
-        # Create the template list critical check box.
-        self.list_crit_chk = Gtk.CheckButton('Apply critical hit')
-        self.list_crit_chk.set_halign(Gtk.Align.CENTER)
-        self.list_crit_chk.set_hexpand(True)
-        self.list_crit_chk.set_margin_top(10)
-        templates_grid.attach_next_to(
-            self.list_crit_chk,
-            self.template_action_bar,
-            Gtk.PositionType.BOTTOM,
-            1, 1,
-        )
+        template_roll_btn_box.add(self.list_roll_btn)
+        self.template_action_bar.pack_end(template_roll_btn_box)
 
         # Create the template drag and drop help text.
         drag_list_lbl = Gtk.Label(
@@ -823,7 +833,7 @@ class NaturalOneWindow(Gtk.ApplicationWindow):
         drag_list_lbl.set_margin_top(10)
         templates_grid.attach_next_to(
             drag_list_lbl,
-            self.list_crit_chk,
+            self.template_action_bar,
             Gtk.PositionType.BOTTOM,
             1, 1,
         )

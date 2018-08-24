@@ -9,6 +9,18 @@ CRITICAL_OPTIONS = [
     ['Do not roll on critical hit', 4],
 ]
 
+SIZE_PROGRESSION = [
+    ['Fine', 0],
+    ['Diminutive', 1],
+    ['Tiny', 2],
+    ['Small', 3],
+    ['Medium', 4],
+    ['Large', 5],
+    ['Huge', 6],
+    ['Gargantuan', 7],
+    ['Colossal', 8],
+]
+
 
 class CriticalOptions(object):
     MULTIPLY = 0
