@@ -3,7 +3,7 @@ import json
 import os
 import sys
 
-import io
+import resources.io as io
 
 
 def get_menu_data():
