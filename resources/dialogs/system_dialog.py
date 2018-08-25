@@ -273,19 +273,48 @@ class SystemDialog(Gtk.Dialog):
         if not indices:
             return
 
-        message_text = 'Are you sure you want to remove ' \
-            '{plural_adj} {count} system{plural}?'.format(
-                plural_adj=pluralize_adj(indices),
-                count=len(indices),
-                plural=pluralize(indices),
+        invalid_system_count = len(
+            [index for index in indices if not self.systems[index]['user_added']],
+        )
+        if invalid_system_count == len(indices):
+            show_message(
+                self,
+                'Systems',
+                (
+                    '{all} selected system{plural} {are} built in to Natural One and '
+                    'cannot be removed.'
+                ).format(
+                    all='All the' if invalid_system_count > 1 else 'The',
+                    are='are' if invalid_system_count > 1 else 'is',
+                    plural=pluralize(range(invalid_system_count)),
+                ),
             )
+            return
+
+        message_prepend = ''
+        if invalid_system_count > 0:
+            message_prepend = (
+                'Of the selected systems, {count} are built in to Natural One '
+                'and cannot be removed.\n\n'
+            ).format(
+                count=invalid_system_count,
+            )
+
+        count = len(indices) - invalid_system_count
+        message_text = (
+            '{prepend}Are you sure you want to remove '
+            '{plural_adj} {count} system{plural}?'
+        ).format(
+            prepend=message_prepend,
+            plural_adj=pluralize_adj(range(count)),
+            count=count,
+            plural=pluralize(range(count)),
+        )
         if not show_question(self, 'Systems', message_text):
             return
 
-        show_base_message = False
         for index in indices:
             if not self.systems[index]['user_added']:
-                show_base_message = True
                 continue
             io.remove_system(self.systems[index]['filename'])
             name_index = self.system_names.index(self.systems[index]['name'])
@@ -293,10 +322,3 @@ class SystemDialog(Gtk.Dialog):
             del self.systems[index]
 
         self.update_systems_list()
-
-        if show_base_message:
-            show_message(
-                self,
-                'Systems',
-                'Systems built in to Natural One cannot be removed.',
-            )
