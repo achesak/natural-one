@@ -944,7 +944,7 @@ class NaturalOneWindow(Gtk.ApplicationWindow):
         )
 
         # Create the sorting check box.
-        self.sort_init_chk = Gtk.CheckButton('Automatically sort initiatives')
+        self.sort_init_chk = Gtk.CheckButton('Automatically sort initiatives when added')
         self.sort_init_chk.set_halign(Gtk.Align.CENTER)
         self.sort_init_chk.set_hexpand(True)
         self.sort_init_chk.set_margin_top(5)
@@ -1021,7 +1021,7 @@ class NaturalOneWindow(Gtk.ApplicationWindow):
 
         # Create the initiative drag and drop help text.
         drag_init_lbl = Gtk.Label(
-            'Drag and drop to rearrange initiative order',
+            'Drag and drop to rearrange initiatives',
         )
         drag_init_lbl.set_margin_top(10)
         list_init_grid.attach_next_to(
