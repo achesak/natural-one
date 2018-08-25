@@ -141,10 +141,10 @@ class TemplateRollResult(BasicRollResult):
         return ', '.join([str(x) for x in self.rolls])
 
 
-class DamageRollEachResult(object):
+class DamageRollDieResult(object):
 
-    def __init__(self, roll_data, type):
-        self.rolls = roll_data
+    def __init__(self, type):
+        self.rolls = []
         self.type = type
 
     def add_roll(self, roll):
@@ -160,6 +160,24 @@ class DamageRollEachResult(object):
         return len(self.rolls)
 
 
+class DamageRollStaticResult(object):
+
+    def __init__(self, type):
+        self.type = type
+
+    def add_static(self, amount):
+        self.amount = amount
+
+    def __int__(self):
+        return self.amount
+
+    def __add__(self, other):
+        return int(self) + other
+
+    def __radd__(self, other):
+        return other + int(self)
+
+
 class DamageRollResult(object):
 
     def __init__(self, number, crit_attack, min_value, mod):
@@ -168,19 +186,20 @@ class DamageRollResult(object):
         self.mod = mod
         self.min_value = min_value
         self.rolls = []
-        self.dmg_static = None
+        self.dmg_static = []
 
-    def add_weapon_roll(self, roll_data, type):
-        self.rolls.append(DamageRollEachResult(roll_data, type))
+    def add_die_roll(self, roll):
+        self.rolls.append(roll)
 
-    def set_static_damage(self, dmg_static, dmg_static_type):
-        self.dmg_static = dmg_static
-        self.dmg_static_type = dmg_static_type
+    def add_static_damage(self, dmg_static):
+        self.dmg_static.append(dmg_static)
 
     def _format_result(self):
         format_dict = defaultdict(int)
         for roll in self.rolls:
             format_dict[roll.type] += int(roll)
+        for static in self.dmg_static:
+            format_dict[static.type] += int(static)
         result = []
         for type, total in format_dict.items():
             result.append('{total} {type}'.format(
@@ -192,7 +211,7 @@ class DamageRollResult(object):
     def __int__(self):
         total = sum([int(x) for x in self.rolls]) + self.mod
         if self.dmg_static is not None:
-            total += self.dmg_static
+            total += sum(self.dmg_static)
         return max(total, self.min_value)
 
     def __str__(self):
@@ -220,11 +239,12 @@ class DamageRollResult(object):
                         roll_num=int(roll),
                         type=roll.type.lower(),
                     ))
-        if self.dmg_static is not None:
-            output.append('\t{static_amount} {static_type}'.format(
-                static_amount=self.dmg_static,
-                static_type=self.dmg_static_type,
-            ))
+        if len(self.dmg_static) != 0:
+            for dmg_static in self.dmg_static:
+                output.append('\t{static_amount} {static_type}'.format(
+                    static_amount=int(dmg_static),
+                    static_type=dmg_static.type.lower(),
+                ))
         if self.mod:
             output.append('\t{mod_sign}{mod} modifier'.format(
                 mod_sign=sign(self.mod),

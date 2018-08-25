@@ -19,6 +19,8 @@ import gi
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk, GdkPixbuf, Gio
 
+from resources.constants import SizeProgression
+import resources.dice as dice
 import resources.formatter as formatter
 import resources.io as io
 import resources.launch as launch
@@ -232,6 +234,7 @@ class NaturalOne(Gtk.Application):
         for system in self.system_names:
             self.window.sys_dam_cbox.append_text(system)
         self.window.sys_dam_cbox.set_active(0)
+        self.update_size_state(self.current_system_index)
 
     def fill_weapon_list(self, index):
         self.window.weap_dam_store.clear()
@@ -251,6 +254,15 @@ class NaturalOne(Gtk.Application):
                     [system_data['data'][i]['weapons'][j]['name']],
                 )
 
+    def update_size_state(self, index):
+        if len(self.system_names) == 0:
+            return
+
+        system_data = self.weapon_data[index]
+        self.window.size_cbox.set_sensitive(system_data['has_size_steps'])
+        if not system_data['has_size_steps']:
+            self.window.size_cbox.set_active(SizeProgression.MEDIUM)
+
     def change_system(self):
         current_selection = self.window.sys_dam_cbox.get_active()
         if current_selection is None or current_selection == -1:
@@ -258,6 +270,7 @@ class NaturalOne(Gtk.Application):
 
         self.current_system_index = current_selection
         self.fill_weapon_list(current_selection)
+        self.update_size_state(current_selection)
 
     def update_templates(self):
         self.window.template_store.clear()
@@ -371,26 +384,36 @@ class NaturalOne(Gtk.Application):
         min_value = self.window.int_or(self.window.min_dam_ent, -float('inf'))
         mods = self.window.mods_or(self.window.mod_dam_ent, [0])
 
+        iter = self.window.size_cbox.get_active_iter()
+        if iter is None:
+            return
+        size = self.window.size_cbox.get_model()[iter][1]
+
+        if 'critical' not in weapon:
+            weapon['critical'] = dict(
+                multiplier=2,
+            )
+        if 'maximize' not in weapon['critical'] and 'multiplier' not in weapon['critical']:
+            weapon['critical']['multiplier'] = 2
+        if 'maximize' in weapon['critical']:
+            weapon['critical']['multiplier'] = 1
+
         mods = expand_mod(
             mods,
             num_atks,
             crit_attack,
-            weapon['crit_mult'],
+            weapon['critical']['multiplier'],
         )
 
-        if 'no_size_steps' in weapon and weapon['no_size_steps']:
-            weapon_path = 'dmg'
-        elif self.window.small_dam_rbtn.get_active():
-            weapon_path = 'dmg_small'
-        else:
-            weapon_path = 'dmg_medium'
+        if self.weapon_data[self.current_system_index]['has_size_steps'] and \
+            'size_steps' not in weapon:
+            weapon = dice.get_dice_by_size(weapon, size, self.dice_progression)
 
         total, rolls = roller.roll_damage(
-            num_atks, mods, weapon, weapon_path, min_value, crit_attack,
+            num_atks, mods, weapon, min_value, crit_attack,
         )
         output = formatter.format_damage(
-            num_atks, mods, weapon, crit_attack, weapon[weapon_path],
-            rolls, total,
+            num_atks, mods, weapon, crit_attack, rolls, total,
         )
         self.window.update_output(output)
 

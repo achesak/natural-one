@@ -274,7 +274,7 @@ class SystemDialog(Gtk.Dialog):
             return
 
         message_text = 'Are you sure you want to remove ' \
-            '{plural_adj} {count} system{plural}'.format(
+            '{plural_adj} {count} system{plural}?'.format(
                 plural_adj=pluralize_adj(indices),
                 count=len(indices),
                 plural=pluralize(indices),

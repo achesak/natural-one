@@ -6,6 +6,8 @@ from resources.rolls import (
     BasicRollResult,
     AttackRollResult,
     TemplateRollResult,
+    DamageRollDieResult,
+    DamageRollStaticResult,
     DamageRollResult,
 )
 
@@ -38,31 +40,53 @@ def roll_attack(num_atks, mods, crit_range, stop_on_crit, confirm_crit):
     return rolls
 
 
-def roll_damage_die(weapon, die_data, max_damage):
-    roll_data = []
+def roll_damage_die(weapon, die_data, crit_attack, is_crit_roll):
+    if crit_attack and 'on_critical' in die_data:
+        count = die_data['on_critical']['count']
+        die = die_data['on_critical']['die']
+        type = die_data['on_critical']['type']
+    else:
+        count = die_data['count']
+        die = die_data['die']
+        type = die_data['type']
+
+    roll_data = DamageRollDieResult(type)
 
     reroll_below = 0 if 'reroll_below' not in weapon \
         else weapon['reroll_below']
-    for _ in range(die_data['count']):
+
+    maximize = crit_attack and 'maximize' in weapon['critical'] and weapon['critical']['maximize'] and not is_crit_roll
+    multiplier = 1 if is_crit_roll or maximize or not crit_attack else weapon['critical']['multiplier']
+
+    for _ in range(multiplier * count):
         roll = -1
         while roll <= reroll_below:
-            if max_damage:
-                roll = die_data['die']
-            else:
-                roll = random.randint(1, die_data['die'])
-        roll_data.append(roll)
+            roll = die if maximize else random.randint(1, die)
+        roll_data.add_roll(roll)
 
     return roll_data
 
 
-def roll_damage(num_atks, mods, weapon, weapon_path, min_value, crit_attack):
-    weapon_rolls = weapon[weapon_path]
-    apply_crit, max_damage = (False, False)
-    if crit_attack and 'max_on_crit' in weapon:
-        max_damage = True
-    elif crit_attack:
-        apply_crit = True
-    crit_count = weapon['crit_mult'] if apply_crit else 1
+def roll_damage_static(weapon, static_data, crit_attack, is_crit_roll):
+    if crit_attack and 'on_critical' in static_data:
+        damage = static_data['on_critical']['damage']
+        type = static_data['on_critical']['type']
+    else:
+        damage = static_data['damage']
+        type = static_data['type']
+
+    damage_data = DamageRollStaticResult(type)
+
+    maximize = crit_attack and 'maximize' in weapon['critical'] and weapon['critical']['maximize'] and not is_crit_roll
+    multiplier = 1 if is_crit_roll or maximize or not crit_attack else weapon['critical']['multiplier']
+
+    damage_data.add_static(damage * multiplier)
+    return damage_data
+
+
+def roll_damage(num_atks, mods, weapon, min_value, crit_attack):
+    maximize = crit_attack and 'maximize' in weapon['critical'] and weapon['critical']['maximize']
+    multiplier = 1 if maximize or not crit_attack else weapon['critical']['multiplier']
 
     rolls = []
     total = 0
@@ -71,42 +95,41 @@ def roll_damage(num_atks, mods, weapon, weapon_path, min_value, crit_attack):
             atk_index + 1,
             False,
             min_value,
-            mods[atk_index] * crit_count,
+            mods[atk_index] * multiplier,
         )
-        for crit_index in range(crit_count):
-            for die_index in range(len(weapon_rolls)):
-                die_data = weapon_rolls[die_index]
-                roll_data = roll_damage_die(weapon, die_data, max_damage)
-                if len(roll_data):
-                    roll_result.add_weapon_roll(roll_data, die_data['type'])
-
-        if 'dmg_static' in weapon:
-            roll_result.set_static_damage(
-                weapon['dmg_static'] * crit_count,
-                weapon['dmg_static_type'].lower(),
-            )
+        if 'damage_rolls' in weapon:
+            for die_data in weapon['damage_rolls']:
+                roll_result.add_die_roll(
+                    roll_damage_die(weapon, die_data, crit_attack, False),
+                )
+        if 'damage_static' in weapon:
+            for static_data in weapon['damage_static']:
+                roll_result.add_static_damage(
+                    roll_damage_static(weapon, static_data, crit_attack, False),
+                )
 
         rolls.append(roll_result)
         total += roll_result
 
-    if crit_attack and 'crit_extra' in weapon:
-        crit_extra = weapon['crit_extra']
-        crit_rolls = crit_extra[weapon_path] \
-            if weapon_path in crit_extra \
-            else []
+    if crit_attack and ('damage_rolls' in weapon['critical'] or 'damage_static' in weapon['critical']):
         for atk_index in range(num_atks):
-            roll_result = DamageRollResult(atk_index + 1, True, min_value, 0)
-            for die_index in range(len(crit_rolls)):
-                die_data = crit_rolls[die_index]
-                roll_data = roll_damage_die(weapon, die_data, False)
-                if len(roll_data):
-                    roll_result.add_weapon_roll(roll_data, die_data['type'])
-
-            if 'dmg_static' in crit_extra:
-                roll_result.set_static_damage(
-                    crit_extra['dmg_static'],
-                    crit_extra['dmg_static_type'].lower(),
-                )
+            roll_result = DamageRollResult(
+                atk_index + 1,
+                True,
+                min_value,
+                0,
+            )
+            critical = weapon['critical']
+            if 'damage_rolls' in critical:
+                for die_data in critical['damage_rolls']:
+                    roll_result.add_die_roll(
+                        roll_damage_die(weapon, die_data, crit_attack, True),
+                    )
+            if 'damage_static' in critical:
+                for static_data in critical['damage_static']:
+                    roll_result.add_static_damage(
+                        roll_damage_static(weapon, static_data, crit_attack, True),
+                    )
 
             rolls.append(roll_result)
             total += roll_result

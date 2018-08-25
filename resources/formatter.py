@@ -41,14 +41,14 @@ def format_damage(
         mods,
         weapon,
         crit_attack,
-        weapon_rolls,
         rolls,
         total,
 ):
-    damage_dice = ', '.join(['{count}d{die}'.format(
-        count=roll['count'],
-        die=roll['die'],
-    ) for roll in weapon_rolls])
+    if 'damage_rolls' in weapon:
+        damage_dice = ', '.join(['{count}d{die}'.format(
+            count=roll['count'],
+            die=roll['die'],
+        ) for roll in weapon['damage_rolls']])
 
     display_name = weapon['name']
     if 'display' in weapon:
@@ -82,7 +82,7 @@ def format_damage(
         pre=pre,
         weapon=display_name,
     )
-    if weapon_rolls[0]['count'] != 0:
+    if 'damage_rolls' in weapon:
         output += '<i>: {dice}</i>'.format(
             dice=damage_dice,
         )
@@ -91,14 +91,16 @@ def format_damage(
     )
     output += '\n'.join([str(x) for x in rolls])
 
-    if crit_attack and weapon['crit_mult'] > 1:
-        output += '\n<i>Multiplied by {mult}x due to critical hit</i>'.format(
-            mult=weapon['crit_mult'],
-        )
-    elif crit_attack and 'max_on_crit' in weapon:
-        output += '\n<i>Maximized due to critical hit</i>'
-    elif crit_attack and weapon['crit_mult'] == 1:
-        output += '\n<i>Not affected by critical it</i>'
+    if crit_attack:
+        critical = weapon['critical']
+        if 'multiplier' in critical and critical['multiplier'] > 1:
+            output += '\n<i>Multiplied by {mult}x due to critical hit</i>'.format(
+                mult=critical['multiplier'],
+            )
+        elif 'maximize' in critical:
+            output += '\n<i>Maximized due to critical hit</i>'
+        elif 'multiplier' in critical and critical['multiplier'] == 1:
+            output += '\n<i>Not affected by critical it</i>'
 
     return output
 
