@@ -468,6 +468,7 @@ class NaturalOneWindow(Gtk.ApplicationWindow):
         atk_lbl = Gtk.Label()
         atk_lbl.set_markup('<span size="x-large">Attack Roll</span>')
         atk_lbl.set_alignment(0, 0.5)
+        atk_lbl.set_margin_bottom(5)
         combat_grid.add(atk_lbl)
 
         # Create the number of attacks row.
@@ -587,6 +588,7 @@ class NaturalOneWindow(Gtk.ApplicationWindow):
         dam_lbl.set_markup('<span size="x-large">Damage Roll</span>')
         dam_lbl.set_alignment(0, 0.5)
         dam_lbl.set_margin_top(15)
+        dam_lbl.set_margin_bottom(5)
         combat_grid.attach_next_to(
             dam_lbl,
             atk_btn_placeholder,
@@ -621,6 +623,14 @@ class NaturalOneWindow(Gtk.ApplicationWindow):
         )
 
         # Create the weapon row.
+        weap_dam_lbl = Gtk.Label('Weapon')
+        weap_dam_lbl.set_alignment(1, 0)
+        combat_grid.attach_next_to(
+            weap_dam_lbl,
+            sys_dam_lbl,
+            Gtk.PositionType.BOTTOM,
+            1, 1,
+        )
         dam_scroll_win = Gtk.ScrolledWindow()
         dam_scroll_win.set_hexpand(True)
         dam_scroll_win.set_vexpand(True)
@@ -634,9 +644,9 @@ class NaturalOneWindow(Gtk.ApplicationWindow):
         self.weap_dam_tree.append_column(weap_dam_col)
         combat_grid.attach_next_to(
             dam_scroll_win,
-            sys_dam_lbl,
-            Gtk.PositionType.BOTTOM,
-            4, 1,
+            weap_dam_lbl,
+            Gtk.PositionType.RIGHT,
+            3, 1,
         )
         self.weap_error_popover = Gtk.Popover()
         self.weap_error_popover.set_relative_to(self.weap_dam_tree)
@@ -646,7 +656,7 @@ class NaturalOneWindow(Gtk.ApplicationWindow):
         num_dam_lbl.set_alignment(1, 0.5)
         combat_grid.attach_next_to(
             num_dam_lbl,
-            dam_scroll_win,
+            weap_dam_lbl,
             Gtk.PositionType.BOTTOM,
             1, 1,
         )
