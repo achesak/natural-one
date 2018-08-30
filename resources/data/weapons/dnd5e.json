@@ -3,7 +3,7 @@
     "has_size_steps": false,
     "data": [
         {
-            "name": "Simple melee weapons",
+            "name": "Simple melee",
             "weapons": [
                 {
                     "name": "Club",
@@ -108,7 +108,7 @@
             ]
         },
         {
-            "name": "Simple ranged weapons",
+            "name": "Simple ranged",
             "weapons": [
                 {
                     "name": "Crossbow, light",
@@ -154,7 +154,7 @@
             ]
         },
         {
-            "name": "Martial melee weapons",
+            "name": "Martial melee",
             "weapons": [
                 {
                     "name": "Battleaxe",
@@ -339,7 +339,7 @@
             ]
         },
         {
-            "name": "Martial ranged weapons",
+            "name": "Martial ranged",
             "weapons": [
                 {
                     "name": "Blowgun",

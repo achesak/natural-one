@@ -218,7 +218,7 @@
                     }
                 }
             ],
-            "name": "Simple light melee weapons"
+            "name": "Simple light melee"
         },
         {
             "weapons": [
@@ -295,7 +295,7 @@
                     }
                 }
             ],
-            "name": "Simple one-handed melee weapons"
+            "name": "Simple one-handed melee"
         },
         {
             "weapons": [
@@ -458,7 +458,7 @@
                     }
                 }
             ],
-            "name": "Simple two-handed melee weapons"
+            "name": "Simple two-handed melee"
         },
         {
             "weapons": [
@@ -577,7 +577,7 @@
                     }
                 }
             ],
-            "name": "Simple ranged weapons"
+            "name": "Simple ranged"
         },
         {
             "weapons": [
@@ -998,7 +998,7 @@
                     }
                 }
             ],
-            "name": "Martial light melee weapons"
+            "name": "Martial light melee"
         },
         {
             "weapons": [
@@ -1286,7 +1286,7 @@
                     }
                 }
             ],
-            "name": "Martial one-handed melee weapons"
+            "name": "Martial one-handed melee"
         },
         {
             "weapons": [
@@ -1602,7 +1602,7 @@
                     }
                 }
             ],
-            "name": "Martial two-handed melee weapons"
+            "name": "Martial two-handed melee"
         },
         {
             "weapons": [
@@ -1748,7 +1748,7 @@
                     }
                 }
             ],
-            "name": "Martial ranged weapons"
+            "name": "Martial ranged"
         },
         {
             "weapons": [
@@ -2112,7 +2112,7 @@
                     }
                 }
             ],
-            "name": "Exotic light melee weapons"
+            "name": "Exotic light melee"
         },
         {
             "weapons": [
@@ -2361,7 +2361,7 @@
                     }
                 }
             ],
-            "name": "Exotic one-handed melee weapons"
+            "name": "Exotic one-handed melee"
         },
         {
             "weapons": [
@@ -2805,7 +2805,7 @@
                     }
                 }
             ],
-            "name": "Exotic two-handed melee weapons"
+            "name": "Exotic two-handed melee"
         },
         {
             "weapons": [
@@ -3120,7 +3120,7 @@
                     }
                 }
             ],
-            "name": "Exotic ranged weapons"
+            "name": "Exotic ranged"
         },
         {
             "weapons": [
@@ -3139,7 +3139,7 @@
                     }
                 }
             ],
-            "name": "Eastern simple light melee weapons"
+            "name": "Eastern simple light melee"
         },
         {
             "weapons": [
@@ -3270,7 +3270,7 @@
                     }
                 }
             ],
-            "name": "Eastern martial light melee weapons"
+            "name": "Eastern martial light melee"
         },
         {
             "weapons": [
@@ -3318,7 +3318,7 @@
                     }
                 }
             ],
-            "name": "Eastern martial one-handed melee weapons"
+            "name": "Eastern martial one-handed melee"
         },
         {
             "weapons": [
@@ -3422,7 +3422,7 @@
                     }
                 }
             ],
-            "name": "Eastern martial two-handed melee weapons"
+            "name": "Eastern martial two-handed melee"
         },
         {
             "weapons": [
@@ -3441,7 +3441,7 @@
                     }
                 }
             ],
-            "name": "Eastern martial ranged weapons"
+            "name": "Eastern martial ranged"
         },
         {
             "weapons": [
@@ -3614,7 +3614,7 @@
                     }
                 }
             ],
-            "name": "Eastern exotic light melee weapons"
+            "name": "Eastern exotic light melee"
         },
         {
             "weapons": [
@@ -3676,7 +3676,7 @@
                     }
                 }
             ],
-            "name": "Eastern exotic one-handed melee weapons"
+            "name": "Eastern exotic one-handed melee"
         },
         {
             "weapons": [
@@ -3825,7 +3825,7 @@
                     }
                 }
             ],
-            "name": "Eastern exotic two-handed melee weapons"
+            "name": "Eastern exotic two-handed melee"
         },
         {
             "weapons": [
@@ -3859,7 +3859,7 @@
                     }
                 }
             ],
-            "name": "Eastern exotic ranged weapons"
+            "name": "Eastern exotic ranged"
         },
         {
             "weapons": [
@@ -4598,7 +4598,7 @@
                     }
                 }
             ],
-            "name": "Stone age simple one-handed melee weapons"
+            "name": "Stone age simple one-handed melee"
         },
         {
             "weapons": [
@@ -4617,7 +4617,7 @@
                     }
                 }
             ],
-            "name": "Stone age martial one-handed melee weapons"
+            "name": "Stone age martial one-handed melee"
         },
         {
             "weapons": [
@@ -4636,7 +4636,7 @@
                     }
                 }
             ],
-            "name": "Stone age martial two-handed malee weapons"
+            "name": "Stone age martial two-handed melee"
         },
         {
             "weapons": [
@@ -4655,7 +4655,7 @@
                     }
                 }
             ],
-            "name": "Stone age martial ranged weapons"
+            "name": "Stone age martial ranged"
         },
         {
             "weapons": [
@@ -4703,7 +4703,7 @@
                     }
                 }
             ],
-            "name": "Stone age exotic one-handed melee weapons"
+            "name": "Stone age exotic one-handed melee"
         },
         {
             "weapons": [
@@ -4736,7 +4736,7 @@
                     }
                 }
             ],
-            "name": "Bronze age martial two-handed melee weapons"
+            "name": "Bronze age martial two-handed melee"
         },
         {
             "weapons": [
@@ -4755,7 +4755,7 @@
                     }
                 }
             ],
-            "name": "Bronze age exotic two-handed melee weapons"
+            "name": "Bronze age exotic two-handed melee"
         },
         {
             "weapons": [
@@ -4774,7 +4774,7 @@
                     }
                 }
             ],
-            "name": "Bronze age exotic ranged weapons"
+            "name": "Bronze age exotic ranged"
         },
         {
             "weapons": [
@@ -4794,7 +4794,7 @@
                     }
                 }
             ],
-            "name": "Alchemical simple light melee weapons"
+            "name": "Alchemical simple light melee"
         },
         {
             "weapons": [
@@ -4815,7 +4815,7 @@
                     }
                 }
             ],
-            "name": "Alchemical simple one-handed melee weapons"
+            "name": "Alchemical simple one-handed melee"
         },
         {
             "weapons": [
@@ -5205,7 +5205,7 @@
                     }
                 }
             ],
-            "name": "Alchemical simple ranged weapons"
+            "name": "Alchemical simple ranged"
         },
         {
             "weapons": [
@@ -5241,7 +5241,7 @@
                     }
                 }
             ],
-            "name": "Technological martial one-handed melee weapons"
+            "name": "Technological martial one-handed melee"
         },
         {
             "weapons": [
@@ -5260,7 +5260,7 @@
                     }
                 }
             ],
-            "name": "Technological exotic light melee weapons"
+            "name": "Technological exotic light melee"
         },
         {
             "weapons": [
@@ -5279,7 +5279,7 @@
                     }
                 }
             ],
-            "name": "Technological exotic one-handed melee weapons"
+            "name": "Technological exotic one-handed melee"
         },
         {
             "weapons": [
@@ -5298,7 +5298,7 @@
                     }
                 }
             ],
-            "name": "Technological exotic two-handed melee weapons"
+            "name": "Technological exotic two-handed melee"
         },
         {
             "weapons": [

@@ -19,7 +19,7 @@
                     }
                 }
             ],
-            "name": "No proficiency ranged weapons"
+            "name": "No proficiency ranged"
         },
         {
             "weapons": [
@@ -446,7 +446,7 @@
                     }
                 }
             ],
-            "name": "Simple ranged weapons"
+            "name": "Simple ranged"
         },
         {
             "weapons": [
@@ -742,7 +742,7 @@
                     }
                 }
             ],
-            "name": "Martial ranged weapons"
+            "name": "Martial ranged"
         },
         {
             "weapons": [
@@ -797,7 +797,7 @@
                     }
                 }
             ],
-            "name": "Exotic ranged weapons"
+            "name": "Exotic ranged"
         },
         {
             "weapons": [
@@ -982,7 +982,7 @@
                     }
                 }
             ],
-            "name": "No feat required melee weapons"
+            "name": "No feat required melee"
         },
         {
             "weapons": [
@@ -1029,7 +1029,7 @@
                     }
                 }
             ],
-            "name": "Simple melee weapons"
+            "name": "Simple melee"
         },
         {
             "weapons": [
@@ -1048,7 +1048,7 @@
                     }
                 }
             ],
-            "name": "Exotic melee weapons"
+            "name": "Exotic melee"
         }
     ]
 }

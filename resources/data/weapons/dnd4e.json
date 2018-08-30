@@ -3,7 +3,7 @@
     "has_size_steps": true,
     "data": [
         {
-            "name": "Simple one-handed melee weapons",
+            "name": "Simple one-handed melee",
             "weapons": [
                 {
                     "name": "Club",
@@ -165,7 +165,7 @@
             ]
         },
         {
-            "name": "Simple two-handed melee weapons",
+            "name": "Simple two-handed melee",
             "weapons": [
                 {
                     "name": "Greatclub",
@@ -222,7 +222,7 @@
             ]
         },
         {
-            "name": "Military one-handed melee weapons",
+            "name": "Military one-handed melee",
             "weapons": [
                 {
                     "name": "Battleaxe",
@@ -451,7 +451,7 @@
             ]
         },
         {
-            "name": "Military two-handed melee weapons",
+            "name": "Military two-handed melee",
             "weapons": [
                 {
                     "name": "Falchion",
@@ -601,7 +601,7 @@
             ]
         },
         {
-            "name": "Superior one-handed melee weapons",
+            "name": "Superior one-handed melee",
             "weapons": [
                 {
                     "name": "Bastard sword",
@@ -833,7 +833,7 @@
             ]
         },
         {
-            "name": "Superior two-handed melee weapons",
+            "name": "Superior two-handed melee",
             "weapons": [
                 {
                     "name": "Axe, execution",
@@ -934,7 +934,7 @@
             ]
         },
         {
-            "name": "Superior double melee weapons",
+            "name": "Superior double melee",
             "weapons": [
                 {
                     "name": "Axe, double",
@@ -1111,7 +1111,7 @@
             ]
         },
         {
-            "name": "Improvised one-handed melee weapons",
+            "name": "Improvised one-handed melee",
             "weapons": [
                 {
                     "name": "Improvised weapon",
@@ -1142,7 +1142,7 @@
             ]
         },
         {
-            "name": "Improvised two-handed melee weapons",
+            "name": "Improvised two-handed melee",
             "weapons": [
                 {
                     "name": "Improvised weapon",
@@ -1160,7 +1160,7 @@
             ]
         },
         {
-            "name": "Simple one-handed ranged weapons",
+            "name": "Simple one-handed ranged",
             "weapons": [
                 {
                     "name": "Crossbow, hand",
@@ -1205,7 +1205,7 @@
             ]
         },
         {
-            "name": "Simple two-handed ranged weapons",
+            "name": "Simple two-handed ranged",
             "weapons": [
                 {
                     "name": "Crossbow",
@@ -1237,7 +1237,7 @@
             ]
         },
         {
-            "name": "Military one-handed ranged weapons",
+            "name": "Military one-handed ranged",
             "weapons": [
                 {
                     "name": "Chatkcha",
@@ -1255,7 +1255,7 @@
             ]
         },
         {
-            "name": "Military two-handed ranged weapons",
+            "name": "Military two-handed ranged",
             "weapons": [
                 {
                     "name": "Longbow",
@@ -1286,7 +1286,7 @@
             ]
         },
         {
-            "name": "Superior one-handed ranged weapons",
+            "name": "Superior one-handed ranged",
             "weapons": [
                 {
                     "name": "Boomerang, talenta",
@@ -1332,7 +1332,7 @@
             ]
         },
         {
-            "name": "Superior two-handed ranged weapons",
+            "name": "Superior two-handed ranged",
             "weapons": [
                 {
                     "name": "Blowgun",
@@ -1377,7 +1377,7 @@
             ]
         },
         {
-            "name": "Improvised one-handed ranged weapons",
+            "name": "Improvised one-handed ranged",
             "weapons": [
                 {
                     "name": "Improvised weapon",

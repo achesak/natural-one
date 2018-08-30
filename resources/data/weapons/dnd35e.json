@@ -33,7 +33,7 @@
                     }
                 }
             ],
-            "name": "Simple unarmed melee weapons"
+            "name": "Simple unarmed melee"
         },
         {
             "weapons": [
@@ -111,7 +111,7 @@
                     }
                 }
             ],
-            "name": "Simple light melee weapons"
+            "name": "Simple light melee"
         },
         {
             "weapons": [
@@ -173,7 +173,7 @@
                     }
                 }
             ],
-            "name": "Simple one-handed melee weapons"
+            "name": "Simple one-handed melee"
         },
         {
             "weapons": [
@@ -220,7 +220,7 @@
                     }
                 }
             ],
-            "name": "Simple two-handed melee weapons"
+            "name": "Simple two-handed melee"
         },
         {
             "weapons": [
@@ -297,7 +297,7 @@
                     }
                 }
             ],
-            "name": "Simple ranged weapons"
+            "name": "Simple ranged"
         },
         {
             "weapons": [
@@ -448,7 +448,7 @@
                     }
                 }
             ],
-            "name": "Martial light melee weapons"
+            "name": "Martial light melee"
         },
         {
             "weapons": [
@@ -596,7 +596,7 @@
                     }
                 }
             ],
-            "name": "Martial one-handed melee weapons"
+            "name": "Martial one-handed melee"
         },
         {
             "weapons": [
@@ -756,7 +756,7 @@
                     }
                 }
             ],
-            "name": "Martial two-handed melee weapons"
+            "name": "Martial two-handed melee"
         },
         {
             "weapons": [
@@ -789,7 +789,7 @@
                     }
                 }
             ],
-            "name": "Martial ranged weapons"
+            "name": "Martial ranged"
         },
         {
             "weapons": [
@@ -850,7 +850,7 @@
                     }
                 }
             ],
-            "name": "Exotic light melee weapons"
+            "name": "Exotic light melee"
         },
         {
             "weapons": [
@@ -899,7 +899,7 @@
                     }
                 }
             ],
-            "name": "Exotic one-handed melee weapons"
+            "name": "Exotic one-handed melee"
         },
         {
             "weapons": [
@@ -1024,7 +1024,7 @@
                     }
                 }
             ],
-            "name": "Exotic two-handed melee weapons"
+            "name": "Exotic two-handed melee"
         },
         {
             "weapons": [
@@ -1102,7 +1102,7 @@
                     }
                 }
             ],
-            "name": "Exotic ranged weapons"
+            "name": "Exotic ranged"
         }
     ]
 }

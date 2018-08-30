@@ -221,7 +221,7 @@
                     ]
                 }
             ],
-            "name": "Basic one-handed weapons - uncategorized"
+            "name": "Basic one-handed uncategorized"
         },
         {
             "weapons": [
@@ -314,7 +314,7 @@
                     ]
                 }
             ],
-            "name": "Basic two-handed weapons - uncategorized"
+            "name": "Basic two-handed uncategorized"
         },
         {
             "weapons": [
@@ -359,7 +359,7 @@
                     }
                 }
             ],
-            "name": "Advanced one-handed weapons - flame"
+            "name": "Advanced one-handed flame"
         },
         {
             "weapons": [
@@ -419,7 +419,7 @@
                     ]
                 }
             ],
-            "name": "Advanced one-handed weapons - plasma"
+            "name": "Advanced one-handed plasma"
         },
         {
             "weapons": [
@@ -504,7 +504,7 @@
                     }
                 }
             ],
-            "name": "Advanced one-handed weapons - shock"
+            "name": "Advanced one-handed shock"
         },
         {
             "weapons": [
@@ -555,7 +555,7 @@
                     ]
                 }
             ],
-            "name": "Advanced one-handed weapons - sonic"
+            "name": "Advanced one-handed sonic"
         },
         {
             "weapons": [
@@ -844,7 +844,7 @@
                     ]
                 }
             ],
-            "name": "Advanced one-handed weapons - uncategorized"
+            "name": "Advanced one-handed uncategorized"
         },
         {
             "weapons": [
@@ -871,7 +871,7 @@
                     ]
                 }
             ],
-            "name": "Advanced two-handed weapons - cryo"
+            "name": "Advanced two-handed cryo"
         },
         {
             "weapons": [
@@ -920,7 +920,7 @@
                     ]
                 }
             ],
-            "name": "Advanced two-handed weapons - flame"
+            "name": "Advanced two-handed flame"
         },
         {
             "weapons": [
@@ -969,7 +969,7 @@
                     ]
                 }
             ],
-            "name": "Advanced two-handed weapons - plasma"
+            "name": "Advanced two-handed plasma"
         },
         {
             "weapons": [
@@ -1281,7 +1281,7 @@
                     ]
                 }
             ],
-            "name": "Advanced two-handed weapons - uncategorized"
+            "name": "Advanced two-handed uncategorized"
         },
         {
             "weapons": [
@@ -1330,7 +1330,7 @@
                     ]
                 }
             ],
-            "name": "Small arms - cryo"
+            "name": "Small arms cryo"
         },
         {
             "weapons": [
@@ -1374,7 +1374,7 @@
                     }
                 }
             ],
-            "name": "Small arms - flame"
+            "name": "Small arms flame"
         },
         {
             "weapons": [
@@ -1499,7 +1499,7 @@
                     }
                 }
             ],
-            "name": "Small arms - laser"
+            "name": "Small arms laser"
         },
         {
             "weapons": [
@@ -1584,7 +1584,7 @@
                     }
                 }
             ],
-            "name": "Small arms - plasma"
+            "name": "Small arms plasma"
         },
         {
             "weapons": [
@@ -1666,7 +1666,7 @@
                     ]
                 }
             ],
-            "name": "Small arms - projectile"
+            "name": "Small arms projectile"
         },
         {
             "weapons": [
@@ -1740,7 +1740,7 @@
                     }
                 }
             ],
-            "name": "Small arms - shock"
+            "name": "Small arms shock"
         },
         {
             "weapons": [
@@ -1791,7 +1791,7 @@
                     ]
                 }
             ],
-            "name": "Small arms - sonic"
+            "name": "Small arms sonic"
         },
         {
             "weapons": [
@@ -1806,7 +1806,7 @@
                     ]
                 }
             ],
-            "name": "Small arms - uncategorized"
+            "name": "Small arms uncategorized"
         },
         {
             "weapons": [
@@ -1855,7 +1855,7 @@
                     ]
                 }
             ],
-            "name": "Longarms - cryo"
+            "name": "Longarms cryo"
         },
         {
             "weapons": [
@@ -1879,7 +1879,7 @@
                     }
                 }
             ],
-            "name": "Longarms - flame"
+            "name": "Longarms flame"
         },
         {
             "weapons": [
@@ -2064,7 +2064,7 @@
                     }
                 }
             ],
-            "name": "Longarms - laser"
+            "name": "Longarms laser"
         },
         {
             "weapons": [
@@ -2189,7 +2189,7 @@
                     }
                 }
             ],
-            "name": "Longarms - plasma"
+            "name": "Longarms plasma"
         },
         {
             "weapons": [
@@ -2493,7 +2493,7 @@
                     ]
                 }
             ],
-            "name": "Longarms - projectile"
+            "name": "Longarms projectile"
         },
         {
             "weapons": [
@@ -2610,7 +2610,7 @@
                     }
                 }
             ],
-            "name": "Longarms - shock"
+            "name": "Longarms shock"
         },
         {
             "weapons": [
@@ -2696,7 +2696,7 @@
                     ]
                 }
             ],
-            "name": "Longarms - sonic"
+            "name": "Longarms sonic"
         },
         {
             "weapons": [
@@ -2711,7 +2711,7 @@
                     ]
                 }
             ],
-            "name": "Longarms - uncategorized"
+            "name": "Longarms uncategorized"
         },
         {
             "weapons": [
@@ -2749,7 +2749,7 @@
                     ]
                 }
             ],
-            "name": "Heavy weapons - cryo"
+            "name": "Heavy weapons cryo"
         },
         {
             "weapons": [
@@ -2854,7 +2854,7 @@
                     }
                 }
             ],
-            "name": "Heavy weapons - flame"
+            "name": "Heavy weapons flame"
         },
         {
             "weapons": [
@@ -3039,7 +3039,7 @@
                     }
                 }
             ],
-            "name": "Heavy weapons - laser"
+            "name": "Heavy weapons laser"
         },
         {
             "weapons": [
@@ -3124,7 +3124,7 @@
                     }
                 }
             ],
-            "name": "Heavy weapons - plasma"
+            "name": "Heavy weapons plasma"
         },
         {
             "weapons": [
@@ -3327,7 +3327,7 @@
                     ]
                 }
             ],
-            "name": "Heavy weapons - projectile"
+            "name": "Heavy weapons projectile"
         },
         {
             "weapons": [
@@ -3376,7 +3376,7 @@
                     ]
                 }
             ],
-            "name": "Heavy weapons - shock"
+            "name": "Heavy weapons shock"
         },
         {
             "weapons": [
@@ -3416,7 +3416,7 @@
                     ]
                 }
             ],
-            "name": "Heavy weapons - sonic"
+            "name": "Heavy weapons sonic"
         },
         {
             "weapons": [
@@ -3476,7 +3476,7 @@
                     ]
                 }
             ],
-            "name": "Sniper weapons - projectile"
+            "name": "Sniper weapons projectile"
         },
         {
             "weapons": [
@@ -3805,7 +3805,7 @@
                     }
                 }
             ],
-            "name": "Special one-handed weapons - uncategorized"
+            "name": "Special one-handed uncategorized"
         },
         {
             "weapons": [
@@ -3820,7 +3820,7 @@
                     ]
                 }
             ],
-            "name": "Special two-handed weapons - uncategorized"
+            "name": "Special two-handed uncategorized"
         }
     ]
 }
