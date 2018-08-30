@@ -471,7 +471,7 @@ class NaturalOneWindow(Gtk.ApplicationWindow):
         combat_grid.add(atk_lbl)
 
         # Create the number of attacks row.
-        num_atks_lbl = Gtk.Label('Number of attacks')
+        num_atks_lbl = Gtk.Label('Attack count')
         num_atks_lbl.set_alignment(1, 0.5)
         combat_grid.attach_next_to(
             num_atks_lbl,
@@ -642,7 +642,7 @@ class NaturalOneWindow(Gtk.ApplicationWindow):
         self.weap_error_popover.set_relative_to(self.weap_dam_tree)
 
         # Create the number of attacks row.
-        num_dam_lbl = Gtk.Label('Number of attacks')
+        num_dam_lbl = Gtk.Label('Attack count')
         num_dam_lbl.set_alignment(1, 0.5)
         combat_grid.attach_next_to(
             num_dam_lbl,
