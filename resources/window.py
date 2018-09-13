@@ -466,7 +466,7 @@ class NaturalOneWindow(Gtk.ApplicationWindow):
 
         # Create the attack roll main label.
         atk_lbl = Gtk.Label()
-        atk_lbl.set_markup('<span size="x-large">Attack Roll</span>')
+        atk_lbl.set_markup('<span size="x-large">Attack Rolls</span>')
         atk_lbl.set_alignment(0, 0.5)
         atk_lbl.set_margin_bottom(5)
         combat_grid.add(atk_lbl)
@@ -585,7 +585,7 @@ class NaturalOneWindow(Gtk.ApplicationWindow):
 
         # Create the damage roll main label.
         dam_lbl = Gtk.Label()
-        dam_lbl.set_markup('<span size="x-large">Damage Roll</span>')
+        dam_lbl.set_markup('<span size="x-large">Damage Rolls</span>')
         dam_lbl.set_alignment(0, 0.5)
         dam_lbl.set_margin_top(15)
         dam_lbl.set_margin_bottom(5)
@@ -980,7 +980,7 @@ class NaturalOneWindow(Gtk.ApplicationWindow):
 
         # Create the initiative list label.
         list_init_lbl = Gtk.Label()
-        list_init_lbl.set_markup('<span size="x-large">Initiative List</span>')
+        list_init_lbl.set_markup('<span size="x-large">Initiatives</span>')
         list_init_lbl.set_alignment(0, 0.5)
         list_init_lbl.set_margin_bottom(10)
         list_init_grid.attach(list_init_lbl, 0, 0, 1, 1)
