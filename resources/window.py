@@ -798,6 +798,7 @@ class NaturalOneWindow(Gtk.ApplicationWindow):
 
         # Create the template list action bar.
         self.template_action_bar = Gtk.ActionBar()
+        self.template_action_bar.get_style_context().add_class("inline-toolbar")
         templates_grid.attach_next_to(
             self.template_action_bar,
             templates_scroll_win,
@@ -1012,6 +1013,7 @@ class NaturalOneWindow(Gtk.ApplicationWindow):
 
         # Create the initiative list action bar.
         self.init_action_bar = Gtk.ActionBar()
+        self.init_action_bar.get_style_context().add_class("inline-toolbar")
         list_init_grid.attach_next_to(
             self.init_action_bar,
             init_scroll_win,

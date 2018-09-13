@@ -282,6 +282,7 @@ class TemplateDialog(Gtk.Dialog):
 
         # Create the roll list action bar.
         self.roll_action_bar = Gtk.ActionBar()
+        self.roll_action_bar.get_style_context().add_class("inline-toolbar")
         roll_grid.attach_next_to(
             self.roll_action_bar,
             roll_scroll_win,

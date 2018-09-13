@@ -87,6 +87,7 @@ class SystemDialog(Gtk.Dialog):
 
         # Create the system list action bar.
         self.system_action_bar = Gtk.ActionBar()
+        self.system_action_bar.get_style_context().add_class("inline-toolbar")
         system_grid.attach_next_to(
             self.system_action_bar,
             system_scroll_win,
