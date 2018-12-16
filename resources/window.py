@@ -17,7 +17,7 @@ class NaturalOneWindow(Gtk.ApplicationWindow):
 
         # Create the header bar.
         self.header = Gtk.HeaderBar()
-        self.header.set_title('Dice Roller')
+        self.header.set_title('Natural One')
         self.header.set_show_close_button(True)
         self.set_titlebar(self.header)
 
@@ -744,7 +744,7 @@ class NaturalOneWindow(Gtk.ApplicationWindow):
         dam_btn_box.set_hexpand(True)
         Gtk.StyleContext.add_class(dam_btn_box.get_style_context(), 'linked')
         self.crit_dam_btn = Gtk.ToggleButton()
-        self.crit_dam_btn.add(load_symbolic('security-high'))
+        self.crit_dam_btn.add(load_symbolic('starred'))
         self.crit_dam_btn.set_tooltip_text('Roll a critical hit')
         self.crit_dam_btn.set_active(False)
         dam_btn_box.add(self.crit_dam_btn)
@@ -842,11 +842,11 @@ class NaturalOneWindow(Gtk.ApplicationWindow):
         template_roll_btn_box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL)
         Gtk.StyleContext.add_class(template_roll_btn_box.get_style_context(), 'linked')
         self.list_crit_btn = Gtk.ToggleButton()
-        self.list_crit_btn.add(load_symbolic('security-high'))
+        self.list_crit_btn.add(load_symbolic('starred'))
         self.list_crit_btn.set_tooltip_text('Apply critical hit')
         self.list_crit_btn.set_active(False)
         template_roll_btn_box.add(self.list_crit_btn)
-        self.list_roll_btn = Gtk.Button('Roll')
+        self.list_roll_btn = Gtk.Button('Roll template')
         self.list_roll_btn.set_tooltip_text('Roll selected template')
         template_roll_btn_box.add(self.list_roll_btn)
         self.template_action_bar.pack_end(template_roll_btn_box)
