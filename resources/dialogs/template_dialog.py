@@ -10,7 +10,6 @@ from resources.utility import pluralize, pluralize_adj, sign
 from resources.window import NaturalOneWindow
 
 
-
 class TemplateDialog(Gtk.Dialog):
 
     def __init__(
@@ -50,11 +49,11 @@ class TemplateDialog(Gtk.Dialog):
         dlg_grid.set_border_width(18)
         self.get_content_area().add(dlg_grid)
 
-        # Create the template details grid.
-        details_grid = Gtk.Grid()
-        details_grid.set_row_spacing(8)
-        details_grid.set_column_spacing(12)
-        dlg_grid.attach(details_grid, 0, 0, 1, 1)
+        # Create the add roll grid.
+        add_grid = Gtk.Grid()
+        add_grid.set_row_spacing(8)
+        add_grid.set_column_spacing(12)
+        dlg_grid.attach(add_grid, 0, 0, 1, 1)
 
         # Create the template details main label.
         details_lbl = Gtk.Label()
@@ -62,17 +61,18 @@ class TemplateDialog(Gtk.Dialog):
             '<span size="x-large">Template Details</span>',
         )
         details_lbl.set_alignment(0, 0.5)
-        details_grid.attach_next_to(
+        details_lbl.set_margin_bottom(5)
+        add_grid.attach_next_to(
             details_lbl,
             None,
             Gtk.PositionType.RIGHT,
-            2, 1,
+            3, 1,
         )
 
         # Create the template name row.
         name_lbl = Gtk.Label('Name')
         name_lbl.set_alignment(1, 0.5)
-        details_grid.attach_next_to(
+        add_grid.attach_next_to(
             name_lbl,
             details_lbl,
             Gtk.PositionType.BOTTOM,
@@ -80,92 +80,67 @@ class TemplateDialog(Gtk.Dialog):
         )
         self.name_ent = Gtk.Entry()
         self.name_ent.set_hexpand(True)
-        details_grid.attach_next_to(
+        add_grid.attach_next_to(
             self.name_ent,
             name_lbl,
             Gtk.PositionType.RIGHT,
-            1, 1,
+            2, 1,
         )
-
-        # Create the add roll grid.
-        add_grid = Gtk.Grid()
-        add_grid.set_row_spacing(8)
-        add_grid.set_column_spacing(12)
-        dlg_grid.attach(add_grid, 0, 1, 1, 1)
 
         # Create the add roll main label.
         add_lbl = Gtk.Label()
         add_lbl.set_markup('<span size=\'x-large\'>Add Roll</span>')
         add_lbl.set_alignment(0, 0.5)
-        add_grid.attach_next_to(add_lbl, None, Gtk.PositionType.RIGHT, 7, 1)
+        add_lbl.set_margin_top(5)
+        add_lbl.set_margin_bottom(5)
+        add_grid.attach_next_to(
+            add_lbl,
+            name_lbl,
+            Gtk.PositionType.BOTTOM,
+            3, 1,
+        )
 
         # Create the roll row.
-        self.count_ent = Gtk.Entry()
-        self.count_ent.set_width_chars(4)
-        self.count_ent.props.xalign = 0.5
+        roll_row_lbl = Gtk.Label('Roll')
+        roll_row_lbl.set_alignment(1, 0.5)
         add_grid.attach_next_to(
-            self.count_ent,
+            roll_row_lbl,
             add_lbl,
             Gtk.PositionType.BOTTOM,
             1, 1,
         )
+        roll_box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL)
+        self.count_ent = Gtk.Entry()
+        self.count_ent.set_width_chars(4)
+        self.count_ent.props.xalign = 0.5
+        roll_box.pack_start(self.count_ent, False, False, 0)
         self.count_error_popover = Gtk.Popover()
         self.count_error_popover.set_relative_to(self.count_ent)
         d_lbl = Gtk.Label('d')
-        add_grid.attach_next_to(
-            d_lbl,
-            self.count_ent,
-            Gtk.PositionType.RIGHT,
-            1, 1,
-        )
+        roll_box.pack_start(d_lbl, True, True, 0)
         self.die_ent = Gtk.Entry()
         self.die_ent.set_width_chars(4)
         self.die_ent.props.xalign = 0.5
-        add_grid.attach_next_to(
-            self.die_ent,
-            d_lbl,
-            Gtk.PositionType.RIGHT,
-            1, 1,
-        )
+        roll_box.pack_start(self.die_ent, False, False, 0)
         self.die_error_popover = Gtk.Popover()
         self.die_error_popover.set_relative_to(self.die_ent)
         plus_lbl = Gtk.Label('+')
-        add_grid.attach_next_to(
-            plus_lbl,
-            self.die_ent,
-            Gtk.PositionType.RIGHT,
-            1, 1,
-        )
+        roll_box.pack_start(plus_lbl, True, True, 0)
         self.mod_ent = Gtk.Entry()
         self.mod_ent.set_width_chars(4)
         self.mod_ent.props.xalign = 0.5
-        add_grid.attach_next_to(
-            self.mod_ent,
-            plus_lbl,
-            Gtk.PositionType.RIGHT,
-            1, 1,
-        )
+        roll_box.pack_start(self.mod_ent, False, False, 0)
         self.mod_error_popover = Gtk.Popover()
         self.mod_error_popover.set_relative_to(self.mod_ent)
         self.mod_chk = Gtk.CheckButton('Add modifier to every roll')
         self.mod_chk.set_active(True)
-        self.mod_chk.set_margin_left(15)
+        self.mod_chk.set_margin_left(12)
+        roll_box.pack_start(self.mod_chk, False, False, 0)
         add_grid.attach_next_to(
-            self.mod_chk,
-            self.mod_ent,
+            roll_box,
+            roll_row_lbl,
             Gtk.PositionType.RIGHT,
             2, 1,
-        )
-
-        # Create the options grid.
-        options_grid = Gtk.Grid()
-        options_grid.set_row_spacing(5)
-        options_grid.set_column_spacing(12)
-        add_grid.attach_next_to(
-            options_grid,
-            self.count_ent,
-            Gtk.PositionType.BOTTOM,
-            7, 1,
         )
 
         # Create the critical row.
@@ -179,8 +154,13 @@ class TemplateDialog(Gtk.Dialog):
         crit_renderer = Gtk.CellRendererText()
         self.crit_cbox.pack_start(crit_renderer, True)
         self.crit_cbox.add_attribute(crit_renderer, 'text', 0)
-        options_grid.add(crit_lbl)
-        options_grid.attach_next_to(
+        add_grid.attach_next_to(
+            crit_lbl,
+            roll_row_lbl,
+            Gtk.PositionType.BOTTOM,
+            1, 1,
+        )
+        add_grid.attach_next_to(
             self.crit_cbox,
             crit_lbl,
             Gtk.PositionType.RIGHT,
@@ -199,13 +179,13 @@ class TemplateDialog(Gtk.Dialog):
         self.crit_error_popover.set_relative_to(self.crit_ent)
         crit_box.pack_start(crit_mult_lbl, False, False, 0)
         crit_box.pack_start(self.crit_ent, False, False, 0)
-        options_grid.attach_next_to(
+        add_grid.attach_next_to(
             crit_placeholder_lbl,
             crit_lbl,
             Gtk.PositionType.BOTTOM,
             1, 1,
         )
-        options_grid.attach_next_to(
+        add_grid.attach_next_to(
             crit_box,
             crit_placeholder_lbl,
             Gtk.PositionType.RIGHT,
@@ -218,13 +198,13 @@ class TemplateDialog(Gtk.Dialog):
         self.min_value_ent = Gtk.Entry()
         self.min_value_ent.set_placeholder_text('No minimum value')
         self.min_value_ent.set_hexpand(True)
-        options_grid.attach_next_to(
+        add_grid.attach_next_to(
             min_value_lbl,
             crit_placeholder_lbl,
             Gtk.PositionType.BOTTOM,
             1, 1,
         )
-        options_grid.attach_next_to(
+        add_grid.attach_next_to(
             self.min_value_ent,
             min_value_lbl,
             Gtk.PositionType.RIGHT,
@@ -243,13 +223,13 @@ class TemplateDialog(Gtk.Dialog):
         self.desc_error_popover.set_relative_to(self.desc_ent)
         self.add_btn = Gtk.Button('Add Roll')
         desc_box.add(self.add_btn)
-        options_grid.attach_next_to(
+        add_grid.attach_next_to(
             desc_lbl,
             min_value_lbl,
             Gtk.PositionType.BOTTOM,
             1, 1,
         )
-        options_grid.attach_next_to(
+        add_grid.attach_next_to(
             desc_box,
             desc_lbl,
             Gtk.PositionType.RIGHT,
@@ -260,7 +240,7 @@ class TemplateDialog(Gtk.Dialog):
         roll_grid = Gtk.Grid()
         roll_grid.set_row_spacing(0)
         roll_grid.set_column_spacing(12)
-        dlg_grid.attach(roll_grid, 0, 2, 1, 1)
+        dlg_grid.attach(roll_grid, 0, 1, 1, 1)
 
         # Create the rolls main label.
         roll_lbl = Gtk.Label()
@@ -284,14 +264,17 @@ class TemplateDialog(Gtk.Dialog):
         self.roll_tree.get_selection().set_mode(Gtk.SelectionMode.MULTIPLE)
         self.roll_tree.set_reorderable(True)
         desc_text = Gtk.CellRendererText()
+        desc_text.set_padding(5, 5)
         self.desc_col = Gtk.TreeViewColumn('Name', desc_text, text=1)
         self.desc_col.set_expand(True)
         self.roll_tree.append_column(self.desc_col)
         roll_text = Gtk.CellRendererText()
+        roll_text.set_padding(5, 5)
         self.roll_col = Gtk.TreeViewColumn('Roll', roll_text, text=2)
         self.roll_col.set_expand(True)
         self.roll_tree.append_column(self.roll_col)
         crit_text = Gtk.CellRendererText()
+        crit_text.set_padding(5, 5)
         self.crit_col = Gtk.TreeViewColumn('Critical', crit_text, text=3)
         self.crit_col.set_expand(True)
         self.roll_tree.append_column(self.crit_col)
@@ -299,6 +282,7 @@ class TemplateDialog(Gtk.Dialog):
 
         # Create the roll list action bar.
         self.roll_action_bar = Gtk.ActionBar()
+        self.roll_action_bar.get_style_context().add_class("inline-toolbar")
         roll_grid.attach_next_to(
             self.roll_action_bar,
             roll_scroll_win,

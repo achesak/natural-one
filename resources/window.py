@@ -466,7 +466,7 @@ class NaturalOneWindow(Gtk.ApplicationWindow):
 
         # Create the attack roll main label.
         atk_lbl = Gtk.Label()
-        atk_lbl.set_markup('<span size="x-large">Attack Roll</span>')
+        atk_lbl.set_markup('<span size="x-large">Attack Rolls</span>')
         atk_lbl.set_alignment(0, 0.5)
         atk_lbl.set_margin_bottom(5)
         combat_grid.add(atk_lbl)
@@ -585,7 +585,7 @@ class NaturalOneWindow(Gtk.ApplicationWindow):
 
         # Create the damage roll main label.
         dam_lbl = Gtk.Label()
-        dam_lbl.set_markup('<span size="x-large">Damage Roll</span>')
+        dam_lbl.set_markup('<span size="x-large">Damage Rolls</span>')
         dam_lbl.set_alignment(0, 0.5)
         dam_lbl.set_margin_top(15)
         dam_lbl.set_margin_bottom(5)
@@ -786,16 +786,19 @@ class NaturalOneWindow(Gtk.ApplicationWindow):
         self.template_tree.get_selection().set_mode(Gtk.SelectionMode.MULTIPLE)
         self.template_tree.set_reorderable(True)
         renderer = Gtk.CellRendererText()
+        renderer.set_padding(5, 5)
         column = Gtk.TreeViewColumn('Name', renderer, text=1)
         column.set_expand(True)
         self.template_tree.append_column(column)
         renderer = Gtk.CellRendererText()
+        renderer.set_padding(5, 5)
         column = Gtk.TreeViewColumn('Rolls', renderer, text=2)
         self.template_tree.append_column(column)
         templates_scroll_win.add(self.template_tree)
 
         # Create the template list action bar.
         self.template_action_bar = Gtk.ActionBar()
+        self.template_action_bar.get_style_context().add_class("inline-toolbar")
         templates_grid.attach_next_to(
             self.template_action_bar,
             templates_scroll_win,
@@ -978,7 +981,7 @@ class NaturalOneWindow(Gtk.ApplicationWindow):
 
         # Create the initiative list label.
         list_init_lbl = Gtk.Label()
-        list_init_lbl.set_markup('<span size="x-large">Initiative List</span>')
+        list_init_lbl.set_markup('<span size="x-large">Initiatives</span>')
         list_init_lbl.set_alignment(0, 0.5)
         list_init_lbl.set_margin_bottom(10)
         list_init_grid.attach(list_init_lbl, 0, 0, 1, 1)
@@ -998,16 +1001,19 @@ class NaturalOneWindow(Gtk.ApplicationWindow):
         self.init_tree.set_reorderable(True)
         self.init_tree.get_selection().set_mode(Gtk.SelectionMode.MULTIPLE)
         renderer = Gtk.CellRendererText()
+        renderer.set_padding(5, 5)
         column = Gtk.TreeViewColumn('Name', renderer, text=1)
         column.set_expand(True)
         self.init_tree.append_column(column)
         renderer = Gtk.CellRendererText()
+        renderer.set_padding(5, 5)
         column = Gtk.TreeViewColumn('Initiative', renderer, text=2)
         self.init_tree.append_column(column)
         init_scroll_win.add(self.init_tree)
 
         # Create the initiative list action bar.
         self.init_action_bar = Gtk.ActionBar()
+        self.init_action_bar.get_style_context().add_class("inline-toolbar")
         list_init_grid.attach_next_to(
             self.init_action_bar,
             init_scroll_win,

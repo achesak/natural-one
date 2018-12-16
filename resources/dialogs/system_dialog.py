@@ -67,6 +67,7 @@ class SystemDialog(Gtk.Dialog):
         self.system_tree.set_reorderable(True)
         self.system_tree.get_selection().set_mode(Gtk.SelectionMode.MULTIPLE)
         enable_text = Gtk.CellRendererToggle()
+        enable_text.set_padding(5, 5)
         enable_text.connect(
             'toggled',
             lambda widget, path: self.toggle_system_enabled(path),
@@ -74,16 +75,19 @@ class SystemDialog(Gtk.Dialog):
         self.enable_col = Gtk.TreeViewColumn('Enabled', enable_text, active=0)
         self.system_tree.append_column(self.enable_col)
         roll_text = Gtk.CellRendererText()
+        roll_text.set_padding(5, 5)
         self.system_col = Gtk.TreeViewColumn('System', roll_text, text=1)
         self.system_col.set_expand(True)
         self.system_tree.append_column(self.system_col)
         source_text = Gtk.CellRendererText()
+        source_text.set_padding(5, 5)
         self.source_col = Gtk.TreeViewColumn('Source', source_text, text=2)
         self.system_tree.append_column(self.source_col)
         system_scroll_win.add(self.system_tree)
 
         # Create the system list action bar.
         self.system_action_bar = Gtk.ActionBar()
+        self.system_action_bar.get_style_context().add_class("inline-toolbar")
         system_grid.attach_next_to(
             self.system_action_bar,
             system_scroll_win,

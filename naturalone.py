@@ -443,7 +443,7 @@ class NaturalOne(Gtk.Application):
     def new_template(self):
         dlg = TemplateDialog(
             self.window,
-            'Create New Template',
+            'Create new template',
             style_css=self.style_css,
         )
         response = dlg.run()
