@@ -45,10 +45,14 @@ def format_damage(
         total,
 ):
     if 'damage_rolls' in weapon:
-        damage_dice = ', '.join(['{count}d{die}'.format(
-            count=roll['count'],
-            die=roll['die'],
-        ) for roll in weapon['damage_rolls']])
+        all_dice = []
+        for roll in weapon['damage_rolls']:
+            roll = roll['on_critical'] if 'on_critical' in roll and crit_attack else roll
+            all_dice.append('{count}d{die}'.format(
+                count=roll['count'],
+                die=roll['die'],
+            ))
+        damage_dice = ', '.join(all_dice)
 
     display_name = weapon['name']
     if 'display' in weapon:
