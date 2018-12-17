@@ -1,0 +1,333 @@
+{
+    "name": "Pathfinder Playtest",
+    "has_size_steps": false,
+    "data": [
+        {
+            "name": "Common simple melee",
+            "weapons": [
+                {
+                    "name": "Club",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 6,
+                            "type": "Bludgeoning"
+                        }
+                    ]
+                },
+                {
+                    "name": "Dagger",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 4,
+                            "type": "Piercing"
+                        }
+                    ]
+                },
+                {
+                    "name": "Fist",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 4,
+                            "type": "Bludgeoning"
+                        }
+                    ]
+                },
+                {
+                    "name": "Gauntlet",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 4,
+                            "type": "Bludgeoning"
+                        }
+                    ]
+                },
+                {
+                    "name": "Gauntlet, spiked",
+                    "display": "Spiked gauntlet",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 4,
+                            "type": "Piercing"
+                        }
+                    ]
+                },
+                {
+                    "name": "Longspear",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 8,
+                            "type": "Piercing"
+                        }
+                    ]
+                },
+                {
+                    "name": "Mace",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 6,
+                            "type": "Bludgeoning"
+                        }
+                    ]
+                },
+                {
+                    "name": "Mace, light",
+                    "display": "Light mace",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 4,
+                            "type": "Bludgeoning"
+                        }
+                    ]
+                },
+                {
+                    "name": "Morningstar",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 6,
+                            "type": "Bludgeoning"
+                        }
+                    ]
+                },
+                {
+                    "name": "Sickle",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 4,
+                            "type": "Slashing"
+                        }
+                    ]
+                },
+                {
+                    "name": "Spear",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 6,
+                            "type": "Piercing"
+                        }
+                    ]
+                },
+                {
+                    "name": "Staff",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 4,
+                            "type": "Bludgeoning"
+                        }
+                    ]
+                },
+                {
+                    "name": "Staff (two-hand)",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 8,
+                            "type": "Bludgeoning"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Common martial melee",
+            "weapons": [
+                {
+                    "name": "Bastard sword",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 8,
+                            "type": "Piercing"
+                        }
+                    ]
+                },
+                {
+                    "name": "Bastard sword (two-hand)",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 12,
+                            "type": "Piercing"
+                        }
+                    ]
+                },
+                {
+                    "name": "Battle axe",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 8,
+                            "type": "Slashing"
+                        }
+                    ]
+                },
+                {
+                    "name": "Bo staff",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 8,
+                            "type": "Bludgeoning"
+                        }
+                    ]
+                },
+                {
+                    "name": "Falchion",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 10,
+                            "type": "Slashing"
+                        }
+                    ]
+                },
+                {
+                    "name": "Flail",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 6,
+                            "type": "Bludgeoning"
+                        }
+                    ]
+                },
+                {
+                    "name": "Glaive",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 8,
+                            "type": "Slashing"
+                        }
+                    ],
+                    "critical": {
+                        "damage_rolls": [
+                            {
+                                "count": 1,
+                                "die": 8,
+                                "type": "Slashing"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "Greataxe",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 12,
+                            "type": "Slashing"
+                        }
+                    ]
+                },
+                {
+                    "name": "Greatclub",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 10,
+                            "type": "Bludgeoning"
+                        }
+                    ]
+                },
+                {
+                    "name": "Greatpick",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 10,
+                            "type": "Piercing",
+                            "on_critical": {
+                                "count": 1,
+                                "die": 12,
+                                "type": "Piercing"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Greatsword",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 12,
+                            "type": "Slashing"
+                        }
+                    ]
+                },
+                {
+                    "name": "Guisarme",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 10,
+                            "type": "Slashing"
+                        }
+                    ]
+                },
+                {
+                    "name": "Halberd",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 10,
+                            "type": "Piercing"
+                        }
+                    ]
+                },
+                {
+                    "name": "Hammer, light",
+                    "display": "Light hammer",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 6,
+                            "type": "Bludgeoning"
+                        }
+                    ]
+                },
+                {
+                    "name": "Hatchet",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 6,
+                            "type": "Slashing"
+                        }
+                    ]
+                },
+                {
+                    "name": "Lance",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 8,
+                            "type": "Piercing"
+                        }
+                    ],
+                    "critical": {
+                        "damage_rolls": [
+                            {
+                                "count": 1,
+                                "die": 8,
+                                "type": "Piercing"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}
+

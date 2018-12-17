@@ -7,6 +7,12 @@
             "user_added": false
         },
         {
+            "name": "Pathfinder Playtest",
+            "filename": "pathfinder2.json",
+            "enabled": true,
+            "user_added": false
+        },
+        {
             "name": "Starfinder",
             "filename": "starfinder.json",
             "enabled": true,
