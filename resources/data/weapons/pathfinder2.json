@@ -254,7 +254,16 @@
                                 "type": "Piercing"
                             }
                         }
-                    ]
+                    ],
+                    "critical": {
+                        "damage_rolls": [
+                            {
+                                "count": 1,
+                                "die": 12,
+                                "type": "Piercing"
+                            }
+                        ]
+                    }
                 },
                 {
                     "name": "Greatsword",
@@ -321,6 +330,449 @@
                             {
                                 "count": 1,
                                 "die": 8,
+                                "type": "Piercing"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "Longsword",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 8,
+                            "type": "Slashing"
+                        }
+                    ]
+                },
+                {
+                    "name": "Main-gauche",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 4,
+                            "type": "Piercing"
+                        }
+                    ]
+                },
+                {
+                    "name": "Maul",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 12,
+                            "type": "Bludgeoning"
+                        }
+                    ]
+                },
+                {
+                    "name": "Pick",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 6,
+                            "type": "Piercing",
+                            "on_critical": {
+                                "count": 1,
+                                "die": 10,
+                                "type": "Piercing"
+                            }
+                        }
+                    ],
+                    "critical": {
+                        "damage_rolls": [
+                            {
+                                "count": 1,
+                                "die": 10,
+                                "type": "Piercing"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "Pick, light",
+                    "display": "Light pick",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 4,
+                            "type": "Piercing",
+                            "on_critical": {
+                                "count": 1,
+                                "die": 8,
+                                "type": "Piercing"
+                            }
+                        }
+                    ],
+                    "critical": {
+                        "damage_rolls": [
+                            {
+                                "count": 1,
+                                "die": 8,
+                                "type": "Piercing"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "Ranseur",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 10,
+                            "type": "Piercing"
+                        }
+                    ]
+                },
+                {
+                    "name": "Rapier",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 6,
+                            "type": "Piercing"
+                        }
+                    ],
+                    "critical": {
+                        "damage_rolls": [
+                            {
+                                "count": 1,
+                                "die": 8,
+                                "type": "Piercing"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "Sap",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 6,
+                            "type": "Bludgeoning"
+                        }
+                    ]
+                },
+                {
+                    "name": "Scimitar",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 6,
+                            "type": "Slashing"
+                        }
+                    ]
+                },
+                {
+                    "name": "Scythe",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 10,
+                            "type": "Slashing"
+                        }
+                    ],
+                    "critical": {
+                        "damage_rolls": [
+                            {
+                                "count": 1,
+                                "die": 10,
+                                "type": "Slashing"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "Shield bash, light",
+                    "display": "Light shield bash",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 3,
+                            "type": "Bludgeoning"
+                        }
+                    ]
+                },
+                {
+                    "name": "Shield boss, light",
+                    "display": "Light shield boss",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 4,
+                            "type": "Bludgeoning"
+                        }
+                    ]
+                },
+                {
+                    "name": "Shield spikes, light",
+                    "display": "Light shield spikes",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 4,
+                            "type": "Piercing"
+                        }
+                    ]
+                },
+                {
+                    "name": "Shortsword",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 6,
+                            "type": "Piercing"
+                        }
+                    ]
+                },
+                {
+                    "name": "Starknife",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 4,
+                            "type": "Piercing"
+                        }
+                    ],
+                    "critical": {
+                        "damage_rolls": [
+                            {
+                                "count": 1,
+                                "die": 6,
+                                "type": "Piercing"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "Trident",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 8,
+                            "type": "Piercing"
+                        }
+                    ]
+                },
+                {
+                    "name": "War flail",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 10,
+                            "type": "Bludgeoning"
+                        }
+                    ]
+                },
+                {
+                    "name": "Warhammer",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 8,
+                            "type": "Bludgeoning"
+                        }
+                    ]
+                },
+                {
+                    "name": "Whip",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 4,
+                            "type": "Slashing"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Common simple ranged",
+            "weapons": [
+                {
+                    "name": "Blowgun",
+                    "damage_static": [
+                        {
+                            "damage": 1,
+                            "type": "Piercing"
+                        }
+                    ]
+                },
+                {
+                    "name": "Crossbow",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 8,
+                            "type": "Piercing"
+                        }
+                    ]
+                },
+                {
+                    "name": "Crossbow, hand",
+                    "display": "Hand crossbow",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 6,
+                            "type": "Piercing"
+                        }
+                    ]
+                },
+                {
+                    "name": "Crossbow, heavy",
+                    "display": "Heavy crossbow",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 10,
+                            "type": "Piercing"
+                        }
+                    ]
+                },
+                {
+                    "name": "Dart",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 4,
+                            "type": "Piercing"
+                        }
+                    ]
+                },
+                {
+                    "name": "Javelin",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 6,
+                            "type": "Piercing"
+                        }
+                    ]
+                },
+                {
+                    "name": "Sling",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 6,
+                            "type": "Bludgeoning"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Common martial ranged",
+            "weapons": [
+                {
+                    "name": "Longbow",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 8,
+                            "type": "Piercing"
+                        }
+                    ],
+                    "critical": {
+                        "damage_rolls": [
+                            {
+                                "count": 1,
+                                "die": 10,
+                                "type": "Piercing"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "Longbow, composite",
+                    "display": "Composite longbow",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 8,
+                            "type": "Piercing"
+                        }
+                    ],
+                    "critical": {
+                        "damage_rolls": [
+                            {
+                                "count": 1,
+                                "die": 10,
+                                "type": "Piercing"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "Shortbow",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 6,
+                            "type": "Piercing"
+                        }
+                    ],
+                    "critical": {
+                        "damage_rolls": [
+                            {
+                                "count": 1,
+                                "die": 10,
+                                "type": "Piercing"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "Shortbow, composite",
+                    "display": "Composite shortbow",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 6,
+                            "type": "Piercing"
+                        }
+                    ],
+                    "critical": {
+                        "damage_rolls": [
+                            {
+                                "count": 1,
+                                "die": 10,
+                                "type": "Piercing"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Uncommon simple melee",
+            "weapons": [
+                {
+                    "name": "Dagger, clan",
+                    "display": "Clan dagger",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 4,
+                            "type": "Piercing"
+                        }
+                    ]
+                },
+                {
+                    "name": "Katar",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 4,
+                            "type": "Piercing"
+                        }
+                    ],
+                    "critical": {
+                        "damage_rolls": [
+                            {
+                                "count": 1,
+                                "die": 6,
                                 "type": "Piercing"
                             }
                         ]
