@@ -5347,12 +5347,6 @@
                 },
                 {
                     "name": "Death ray (fail)",
-                    "damage_rolls": [
-                        {
-                            "count": 0,
-                            "die": 0
-                        }
-                    ],
                     "size_steps": false,
                     "damage_static": [
                         {
