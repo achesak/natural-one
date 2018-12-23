@@ -27,12 +27,15 @@ def format_attack(num_atks, mods, crit_range, rolls):
             num_atks=num_atks,
             singular=singularize(num_atks),
         )
-    output += '<i>Modifiers {mods}\nCritical range {crit_low}-20</i>\n'.format(
-        mods=', '.join([str(x) for x in mods]),
+    if all([mod != 0 for mod in mods]):
+        output += '<i>Modifiers {mods}</i>\n'.format(
+            mods=', '.join([str(x) for x in mods]),
+        )
+    output += '<i>Critical range {crit_low}-20</i>\n'.format(
         crit_low=crit_range,
     )
     output += '\n'.join([str(x) for x in rolls])
-
+    
     return output
 
 
@@ -87,12 +90,13 @@ def format_damage(
         weapon=display_name,
     )
     if 'damage_rolls' in weapon:
-        output += '<i>: {dice}</i>'.format(
+        output += '<i>: {dice}</i>\n'.format(
             dice=damage_dice,
         )
-    output += '\n<i>Modifiers {mods}</i>\n'.format(
-        mods=', '.join([str(x) for x in mods]),
-    )
+    if all([mod != 0 for mod in mods]):
+        output += '<i>Modifiers {mods}</i>\n'.format(
+            mods=', '.join([str(x) for x in mods]),
+        )
     output += '\n'.join([str(x) for x in rolls])
 
     if crit_attack:
