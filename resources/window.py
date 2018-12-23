@@ -37,10 +37,18 @@ class NaturalOneWindow(Gtk.ApplicationWindow):
         self.add(win_pane)
 
         # Create the header buttons.
+        header_btn_box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL)
+        header_btn_box.set_hexpand(True)
+        Gtk.StyleContext.add_class(header_btn_box.get_style_context(), 'linked')
+        self.header.pack_end(header_btn_box)
+        self.reset_btn = Gtk.Button()
+        self.reset_btn.add(load_symbolic('edit-undo'))
+        self.reset_btn.set_tooltip_text('Reset all fields')
+        header_btn_box.add(self.reset_btn)
         self.clear_btn = Gtk.Button()
         self.clear_btn.add(load_symbolic('edit-clear'))
         self.clear_btn.set_tooltip_text('Clear rolls')
-        self.header.pack_end(self.clear_btn)
+        header_btn_box.add(self.clear_btn)
 
         # Create the Basic grid.
         dice_grid = Gtk.Grid()
@@ -1150,6 +1158,22 @@ class NaturalOneWindow(Gtk.ApplicationWindow):
         self.results = []
         self.results_store.clear()
 
+    def reset_fields(self):
+        fields_to_clear = [
+            self.d4_mod_ent, self.d6_mod_ent, self.d8_mod_ent,
+            self.d10_mod_ent, self.d12_mod_ent, self.d20_mod_ent,
+            self.dq_mod_ent, self.min_value_ent, self.min_dam_ent,
+            self.mod_init_ent, self.d4_count_ent, self.d6_count_ent,
+            self.d8_count_ent, self.d10_count_ent, self.d12_count_ent,
+            self.d20_count_ent, self.dq_count_ent, self.dq_size_ent,
+            self.num_atks_ent, self.num_dam_ent, self.mod_atks_ent,
+            self.mod_dam_ent,
+        ]
+
+        for field in fields_to_clear:
+            field.set_text('')
+
+
     def toggle_initiative_mode(self):
         roll_is_active = self.roll_init_rbtn.get_active()
 
@@ -1202,7 +1226,7 @@ class NaturalOneWindow(Gtk.ApplicationWindow):
         count_inputs = [
             self.d4_count_ent, self.d6_count_ent, self.d8_count_ent,
             self.d10_count_ent, self.d12_count_ent, self.d20_count_ent,
-            self.dq_mod_ent, self.dq_size_ent, self.num_atks_ent,
+            self.dq_count_ent, self.dq_size_ent, self.num_atks_ent,
             self.num_dam_ent,
         ]
         mod_inputs = [

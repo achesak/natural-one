@@ -102,6 +102,10 @@ class NaturalOne(Gtk.Application):
             'clicked',
             lambda x: self.window.clear_output(),
         )
+        self.window.reset_btn.connect(
+            'clicked',
+            lambda x: self.window.reset_fields(),
+        )
         self.window.d4_btn.connect(
             'clicked',
             lambda x: self.roll(
