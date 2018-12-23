@@ -21,7 +21,7 @@
                         {
                             "count": 1,
                             "die": 4,
-                            "type": "Piercing"
+                            "type": "Piercing or slashing"
                         }
                     ]
                 },
@@ -93,7 +93,7 @@
                         {
                             "count": 1,
                             "die": 6,
-                            "type": "Bludgeoning"
+                            "type": "Bludgeoning or piercing"
                         }
                     ]
                 },
@@ -271,7 +271,7 @@
                         {
                             "count": 1,
                             "die": 12,
-                            "type": "Slashing"
+                            "type": "Slashing or piercing"
                         }
                     ]
                 },
@@ -291,7 +291,7 @@
                         {
                             "count": 1,
                             "die": 10,
-                            "type": "Piercing"
+                            "type": "Piercing or slashing"
                         }
                     ]
                 },
@@ -341,7 +341,7 @@
                         {
                             "count": 1,
                             "die": 8,
-                            "type": "Slashing"
+                            "type": "Slashing or piercing"
                         }
                     ]
                 },
@@ -351,7 +351,7 @@
                         {
                             "count": 1,
                             "die": 4,
-                            "type": "Piercing"
+                            "type": "Piercing or slashing"
                         }
                     ]
                 },
@@ -521,7 +521,7 @@
                         {
                             "count": 1,
                             "die": 6,
-                            "type": "Piercing"
+                            "type": "Piercing or slashing"
                         }
                     ]
                 },
@@ -531,7 +531,7 @@
                         {
                             "count": 1,
                             "die": 4,
-                            "type": "Piercing"
+                            "type": "Piercing or slashing"
                         }
                     ],
                     "critical": {
@@ -755,7 +755,7 @@
                         {
                             "count": 1,
                             "die": 4,
-                            "type": "Piercing"
+                            "type": "Piercing or bludgeoning"
                         }
                     ]
                 },
@@ -779,7 +779,242 @@
                     }
                 }
             ]
+        },
+        {
+            "name": "Uncommon martial melee",
+            "weapons": [
+                {
+                    "name": "Dogblade",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 6,
+                            "type": "Slashing"
+                        }
+                    ]
+                },
+                {
+                    "name": "Elven curve blade",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 8,
+                            "type": "Slashing"
+                        }
+                    ]
+                },
+                {
+                    "name": "Filcher's fork",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 4,
+                            "type": "Piercing"
+                        }
+                    ],
+                    "critical": {
+                        "damage_rolls": [
+                            {
+                                "count": 1,
+                                "die": 6,
+                                "type": "Piercing"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "Gnome hooked hammer",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 6,
+                            "type": "Bludgeoning or piercing"
+                        }
+                    ]
+                },
+                {
+                    "name": "Gnome hooked hammer (two hand)",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 10,
+                            "type": "Bludgeoning or piercing"
+                        }
+                    ]
+                },
+                {
+                    "name": "Horsechopper",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 8,
+                            "type": "Slashing or piercing"
+                        }
+                    ]
+                },
+                {
+                    "name": "Kama",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 6,
+                            "type": "Slashing"
+                        }
+                    ]
+                },
+                {
+                    "name": "Katana",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 8,
+                            "type": "Slashing or piercing"
+                        }
+                    ]
+                },
+                {
+                    "name": "Kukri",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 6,
+                            "type": "Slashing"
+                        }
+                    ]
+                },
+                {
+                    "name": "Nunchaku",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 6,
+                            "type": "Bludgeoning"
+                        }
+                    ]
+                },
+                {
+                    "name": "Orc knuckle dagger",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 6,
+                            "type": "Piercing"
+                        }
+                    ]
+                },
+                {
+                    "name": "Sai",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 5,
+                            "type": "Piercing or bludgeoning"
+                        }
+                    ]
+                },
+                {
+                    "name": "Spiked chain",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 8,
+                            "type": "Slashing"
+                        }
+                    ]
+                },
+                {
+                    "name": "Temple sword",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 8,
+                            "type": "Slashing"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Uncommon exotic melee",
+            "weapons": [
+                {
+                    "name": "Dwarven waraxe",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 8,
+                            "type": "Slashing"
+                        }
+                    ]
+                },
+                {
+                    "name": "Dwarven waraxe (two hand)",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 12,
+                            "type": "Slashing"
+                        }
+                    ]
+                },
+                {
+                    "name": "Gnome flickmace",
+                    "damage_rolls": [
+                        {
+
+                            "count": 1,
+                            "die": 8,
+                            "type": "Bludgeoning"
+                        }
+                    ]
+                },
+                {
+                    "name": "Orc necksplitter",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 8,
+                            "type": "Slashing or piercing"
+                        }
+                    ]
+                },
+                {
+                    "name": "Sawtooth sabre",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 6,
+                            "type": "Slashing"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+
+            "name": "Uncommon martial ranged",
+            "weapons": [
+                {
+                    "name": "Halfling sling staff",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 10,
+                            "type": "Bludgeoning"
+                        }
+                    ]
+                },
+                {
+                    "name": "Shuriken",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 4,
+                            "type": "Piercing"
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
-
