@@ -1167,11 +1167,26 @@ class NaturalOneWindow(Gtk.ApplicationWindow):
             self.d8_count_ent, self.d10_count_ent, self.d12_count_ent,
             self.d20_count_ent, self.dq_count_ent, self.dq_size_ent,
             self.num_atks_ent, self.num_dam_ent, self.mod_atks_ent,
-            self.mod_dam_ent,
+            self.mod_dam_ent, self.crit_atks_ent, self.name_init_ent,
         ]
+
+        actives_to_set = {
+            self.dice_mod_chk: True,
+            self.confirm_atks_chk: True,
+            self.stop_atks_chk: True,
+            self.roll_init_rbtn: True, 
+            self.sys_dam_cbox: 0,
+            self.size_cbox: SizeProgression.MEDIUM,
+            self.crit_dam_btn: False,
+            self.list_crit_btn: False,
+            self.sort_init_chk: True,
+        }
 
         for field in fields_to_clear:
             field.set_text('')
+
+        for field, active in actives_to_set.items():
+            field.set_active(active)
 
 
     def toggle_initiative_mode(self):
