@@ -93,6 +93,8 @@ def format_damage(
         output += '<i>: {dice}</i>\n'.format(
             dice=damage_dice,
         )
+    else:
+        output += '\n'
     if all([mod != 0 for mod in mods]):
         output += '<i>Modifiers {mods}</i>\n'.format(
             mods=', '.join([str(x) for x in mods]),
