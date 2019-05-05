@@ -856,9 +856,43 @@ class NaturalOneWindow(Gtk.ApplicationWindow):
             'Drag and drop to rearrange templates',
         )
         drag_list_lbl.set_margin_top(10)
+        drag_list_lbl.set_margin_bottom(10)
         templates_grid.attach_next_to(
             drag_list_lbl,
             self.template_action_bar,
+            Gtk.PositionType.BOTTOM,
+            1, 1,
+        )
+
+        # Create the quick roll main label.
+        qck_lbl = Gtk.Label()
+        qck_lbl.set_markup('<span size="x-large">Quick Roll</span>')
+        qck_lbl.set_alignment(0, 0.5)
+        qck_lbl.set_margin_bottom(10)
+        templates_grid.attach_next_to(
+            qck_lbl,
+            drag_list_lbl,
+            Gtk.PositionType.BOTTOM,
+            1, 1,
+        )
+
+        # Create the quick roll input and button.
+        qck_box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL)
+        Gtk.StyleContext.add_class(qck_box.get_style_context(), 'linked')
+        self.qck_ent = Gtk.Entry()
+        self.qck_ent.set_hexpand(True)
+        self.qck_ent.set_tooltip_text(
+            'Quick rolls allow the faster input of more complex sequences. '
+            'For example, this will roll two groups of dice, one with an '
+            'additional multiplier:\n\n'
+            '(3d6+4)*2 + (2d4)'
+        )
+        qck_box.add(self.qck_ent)
+        self.qck_btn = Gtk.Button('Roll')
+        qck_box.add(self.qck_btn)
+        templates_grid.attach_next_to(
+            qck_box,
+            qck_lbl,
             Gtk.PositionType.BOTTOM,
             1, 1,
         )
