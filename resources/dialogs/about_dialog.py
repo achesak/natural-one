@@ -15,7 +15,7 @@ class NaturalOneAboutDialog(Gtk.AboutDialog):
         self.set_version('3.2')
         self.set_comments('Natural One is a dice roller designed primarily '
                           'for the Pathfinder tabletop roll-playing game.')
-        self.set_copyright('© 2018 Adam Chesak')
+        self.set_copyright('© 2018-2019 Adam Chesak')
         self.set_authors(['Adam Chesak <achesak@yahoo.com>'])
         self.set_license_type(Gtk.License.GPL_3_0)
         self.set_website('https://github.com/achesak/natural-one')
