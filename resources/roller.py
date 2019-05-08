@@ -9,6 +9,7 @@ from resources.rolls import (
     DamageRollDieResult,
     DamageRollStaticResult,
     DamageRollResult,
+    QuickRollGroupResult,
 )
 
 
@@ -158,4 +159,25 @@ def roll_template(template, crit_attack):
         rolls.append(roll_result)
         total += roll_result
 
+    return total, rolls
+
+
+def roll_quick(groups):
+    rolls = []
+    for group in groups:
+        group_result = QuickRollGroupResult(group)
+        group_total = 0
+        for roll in group.rolls:
+            if roll.is_constant:
+                group_total += roll.constant
+            else:
+                if roll.count == 0 or roll.die == 0:
+                    continue
+                roll_total = 0
+                for _ in range(roll.count):
+                    roll_total += random.randint(1, roll.die)
+                group_total += roll_total
+        group_result.total = group_total
+        rolls.append(group_result)
+    total = sum(rolls)
     return total, rolls

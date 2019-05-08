@@ -32,7 +32,7 @@ def pluralize(items):
 
 
 def pluralize_adj(items):
-    return 'these' if len(items) > 1else 'this'
+    return 'these' if len(items) > 1 else 'this'
 
 
 def singularize(item):

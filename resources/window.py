@@ -888,6 +888,8 @@ class NaturalOneWindow(Gtk.ApplicationWindow):
             '(3d6+4)*2 + (2d4)'
         )
         qck_box.add(self.qck_ent)
+        self.qck_error_popover = Gtk.Popover()
+        self.qck_error_popover.set_relative_to(self.qck_ent)
         self.qck_btn = Gtk.Button('Roll')
         qck_box.add(self.qck_btn)
         templates_grid.attach_next_to(
@@ -1165,7 +1167,7 @@ class NaturalOneWindow(Gtk.ApplicationWindow):
             self.min_value_ent, self.num_atks_ent, self.mod_atks_ent,
             self.crit_atks_ent, self.weap_dam_tree, self.num_dam_ent,
             self.mod_dam_ent, self.min_dam_ent, self.name_init_ent,
-            self.mod_init_ent,
+            self.mod_init_ent, self.qck_ent,
         ]
 
         for widget in widgets:

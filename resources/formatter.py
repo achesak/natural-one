@@ -44,6 +44,7 @@ def format_damage(
         rolls,
         total,
 ):
+    damage_dice = None
     if 'damage_rolls' in weapon:
         all_dice = []
         for roll in weapon['damage_rolls']:
@@ -146,4 +147,18 @@ def format_initiative(name, mod, roll):
     else:
         output += '<b>{roll}</b>'.format(roll=roll)
 
+    return output
+
+
+def format_quick(total, rolls):
+    output = (
+        '<span size="larger"><b>Rolled quick roll: <i>'
+        '{total}</i></b></span>\n'
+    ).format(
+        total=total,
+    )
+    for roll in rolls:
+        output += str(roll)
+    if output.endswith('\n'):
+        output = output[:-1]
     return output

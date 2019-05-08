@@ -24,6 +24,7 @@ import resources.dice as dice
 import resources.formatter as formatter
 import resources.io as io
 import resources.launch as launch
+import resources.parser as parser
 import resources.roller as roller
 from resources.utility import (
     expand_mod,
@@ -205,6 +206,10 @@ class NaturalOne(Gtk.Application):
         self.window.template_tree.connect(
             'drag-end',
             lambda x, y: self.reorder_templates(),
+        )
+        self.window.qck_btn.connect(
+            'clicked',
+            lambda x: self.quick_roll(),
         )
         self.window.roll_init_rbtn.connect(
             'toggled',
@@ -601,6 +606,27 @@ class NaturalOne(Gtk.Application):
             return
 
         io.write_templates(filename, self.templates)
+
+    def quick_roll(self):
+        self.window.remove_errors()
+
+        roll_input = self.window.qck_ent.get_text()
+        roll_input = ''.join(roll_input.split()).lower()
+        roll_is_valid = parser.is_quick_roll_valid(roll_input)
+
+        if not roll_is_valid:
+            self.window.add_error(self.window.qck_ent)
+            self.window.show_popup(
+                self.window.qck_error_popover,
+                message='Roll input is invalid',
+                required=False,
+            )
+            return
+
+        groups = parser.parse_quick_roll_input(roll_input)
+        total, rolls = roller.roll_quick(groups)
+        output = formatter.format_quick(total, rolls)
+        self.window.update_output(output)
 
     def roll_initiative(self):
         self.window.remove_errors()

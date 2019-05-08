@@ -257,3 +257,25 @@ class DamageRollResult(object):
 
     def __radd__(self, other):
         return other + int(self)
+
+
+class QuickRollGroupResult(object):
+
+    def __init__(self, group):
+        self.group = group
+        self.total = 0
+
+    def __int__(self):
+        return self.total * self.group.multiplier
+
+    def __str__(self):
+        return 'Rolled {group}: <b>{result}</b>\n'.format(
+            group=str(self.group),
+            result=int(self),
+        )
+
+    def __add__(self, other):
+        return int(self) + other
+
+    def __radd__(self, other):
+        return other + int(self)
