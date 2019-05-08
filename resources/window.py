@@ -38,7 +38,7 @@ class NaturalOneWindow(Gtk.ApplicationWindow):
 
         # Create the header buttons.
         header_btn_box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL)
-        header_btn_box.set_hexpand(True)
+        header_btn_box.set_hexpand(False)
         Gtk.StyleContext.add_class(header_btn_box.get_style_context(), 'linked')
         self.header.pack_end(header_btn_box)
         self.reset_btn = Gtk.Button()
@@ -1223,7 +1223,6 @@ class NaturalOneWindow(Gtk.ApplicationWindow):
 
         for field, active in actives_to_set.items():
             field.set_active(active)
-
 
     def toggle_initiative_mode(self):
         roll_is_active = self.roll_init_rbtn.get_active()
