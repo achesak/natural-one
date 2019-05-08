@@ -5,7 +5,7 @@
 ###############################################################################
 #
 # Natural One
-# Version 3.1
+# Version 3.2
 #
 # Natural One is a dice roller designed primarily for the Pathfinder
 # tabletop roll-playing game.
