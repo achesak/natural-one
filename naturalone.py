@@ -410,8 +410,10 @@ class NaturalOne(Gtk.Application):
             weapon['critical']['multiplier'],
         )
 
-        if self.weapon_data[self.current_system_index]['has_size_steps'] and \
-            'size_steps' not in weapon:
+        if (
+            self.weapon_data[self.current_system_index]['has_size_steps'] and
+            'size_steps' not in weapon
+        ):
             weapon = dice.get_dice_by_size(weapon, size, self.dice_progression)
 
         total, rolls = roller.roll_damage(
