@@ -62,7 +62,7 @@ def step(weapon, step_by, progression):
             if die == 4:
                 count, die = adjust_d4(count, die)
             if count >= 2 and die == 10:
-                count *=2
+                count *= 2
                 die = 8
             else:
                 while True:

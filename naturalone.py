@@ -402,7 +402,7 @@ class NaturalOne(Gtk.Application):
             weapon['critical'] = dict(
                 multiplier=2,
             )
-        if 'maximize' not in weapon['critical'] and 'multiplier' not in weapon['critical']:
+        if all(x not in weapon['critical'] for x in ['maximize', 'multiplier']):
             weapon['critical']['multiplier'] = 2
         if 'maximize' in weapon['critical']:
             weapon['critical']['multiplier'] = 1
