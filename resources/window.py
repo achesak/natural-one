@@ -25,7 +25,7 @@ class NaturalOneWindow(Gtk.ApplicationWindow):
         self.stack = Gtk.Stack()
         self.stack.set_vexpand(False)
         self.stack.set_hexpand(False)
-        self.stack.set_size_request(450, 1)
+        self.stack.set_size_request(475, 1)
         self.stack.set_transition_type(
             Gtk.StackTransitionType.SLIDE_LEFT_RIGHT,
         )
@@ -39,7 +39,10 @@ class NaturalOneWindow(Gtk.ApplicationWindow):
         # Create the header buttons.
         header_btn_box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL)
         header_btn_box.set_hexpand(False)
-        Gtk.StyleContext.add_class(header_btn_box.get_style_context(), 'linked')
+        Gtk.StyleContext.add_class(
+            header_btn_box.get_style_context(),
+            'linked',
+        )
         self.header.pack_end(header_btn_box)
         self.reset_btn = Gtk.Button()
         self.reset_btn.add(load_symbolic('edit-undo'))
@@ -806,7 +809,9 @@ class NaturalOneWindow(Gtk.ApplicationWindow):
 
         # Create the template list action bar.
         self.template_action_bar = Gtk.ActionBar()
-        self.template_action_bar.get_style_context().add_class("inline-toolbar")
+        self.template_action_bar.get_style_context().add_class(
+            'inline-toolbar'
+        )
         templates_grid.attach_next_to(
             self.template_action_bar,
             templates_scroll_win,
@@ -848,7 +853,10 @@ class NaturalOneWindow(Gtk.ApplicationWindow):
         self.list_open_btn.set_tooltip_text('Import templates')
         template_file_btn_box.add(self.list_open_btn)
         template_roll_btn_box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL)
-        Gtk.StyleContext.add_class(template_roll_btn_box.get_style_context(), 'linked')
+        Gtk.StyleContext.add_class(
+            template_roll_btn_box.get_style_context(),
+            'linked',
+        )
         self.list_crit_btn = Gtk.ToggleButton()
         self.list_crit_btn.add(load_symbolic('starred'))
         self.list_crit_btn.set_tooltip_text('Apply critical hit')
@@ -1000,7 +1008,9 @@ class NaturalOneWindow(Gtk.ApplicationWindow):
         )
 
         # Create the sorting check box.
-        self.sort_init_chk = Gtk.CheckButton('Automatically sort initiatives when added')
+        self.sort_init_chk = Gtk.CheckButton(
+            'Automatically sort initiatives when added',
+        )
         self.sort_init_chk.set_halign(Gtk.Align.CENTER)
         self.sort_init_chk.set_hexpand(True)
         self.sort_init_chk.set_margin_top(5)
@@ -1210,7 +1220,7 @@ class NaturalOneWindow(Gtk.ApplicationWindow):
             self.dice_mod_chk: True,
             self.confirm_atks_chk: True,
             self.stop_atks_chk: True,
-            self.roll_init_rbtn: True, 
+            self.roll_init_rbtn: True,
             self.sys_dam_cbox: 0,
             self.size_cbox: SizeProgression.MEDIUM,
             self.crit_dam_btn: False,
