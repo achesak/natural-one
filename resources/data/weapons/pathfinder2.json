@@ -1,5 +1,5 @@
 {
-    "name": "Pathfinder Playtest",
+    "name": "Pathfinder 2e",
     "has_size_steps": false,
     "data": [
         {
@@ -346,6 +346,25 @@
                     ]
                 },
                 {
+                    "name": "Machete",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 6,
+                            "type": "Slashing"
+                        }
+                    ],
+                    "critical": {
+                        "damage_rolls": [
+                            {
+                                "count": 1,
+                                "die": 8,
+                                "type": "Slashing"
+                            }
+                        ]
+                    }
+                },
+                {
                     "name": "Main-gauche",
                     "damage_rolls": [
                         {
@@ -575,6 +594,25 @@
                     ]
                 },
                 {
+                    "name": "War razor",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 4,
+                            "type": "Slashing"
+                        }
+                    ],
+                    "critical": {
+                        "damage_rolls": [
+                            {
+                                "count": 1,
+                                "die": 8,
+                                "type": "Slashing"
+                            }
+                        ]
+                    }
+                },
+                {
                     "name": "Whip",
                     "damage_rolls": [
                         {
@@ -760,6 +798,17 @@
                     ]
                 },
                 {
+                    "name": "Club, juggling",
+                    "display": "Juggling club",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 4,
+                            "type": "Bludgeoning"
+                        }
+                    ]
+                },
+                {
                     "name": "Katar",
                     "damage_rolls": [
                         {
@@ -777,6 +826,26 @@
                             }
                         ]
                     }
+                },
+                {
+                    "name": "Poi",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 4,
+                            "type": "Bludgeoning"
+                        }
+                    ]
+                },
+                {
+                    "name": "Throwing knife",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 4,
+                            "type": "Piercing"
+                        }
+                    ]
                 }
             ]
         },
@@ -784,7 +853,17 @@
             "name": "Uncommon martial melee",
             "weapons": [
                 {
-                    "name": "Dogblade",
+                    "name": "Bladed scarf",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 8,
+                            "type": "Slashing"
+                        }
+                    ]
+                },
+                {
+                    "name": "Dogslicer",
                     "damage_rolls": [
                         {
                             "count": 1,
@@ -818,6 +897,25 @@
                                 "count": 1,
                                 "die": 6,
                                 "type": "Piercing"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "Fighting fan",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 4,
+                            "type": "Slashing"
+                        }
+                    ],
+                    "critical": {
+                        "damage_rolls": [
+                            {
+                                "count": 1,
+                                "die": 6,
+                                "type": "Slashing"
                             }
                         ]
                     }
@@ -873,6 +971,16 @@
                     ]
                 },
                 {
+                    "name": "Kopesh",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 8,
+                            "type": "Slashing"
+                        }
+                    ]
+                },
+                {
                     "name": "Kukri",
                     "damage_rolls": [
                         {
@@ -881,6 +989,25 @@
                             "type": "Slashing"
                         }
                     ]
+                },
+                {
+                    "name": "Mambele",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 6,
+                            "type": "Slashing"
+                        }
+                    ],
+                    "critical": {
+                        "damage_rolls": [
+                            {
+                                "count": 1,
+                                "die": 8,
+                                "type": "Slashing"
+                            }
+                        ]
+                    }
                 },
                 {
                     "name": "Nunchaku",
@@ -903,12 +1030,32 @@
                     ]
                 },
                 {
+                    "name": "Polytool",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 6,
+                            "type": "Bludgeoning, piercing, or slashing"
+                        }
+                    ]
+                },
+                {
                     "name": "Sai",
                     "damage_rolls": [
                         {
                             "count": 1,
                             "die": 5,
                             "type": "Piercing or bludgeoning"
+                        }
+                    ]
+                },
+                {
+                    "name": "Scorpion whip",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 4,
+                            "type": "Slashing"
                         }
                     ]
                 },
@@ -923,6 +1070,16 @@
                     ]
                 },
                 {
+                    "name": "Tekko-kagi",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 4,
+                            "type": "Slashing"
+                        }
+                    ]
+                },
+                {
                     "name": "Temple sword",
                     "damage_rolls": [
                         {
@@ -931,12 +1088,97 @@
                             "type": "Slashing"
                         }
                     ]
+                },
+                {
+                    "name": "Urumi",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 6,
+                            "type": "Slashing"
+                        }
+                    ],
+                    "critical": {
+                        "damage_rolls": [
+                            {
+                                "count": 1,
+                                "die": 10,
+                                "type": "Slashing"
+                            }
+                        ]
+                    }
                 }
             ]
         },
         {
-            "name": "Uncommon exotic melee",
+
+            "name": "Uncommon martial ranged",
             "weapons": [
+                {
+                    "name": "Bola",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 6,
+                            "type": "Bludgeoning"
+                        }
+                    ]
+                },
+                {
+                    "name": "Halfling sling staff",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 10,
+                            "type": "Bludgeoning"
+                        }
+                    ]
+                },
+                {
+                    "name": "Shuriken",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 4,
+                            "type": "Piercing"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Uncommon advanced melee",
+            "weapons": [
+                {
+                    "name": "Bladed diabolo",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 4,
+                            "type": "Slashing"
+                        }
+                    ]
+                },
+                {
+                    "name": "Bladed hoop",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 6,
+                            "type": "Slashing"
+                        }
+                    ]
+                },
+                {
+                    "name": "Bladed hoop (two-hand)",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 8,
+                            "type": "Slashing"
+                        }
+                    ]
+                },
                 {
                     "name": "Dwarven waraxe",
                     "damage_rolls": [
@@ -954,6 +1196,21 @@
                             "count": 1,
                             "die": 12,
                             "type": "Slashing"
+                        }
+                    ]
+                },
+                {
+                    "name": "Fire poi",
+                    "damage_rolls": [
+                        {
+                            "count": 1,
+                            "die": 4,
+                            "type": "Bludgeoning"
+                        },
+                        {
+                            "count": 1,
+                            "die": 4,
+                            "type": "Fire"
                         }
                     ]
                 },
@@ -985,32 +1242,6 @@
                             "count": 1,
                             "die": 6,
                             "type": "Slashing"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-
-            "name": "Uncommon martial ranged",
-            "weapons": [
-                {
-                    "name": "Halfling sling staff",
-                    "damage_rolls": [
-                        {
-                            "count": 1,
-                            "die": 10,
-                            "type": "Bludgeoning"
-                        }
-                    ]
-                },
-                {
-                    "name": "Shuriken",
-                    "damage_rolls": [
-                        {
-                            "count": 1,
-                            "die": 4,
-                            "type": "Piercing"
                         }
                     ]
                 }
