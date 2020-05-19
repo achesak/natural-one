@@ -476,6 +476,11 @@ class NaturalOne(Gtk.Application):
     def edit_template(self):
         index = self.window.get_selected_index(self.window.template_tree)
         if index is None:
+            self.window.show_popup(
+                self.window.list_edit_btn_popover,
+                message='Select a template to edit',
+                required=False,
+            )
             return
 
         template = self.templates[index]
@@ -508,6 +513,11 @@ class NaturalOne(Gtk.Application):
     def remove_template(self):
         indices = self.window.get_selected_indices(self.window.template_tree)
         if not indices:
+            self.window.show_popup(
+                self.window.list_delete_btn_popover,
+                message='Select one or more templates to delete',
+                required=False,
+            )
             return
 
         message_text = 'Are you sure you want to remove ' \
